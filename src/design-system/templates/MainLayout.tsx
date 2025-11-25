@@ -9,7 +9,7 @@ export const MainLayout = ({ children }: { children: React.ReactNode }) => {
             <Sidebar />
             <Box sx={{ flexGrow: 1, display: 'flex', flexDirection: 'column' }}>
                 <Header />
-                <Box component="main" sx={{ flexGrow: 1, p: 4, overflow: 'auto', bgcolor: '#FFFFFF' }}>
+                <Box component="main" sx={{ flexGrow: 1, p: 4, overflow: 'auto', bgcolor: 'background.default', color: 'text.primary' }}>
                     {children}
                 </Box>
             </Box>
