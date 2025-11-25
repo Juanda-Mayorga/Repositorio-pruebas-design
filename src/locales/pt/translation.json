@@ -1,0 +1,63 @@
+{
+    "header": {
+        "title": "MAMBA",
+        "product": "BiMMate",
+        "notifications": "Notificações",
+        "profile": "Perfil"
+    },
+    "sidebar": {
+        "account": "Conta",
+        "profile": "Perfil",
+        "plan": "Plano e assinatura",
+        "team": "Membros da equipe",
+        "notifications": "Notificações",
+        "integrations": "Integrações",
+        "help": "Ajuda e Suporte",
+        "logout": "Sair"
+    },
+    "subscription": {
+        "title": "Plano e assinatura",
+        "subtitle": "Gerencie seu plano, licenças e opções de assinatura",
+        "standardPlan": "Plano Padrão",
+        "renewsOn": "Sua assinatura renova em {{date}}",
+        "upgradePlan": "Atualizar Plano",
+        "billedMonthly": "Faturado mensalmente",
+        "storage": "Armazenamento",
+        "used": "{{percentage}}% usado",
+        "storageDetail": "{{used}}GB de {{total}}GB usados",
+        "needMoreSpace": "Precisa de mais espaço?",
+        "upgradePro": "Atualize para nosso plano Pro para armazenamento ilimitado e recursos avançados.",
+        "contactSales": "Contatar Vendas",
+        "paymentMethod": "Método de Pagamento",
+        "visaEnding": "Visa terminando em {{last4}}",
+        "expiry": "Expira em {{date}}",
+        "edit": "Editar",
+        "billingHistory": "Histórico de Faturamento",
+        "invoice": "Fatura #{{number}}",
+        "paid": "Pago"
+    },
+    "profile": {
+        "title": "Perfil",
+        "subtitle": "Gerencie seus dados pessoais",
+        "addImage": "Adicionar imagem",
+        "maxSize": "(Máx. XX MB)",
+        "name": "Nome",
+        "surname": "Sobrenome",
+        "email": "E-mail",
+        "save": "Salvar",
+        "security": "Segurança",
+        "securitySubtitle": "Gerencie sua senha para manter sua conta segura",
+        "currentPassword": "Senha Atual",
+        "newPassword": "Nova Senha",
+        "verifyPassword": "Verificar Nova Senha",
+        "deleteAccount": "Excluir Conta",
+        "deleteWarning": "Depois de excluir sua conta, não há como voltar atrás. Por favor, tenha certeza.",
+        "deleteButton": "Excluir Conta"
+    },
+    "validation": {
+        "nameRequired": "O seu nome deve ter pelo menos 2 caracteres",
+        "surnameRequired": "O seu sobrenome deve ter pelo menos 2 caracteres",
+        "passwordLength": "Deve ter pelo menos 6 caracteres",
+        "passwordMatch": "A senha que você digitou não corresponde"
+    }
+}

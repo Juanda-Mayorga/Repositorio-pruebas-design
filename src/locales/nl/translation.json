@@ -1,0 +1,63 @@
+{
+    "header": {
+        "title": "MAMBA",
+        "product": "BiMMate",
+        "notifications": "Meldingen",
+        "profile": "Profiel"
+    },
+    "sidebar": {
+        "account": "Account",
+        "profile": "Profiel",
+        "plan": "Plan en abonnement",
+        "team": "Teamleden",
+        "notifications": "Meldingen",
+        "integrations": "Integraties",
+        "help": "Hulp & Ondersteuning",
+        "logout": "Uitloggen"
+    },
+    "subscription": {
+        "title": "Plan en abonnement",
+        "subtitle": "Beheer uw plan, licenties en abonnementsopties",
+        "standardPlan": "Standaard Plan",
+        "renewsOn": "Uw abonnement wordt verlengd op {{date}}",
+        "upgradePlan": "Plan upgraden",
+        "billedMonthly": "Maandelijks gefactureerd",
+        "storage": "Opslag",
+        "used": "{{percentage}}% gebruikt",
+        "storageDetail": "{{used}}GB van {{total}}GB gebruikt",
+        "needMoreSpace": "Meer ruimte nodig?",
+        "upgradePro": "Upgrade naar ons Pro-plan voor onbeperkte opslag en geavanceerde functies.",
+        "contactSales": "Neem contact op met verkoop",
+        "paymentMethod": "Betaalmethode",
+        "visaEnding": "Visa eindigend op {{last4}}",
+        "expiry": "Verloopt op {{date}}",
+        "edit": "Bewerken",
+        "billingHistory": "Factuurgeschiedenis",
+        "invoice": "Factuur #{{number}}",
+        "paid": "Betaald"
+    },
+    "profile": {
+        "title": "Profiel",
+        "subtitle": "Beheer uw persoonlijke gegevens",
+        "addImage": "Afbeelding toevoegen",
+        "maxSize": "(Max. XX MB)",
+        "name": "Voornaam",
+        "surname": "Achternaam",
+        "email": "E-mail",
+        "save": "Opslaan",
+        "security": "Beveiliging",
+        "securitySubtitle": "Beheer uw wachtwoord om uw account veilig te houden",
+        "currentPassword": "Huidig Wachtwoord",
+        "newPassword": "Nieuw Wachtwoord",
+        "verifyPassword": "Verifieer Nieuw Wachtwoord",
+        "deleteAccount": "Account verwijderen",
+        "deleteWarning": "Zodra u uw account verwijdert, is er geen weg terug. Wees er zeker van.",
+        "deleteButton": "Account verwijderen"
+    },
+    "validation": {
+        "nameRequired": "Uw naam moet minimaal 2 tekens lang zijn",
+        "surnameRequired": "Uw achternaam moet minimaal 2 tekens lang zijn",
+        "passwordLength": "Moet minimaal 6 tekens lang zijn",
+        "passwordMatch": "Het ingevoerde wachtwoord komt niet overeen"
+    }
+}

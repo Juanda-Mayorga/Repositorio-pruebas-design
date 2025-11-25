@@ -1,0 +1,63 @@
+{
+    "header": {
+        "title": "MAMBA",
+        "product": "BiMMate",
+        "notifications": "Notifikationer",
+        "profile": "Profil"
+    },
+    "sidebar": {
+        "account": "Konto",
+        "profile": "Profil",
+        "plan": "Plan og abonnement",
+        "team": "Teammedlemmer",
+        "notifications": "Notifikationer",
+        "integrations": "Integrationer",
+        "help": "Hjælp & Support",
+        "logout": "Log ud"
+    },
+    "subscription": {
+        "title": "Plan og abonnement",
+        "subtitle": "Administrer din plan, licenser og abonnementsmuligheder",
+        "standardPlan": "Standardplan",
+        "renewsOn": "Dit abonnement fornyes den {{date}}",
+        "upgradePlan": "Opgrader Plan",
+        "billedMonthly": "Faktureres månedligt",
+        "storage": "Lagerplads",
+        "used": "{{percentage}}% brugt",
+        "storageDetail": "{{used}}GB af {{total}}GB brugt",
+        "needMoreSpace": "Brug for mere plads?",
+        "upgradePro": "Opgrader til vores Pro-plan for ubegrænset lagerplads og avancerede funktioner.",
+        "contactSales": "Kontakt Salg",
+        "paymentMethod": "Betalingsmetode",
+        "visaEnding": "Visa der slutter på {{last4}}",
+        "expiry": "Udløber {{date}}",
+        "edit": "Rediger",
+        "billingHistory": "Faktureringshistorik",
+        "invoice": "Faktura #{{number}}",
+        "paid": "Betalt"
+    },
+    "profile": {
+        "title": "Profil",
+        "subtitle": "Administrer dine personlige oplysninger",
+        "addImage": "Tilføj billede",
+        "maxSize": "(Maks. XX MB)",
+        "name": "Navn",
+        "surname": "Efternavn",
+        "email": "E-mail",
+        "save": "Gem",
+        "security": "Sikkerhed",
+        "securitySubtitle": "Administrer din adgangskode for at holde din konto sikker",
+        "currentPassword": "Nuværende Adgangskode",
+        "newPassword": "Ny Adgangskode",
+        "verifyPassword": "Bekræft Ny Adgangskode",
+        "deleteAccount": "Slet Konto",
+        "deleteWarning": "Når du sletter din konto, er der ingen vej tilbage. Vær sikker.",
+        "deleteButton": "Slet Konto"
+    },
+    "validation": {
+        "nameRequired": "Dit navn skal være mindst 2 tegn langt",
+        "surnameRequired": "Dit efternavn skal være mindst 2 tegn langt",
+        "passwordLength": "Skal være mindst 6 tegn langt",
+        "passwordMatch": "Den adgangskode, du har indtastet, stemmer ikke overens"
+    }
+}

@@ -1,0 +1,67 @@
+{
+    "header": {
+        "title": "MAMBA",
+        "product": "BiMMate",
+        "notifications": "Notifications",
+        "profile": "Profile"
+    },
+    "sidebar": {
+        "account": "Account",
+        "profile": "Profile",
+        "plan": "Plan and subscription",
+        "team": "Team members",
+        "notifications": "Notifications",
+        "integrations": "Integrations",
+        "help": "Help & Support",
+        "logout": "Log out"
+    },
+    "subscription": {
+        "title": "Plan and subscription",
+        "subtitle": "Manage your plan, licenses, and subscription options",
+        "standardPlan": "Standard Plan",
+        "renewsOn": "Your subscription renews on {{date}}",
+        "upgradePlan": "Upgrade Plan",
+        "billedMonthly": "Billed monthly",
+        "storage": "Storage",
+        "used": "{{percentage}}% used",
+        "storageDetail": "{{used}}GB of {{total}}GB used",
+        "needMoreSpace": "Need more space?",
+        "upgradePro": "Upgrade to our Pro plan for unlimited storage and advanced features.",
+        "contactSales": "Contact Sales",
+        "paymentMethod": "Payment Method",
+        "visaEnding": "Visa ending in {{last4}}",
+        "expiry": "Expiry {{date}}",
+        "edit": "Edit",
+        "billingHistory": "Billing History",
+        "invoice": "Invoice #{{number}}",
+        "paid": "Paid"
+    },
+    "profile": {
+        "title": "Profile",
+        "subtitle": "Manage your personal details",
+        "addImage": "Add image",
+        "maxSize": "(Max. XX MB)",
+        "name": "Name",
+        "surname": "Surname",
+        "email": "Email",
+        "save": "Save",
+        "security": "Security",
+        "securitySubtitle": "Manage your password to keep your account secure",
+        "currentPassword": "Current Password",
+        "newPassword": "New Password",
+        "verifyPassword": "Verify New Password",
+        "deleteAccount": "Delete Account",
+        "deleteWarning": "Once you delete your account, there is no going back. Please be certain.",
+        "deleteButton": "Delete Account"
+    },
+    "validation": {
+        "nameRequired": "Your name must be at least 2 characters long",
+        "surnameRequired": "Your surname must be at least 2 characters long",
+        "passwordLength": "Must be at least 6 characters long",
+        "passwordMatch": "The password you enteres does not match"
+    },
+    "feedback": {
+        "profileSaved": "Profile saved successfully!",
+        "passwordUpdated": "Password updated successfully!"
+    }
+}

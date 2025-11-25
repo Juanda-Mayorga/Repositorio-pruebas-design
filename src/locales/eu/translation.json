@@ -1,0 +1,63 @@
+{
+    "header": {
+        "title": "MAMBA",
+        "product": "BiMMate",
+        "notifications": "Jakinarazpenak",
+        "profile": "Profila"
+    },
+    "sidebar": {
+        "account": "Kontua",
+        "profile": "Profila",
+        "plan": "Plana eta harpidetza",
+        "team": "Taldekideak",
+        "notifications": "Jakinarazpenak",
+        "integrations": "Integrazioak",
+        "help": "Laguntza eta euskarria",
+        "logout": "Saioa itxi"
+    },
+    "subscription": {
+        "title": "Plana eta harpidetza",
+        "subtitle": "Kudeatu zure plana, lizentziak eta harpidetza aukerak",
+        "standardPlan": "Plan Estandarra",
+        "renewsOn": "Zure harpidetza {{date}}an berrituko da",
+        "upgradePlan": "Plana berritu",
+        "billedMonthly": "Hilero fakturatuta",
+        "storage": "Biltegiratzea",
+        "used": "%{{percentage}} erabilita",
+        "storageDetail": "{{used}}GB / {{total}}GB erabilita",
+        "needMoreSpace": "Leku gehiago behar duzu?",
+        "upgradePro": "Berritu gure Pro planera biltegiratze mugagabea eta funtzio aurreratuak lortzeko.",
+        "contactSales": "Salmentekin harremanetan jarri",
+        "paymentMethod": "Ordainketa metodoa",
+        "visaEnding": "Visa {{last4}} zenbakian amaituta",
+        "expiry": "Iraungitze data: {{date}}",
+        "edit": "Editatu",
+        "billingHistory": "Fakturazio historia",
+        "invoice": "Faktura #{{number}}",
+        "paid": "Ordainduta"
+    },
+    "profile": {
+        "title": "Profila",
+        "subtitle": "Kudeatu zure datu pertsonalak",
+        "addImage": "Gehitu irudia",
+        "maxSize": "(Gehienez XX MB)",
+        "name": "Izena",
+        "surname": "Abizenak",
+        "email": "Posta elektronikoa",
+        "save": "Gorde",
+        "security": "Segurtasuna",
+        "securitySubtitle": "Kudeatu zure pasahitza kontua seguru mantentzeko",
+        "currentPassword": "Uneko pasahitza",
+        "newPassword": "Pasahitz berria",
+        "verifyPassword": "Egiaztatu pasahitz berria",
+        "deleteAccount": "Ezabatu kontua",
+        "deleteWarning": "Zure kontua ezabatzen baduzu, ez dago atzera bueltarik. Mesedez, ziurtatu.",
+        "deleteButton": "Ezabatu kontua"
+    },
+    "validation": {
+        "nameRequired": "Zure izenak gutxienez 2 karaktere izan behar ditu",
+        "surnameRequired": "Zure abizenak gutxienez 2 karaktere izan behar ditu",
+        "passwordLength": "Gutxienez 6 karaktere izan behar ditu",
+        "passwordMatch": "Sartu duzun pasahitza ez dator bat"
+    }
+}

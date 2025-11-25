@@ -1,0 +1,63 @@
+{
+    "header": {
+        "title": "MAMBA",
+        "product": "BiMMate",
+        "notifications": "Notificacions",
+        "profile": "Perfil"
+    },
+    "sidebar": {
+        "account": "Compte",
+        "profile": "Perfil",
+        "plan": "Pla i subscripció",
+        "team": "Membres de l'equip",
+        "notifications": "Notificacions",
+        "integrations": "Integracions",
+        "help": "Ajuda i Suport",
+        "logout": "Tancar sessió"
+    },
+    "subscription": {
+        "title": "Pla i subscripció",
+        "subtitle": "Gestiona el teu pla, llicències i opcions de subscripció",
+        "standardPlan": "Pla Estàndard",
+        "renewsOn": "La teva subscripció es renova el {{date}}",
+        "upgradePlan": "Millorar Pla",
+        "billedMonthly": "Facturat mensualment",
+        "storage": "Emmagatzematge",
+        "used": "{{percentage}}% utilitzat",
+        "storageDetail": "{{used}}GB de {{total}}GB utilitzats",
+        "needMoreSpace": "Necessites més espai?",
+        "upgradePro": "Actualitza al nostre pla Pro per a emmagatzematge il·limitat i funcions avançades.",
+        "contactSales": "Contactar Vendes",
+        "paymentMethod": "Mètode de Pagament",
+        "visaEnding": "Visa acabada en {{last4}}",
+        "expiry": "Caduca {{date}}",
+        "edit": "Editar",
+        "billingHistory": "Historial de Facturació",
+        "invoice": "Factura #{{number}}",
+        "paid": "Pagat"
+    },
+    "profile": {
+        "title": "Perfil",
+        "subtitle": "Gestiona les teves dades personals",
+        "addImage": "Afegir imatge",
+        "maxSize": "(Màx. XX MB)",
+        "name": "Nom",
+        "surname": "Cognoms",
+        "email": "Correu electrònic",
+        "save": "Guardar",
+        "security": "Seguretat",
+        "securitySubtitle": "Gestiona la teva contrasenya per mantenir el teu compte segur",
+        "currentPassword": "Contrasenya Actual",
+        "newPassword": "Nova Contrasenya",
+        "verifyPassword": "Verificar Nova Contrasenya",
+        "deleteAccount": "Eliminar Compte",
+        "deleteWarning": "Un cop eliminis el teu compte, no hi ha marxa enrere. Si us plau, assegura't.",
+        "deleteButton": "Eliminar Compte"
+    },
+    "validation": {
+        "nameRequired": "El teu nom ha de tenir almenys 2 caràcters",
+        "surnameRequired": "El teu cognom ha de tenir almenys 2 caràcters",
+        "passwordLength": "Ha de tenir almenys 6 caràcters",
+        "passwordMatch": "La contrasenya que has introduït no coincideix"
+    }
+}

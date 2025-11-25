@@ -1,0 +1,63 @@
+{
+    "header": {
+        "title": "MAMBA",
+        "product": "BiMMate",
+        "notifications": "Varsler",
+        "profile": "Profil"
+    },
+    "sidebar": {
+        "account": "Konto",
+        "profile": "Profil",
+        "plan": "Plan og abonnement",
+        "team": "Teammedlemmer",
+        "notifications": "Varsler",
+        "integrations": "Integrasjoner",
+        "help": "Hjelp og Støtte",
+        "logout": "Logg ut"
+    },
+    "subscription": {
+        "title": "Plan og abonnement",
+        "subtitle": "Administrer planen din, lisenser og abonnementsalternativer",
+        "standardPlan": "Standardplan",
+        "renewsOn": "Abonnementet ditt fornyes den {{date}}",
+        "upgradePlan": "Oppgrader Plan",
+        "billedMonthly": "Fakturert månedlig",
+        "storage": "Lagring",
+        "used": "{{percentage}}% brukt",
+        "storageDetail": "{{used}}GB av {{total}}GB brukt",
+        "needMoreSpace": "Trenger du mer plass?",
+        "upgradePro": "Oppgrader til vår Pro-plan for ubegrenset lagring og avanserte funksjoner.",
+        "contactSales": "Kontakt Salg",
+        "paymentMethod": "Betalingsmetode",
+        "visaEnding": "Visa som slutter på {{last4}}",
+        "expiry": "Utløper {{date}}",
+        "edit": "Rediger",
+        "billingHistory": "Faktureringshistorikk",
+        "invoice": "Faktura #{{number}}",
+        "paid": "Betalt"
+    },
+    "profile": {
+        "title": "Profil",
+        "subtitle": "Administrer dine personlige opplysninger",
+        "addImage": "Legg til bilde",
+        "maxSize": "(Maks. XX MB)",
+        "name": "Navn",
+        "surname": "Etternavn",
+        "email": "E-post",
+        "save": "Lagre",
+        "security": "Sikkerhet",
+        "securitySubtitle": "Administrer passordet ditt for å holde kontoen din sikker",
+        "currentPassword": "Nåværende Passord",
+        "newPassword": "Nytt Passord",
+        "verifyPassword": "Bekreft Nytt Passord",
+        "deleteAccount": "Slett Konto",
+        "deleteWarning": "Når du sletter kontoen din, er det ingen vei tilbake. Vær sikker.",
+        "deleteButton": "Slett Konto"
+    },
+    "validation": {
+        "nameRequired": "Navnet ditt må være minst 2 tegn langt",
+        "surnameRequired": "Etternavnet ditt må være minst 2 tegn langt",
+        "passwordLength": "Må være minst 6 tegn langt",
+        "passwordMatch": "Passordet du skrev inn stemmer ikke"
+    }
+}

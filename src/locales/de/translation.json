@@ -1,0 +1,63 @@
+{
+    "header": {
+        "title": "MAMBA",
+        "product": "BiMMate",
+        "notifications": "Benachrichtigungen",
+        "profile": "Profil"
+    },
+    "sidebar": {
+        "account": "Konto",
+        "profile": "Profil",
+        "plan": "Plan und Abonnement",
+        "team": "Teammitglieder",
+        "notifications": "Benachrichtigungen",
+        "integrations": "Integrationen",
+        "help": "Hilfe & Support",
+        "logout": "Abmelden"
+    },
+    "subscription": {
+        "title": "Plan und Abonnement",
+        "subtitle": "Verwalten Sie Ihren Plan, Lizenzen und Abonnementoptionen",
+        "standardPlan": "Standardplan",
+        "renewsOn": "Ihr Abonnement verlängert sich am {{date}}",
+        "upgradePlan": "Plan upgraden",
+        "billedMonthly": "Monatlich abgerechnet",
+        "storage": "Speicher",
+        "used": "{{percentage}}% verwendet",
+        "storageDetail": "{{used}}GB von {{total}}GB verwendet",
+        "needMoreSpace": "Benötigen Sie mehr Platz?",
+        "upgradePro": "Upgraden Sie auf unseren Pro-Plan für unbegrenzten Speicherplatz und erweiterte Funktionen.",
+        "contactSales": "Vertrieb kontaktieren",
+        "paymentMethod": "Zahlungsmethode",
+        "visaEnding": "Visa endet auf {{last4}}",
+        "expiry": "Läuft ab {{date}}",
+        "edit": "Bearbeiten",
+        "billingHistory": "Rechnungsverlauf",
+        "invoice": "Rechnung #{{number}}",
+        "paid": "Bezahlt"
+    },
+    "profile": {
+        "title": "Profil",
+        "subtitle": "Verwalten Sie Ihre persönlichen Daten",
+        "addImage": "Bild hinzufügen",
+        "maxSize": "(Max. XX MB)",
+        "name": "Vorname",
+        "surname": "Nachname",
+        "email": "E-Mail",
+        "save": "Speichern",
+        "security": "Sicherheit",
+        "securitySubtitle": "Verwalten Sie Ihr Passwort, um Ihr Konto zu schützen",
+        "currentPassword": "Aktuelles Passwort",
+        "newPassword": "Neues Passwort",
+        "verifyPassword": "Neues Passwort bestätigen",
+        "deleteAccount": "Konto löschen",
+        "deleteWarning": "Sobald Sie Ihr Konto löschen, gibt es kein Zurück mehr. Bitte seien Sie sich sicher.",
+        "deleteButton": "Konto löschen"
+    },
+    "validation": {
+        "nameRequired": "Ihr Name muss mindestens 2 Zeichen lang sein",
+        "surnameRequired": "Ihr Nachname muss mindestens 2 Zeichen lang sein",
+        "passwordLength": "Muss mindestens 6 Zeichen lang sein",
+        "passwordMatch": "Das eingegebene Passwort stimmt nicht überein"
+    }
+}

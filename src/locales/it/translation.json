@@ -1,0 +1,63 @@
+{
+    "header": {
+        "title": "MAMBA",
+        "product": "BiMMate",
+        "notifications": "Notifiche",
+        "profile": "Profilo"
+    },
+    "sidebar": {
+        "account": "Account",
+        "profile": "Profilo",
+        "plan": "Piano e abbonamento",
+        "team": "Membri del team",
+        "notifications": "Notifiche",
+        "integrations": "Integrazioni",
+        "help": "Aiuto e Supporto",
+        "logout": "Disconnettersi"
+    },
+    "subscription": {
+        "title": "Piano e abbonamento",
+        "subtitle": "Gestisci il tuo piano, le licenze e le opzioni di abbonamento",
+        "standardPlan": "Piano Standard",
+        "renewsOn": "Il tuo abbonamento si rinnova il {{date}}",
+        "upgradePlan": "Aggiorna Piano",
+        "billedMonthly": "Fatturato mensilmente",
+        "storage": "Archiviazione",
+        "used": "{{percentage}}% utilizzato",
+        "storageDetail": "{{used}}GB di {{total}}GB utilizzati",
+        "needMoreSpace": "Hai bisogno di più spazio?",
+        "upgradePro": "Passa al nostro piano Pro per archiviazione illimitata e funzionalità avanzate.",
+        "contactSales": "Contatta le vendite",
+        "paymentMethod": "Metodo di Pagamento",
+        "visaEnding": "Visa che termina con {{last4}}",
+        "expiry": "Scade il {{date}}",
+        "edit": "Modifica",
+        "billingHistory": "Cronologia Fatturazione",
+        "invoice": "Fattura #{{number}}",
+        "paid": "Pagato"
+    },
+    "profile": {
+        "title": "Profilo",
+        "subtitle": "Gestisci i tuoi dati personali",
+        "addImage": "Aggiungi immagine",
+        "maxSize": "(Max. XX MB)",
+        "name": "Nome",
+        "surname": "Cognome",
+        "email": "Email",
+        "save": "Salva",
+        "security": "Sicurezza",
+        "securitySubtitle": "Gestisci la tua password per mantenere sicuro il tuo account",
+        "currentPassword": "Password Attuale",
+        "newPassword": "Nuova Password",
+        "verifyPassword": "Verifica Nuova Password",
+        "deleteAccount": "Elimina Account",
+        "deleteWarning": "Una volta eliminato il tuo account, non si può tornare indietro. Per favore, sii certo.",
+        "deleteButton": "Elimina Account"
+    },
+    "validation": {
+        "nameRequired": "Il tuo nome deve contenere almeno 2 caratteri",
+        "surnameRequired": "Il tuo cognome deve contenere almeno 2 caratteri",
+        "passwordLength": "Deve contenere almeno 6 caratteri",
+        "passwordMatch": "La password inserita non corrisponde"
+    }
+}

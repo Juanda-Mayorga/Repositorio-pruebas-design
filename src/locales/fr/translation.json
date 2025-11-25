@@ -1,0 +1,63 @@
+{
+    "header": {
+        "title": "MAMBA",
+        "product": "BiMMate",
+        "notifications": "Notifications",
+        "profile": "Profil"
+    },
+    "sidebar": {
+        "account": "Compte",
+        "profile": "Profil",
+        "plan": "Plan et abonnement",
+        "team": "Membres de l'équipe",
+        "notifications": "Notifications",
+        "integrations": "Intégrations",
+        "help": "Aide et Support",
+        "logout": "Se déconnecter"
+    },
+    "subscription": {
+        "title": "Plan et abonnement",
+        "subtitle": "Gérez votre plan, vos licences et vos options d'abonnement",
+        "standardPlan": "Plan Standard",
+        "renewsOn": "Votre abonnement se renouvelle le {{date}}",
+        "upgradePlan": "Mettre à niveau",
+        "billedMonthly": "Facturé mensuellement",
+        "storage": "Stockage",
+        "used": "{{percentage}}% utilisé",
+        "storageDetail": "{{used}}Go de {{total}}Go utilisés",
+        "needMoreSpace": "Besoin de plus d'espace ?",
+        "upgradePro": "Passez à notre plan Pro pour un stockage illimité et des fonctionnalités avancées.",
+        "contactSales": "Contacter les ventes",
+        "paymentMethod": "Méthode de paiement",
+        "visaEnding": "Visa se terminant par {{last4}}",
+        "expiry": "Expire le {{date}}",
+        "edit": "Modifier",
+        "billingHistory": "Historique de facturation",
+        "invoice": "Facture #{{number}}",
+        "paid": "Payé"
+    },
+    "profile": {
+        "title": "Profil",
+        "subtitle": "Gérez vos informations personnelles",
+        "addImage": "Ajouter une image",
+        "maxSize": "(Max. XX Mo)",
+        "name": "Prénom",
+        "surname": "Nom",
+        "email": "Email",
+        "save": "Enregistrer",
+        "security": "Sécurité",
+        "securitySubtitle": "Gérez votre mot de passe pour sécuriser votre compte",
+        "currentPassword": "Mot de passe actuel",
+        "newPassword": "Nouveau mot de passe",
+        "verifyPassword": "Vérifier le nouveau mot de passe",
+        "deleteAccount": "Supprimer le compte",
+        "deleteWarning": "Une fois votre compte supprimé, il n'y a pas de retour en arrière. Soyez certain.",
+        "deleteButton": "Supprimer le compte"
+    },
+    "validation": {
+        "nameRequired": "Votre nom doit contenir au moins 2 caractères",
+        "surnameRequired": "Votre nom de famille doit contenir au moins 2 caractères",
+        "passwordLength": "Doit contenir au moins 6 caractères",
+        "passwordMatch": "Le mot de passe que vous avez entré ne correspond pas"
+    }
+}

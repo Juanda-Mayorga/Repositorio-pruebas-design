@@ -1,0 +1,63 @@
+{
+    "header": {
+        "title": "MAMBA",
+        "product": "BiMMate",
+        "notifications": "Notificacións",
+        "profile": "Perfil"
+    },
+    "sidebar": {
+        "account": "Conta",
+        "profile": "Perfil",
+        "plan": "Plan e subscrición",
+        "team": "Membros do equipo",
+        "notifications": "Notificacións",
+        "integrations": "Integracións",
+        "help": "Axuda e Soporte",
+        "logout": "Pechar sesión"
+    },
+    "subscription": {
+        "title": "Plan e subscrición",
+        "subtitle": "Xestiona o teu plan, licenzas e opcións de subscrición",
+        "standardPlan": "Plan Estándar",
+        "renewsOn": "A túa subscrición renóvase o {{date}}",
+        "upgradePlan": "Mellorar Plan",
+        "billedMonthly": "Facturado mensualmente",
+        "storage": "Almacenamento",
+        "used": "{{percentage}}% usado",
+        "storageDetail": "{{used}}GB de {{total}}GB usados",
+        "needMoreSpace": "Necesitas máis espazo?",
+        "upgradePro": "Actualiza ao noso plan Pro para almacenamento ilimitado e funcións avanzadas.",
+        "contactSales": "Contactar Vendas",
+        "paymentMethod": "Método de Pago",
+        "visaEnding": "Visa rematada en {{last4}}",
+        "expiry": "Caduca {{date}}",
+        "edit": "Editar",
+        "billingHistory": "Historial de Facturación",
+        "invoice": "Factura #{{number}}",
+        "paid": "Pagado"
+    },
+    "profile": {
+        "title": "Perfil",
+        "subtitle": "Xestiona os teus datos persoais",
+        "addImage": "Engadir imaxe",
+        "maxSize": "(Máx. XX MB)",
+        "name": "Nome",
+        "surname": "Apelidos",
+        "email": "Correo electrónico",
+        "save": "Gardar",
+        "security": "Seguridade",
+        "securitySubtitle": "Xestiona o teu contrasinal para manter a túa conta segura",
+        "currentPassword": "Contrasinal Actual",
+        "newPassword": "Novo Contrasinal",
+        "verifyPassword": "Verificar Novo Contrasinal",
+        "deleteAccount": "Eliminar Conta",
+        "deleteWarning": "Unce que elimines a túa conta, non hai volta atrás. Por favor, asegúrate.",
+        "deleteButton": "Eliminar Conta"
+    },
+    "validation": {
+        "nameRequired": "O teu nome debe ter polo menos 2 caracteres",
+        "surnameRequired": "O teu apelido debe ter polo menos 2 caracteres",
+        "passwordLength": "Debe ter polo menos 6 caracteres",
+        "passwordMatch": "O contrasinal que introduciches non coincide"
+    }
+}
