@@ -1,160 +1,126 @@
-import { Box, Typography, Card, CardContent, Button, Chip, Divider, Grid } from '@mui/material';
-import CheckCircleIcon from '@mui/icons-material/CheckCircle';
-import CancelIcon from '@mui/icons-material/Cancel';
-import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
-import PersonIcon from '@mui/icons-material/Person';
-
-const FeatureStatus = ({ active }: { active: boolean }) => {
-    return active ? (
-        <CheckCircleIcon sx={{ color: '#C4B5FD', bgcolor: '#F3F4F6', borderRadius: '50%', p: 0.5 }} />
-    ) : (
-        <CancelIcon sx={{ color: '#9CA3AF', bgcolor: '#F3F4F6', borderRadius: '50%', p: 0.5 }} />
-    );
-};
-
-const FeatureRow = ({ label, active }: { label: string; active: boolean }) => (
-    <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', py: 1 }}>
-        <Typography variant="body2" color="text.secondary">{label}</Typography>
-        <FeatureStatus active={active} />
-    </Box>
-);
+import { Box, Typography, Card, CardContent, Grid, Button, LinearProgress } from '@mui/material';
+import { useTranslation } from 'react-i18next';
 
 export const SubscriptionPage = () => {
+    const { t } = useTranslation();
+
     return (
         <Box sx={{ maxWidth: 1200, mx: 'auto' }}>
             <Typography variant="body2" color="text.secondary" gutterBottom>
-                Plan and subscription
+                {t('subscription.title')}
             </Typography>
-            <Typography variant="h4" sx={{ fontWeight: 600, color: '#374151', mb: 1 }}>
-                Plan and subscription
-            </Typography>
-            <Typography variant="body2" color="text.secondary" sx={{ mb: 4 }}>
-                Manage your plan, licenses, and subscription options
+            <Typography variant="h4" sx={{ fontWeight: 600, color: 'text.primary', mb: 1 }}>
+                {t('subscription.title')}
             </Typography>
 
             <Grid container spacing={3} sx={{ mb: 4 }}>
                 <Grid size={{ xs: 12, md: 8 }}>
-                    <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                    <Card sx={{ height: '100%', bgcolor: 'background.paper' }}>
                         <CardContent>
-                            <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', mb: 3 }}>
-                                <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-                                    <Typography variant="h5" fontWeight="bold">Trial</Typography>
-                                    <Chip label="Active" size="small" sx={{ bgcolor: '#D1FAE5', color: '#065F46', fontWeight: 600 }} />
+                            <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', mb: 2 }}>
+                                <Box>
+                                    <Typography variant="h6" fontWeight="bold" color="text.primary">
+                                        {t('subscription.standardPlan')}
+                                    </Typography>
+                                    <Typography variant="body2" color="text.secondary">
+                                        {t('subscription.renewsOn', { date: 'July 12th, 2024' })}
+                                    </Typography>
                                 </Box>
-                                <Button variant="contained" color="primary" sx={{ bgcolor: '#5B4D9D' }}>
-                                    Update plan
+                                <Button variant="contained" sx={{ bgcolor: '#E0E7FF', color: '#4338CA', '&:hover': { bgcolor: '#C7D2FE' }, textTransform: 'none', fontWeight: 600, boxShadow: 'none' }}>
+                                    {t('subscription.upgradePlan')}
                                 </Button>
                             </Box>
 
-                            <Box sx={{ display: 'flex', gap: 4 }}>
-                                <Box sx={{ display: 'flex', gap: 2, alignItems: 'center' }}>
-                                    <Box sx={{ bgcolor: '#F3F4F6', p: 1, borderRadius: 1 }}>
-                                        <CalendarTodayIcon color="action" />
-                                    </Box>
-                                    <Box>
-                                        <Typography variant="caption" color="text.secondary" display="block">Next renewal</Typography>
-                                        <Typography variant="body2">October 15, 2026</Typography>
-                                    </Box>
+                            <Typography variant="h3" fontWeight="bold" sx={{ mb: 1, color: 'text.primary' }}>
+                                $49.00 <Typography component="span" variant="body1" color="text.secondary">/ {t('subscription.billedMonthly')}</Typography>
+                            </Typography>
+                            <Typography variant="body2" color="text.secondary" sx={{ mb: 3 }}>
+                                {t('subscription.billedMonthly')}
+                            </Typography>
+
+                            <Box sx={{ mb: 3 }}>
+                                <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 1 }}>
+                                    <Typography variant="body2" fontWeight="medium" color="text.primary">{t('subscription.storage')}</Typography>
+                                    <Typography variant="body2" color="text.secondary">{t('subscription.used', { percentage: 75 })}</Typography>
                                 </Box>
-
-                                <Divider orientation="vertical" flexItem />
-
-                                <Box sx={{ display: 'flex', gap: 2, alignItems: 'center' }}>
-                                    <Box sx={{ bgcolor: '#F3F4F6', p: 1, borderRadius: 1 }}>
-                                        <PersonIcon color="action" />
-                                    </Box>
-                                    <Box>
-                                        <Typography variant="caption" color="text.secondary" display="block">License type</Typography>
-                                        <Typography variant="body2">Single seat</Typography>
-                                    </Box>
-                                </Box>
-
-                                <Divider orientation="vertical" flexItem />
-
-                                <Box sx={{ display: 'flex', alignItems: 'baseline', gap: 0.5 }}>
-                                    <Typography variant="h4" fontWeight="bold">0€</Typography>
-                                    <Typography variant="body2" color="text.secondary">/14 days</Typography>
-                                </Box>
+                                <LinearProgress variant="determinate" value={75} sx={{ height: 8, borderRadius: 4, bgcolor: 'action.hover', '& .MuiLinearProgress-bar': { bgcolor: 'primary.main' } }} />
+                                <Typography variant="caption" color="text.secondary" sx={{ mt: 0.5, display: 'block' }}>
+                                    {t('subscription.storageDetail', { used: 15, total: 20 })}
+                                </Typography>
                             </Box>
                         </CardContent>
                     </Card>
                 </Grid>
 
                 <Grid size={{ xs: 12, md: 4 }}>
-                    <Card sx={{ height: '100%' }}>
-                        <CardContent>
-                            <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 2 }}>
-                                <Typography variant="h6" fontWeight="bold">Payment method</Typography>
-                                <Button variant="outlined" color="inherit" size="small">Update</Button>
+                    <Card sx={{ height: '100%', bgcolor: 'primary.main', color: 'white' }}>
+                        <CardContent sx={{ display: 'flex', flexDirection: 'column', height: '100%', justifyContent: 'space-between' }}>
+                            <Box>
+                                <Typography variant="h6" fontWeight="bold" gutterBottom>
+                                    {t('subscription.needMoreSpace')}
+                                </Typography>
+                                <Typography variant="body2" sx={{ opacity: 0.9 }}>
+                                    {t('subscription.upgradePro')}
+                                </Typography>
                             </Box>
-                            <Typography variant="body2" color="text.secondary">
-                                There is no payment method registered. It will be saved upon your first purchase.
-                            </Typography>
+                            <Button variant="contained" sx={{ mt: 2, bgcolor: 'white', color: 'primary.main', '&:hover': { bgcolor: 'rgba(255, 255, 255, 0.9)' }, textTransform: 'none', fontWeight: 600 }}>
+                                {t('subscription.contactSales')}
+                            </Button>
                         </CardContent>
                     </Card>
                 </Grid>
             </Grid>
 
-            <Card>
+            <Typography variant="h6" sx={{ fontWeight: 600, color: 'text.primary', mb: 2 }}>
+                {t('subscription.paymentMethod')}
+            </Typography>
+            <Card sx={{ mb: 4, bgcolor: 'background.paper' }}>
+                <CardContent sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 2 }}>
+                    <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+                        <Box sx={{ width: 48, height: 32, bgcolor: 'action.hover', borderRadius: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid', borderColor: 'divider' }}>
+                            {/* Placeholder for Visa Logo */}
+                            <Typography variant="caption" fontWeight="bold" color="text.secondary">VISA</Typography>
+                        </Box>
+                        <Box>
+                            <Typography variant="subtitle2" fontWeight="bold" color="text.primary">
+                                {t('subscription.visaEnding', { last4: '4242' })}
+                            </Typography>
+                            <Typography variant="body2" color="text.secondary">
+                                {t('subscription.expiry', { date: '12/2024' })}
+                            </Typography>
+                        </Box>
+                    </Box>
+                    <Button variant="outlined" sx={{ textTransform: 'none', fontWeight: 600, borderColor: 'divider', color: 'text.primary' }}>
+                        {t('subscription.edit')}
+                    </Button>
+                </CardContent>
+            </Card>
+
+            <Typography variant="h6" sx={{ fontWeight: 600, color: 'text.primary', mb: 2 }}>
+                {t('subscription.billingHistory')}
+            </Typography>
+            <Card sx={{ bgcolor: 'background.paper' }}>
                 <CardContent>
-                    <Grid container spacing={4}>
-                        <Grid size={{ xs: 12, md: 4 }}>
-                            <Typography variant="h6" fontWeight="bold" gutterBottom>Feature</Typography>
-
-                            <Box sx={{ mb: 3 }}>
-                                <Typography variant="subtitle2" fontWeight="bold" gutterBottom>Filtering</Typography>
-                                <FeatureRow label="Filters by category" active={true} />
-                                <FeatureRow label="Export filters" active={true} />
-                                <FeatureRow label="Shared filters online" active={false} />
-                            </Box>
-
-                            <Box>
-                                <Typography variant="subtitle2" fontWeight="bold" gutterBottom>Ruling</Typography>
-                                <FeatureRow label="Audit rules" active={false} />
-                                <FeatureRow label="Cost estimating rules" active={true} />
-                                <FeatureRow label="Clash detection rules" active={false} />
-                                <FeatureRow label="Planning rules" active={false} />
-                                <FeatureRow label="Export rules" active={true} />
-                                <FeatureRow label="Shared rules online" active={false} />
-                                <FeatureRow label="Information Delivery Specification (IDS)" active={false} />
-                            </Box>
-
-                            <Box sx={{ mt: 3 }}>
-                                <Typography variant="subtitle2" fontWeight="bold" gutterBottom>Communications</Typography>
-                                {/* Add items if visible in full design, assuming truncated */}
-                            </Box>
-                        </Grid>
-
-                        <Grid size={{ xs: 12, md: 4 }}>
-                            <Typography variant="h6" fontWeight="bold" gutterBottom>Progress Certification</Typography>
-                            <FeatureRow label="Filters by category" active={true} />
-
-                            <Box sx={{ mt: 4 }}>
-                                <Typography variant="h6" fontWeight="bold" gutterBottom>File system</Typography>
-                                <Typography variant="subtitle2" fontWeight="bold" gutterBottom>Templates</Typography>
-                                <Divider sx={{ mb: 1 }} />
-                                <FeatureRow label="Default document" active={true} />
-                                <FeatureRow label="Custom document" active={false} />
-                                <FeatureRow label="Shared document" active={false} />
-
-                                <Typography variant="subtitle2" fontWeight="bold" sx={{ mt: 2 }} gutterBottom>Save Options</Typography>
-                                <Divider sx={{ mb: 1 }} />
-                                <FeatureRow label="Save/Autosave" active={true} />
-                            </Box>
-                        </Grid>
-
-                        <Grid size={{ xs: 12, md: 4 }}>
-                            {/* Spacer or 3rd column content */}
-                            <Box sx={{ mt: 0 }}> {/* Aligned with Progress Certification visually? No, it's Publish */}
-                                <Typography variant="h6" fontWeight="bold" gutterBottom>Publish</Typography>
-                                <Typography variant="subtitle2" fontWeight="bold" gutterBottom>Templates</Typography>
-                                <Divider sx={{ mb: 1 }} />
-                                <FeatureRow label="Default report" active={true} />
-                                <FeatureRow label="Custom report" active={false} />
-                                <FeatureRow label="Shared report" active={false} />
-                            </Box>
-                        </Grid>
-                    </Grid>
+                    <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', py: 2, borderBottom: '1px solid', borderColor: 'divider' }}>
+                        <Box>
+                            <Typography variant="subtitle2" fontWeight="bold" color="text.primary">{t('subscription.invoice', { number: '001' })}</Typography>
+                            <Typography variant="body2" color="text.secondary">July 12, 2024</Typography>
+                        </Box>
+                        <Box sx={{ textAlign: 'right' }}>
+                            <Typography variant="subtitle2" fontWeight="bold" color="text.primary">$49.00</Typography>
+                            <Typography variant="caption" sx={{ bgcolor: '#DEF7EC', color: '#03543F', px: 1, py: 0.5, borderRadius: 1, fontWeight: 'bold' }}>{t('subscription.paid')}</Typography>
+                        </Box>
+                    </Box>
+                    <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', py: 2 }}>
+                        <Box>
+                            <Typography variant="subtitle2" fontWeight="bold" color="text.primary">{t('subscription.invoice', { number: '002' })}</Typography>
+                            <Typography variant="body2" color="text.secondary">June 12, 2024</Typography>
+                        </Box>
+                        <Box sx={{ textAlign: 'right' }}>
+                            <Typography variant="subtitle2" fontWeight="bold" color="text.primary">$49.00</Typography>
+                            <Typography variant="caption" sx={{ bgcolor: '#DEF7EC', color: '#03543F', px: 1, py: 0.5, borderRadius: 1, fontWeight: 'bold' }}>{t('subscription.paid')}</Typography>
+                        </Box>
+                    </Box>
                 </CardContent>
             </Card>
         </Box>
