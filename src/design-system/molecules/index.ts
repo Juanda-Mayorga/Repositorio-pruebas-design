@@ -1,2 +1,5 @@
-export { PasswordField } from './PasswordField';
-export { FeedbackSnackbar } from './FeedbackSnackbar';
+export * from './FeedbackSnackbar';
+export * from './PasswordField';
+export * from './SidebarItem';
+export * from './SidebarSubItem';
+export * from './SidebarExpandableItem';
