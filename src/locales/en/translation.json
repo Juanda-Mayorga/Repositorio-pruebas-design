@@ -9,11 +9,11 @@
         "account": "Account",
         "profile": "Profile",
         "plan": "Plan and subscription",
-        "team": "Team members",
-        "notifications": "Notifications",
-        "integrations": "Integrations",
-        "help": "Help & Support",
-        "logout": "Log out"
+        "trainings": "Trainings",
+        "users": "Users",
+        "projects": "Projects",
+        "support": "Support",
+        "download": "Download"
     },
     "subscription": {
         "title": "Plan and subscription",
