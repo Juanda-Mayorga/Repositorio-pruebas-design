@@ -1,6 +1,58 @@
 import { createTheme } from '@mui/material';
 import type { PaletteMode } from '@mui/material';
 
+// Extend the Theme interface to include sidebar colors
+declare module '@mui/material/styles' {
+    interface Theme {
+        sidebar: {
+            default: {
+                bg: string;
+                text: string;
+            };
+            hover: {
+                bg: string;
+                text: string;
+            };
+            selected: {
+                bg: string;
+                text: string;
+            };
+            active: {
+                bg: string;
+                text: string;
+            };
+            disabled: {
+                bg: string;
+                text: string;
+            };
+        };
+    }
+    interface ThemeOptions {
+        sidebar?: {
+            default?: {
+                bg?: string;
+                text?: string;
+            };
+            hover?: {
+                bg?: string;
+                text?: string;
+            };
+            selected?: {
+                bg?: string;
+                text?: string;
+            };
+            active?: {
+                bg?: string;
+                text?: string;
+            };
+            disabled?: {
+                bg?: string;
+                text?: string;
+            };
+        };
+    }
+}
+
 export const getTheme = (mode: PaletteMode) => createTheme({
     palette: {
         mode,
@@ -40,6 +92,28 @@ export const getTheme = (mode: PaletteMode) => createTheme({
                 },
                 divider: 'rgba(255, 255, 255, 0.12)',
             }),
+    },
+    sidebar: {
+        default: {
+            bg: '#FFFFFF',
+            text: '#797D80',
+        },
+        hover: {
+            bg: '#FFFFFF',
+            text: '#7A6EBD',
+        },
+        selected: {
+            bg: '#F5F3FD',
+            text: '#7A6EBD',
+        },
+        active: {
+            bg: '#DFDAF9',
+            text: '#5C528E',
+        },
+        disabled: {
+            bg: '#E0E0E0',
+            text: '#6A6A6A',
+        },
     },
     typography: {
         fontFamily: '"Hind Siliguri", "Inter", "Roboto", "Helvetica", "Arial", sans-serif',
