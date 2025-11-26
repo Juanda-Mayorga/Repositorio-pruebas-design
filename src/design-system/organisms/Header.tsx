@@ -44,7 +44,7 @@ export const Header = () => {
     };
 
     return (
-        <Box component="header" sx={{ height: 64, borderBottom: '1px solid', borderColor: 'divider', display: 'flex', alignItems: 'center', justifyContent: 'space-between', px: 4, bgcolor: 'background.paper' }}>
+        <Box component="header" sx={{ height: 64, borderBottom: '1px solid', borderColor: 'divider', display: 'flex', alignItems: 'center', justifyContent: 'space-between', px: 4, bgcolor: '#FFFFFF' }}>
             <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
                 <Box sx={{ width: 32, height: 32, bgcolor: 'primary.main', borderRadius: 1 }} />
                 <Typography variant="h6" fontWeight="bold" color="text.primary">
