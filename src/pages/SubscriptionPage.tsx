@@ -77,7 +77,7 @@ export const SubscriptionPage = () => {
             <Card sx={{ mb: 4, bgcolor: 'background.paper' }}>
                 <CardContent sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 2 }}>
                     <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-                        <Box sx={{ width: 48, height: 32, bgcolor: 'action.hover', borderRadius: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid', borderColor: 'divider' }}>
+                        <Box sx={{ width: 48, height: 32, bgcolor: 'action.hover', borderRadius: 0.5, display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid', borderColor: 'divider' }}>
                             {/* Placeholder for Visa Logo */}
                             <Typography variant="caption" fontWeight="bold" color="text.secondary">VISA</Typography>
                         </Box>
@@ -108,7 +108,7 @@ export const SubscriptionPage = () => {
                         </Box>
                         <Box sx={{ textAlign: 'right' }}>
                             <Typography variant="subtitle2" fontWeight="bold" color="text.primary">$49.00</Typography>
-                            <Typography variant="caption" sx={{ bgcolor: '#DEF7EC', color: '#03543F', px: 1, py: 0.5, borderRadius: 1, fontWeight: 'bold' }}>{t('subscription.paid')}</Typography>
+                            <Typography variant="caption" sx={{ bgcolor: '#DEF7EC', color: '#03543F', px: 1, py: 0.5, borderRadius: 0.5, fontWeight: 'bold' }}>{t('subscription.paid')}</Typography>
                         </Box>
                     </Box>
                     <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', py: 2 }}>
@@ -118,7 +118,7 @@ export const SubscriptionPage = () => {
                         </Box>
                         <Box sx={{ textAlign: 'right' }}>
                             <Typography variant="subtitle2" fontWeight="bold" color="text.primary">$49.00</Typography>
-                            <Typography variant="caption" sx={{ bgcolor: '#DEF7EC', color: '#03543F', px: 1, py: 0.5, borderRadius: 1, fontWeight: 'bold' }}>{t('subscription.paid')}</Typography>
+                            <Typography variant="caption" sx={{ bgcolor: '#DEF7EC', color: '#03543F', px: 1, py: 0.5, borderRadius: 0.5, fontWeight: 'bold' }}>{t('subscription.paid')}</Typography>
                         </Box>
                     </Box>
                 </CardContent>
