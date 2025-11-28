@@ -62,7 +62,7 @@ export const SidebarItem = ({
         px: 2,
         pl: isSubItem ? 5 : 2,
         mb: 0.5,
-        borderRadius: '8px',
+        borderRadius: '4px',
         mx: 1,
         bgcolor: stateColors.bg,
         color: stateColors.text,

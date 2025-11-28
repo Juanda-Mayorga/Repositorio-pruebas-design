@@ -124,7 +124,7 @@ export const InputField: React.FC<InputFieldProps> = ({
             }}
             sx={{
                 '& .MuiOutlinedInput-root': {
-                    borderRadius: '8px',
+                    borderRadius: '4px',
                     backgroundColor: '#FFFFFF',
                     '& fieldset': {
                         borderColor: '#CCCCCC',
@@ -147,9 +147,12 @@ export const InputField: React.FC<InputFieldProps> = ({
                     },
                     '& input': {
                         color: '#434343',
+                        fontFamily: '"Hind Siliguri", sans-serif',
                         '&::placeholder': {
                             color: '#797D80',
                             opacity: 1,
+                            fontSize: '18px',
+                            fontFamily: '"Hind Siliguri", sans-serif',
                         },
                         '&.Mui-disabled': {
                             color: '#AAAAAA',
@@ -163,6 +166,8 @@ export const InputField: React.FC<InputFieldProps> = ({
                 },
                 '& .MuiInputLabel-root': {
                     color: '#434343',
+                    fontSize: '16px',
+                    fontFamily: '"Hind Siliguri", sans-serif',
                     '&.Mui-focused': {
                         color: '#434343',
                     },

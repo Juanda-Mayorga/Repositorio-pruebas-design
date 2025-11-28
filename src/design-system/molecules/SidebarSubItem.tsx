@@ -44,7 +44,7 @@ export const SidebarSubItem = ({
         px: 2,
         pl: '30px', // Align text with parent item (adjusted for new margin)
         mb: 0.5, // Add vertical margin between sub-items
-        borderRadius: '8px',
+        borderRadius: '4px',
         ml: '34px', // 28px (red line) + 1.5px (width) + ~4.5px gap
         mr: 1,
         bgcolor: stateColors.bg,
