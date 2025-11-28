@@ -165,11 +165,12 @@ export const getTheme = (mode: PaletteMode) => createTheme({
     },
     typography: {
         fontFamily: '"Hind Siliguri", "Inter", "Roboto", "Helvetica", "Arial", sans-serif',
-        // Website Hero Title (Inter with gradient)
+        // Website Hero Title (Inter Medium)
         h1: {
             fontFamily: '"Inter", "Hind Siliguri", sans-serif',
-            fontWeight: 500,
+            fontWeight: 500, // Medium
             lineHeight: 1.2,
+            letterSpacing: 0,
             fontSize: '32px',
             '@media (min-width:600px)': {
                 fontSize: '40px',

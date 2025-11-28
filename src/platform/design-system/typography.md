@@ -1,7 +1,8 @@
-# Typography Design System
+# Sistema de Diseño - Tipografía Plataforma
 
-## Overview
-This document defines the typography system for the MAMBA platform and website, including responsive breakpoints, font families, sizes, and special styles like gradient titles.
+> **Contexto:** Aplicación de plataforma (`/src/platform`)
+
+Este documento define el sistema de tipografía para la aplicación interna de MAMBA, incluyendo breakpoints responsive, familias tipográficas, tamaños y estilos especiales.
 
 ## Breakpoints
 The system uses 5 breakpoints for responsive design:
