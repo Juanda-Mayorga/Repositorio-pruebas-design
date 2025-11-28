@@ -4,7 +4,8 @@ import EditIcon from '@mui/icons-material/Edit';
 import { useTranslation } from 'react-i18next';
 import { InputField } from '../design-system/molecules/InputField';
 import { FeedbackSnackbar } from '../design-system/molecules/FeedbackSnackbar';
-import { ProfileDeleteAccountModal } from './components/ProfileDeleteAccountModal';
+// TODO: Uncomment when delete account feature is ready
+// import { ProfileDeleteAccountModal } from './components/ProfileDeleteAccountModal';
 
 export const ProfilePage = () => {
     const { t } = useTranslation();
@@ -30,7 +31,8 @@ export const ProfilePage = () => {
         severity: 'success' as 'success' | 'error' | 'warning' | 'info'
     });
 
-    const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
+    // TODO: Uncomment when delete account feature is ready
+    // const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
 
     const handleCloseSnackbar = () => {
         setSnackbar({ ...snackbar, open: false });
@@ -145,11 +147,12 @@ export const ProfilePage = () => {
 
 
 
-    const handleDeleteAccount = (reason: string, otherReason?: string) => {
-        console.log('Account deletion requested:', { reason, otherReason });
-        // Here you would typically make an API call to delete the account
-        // The modal will close when the user clicks the "Cerrar" button in the success state
-    };
+    // TODO: Uncomment when delete account feature is ready
+    // const handleDeleteAccount = (reason: string, otherReason?: string) => {
+    //     console.log('Account deletion requested:', { reason, otherReason });
+    //     // Here you would typically make an API call to delete the account
+    //     // The modal will close when the user clicks the "Cerrar" button in the success state
+    // };
 
     return (
         <Box sx={{ maxWidth: 800, mx: 'auto' }}>
@@ -299,7 +302,8 @@ export const ProfilePage = () => {
                 </CardContent>
             </Card>
 
-            <Box sx={{ mb: 2 }}>
+            {/* TODO: Uncomment when delete account feature is ready */}
+            {/* <Box sx={{ mb: 2 }}>
                 <Typography variant="h5" sx={{ fontWeight: 500, color: 'primary.950', mb: 1, fontSize: '32px', fontFamily: '"Hind Siliguri", sans-serif' }}>
                     {t('profile.deleteAccount')}
                 </Typography>
@@ -315,7 +319,6 @@ export const ProfilePage = () => {
                             La <Box component="span" sx={{ fontWeight: 700 }}>eliminación de tu cuenta es irreversible</Box> y requiere una <Box component="span" sx={{ fontWeight: 700 }}>solicitud de verificación</Box>. Para proteger tus datos y cumplir la normativa de seguridad, nuestro equipo procesa cada solicitud de baja de forma manual.
                         </Typography>
                         <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
-                            {/* //TODO: This should be refactored to a global component*/}
                             <Button
                                 variant="contained"
                                 color="error"
@@ -327,7 +330,7 @@ export const ProfilePage = () => {
                         </Box>
                     </Box>
                 </CardContent>
-            </Card>
+            </Card> */}
 
             <FeedbackSnackbar
                 open={snackbar.open}
@@ -336,12 +339,13 @@ export const ProfilePage = () => {
                 onClose={handleCloseSnackbar}
             />
 
-            <ProfileDeleteAccountModal
+            {/* TODO: Uncomment when delete account feature is ready */}
+            {/* <ProfileDeleteAccountModal
                 open={isDeleteModalOpen}
                 onClose={() => setIsDeleteModalOpen(false)}
                 userEmail={formData.email}
                 onConfirm={handleDeleteAccount}
-            />
+            /> */}
         </Box>
     );
 };
