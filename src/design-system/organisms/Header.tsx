@@ -7,6 +7,7 @@ import { useTheme } from '@mui/material/styles';
 import { useColorMode } from '../theme/ThemeContext';
 import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const languages = [
     { code: 'da', label: 'Dansk' },
@@ -29,6 +30,7 @@ export const Header = () => {
     const { t, i18n } = useTranslation();
     const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
     const open = Boolean(anchorEl);
+    const navigate = useNavigate();
 
     const handleClick = (event: React.MouseEvent<HTMLElement>) => {
         setAnchorEl(event.currentTarget);
@@ -45,7 +47,7 @@ export const Header = () => {
 
     return (
         <Box component="header" sx={{ height: 64, borderBottom: '1px solid', borderColor: 'divider', display: 'flex', alignItems: 'center', justifyContent: 'space-between', px: 4, bgcolor: '#FFFFFF' }}>
-            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, cursor: 'pointer' }} onClick={() => navigate('/resources')}>
                 <Box sx={{ width: 32, height: 32, bgcolor: 'primary.main', borderRadius: 1 }} />
                 <Typography variant="h6" fontWeight="bold" color="text.primary">
                     {t('header.title')} <Typography component="span" color="text.secondary" sx={{ fontWeight: 'normal' }}>/ {t('header.product')}</Typography>

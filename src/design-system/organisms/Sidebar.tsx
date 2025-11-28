@@ -108,7 +108,7 @@ export const Sidebar = ({ activePath = '/account' }: SidebarProps) => {
                         bgcolor: '#7A6EBD',
                         color: '#FFFFFF',
                         py: 1.5,
-                        borderRadius: '8px',
+                        borderRadius: '4px',
                         textTransform: 'none',
                         fontWeight: 600,
                         fontSize: '15px',
