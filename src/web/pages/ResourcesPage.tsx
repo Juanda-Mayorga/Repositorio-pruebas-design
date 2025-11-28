@@ -39,14 +39,18 @@ export const ResourcesPage = () => {
                         position: 'relative',
                         overflow: 'hidden'
                     }}>
-                        {/* Background decoration */}
+                        {/* Wave Background Image */}
                         <Box sx={{
                             position: 'absolute',
                             bottom: 0,
                             left: 0,
                             right: 0,
-                            height: '50%',
-                            background: 'linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(229,231,235,1) 100%)',
+                            height: '100%',
+                            backgroundImage: 'url(/src/assets/wave-background.png)',
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center bottom',
+                            backgroundRepeat: 'no-repeat',
+                            opacity: 0.6,
                             zIndex: 0
                         }} />
 
