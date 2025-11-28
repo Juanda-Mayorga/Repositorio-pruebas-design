@@ -229,12 +229,20 @@ export const ProfilePage = () => {
                         </Grid>
                     </Grid>
 
-                    <Box sx={{ mt: 3, display: 'flex', justifyContent: 'flex-end' }}>
+                    <Box sx={{ mt: 3, display: 'flex', justifyContent: { xs: 'center', md: 'flex-end' } }}>
                         {/* //TODO: This should be refactored to a global component*/}
                         <Button
                             variant="contained"
                             onClick={handleSavePersonalDetails}
-                            sx={{ bgcolor: 'primary.main', '&:hover': { bgcolor: 'primary.dark' }, textTransform: 'none', fontWeight: 600, boxShadow: 'none' }}
+                            fullWidth={true}
+                            sx={{
+                                bgcolor: 'primary.main',
+                                '&:hover': { bgcolor: 'primary.dark' },
+                                textTransform: 'none',
+                                fontWeight: 600,
+                                boxShadow: 'none',
+                                width: { xs: '100%', md: 'auto' } // Full width on mobile, auto on desktop
+                            }}
                         >
                             {t('profile.save')}
                         </Button>
@@ -289,12 +297,20 @@ export const ProfilePage = () => {
                         </Grid>
                     </Grid>
 
-                    <Box sx={{ mt: 3, display: 'flex', justifyContent: 'flex-end' }}>
+                    <Box sx={{ mt: 3, display: 'flex', justifyContent: { xs: 'center', md: 'flex-end' } }}>
                         {/* //TODO: This should be refactored to a global component*/}
                         <Button
                             variant="contained"
                             onClick={handleUpdatePassword}
-                            sx={{ bgcolor: 'primary.main', '&:hover': { bgcolor: 'primary.dark' }, textTransform: 'none', fontWeight: 600, boxShadow: 'none' }}
+                            fullWidth={true}
+                            sx={{
+                                bgcolor: 'primary.main',
+                                '&:hover': { bgcolor: 'primary.dark' },
+                                textTransform: 'none',
+                                fontWeight: 600,
+                                boxShadow: 'none',
+                                width: { xs: '100%', md: 'auto' } // Full width on mobile, auto on desktop
+                            }}
                         >
                             {t('profile.save')}
                         </Button>
