@@ -1,9 +1,10 @@
 import { useState } from 'react';
-import { Box, Typography, Card, CardContent, Grid, Button, Avatar, IconButton } from '@mui/material';
+import { Box, Typography, Card, CardContent, Grid, Avatar, IconButton } from '@mui/material';
 import EditIcon from '@mui/icons-material/Edit';
 import { useTranslation } from 'react-i18next';
 import { InputField } from '../design-system/molecules/InputField';
 import { FeedbackSnackbar } from '../design-system/molecules/FeedbackSnackbar';
+import { PrimaryButton } from '../design-system/atoms/PrimaryButton';
 // TODO: Uncomment when delete account feature is ready
 // import { ProfileDeleteAccountModal } from './components/ProfileDeleteAccountModal';
 
@@ -230,22 +231,15 @@ export const ProfilePage = () => {
                     </Grid>
 
                     <Box sx={{ mt: 3, display: 'flex', justifyContent: { xs: 'center', md: 'flex-end' } }}>
-                        {/* //TODO: This should be refactored to a global component*/}
-                        <Button
-                            variant="contained"
+                        <PrimaryButton
                             onClick={handleSavePersonalDetails}
                             fullWidth={true}
                             sx={{
-                                bgcolor: 'primary.main',
-                                '&:hover': { bgcolor: 'primary.dark' },
-                                textTransform: 'none',
-                                fontWeight: 600,
-                                boxShadow: 'none',
                                 width: { xs: '100%', md: 'auto' } // Full width on mobile, auto on desktop
                             }}
                         >
                             {t('profile.save')}
-                        </Button>
+                        </PrimaryButton>
                     </Box>
                 </CardContent>
             </Card>
@@ -298,22 +292,15 @@ export const ProfilePage = () => {
                     </Grid>
 
                     <Box sx={{ mt: 3, display: 'flex', justifyContent: { xs: 'center', md: 'flex-end' } }}>
-                        {/* //TODO: This should be refactored to a global component*/}
-                        <Button
-                            variant="contained"
+                        <PrimaryButton
                             onClick={handleUpdatePassword}
                             fullWidth={true}
                             sx={{
-                                bgcolor: 'primary.main',
-                                '&:hover': { bgcolor: 'primary.dark' },
-                                textTransform: 'none',
-                                fontWeight: 600,
-                                boxShadow: 'none',
                                 width: { xs: '100%', md: 'auto' } // Full width on mobile, auto on desktop
                             }}
                         >
                             {t('profile.save')}
-                        </Button>
+                        </PrimaryButton>
                     </Box>
                 </CardContent>
             </Card>

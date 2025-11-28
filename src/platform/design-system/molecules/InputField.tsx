@@ -148,10 +148,13 @@ export const InputField: React.FC<InputFieldProps> = ({
                     '& input': {
                         color: '#434343',
                         fontFamily: '"Hind Siliguri", sans-serif',
+                        height: '48px', // Set explicit height
+                        padding: '0 14px', // Adjust padding if needed to center text vertically with fixed height, or rely on flex
+                        boxSizing: 'border-box',
                         '&::placeholder': {
                             color: '#797D80',
                             opacity: 1,
-                            fontSize: '18px',
+                            fontSize: '16px', // Updated font size
                             fontFamily: '"Hind Siliguri", sans-serif',
                         },
                         '&.Mui-disabled': {
