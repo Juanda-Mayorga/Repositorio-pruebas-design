@@ -225,19 +225,16 @@ export const getTheme = (mode: PaletteMode) => createTheme({
         // Platform Page Title (Hind Siliguri)
         h4: {
             fontFamily: '"Hind Siliguri", sans-serif',
-            fontWeight: 600,
+            fontWeight: 500,
             lineHeight: 1.4,
-            fontSize: '18px',
+            fontSize: '24px', // Mobile base
             '@media (min-width:600px)': {
-                fontSize: '20px',
+                fontSize: '26px',
             },
             '@media (min-width:960px)': {
-                fontSize: '24px',
-            },
-            '@media (min-width:1280px)': {
                 fontSize: '28px',
             },
-            '@media (min-width:1920px)': {
+            '@media (min-width:1280px)': {
                 fontSize: '32px',
             },
         },
@@ -284,11 +281,8 @@ export const getTheme = (mode: PaletteMode) => createTheme({
             fontFamily: '"Hind Siliguri", sans-serif',
             fontWeight: 400,
             lineHeight: 1.6,
-            fontSize: '12px',
+            fontSize: '14px', // Mobile base
             '@media (min-width:960px)': {
-                fontSize: '14px',
-            },
-            '@media (min-width:1280px)': {
                 fontSize: '16px',
             },
         },

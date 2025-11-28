@@ -158,7 +158,7 @@ export const ProfilePage = () => {
     return (
         <Box sx={{ maxWidth: 800, mx: 'auto' }}>
             <Box sx={{ mb: 2 }}>
-                <Typography variant="h4" sx={{ fontWeight: 500, color: 'primary.950', mb: 1, fontSize: '32px', fontFamily: '"Hind Siliguri", sans-serif' }}>
+                <Typography variant="h4" sx={{ color: 'primary.950', mb: 1 }}>
                     {t('profile.title')}
                 </Typography>
                 <Typography variant="body1" color="text.secondary">
@@ -245,7 +245,7 @@ export const ProfilePage = () => {
             </Card>
 
             <Box sx={{ mb: 2 }}>
-                <Typography variant="h5" sx={{ fontWeight: 500, color: 'primary.950', mb: 1, fontSize: '32px', fontFamily: '"Hind Siliguri", sans-serif' }}>
+                <Typography variant="h4" sx={{ color: 'primary.950', mb: 1 }}>
                     {t('profile.security')}
                 </Typography>
                 <Typography variant="body1" color="text.secondary">
