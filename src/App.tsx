@@ -3,9 +3,9 @@ import CssBaseline from '@mui/material/CssBaseline';
 import { MainLayout } from './platform/design-system/templates/MainLayout';
 import { SubscriptionPage } from './platform/pages/SubscriptionPage';
 import { ProfilePage } from './platform/pages/ProfilePage';
-import { ResourcesPage } from './platform/pages/ResourcesPage';
-import { LandingPage } from './platform/pages/LandingPage';
-import { ContactPage } from './platform/pages/ContactPage';
+import { ResourcesPage } from './web/pages/ResourcesPage';
+import { LandingPage } from './web/pages/LandingPage';
+import { ContactPage } from './web/pages/ContactPage';
 import { ThemeProvider } from './platform/design-system/theme/ThemeContext';
 
 function App() {
