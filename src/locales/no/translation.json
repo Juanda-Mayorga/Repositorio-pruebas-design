@@ -52,6 +52,7 @@
         "verifyPassword": "Bekreft Nytt Passord",
         "newPasswordPlaceholder": "Nytt passord",
         "rewritePasswordPlaceholder": "Skriv passordet på nytt",
+        "emailTooltip": "E-post er din unike identifikator og kan ikke endres",
         "deleteAccount": "Slett Konto",
         "deleteAccountSubtitle": "Administrer den permanente lukkingen av kontoen din",
         "deleteWarning": "Sletting av kontoen din er irreversibel og krever en bekreftelsesforespørsel. For å beskytte dataene dine og overholde sikkerhetsforskrifter, behandler teamet vårt hver forespørsel om sletting manuelt.",

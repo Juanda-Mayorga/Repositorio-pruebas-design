@@ -52,6 +52,7 @@
         "verifyPassword": "Neues Passwort bestätigen",
         "newPasswordPlaceholder": "Neues Passwort",
         "rewritePasswordPlaceholder": "Passwort erneut eingeben",
+        "emailTooltip": "Die E-Mail ist Ihre eindeutige Kennung und kann nicht geändert werden",
         "deleteAccount": "Konto löschen",
         "deleteAccountSubtitle": "Verwalten Sie die dauerhafte Schließung Ihres Kontos",
         "deleteWarning": "Das Löschen Ihres Kontos ist irreversibel und erfordert eine Verifizierungsanfrage. Um Ihre Daten zu schützen und Sicherheitsvorschriften einzuhalten, bearbeitet unser Team jede Kündigungsanfrage manuell.",

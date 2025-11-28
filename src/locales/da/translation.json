@@ -52,6 +52,7 @@
         "verifyPassword": "Bekræft Ny Adgangskode",
         "newPasswordPlaceholder": "Ny adgangskode",
         "rewritePasswordPlaceholder": "Genskriv adgangskode",
+        "emailTooltip": "E-mailen er din unikke identifikator og kan ikke ændres",
         "deleteAccount": "Slet Konto",
         "deleteAccountSubtitle": "Administrer den permanente lukning af din konto",
         "deleteWarning": "Sletning af din konto er irreversibel og kræver en bekræftelsesanmodning. For at beskytte dine data og overholde sikkerhedsreglerne behandler vores team hver opsigelsesanmodning manuelt.",

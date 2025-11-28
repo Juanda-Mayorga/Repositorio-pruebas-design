@@ -57,6 +57,7 @@
         "verifyPassword": "Verificar Nueva Contraseña",
         "newPasswordPlaceholder": "Nueva contraseña",
         "rewritePasswordPlaceholder": "Reescribe la contraseña",
+        "emailTooltip": "El correo es tu identificador único y no se puede modificar",
         "deleteAccount": "Eliminar Cuenta",
         "deleteAccountSubtitle": "Gestiona el cierre permanente de tu cuenta",
         "deleteWarning": "La eliminación de tu cuenta es irreversible y requiere una solicitud de verificación. Para proteger tus datos y cumplir la normativa de seguridad, nuestro equipo procesa cada solicitud de baja de forma manual.",

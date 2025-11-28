@@ -52,6 +52,7 @@
         "verifyPassword": "Verificar Novo Contrasinal",
         "newPasswordPlaceholder": "Novo contrasinal",
         "rewritePasswordPlaceholder": "Reescribe o contrasinal",
+        "emailTooltip": "O correo é o teu identificador único e non se pode modificar",
         "deleteAccount": "Eliminar Conta",
         "deleteAccountSubtitle": "Xestiona o peche permanente da túa conta",
         "deleteWarning": "A eliminación da túa conta é irreversible e require unha solicitude de verificación. Para protexer os teus datos e cumprir a normativa de seguridade, o noso equipo procesa cada solicitude de baixa de forma manual.",

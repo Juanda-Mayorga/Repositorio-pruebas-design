@@ -52,7 +52,8 @@
         "verifyPassword": "Egiaztatu pasahitz berria",
         "newPasswordPlaceholder": "Pasahitz berria",
         "rewritePasswordPlaceholder": "Berridatzi pasahitza",
-        "deleteAccount": "Ezabatu kontua",
+        "emailTooltip": "Posta elektronikoa zure identifikatzaile bakarra da eta ezin da aldatu",
+        "deleteAccount": "Kontua ezabatu",
         "deleteAccountSubtitle": "Kudeatu zure kontuaren itxiera iraunkorra",
         "deleteWarning": "Zure kontua ezabatzea atzeraezina da eta egiaztapen-eskaera bat behar du. Zure datuak babesteko eta segurtasun-arauak betetzeko, gure taldeak baja-eskaera bakoitza eskuz prozesatzen du.",
         "deleteButton": "Hasi baja-prozesua"

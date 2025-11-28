@@ -52,6 +52,7 @@
         "verifyPassword": "Verificar Nova Contrasenya",
         "newPasswordPlaceholder": "Nova contrasenya",
         "rewritePasswordPlaceholder": "Reescriu la contrasenya",
+        "emailTooltip": "El correu és el teu identificador únic i no es pot modificar",
         "deleteAccount": "Eliminar Compte",
         "deleteAccountSubtitle": "Gestiona el tancament permanent del teu compte",
         "deleteWarning": "L'eliminació del teu compte és irreversible i requereix una sol·licitud de verificació. Per protegir les teves dades i complir la normativa de seguretat, el nostre equip processa cada sol·licitud de baixa de forma manual.",

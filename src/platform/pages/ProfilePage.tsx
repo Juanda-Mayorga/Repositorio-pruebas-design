@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { InputField } from '../design-system/molecules/InputField';
 import { FeedbackSnackbar } from '../design-system/molecules/FeedbackSnackbar';
 import { PrimaryButton } from '../design-system/atoms/PrimaryButton';
+import { CustomTooltip } from '../design-system/atoms/CustomTooltip';
 // TODO: Uncomment when delete account feature is ready
 // import { ProfileDeleteAccountModal } from './components/ProfileDeleteAccountModal';
 
@@ -220,13 +221,17 @@ export const ProfilePage = () => {
                             />
                         </Grid>
                         <Grid size={{ xs: 12 }}>
-                            <InputField
-                                variant="email"
-                                label={t('profile.email')}
-                                name="email"
-                                value={formData.email}
-                                disabled
-                            />
+                            <CustomTooltip title={t('profile.emailTooltip')}>
+                                <Box>
+                                    <InputField
+                                        variant="email"
+                                        label={t('profile.email')}
+                                        name="email"
+                                        value={formData.email}
+                                        disabled
+                                    />
+                                </Box>
+                            </CustomTooltip>
                         </Grid>
                     </Grid>
 

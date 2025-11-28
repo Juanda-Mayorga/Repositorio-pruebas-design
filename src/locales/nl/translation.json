@@ -52,6 +52,7 @@
         "verifyPassword": "Verifieer Nieuw Wachtwoord",
         "newPasswordPlaceholder": "Nieuw wachtwoord",
         "rewritePasswordPlaceholder": "Herschrijf wachtwoord",
+        "emailTooltip": "E-mail is uw unieke identificatie en kan niet worden gewijzigd",
         "deleteAccount": "Account verwijderen",
         "deleteAccountSubtitle": "Beheer de permanente sluiting van uw account",
         "deleteWarning": "Het verwijderen van uw account is onomkeerbaar en vereist een verificatieverzoek. Om uw gegevens te beschermen en te voldoen aan veiligheidsvoorschriften, verwerkt ons team elk opzeggingsverzoek handmatig.",
