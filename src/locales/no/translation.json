@@ -9,11 +9,11 @@
         "account": "Konto",
         "profile": "Profil",
         "plan": "Plan og abonnement",
-        "team": "Teammedlemmer",
-        "notifications": "Varsler",
-        "integrations": "Integrasjoner",
-        "help": "Hjelp og Støtte",
-        "logout": "Logg ut"
+        "trainings": "Opplæring",
+        "users": "Brukere",
+        "projects": "Prosjekter",
+        "support": "Support",
+        "download": "Last ned"
     },
     "subscription": {
         "title": "Plan og abonnement",
@@ -50,9 +50,28 @@
         "currentPassword": "Nåværende Passord",
         "newPassword": "Nytt Passord",
         "verifyPassword": "Bekreft Nytt Passord",
+        "newPasswordPlaceholder": "Nytt passord",
+        "rewritePasswordPlaceholder": "Skriv passordet på nytt",
         "deleteAccount": "Slett Konto",
-        "deleteWarning": "Når du sletter kontoen din, er det ingen vei tilbake. Vær sikker.",
-        "deleteButton": "Slett Konto"
+        "deleteAccountSubtitle": "Administrer den permanente lukkingen av kontoen din",
+        "deleteWarning": "Sletting av kontoen din er irreversibel og krever en bekreftelsesforespørsel. For å beskytte dataene dine og overholde sikkerhetsforskrifter, behandler teamet vårt hver forespørsel om sletting manuelt.",
+        "deleteButton": "Start sletteprosess"
+    },
+    "deleteModal": {
+        "title": "We are sorry to see you go",
+        "subtitle": "To help us improve, please tell us why you want to delete your account.",
+        "emailLabel": "Your email",
+        "reasonLabel": "Reason for leaving",
+        "reasonPlaceholder": "Select a reason...",
+        "otherReasonLabel": "Tell us more",
+        "otherReasonPlaceholder": "Write here...",
+        "cancelButton": "Cancel",
+        "deleteButton": "Send and delete account",
+        "reasons": {
+            "unused": "I don't use it",
+            "expensive": "It's too expensive",
+            "other": "Other"
+        }
     },
     "validation": {
         "nameRequired": "Navnet ditt må være minst 2 tegn langt",

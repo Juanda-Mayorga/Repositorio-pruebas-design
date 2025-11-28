@@ -9,11 +9,11 @@
         "account": "Account",
         "profile": "Profilo",
         "plan": "Piano e abbonamento",
-        "team": "Membri del team",
-        "notifications": "Notifiche",
-        "integrations": "Integrazioni",
-        "help": "Aiuto e Supporto",
-        "logout": "Disconnettersi"
+        "trainings": "Formazione",
+        "users": "Utenti",
+        "projects": "Progetti",
+        "support": "Supporto",
+        "download": "Scarica"
     },
     "subscription": {
         "title": "Piano e abbonamento",
@@ -50,9 +50,28 @@
         "currentPassword": "Password Attuale",
         "newPassword": "Nuova Password",
         "verifyPassword": "Verifica Nuova Password",
+        "newPasswordPlaceholder": "Nuova password",
+        "rewritePasswordPlaceholder": "Riscrivi la password",
         "deleteAccount": "Elimina Account",
-        "deleteWarning": "Una volta eliminato il tuo account, non si può tornare indietro. Per favore, sii certo.",
-        "deleteButton": "Elimina Account"
+        "deleteAccountSubtitle": "Gestisci la chiusura permanente del tuo account",
+        "deleteWarning": "L'eliminazione del tuo account è irreversibile e richiede una richiesta di verifica. Per proteggere i tuoi dati e rispettare le normative di sicurezza, il nostro team elabora manualmente ogni richiesta di cancellazione.",
+        "deleteButton": "Avvia processo di cancellazione"
+    },
+    "deleteModal": {
+        "title": "We are sorry to see you go",
+        "subtitle": "To help us improve, please tell us why you want to delete your account.",
+        "emailLabel": "Your email",
+        "reasonLabel": "Reason for leaving",
+        "reasonPlaceholder": "Select a reason...",
+        "otherReasonLabel": "Tell us more",
+        "otherReasonPlaceholder": "Write here...",
+        "cancelButton": "Cancel",
+        "deleteButton": "Send and delete account",
+        "reasons": {
+            "unused": "I don't use it",
+            "expensive": "It's too expensive",
+            "other": "Other"
+        }
     },
     "validation": {
         "nameRequired": "Il tuo nome deve contenere almeno 2 caratteri",

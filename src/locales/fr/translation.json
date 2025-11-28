@@ -9,11 +9,11 @@
         "account": "Compte",
         "profile": "Profil",
         "plan": "Plan et abonnement",
-        "team": "Membres de l'équipe",
-        "notifications": "Notifications",
-        "integrations": "Intégrations",
-        "help": "Aide et Support",
-        "logout": "Se déconnecter"
+        "trainings": "Formations",
+        "users": "Utilisateurs",
+        "projects": "Projets",
+        "support": "Support",
+        "download": "Télécharger"
     },
     "subscription": {
         "title": "Plan et abonnement",
@@ -50,9 +50,28 @@
         "currentPassword": "Mot de passe actuel",
         "newPassword": "Nouveau mot de passe",
         "verifyPassword": "Vérifier le nouveau mot de passe",
+        "newPasswordPlaceholder": "Nouveau mot de passe",
+        "rewritePasswordPlaceholder": "Réécrire le mot de passe",
         "deleteAccount": "Supprimer le compte",
-        "deleteWarning": "Une fois votre compte supprimé, il n'y a pas de retour en arrière. Soyez certain.",
-        "deleteButton": "Supprimer le compte"
+        "deleteAccountSubtitle": "Gérez la fermeture permanente de votre compte",
+        "deleteWarning": "La suppression de votre compte est irréversible et nécessite une demande de vérification. Pour protéger vos données et respecter les règles de sécurité, notre équipe traite chaque demande de résiliation manuellement.",
+        "deleteButton": "Lancer le processus de résiliation"
+    },
+    "deleteModal": {
+        "title": "We are sorry to see you go",
+        "subtitle": "To help us improve, please tell us why you want to delete your account.",
+        "emailLabel": "Your email",
+        "reasonLabel": "Reason for leaving",
+        "reasonPlaceholder": "Select a reason...",
+        "otherReasonLabel": "Tell us more",
+        "otherReasonPlaceholder": "Write here...",
+        "cancelButton": "Cancel",
+        "deleteButton": "Send and delete account",
+        "reasons": {
+            "unused": "I don't use it",
+            "expensive": "It's too expensive",
+            "other": "Other"
+        }
     },
     "validation": {
         "nameRequired": "Votre nom doit contenir au moins 2 caractères",

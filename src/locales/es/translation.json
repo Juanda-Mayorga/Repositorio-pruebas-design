@@ -55,9 +55,34 @@
         "currentPassword": "Contraseña Actual",
         "newPassword": "Nueva Contraseña",
         "verifyPassword": "Verificar Nueva Contraseña",
+        "newPasswordPlaceholder": "Nueva contraseña",
+        "rewritePasswordPlaceholder": "Reescribe la contraseña",
         "deleteAccount": "Eliminar Cuenta",
-        "deleteWarning": "Una vez que elimines tu cuenta, no hay vuelta atrás. Por favor, asegúrate.",
-        "deleteButton": "Eliminar Cuenta"
+        "deleteAccountSubtitle": "Gestiona el cierre permanente de tu cuenta",
+        "deleteWarning": "La eliminación de tu cuenta es irreversible y requiere una solicitud de verificación. Para proteger tus datos y cumplir la normativa de seguridad, nuestro equipo procesa cada solicitud de baja de forma manual.",
+        "deleteButton": "Eliminar cuenta"
+    },
+    "deleteModal": {
+        "title": "Lamentamos que te vayas",
+        "subtitle": "Para ayudarnos a mejorar, por favor, cuéntanos por qué quieres eliminar tu cuenta.",
+        "emailLabel": "Tu correo electrónico",
+        "reasonLabel": "Motivo de la baja",
+        "reasonPlaceholder": "Selecciona un motivo...",
+        "otherReasonLabel": "Cuéntanos más",
+        "otherReasonPlaceholder": "Escribe aquí...",
+        "cancelButton": "Cancelar",
+        "deleteButton": "Enviar y eliminar cuenta",
+        "processing": "Estamos procesando su solicitud",
+        "processingSubtitle": "Por favor, espere un momento...",
+        "successTitle": "Solicitud Recibida",
+        "successMessage": "Hemos recibido tu solicitud para eliminar la cuenta.",
+        "successSubtitle": "Nuestro equipo la procesará en breve.",
+        "closeButton": "Cerrar",
+        "reasons": {
+            "unused": "No lo uso",
+            "expensive": "Es muy caro",
+            "other": "Otro"
+        }
     },
     "validation": {
         "nameRequired": "Tu nombre debe tener al menos 2 caracteres",

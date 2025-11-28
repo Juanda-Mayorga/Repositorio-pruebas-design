@@ -50,9 +50,34 @@
         "currentPassword": "Current Password",
         "newPassword": "New Password",
         "verifyPassword": "Verify New Password",
+        "newPasswordPlaceholder": "New password",
+        "rewritePasswordPlaceholder": "Rewrite password",
         "deleteAccount": "Delete Account",
-        "deleteWarning": "Once you delete your account, there is no going back. Please be certain.",
-        "deleteButton": "Delete Account"
+        "deleteAccountSubtitle": "Manage the permanent closure of your account",
+        "deleteWarning": "Deleting your account is irreversible and requires a verification request. To protect your data and comply with security regulations, our team processes each cancellation request manually.",
+        "deleteButton": "Delete account"
+    },
+    "deleteModal": {
+        "title": "We are sorry to see you go",
+        "subtitle": "To help us improve, please tell us why you want to delete your account.",
+        "emailLabel": "Your email",
+        "reasonLabel": "Reason for leaving",
+        "reasonPlaceholder": "Select a reason...",
+        "otherReasonLabel": "Tell us more",
+        "otherReasonPlaceholder": "Write here...",
+        "cancelButton": "Cancel",
+        "deleteButton": "Send and delete account",
+        "processing": "We are processing your request",
+        "processingSubtitle": "Please wait a moment...",
+        "successTitle": "Request Received",
+        "successMessage": "We have received your request to delete the account.",
+        "successSubtitle": "Our team will process it shortly.",
+        "closeButton": "Close",
+        "reasons": {
+            "unused": "I don't use it",
+            "expensive": "It's too expensive",
+            "other": "Other"
+        }
     },
     "validation": {
         "nameRequired": "Your name must be at least 2 characters long",

@@ -9,11 +9,11 @@
         "account": "Conta",
         "profile": "Perfil",
         "plan": "Plano e assinatura",
-        "team": "Membros da equipe",
-        "notifications": "Notificações",
-        "integrations": "Integrações",
-        "help": "Ajuda e Suporte",
-        "logout": "Sair"
+        "trainings": "Treinamentos",
+        "users": "Usuários",
+        "projects": "Projetos",
+        "support": "Suporte",
+        "download": "Baixar"
     },
     "subscription": {
         "title": "Plano e assinatura",
@@ -50,9 +50,28 @@
         "currentPassword": "Senha Atual",
         "newPassword": "Nova Senha",
         "verifyPassword": "Verificar Nova Senha",
+        "newPasswordPlaceholder": "Nova senha",
+        "rewritePasswordPlaceholder": "Reescreva a senha",
         "deleteAccount": "Excluir Conta",
-        "deleteWarning": "Depois de excluir sua conta, não há como voltar atrás. Por favor, tenha certeza.",
-        "deleteButton": "Excluir Conta"
+        "deleteAccountSubtitle": "Gerencie o encerramento permanente da sua conta",
+        "deleteWarning": "A eliminação da sua conta é irreversível e requer um pedido de verificação. Para proteger os seus dados e cumprir os regulamentos de segurança, a nossa equipa processa cada pedido de cancelamento manualmente.",
+        "deleteButton": "Iniciar processo de cancelamento"
+    },
+    "deleteModal": {
+        "title": "We are sorry to see you go",
+        "subtitle": "To help us improve, please tell us why you want to delete your account.",
+        "emailLabel": "Your email",
+        "reasonLabel": "Reason for leaving",
+        "reasonPlaceholder": "Select a reason...",
+        "otherReasonLabel": "Tell us more",
+        "otherReasonPlaceholder": "Write here...",
+        "cancelButton": "Cancel",
+        "deleteButton": "Send and delete account",
+        "reasons": {
+            "unused": "I don't use it",
+            "expensive": "It's too expensive",
+            "other": "Other"
+        }
     },
     "validation": {
         "nameRequired": "O seu nome deve ter pelo menos 2 caracteres",

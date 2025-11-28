@@ -9,11 +9,11 @@
         "account": "Konto",
         "profile": "Profil",
         "plan": "Plan und Abonnement",
-        "team": "Teammitglieder",
-        "notifications": "Benachrichtigungen",
-        "integrations": "Integrationen",
-        "help": "Hilfe & Support",
-        "logout": "Abmelden"
+        "trainings": "Schulungen",
+        "users": "Benutzer",
+        "projects": "Projekte",
+        "support": "Support",
+        "download": "Herunterladen"
     },
     "subscription": {
         "title": "Plan und Abonnement",
@@ -50,9 +50,28 @@
         "currentPassword": "Aktuelles Passwort",
         "newPassword": "Neues Passwort",
         "verifyPassword": "Neues Passwort bestätigen",
+        "newPasswordPlaceholder": "Neues Passwort",
+        "rewritePasswordPlaceholder": "Passwort erneut eingeben",
         "deleteAccount": "Konto löschen",
-        "deleteWarning": "Sobald Sie Ihr Konto löschen, gibt es kein Zurück mehr. Bitte seien Sie sich sicher.",
-        "deleteButton": "Konto löschen"
+        "deleteAccountSubtitle": "Verwalten Sie die dauerhafte Schließung Ihres Kontos",
+        "deleteWarning": "Das Löschen Ihres Kontos ist irreversibel und erfordert eine Verifizierungsanfrage. Um Ihre Daten zu schützen und Sicherheitsvorschriften einzuhalten, bearbeitet unser Team jede Kündigungsanfrage manuell.",
+        "deleteButton": "Kündigungsprozess starten"
+    },
+    "deleteModal": {
+        "title": "We are sorry to see you go",
+        "subtitle": "To help us improve, please tell us why you want to delete your account.",
+        "emailLabel": "Your email",
+        "reasonLabel": "Reason for leaving",
+        "reasonPlaceholder": "Select a reason...",
+        "otherReasonLabel": "Tell us more",
+        "otherReasonPlaceholder": "Write here...",
+        "cancelButton": "Cancel",
+        "deleteButton": "Send and delete account",
+        "reasons": {
+            "unused": "I don't use it",
+            "expensive": "It's too expensive",
+            "other": "Other"
+        }
     },
     "validation": {
         "nameRequired": "Ihr Name muss mindestens 2 Zeichen lang sein",

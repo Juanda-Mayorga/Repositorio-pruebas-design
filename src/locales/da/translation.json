@@ -9,11 +9,11 @@
         "account": "Konto",
         "profile": "Profil",
         "plan": "Plan og abonnement",
-        "team": "Teammedlemmer",
-        "notifications": "Notifikationer",
-        "integrations": "Integrationer",
-        "help": "Hjælp & Support",
-        "logout": "Log ud"
+        "trainings": "Træning",
+        "users": "Brugere",
+        "projects": "Projekter",
+        "support": "Support",
+        "download": "Download"
     },
     "subscription": {
         "title": "Plan og abonnement",
@@ -50,9 +50,28 @@
         "currentPassword": "Nuværende Adgangskode",
         "newPassword": "Ny Adgangskode",
         "verifyPassword": "Bekræft Ny Adgangskode",
+        "newPasswordPlaceholder": "Ny adgangskode",
+        "rewritePasswordPlaceholder": "Genskriv adgangskode",
         "deleteAccount": "Slet Konto",
-        "deleteWarning": "Når du sletter din konto, er der ingen vej tilbage. Vær sikker.",
-        "deleteButton": "Slet Konto"
+        "deleteAccountSubtitle": "Administrer den permanente lukning af din konto",
+        "deleteWarning": "Sletning af din konto er irreversibel og kræver en bekræftelsesanmodning. For at beskytte dine data og overholde sikkerhedsreglerne behandler vores team hver opsigelsesanmodning manuelt.",
+        "deleteButton": "Start opsigelsesproces"
+    },
+    "deleteModal": {
+        "title": "We are sorry to see you go",
+        "subtitle": "To help us improve, please tell us why you want to delete your account.",
+        "emailLabel": "Your email",
+        "reasonLabel": "Reason for leaving",
+        "reasonPlaceholder": "Select a reason...",
+        "otherReasonLabel": "Tell us more",
+        "otherReasonPlaceholder": "Write here...",
+        "cancelButton": "Cancel",
+        "deleteButton": "Send and delete account",
+        "reasons": {
+            "unused": "I don't use it",
+            "expensive": "It's too expensive",
+            "other": "Other"
+        }
     },
     "validation": {
         "nameRequired": "Dit navn skal være mindst 2 tegn langt",

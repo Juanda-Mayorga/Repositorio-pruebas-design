@@ -9,11 +9,11 @@
         "account": "Conta",
         "profile": "Perfil",
         "plan": "Plan e subscrición",
-        "team": "Membros do equipo",
-        "notifications": "Notificacións",
-        "integrations": "Integracións",
-        "help": "Axuda e Soporte",
-        "logout": "Pechar sesión"
+        "trainings": "Formacións",
+        "users": "Usuarios",
+        "projects": "Proxectos",
+        "support": "Soporte",
+        "download": "Descargar"
     },
     "subscription": {
         "title": "Plan e subscrición",
@@ -50,9 +50,28 @@
         "currentPassword": "Contrasinal Actual",
         "newPassword": "Novo Contrasinal",
         "verifyPassword": "Verificar Novo Contrasinal",
+        "newPasswordPlaceholder": "Novo contrasinal",
+        "rewritePasswordPlaceholder": "Reescribe o contrasinal",
         "deleteAccount": "Eliminar Conta",
-        "deleteWarning": "Unce que elimines a túa conta, non hai volta atrás. Por favor, asegúrate.",
-        "deleteButton": "Eliminar Conta"
+        "deleteAccountSubtitle": "Xestiona o peche permanente da túa conta",
+        "deleteWarning": "A eliminación da túa conta é irreversible e require unha solicitude de verificación. Para protexer os teus datos e cumprir a normativa de seguridade, o noso equipo procesa cada solicitude de baixa de forma manual.",
+        "deleteButton": "Iniciar proceso de baixa"
+    },
+    "deleteModal": {
+        "title": "Lamentamos que te vayas",
+        "subtitle": "Para ayudarnos a mejorar, por favor, cuéntanos por qué quieres eliminar tu cuenta.",
+        "emailLabel": "Tu correo electrónico",
+        "reasonLabel": "Motivo de la baja",
+        "reasonPlaceholder": "Selecciona un motivo...",
+        "otherReasonLabel": "Cuéntanos más",
+        "otherReasonPlaceholder": "Escribe aquí...",
+        "cancelButton": "Cancelar",
+        "deleteButton": "Enviar y eliminar cuenta",
+        "reasons": {
+            "unused": "No lo uso",
+            "expensive": "Es muy caro",
+            "other": "Otro"
+        }
     },
     "validation": {
         "nameRequired": "O teu nome debe ter polo menos 2 caracteres",

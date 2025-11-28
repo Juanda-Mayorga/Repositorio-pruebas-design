@@ -9,11 +9,11 @@
         "account": "Account",
         "profile": "Profiel",
         "plan": "Plan en abonnement",
-        "team": "Teamleden",
-        "notifications": "Meldingen",
-        "integrations": "Integraties",
-        "help": "Hulp & Ondersteuning",
-        "logout": "Uitloggen"
+        "trainings": "Trainingen",
+        "users": "Gebruikers",
+        "projects": "Projecten",
+        "support": "Ondersteuning",
+        "download": "Downloaden"
     },
     "subscription": {
         "title": "Plan en abonnement",
@@ -50,9 +50,28 @@
         "currentPassword": "Huidig Wachtwoord",
         "newPassword": "Nieuw Wachtwoord",
         "verifyPassword": "Verifieer Nieuw Wachtwoord",
+        "newPasswordPlaceholder": "Nieuw wachtwoord",
+        "rewritePasswordPlaceholder": "Herschrijf wachtwoord",
         "deleteAccount": "Account verwijderen",
-        "deleteWarning": "Zodra u uw account verwijdert, is er geen weg terug. Wees er zeker van.",
-        "deleteButton": "Account verwijderen"
+        "deleteAccountSubtitle": "Beheer de permanente sluiting van uw account",
+        "deleteWarning": "Het verwijderen van uw account is onomkeerbaar en vereist een verificatieverzoek. Om uw gegevens te beschermen en te voldoen aan veiligheidsvoorschriften, verwerkt ons team elk opzeggingsverzoek handmatig.",
+        "deleteButton": "Start opzeggingsproces"
+    },
+    "deleteModal": {
+        "title": "We are sorry to see you go",
+        "subtitle": "To help us improve, please tell us why you want to delete your account.",
+        "emailLabel": "Your email",
+        "reasonLabel": "Reason for leaving",
+        "reasonPlaceholder": "Select a reason...",
+        "otherReasonLabel": "Tell us more",
+        "otherReasonPlaceholder": "Write here...",
+        "cancelButton": "Cancel",
+        "deleteButton": "Send and delete account",
+        "reasons": {
+            "unused": "I don't use it",
+            "expensive": "It's too expensive",
+            "other": "Other"
+        }
     },
     "validation": {
         "nameRequired": "Uw naam moet minimaal 2 tekens lang zijn",
