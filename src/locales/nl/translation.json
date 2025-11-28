@@ -78,5 +78,9 @@
         "surnameRequired": "Uw achternaam moet minimaal 2 tekens lang zijn",
         "passwordLength": "Moet minimaal 6 tekens lang zijn",
         "passwordMatch": "Het ingevoerde wachtwoord komt niet overeen"
+    },
+    "feedback": {
+        "profileSaved": "Profiel succesvol opgeslagen!",
+        "passwordUpdated": "Wachtwoord succesvol bijgewerkt!"
     }
 }

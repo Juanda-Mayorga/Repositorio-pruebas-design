@@ -78,5 +78,9 @@
         "surnameRequired": "O teu apelido debe ter polo menos 2 caracteres",
         "passwordLength": "Debe ter polo menos 6 caracteres",
         "passwordMatch": "O contrasinal que introduciches non coincide"
+    },
+    "feedback": {
+        "profileSaved": "Perfil gardado correctamente!",
+        "passwordUpdated": "Contrasinal actualizado correctamente!"
     }
 }

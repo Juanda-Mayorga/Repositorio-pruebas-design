@@ -78,5 +78,9 @@
         "surnameRequired": "Etternavnet ditt må være minst 2 tegn langt",
         "passwordLength": "Må være minst 6 tegn langt",
         "passwordMatch": "Passordet du skrev inn stemmer ikke"
+    },
+    "feedback": {
+        "profileSaved": "Profil lagret!",
+        "passwordUpdated": "Passord oppdatert!"
     }
 }

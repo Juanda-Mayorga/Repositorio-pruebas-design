@@ -78,5 +78,9 @@
         "surnameRequired": "Zure abizenak gutxienez 2 karaktere izan behar ditu",
         "passwordLength": "Gutxienez 6 karaktere izan behar ditu",
         "passwordMatch": "Sartu duzun pasahitza ez dator bat"
+    },
+    "feedback": {
+        "profileSaved": "Profila ondo gorde da!",
+        "passwordUpdated": "Pasahitza ondo eguneratu da!"
     }
 }

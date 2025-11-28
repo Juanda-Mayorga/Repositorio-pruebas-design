@@ -78,5 +78,9 @@
         "surnameRequired": "O seu sobrenome deve ter pelo menos 2 caracteres",
         "passwordLength": "Deve ter pelo menos 6 caracteres",
         "passwordMatch": "A senha que você digitou não corresponde"
+    },
+    "feedback": {
+        "profileSaved": "Perfil guardado com sucesso!",
+        "passwordUpdated": "Palavra-passe atualizada com sucesso!"
     }
 }

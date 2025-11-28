@@ -77,6 +77,10 @@
         "nameRequired": "Dit navn skal være mindst 2 tegn langt",
         "surnameRequired": "Dit efternavn skal være mindst 2 tegn langt",
         "passwordLength": "Skal være mindst 6 tegn langt",
-        "passwordMatch": "Den adgangskode, du har indtastet, stemmer ikke overens"
+        "passwordMatch": "Adgangskoden du indtastede matcher ikke"
+    },
+    "feedback": {
+        "profileSaved": "Profil gemt!",
+        "passwordUpdated": "Adgangskode opdateret!"
     }
 }

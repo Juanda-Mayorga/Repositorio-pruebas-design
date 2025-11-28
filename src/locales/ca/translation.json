@@ -78,5 +78,9 @@
         "surnameRequired": "El teu cognom ha de tenir almenys 2 caràcters",
         "passwordLength": "Ha de tenir almenys 6 caràcters",
         "passwordMatch": "La contrasenya que has introduït no coincideix"
+    },
+    "feedback": {
+        "profileSaved": "Perfil desat correctament!",
+        "passwordUpdated": "Contrasenya actualitzada correctament!"
     }
 }

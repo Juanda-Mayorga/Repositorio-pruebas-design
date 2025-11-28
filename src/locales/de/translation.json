@@ -78,5 +78,9 @@
         "surnameRequired": "Ihr Nachname muss mindestens 2 Zeichen lang sein",
         "passwordLength": "Muss mindestens 6 Zeichen lang sein",
         "passwordMatch": "Das eingegebene Passwort stimmt nicht überein"
+    },
+    "feedback": {
+        "profileSaved": "Profil erfolgreich gespeichert!",
+        "passwordUpdated": "Passwort erfolgreich aktualisiert!"
     }
 }
