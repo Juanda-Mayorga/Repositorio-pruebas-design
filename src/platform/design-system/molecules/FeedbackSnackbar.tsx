@@ -1,5 +1,5 @@
 import React from 'react';
-import { Snackbar, Box, Typography, IconButton } from '@mui/material';
+import { Snackbar, Box, Typography, IconButton, useMediaQuery, useTheme } from '@mui/material';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline';
 import WarningAmberIcon from '@mui/icons-material/WarningAmber';
@@ -21,30 +21,48 @@ export const FeedbackSnackbar: React.FC<FeedbackSnackbarProps> = ({
     onClose,
     subtitle
 }) => {
-    const getBorderColor = () => {
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
+    const getColors = () => {
         switch (severity) {
             case 'success':
-                return '#10B981';
+                return { main: '#10B981', bg: '#ECFDF5' }; // Green-500, Green-50
             case 'error':
-                return '#FECACA';
+                return { main: '#F04438', bg: '#FEF2F2' }; // Red-500, Red-50 (Updated for better contrast)
             case 'warning':
-                return '#FDE68A';
+                return { main: '#F59E0B', bg: '#FFFBEB' }; // Amber-500, Amber-50
             case 'info':
             default:
-                return '#BFDBFE';
+                return { main: '#3B82F6', bg: '#EFF6FF' }; // Blue-500, Blue-50
         }
     };
+
+    const colors = getColors();
 
     return (
         <Snackbar
             open={open}
             autoHideDuration={4000}
             onClose={onClose}
-            anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
-            sx={{
-                top: '80px !important',
-                right: '24px !important'
-            }}
+            anchorOrigin={
+                isMobile
+                    ? { vertical: 'top', horizontal: 'center' }
+                    : { vertical: 'top', horizontal: 'right' }
+            }
+            sx={
+                isMobile
+                    ? {
+                        top: '68px !important', // Header (64px) + 4px
+                        left: '16px !important',
+                        right: '16px !important',
+                        transform: 'none !important'
+                    }
+                    : {
+                        top: '68px !important', // Header (64px) + 4px
+                        right: '24px !important'
+                    }
+            }
         >
             <Box
                 sx={{
@@ -54,8 +72,9 @@ export const FeedbackSnackbar: React.FC<FeedbackSnackbarProps> = ({
                     bgcolor: '#FFFFFF',
                     border: `1px solid #E5E7EB`,
                     borderRadius: '4px',
-                    minWidth: '320px',
-                    maxWidth: '400px',
+                    minWidth: isMobile ? 'auto' : '320px',
+                    maxWidth: isMobile ? 'none' : '400px',
+                    width: isMobile ? '100%' : 'auto',
                     boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.1)',
                     position: 'relative',
                     overflow: 'hidden',
@@ -66,7 +85,7 @@ export const FeedbackSnackbar: React.FC<FeedbackSnackbarProps> = ({
                 <Box sx={{
                     width: '4px',
                     height: '100%',
-                    bgcolor: getBorderColor(),
+                    bgcolor: colors.main,
                     position: 'absolute',
                     left: 0,
                     top: 0
@@ -77,17 +96,17 @@ export const FeedbackSnackbar: React.FC<FeedbackSnackbarProps> = ({
                     width: 32,
                     height: 32,
                     borderRadius: '4px',
-                    bgcolor: getBorderColor(),
+                    bgcolor: colors.bg,
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
                     flexShrink: 0,
                     ml: 2
                 }}>
-                    {severity === 'success' && <CheckCircleOutlineIcon sx={{ fontSize: 20, color: '#FFFFFF' }} />}
-                    {severity === 'error' && <ErrorOutlineIcon sx={{ fontSize: 20, color: '#FFFFFF' }} />}
-                    {severity === 'warning' && <WarningAmberIcon sx={{ fontSize: 20, color: '#FFFFFF' }} />}
-                    {severity === 'info' && <InfoOutlinedIcon sx={{ fontSize: 20, color: '#FFFFFF' }} />}
+                    {severity === 'success' && <CheckCircleOutlineIcon sx={{ fontSize: 20, color: colors.main }} />}
+                    {severity === 'error' && <ErrorOutlineIcon sx={{ fontSize: 20, color: colors.main }} />}
+                    {severity === 'warning' && <WarningAmberIcon sx={{ fontSize: 20, color: colors.main }} />}
+                    {severity === 'info' && <InfoOutlinedIcon sx={{ fontSize: 20, color: colors.main }} />}
                 </Box>
 
                 {/* Text content */}
