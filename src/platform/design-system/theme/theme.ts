@@ -204,23 +204,23 @@ export const getTheme = (mode: PaletteMode) => createTheme({
                 fontSize: '48px',
             },
         },
-        // Website Subsection Title (Inter)
+        // Website Card Title (Inter Medium) - Used in Resources page cards
         h3: {
             fontFamily: '"Inter", "Hind Siliguri", sans-serif',
-            fontWeight: 600,
+            fontWeight: 500, // Medium
             lineHeight: 1.4,
-            fontSize: '20px',
+            fontSize: '18px', // xs: 375x812
             '@media (min-width:600px)': {
-                fontSize: '24px',
+                fontSize: '20px', // sm: 744x1133
             },
             '@media (min-width:960px)': {
-                fontSize: '28px',
+                fontSize: '24px', // md: 1133x744
             },
             '@media (min-width:1280px)': {
-                fontSize: '32px',
+                fontSize: '28px', // lg: 1440x1024
             },
             '@media (min-width:1920px)': {
-                fontSize: '36px',
+                fontSize: '32px', // xl: 1920x1080
             },
         },
         // Platform Page Title (Hind Siliguri)

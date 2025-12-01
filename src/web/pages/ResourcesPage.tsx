@@ -57,9 +57,9 @@ export const ResourcesPage = () => {
                         <Grid container spacing={3} sx={{ position: 'relative', zIndex: 1 }}>
                             {/* Tips & Tricks Card */}
                             <Grid size={{ xs: 12, md: 3 }}>
-                                <Card sx={{ height: '100%', borderRadius: 2, borderTop: '4px solid #6366F1' }}>
+                                <Card sx={{ height: '100%', borderTop: '4px solid #6366F1' }}>
                                     <CardContent sx={{ display: 'flex', flexDirection: 'column', height: '100%', p: 3 }}>
-                                        <Typography variant="h5" sx={{ fontWeight: 600, mb: 2, color: '#4338CA', fontFamily: 'Hind Siliguri' }}>
+                                        <Typography variant="h3" sx={{ mb: 2, color: '#5C528E' }}>
                                             Tips&Tricks
                                         </Typography>
                                         <Typography variant="body2" color="text.secondary" sx={{ mb: 3, flexGrow: 1, fontFamily: 'Hind Siliguri' }}>
@@ -74,9 +74,9 @@ export const ResourcesPage = () => {
 
                             {/* Community Card */}
                             <Grid size={{ xs: 12, md: 3 }}>
-                                <Card sx={{ height: '100%', borderRadius: 2, borderTop: '4px solid #FBBF24' }}>
+                                <Card sx={{ height: '100%', borderTop: '4px solid #FBBF24' }}>
                                     <CardContent sx={{ display: 'flex', flexDirection: 'column', height: '100%', p: 3 }}>
-                                        <Typography variant="h5" sx={{ fontWeight: 600, mb: 2, color: '#4338CA', fontFamily: 'Hind Siliguri' }}>
+                                        <Typography variant="h3" sx={{ mb: 2, color: '#5C528E' }}>
                                             Community
                                         </Typography>
                                         <Typography variant="body2" color="text.secondary" sx={{ mb: 3, flexGrow: 1, fontFamily: 'Hind Siliguri' }}>
@@ -96,9 +96,9 @@ export const ResourcesPage = () => {
 
                             {/* Documentation Card */}
                             <Grid size={{ xs: 12, md: 3 }}>
-                                <Card sx={{ height: '100%', borderRadius: 2, borderTop: '4px solid #6366F1' }}>
+                                <Card sx={{ height: '100%', borderTop: '4px solid #6366F1' }}>
                                     <CardContent sx={{ display: 'flex', flexDirection: 'column', height: '100%', p: 3 }}>
-                                        <Typography variant="h5" sx={{ fontWeight: 600, mb: 2, color: '#4338CA', fontFamily: 'Hind Siliguri' }}>
+                                        <Typography variant="h3" sx={{ mb: 2, color: '#5C528E' }}>
                                             Documentation
                                         </Typography>
                                         <Typography variant="body2" color="text.secondary" sx={{ mb: 3, flexGrow: 1, fontFamily: 'Hind Siliguri' }}>
@@ -113,9 +113,9 @@ export const ResourcesPage = () => {
 
                             {/* Support Card */}
                             <Grid size={{ xs: 12, md: 3 }}>
-                                <Card sx={{ height: '100%', borderRadius: 2, borderTop: '4px solid #FBBF24' }}>
+                                <Card sx={{ height: '100%', borderTop: '4px solid #FBBF24' }}>
                                     <CardContent sx={{ display: 'flex', flexDirection: 'column', height: '100%', p: 3 }}>
-                                        <Typography variant="h5" sx={{ fontWeight: 600, mb: 2, color: '#4338CA', fontFamily: 'Hind Siliguri' }}>
+                                        <Typography variant="h3" sx={{ mb: 2, color: '#5C528E' }}>
                                             Support
                                         </Typography>
                                         <Typography variant="body2" color="text.secondary" sx={{ mb: 3, flexGrow: 1, fontFamily: 'Hind Siliguri' }}>

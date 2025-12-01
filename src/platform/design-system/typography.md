@@ -42,11 +42,13 @@ The system uses 5 breakpoints for responsive design:
 - **Weight**: 600 (SemiBold)
 - **Line Height**: 1.3
 
-#### Subsection Title (h3)
+#### Card Title (h3)
 - **Font**: Inter
-- **Size**: 36px (xl), 32px (lg), 28px (md), 24px (sm), 20px (xs)
-- **Weight**: 600 (SemiBold)
+- **Size**: 32px (xl), 28px (lg), 24px (md), 20px (sm), 18px (xs)
+- **Weight**: 500 (Medium)
 - **Line Height**: 1.4
+- **Usage**: Card titles in Resources page
+- **Color**: #5C528E (mambaPrimary[800])
 
 ### Platform Headings (Hind Siliguri)
 
