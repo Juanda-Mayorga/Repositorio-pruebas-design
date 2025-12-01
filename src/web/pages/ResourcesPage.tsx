@@ -3,8 +3,11 @@ import { PublicHeader } from '../design-system/organisms/PublicHeader';
 import { Footer } from '../design-system/organisms/Footer';
 import TelegramIcon from '@mui/icons-material/Telegram';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import { useTranslation } from 'react-i18next';
 
 export const ResourcesPage = () => {
+    const { t } = useTranslation();
+
     return (
         <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', bgcolor: '#FCFCFC' }}>
             <PublicHeader />
@@ -23,10 +26,10 @@ export const ResourcesPage = () => {
                             backgroundClip: 'text',
                         }}
                     >
-                        Learn, connect and solve faster
+                        {t('resources.hero.title')}
                     </Typography>
                     <Typography variant="h6" sx={{ color: 'text.secondary', maxWidth: 600, mx: 'auto', fontWeight: 'normal', fontFamily: 'Hind Siliguri' }}>
-                        Access FAQs, practical tips, community insights and dedicated support for MAMBA
+                        {t('resources.hero.subtitle')}
                     </Typography>
                 </Box>
 
@@ -60,13 +63,13 @@ export const ResourcesPage = () => {
                                 <Card sx={{ height: '100%', borderTop: '4px solid #736D8D' }}>
                                     <CardContent sx={{ display: 'flex', flexDirection: 'column', height: '100%', p: 3 }}>
                                         <Typography variant="h3" sx={{ mb: 2, color: '#5C528E' }}>
-                                            Tips&Tricks
+                                            {t('resources.cards.tips.title')}
                                         </Typography>
                                         <Typography variant="body1" sx={{ mb: 3, flexGrow: 1, color: '#797979' }}>
-                                            Discover expert shortcuts and practical use cases to work faster and smarter
+                                            {t('resources.cards.tips.description')}
                                         </Typography>
                                         <Button variant="outlined" fullWidth sx={{ fontFamily: 'Hind Siliguri' }}>
-                                            See Tips
+                                            {t('resources.cards.tips.button')}
                                         </Button>
                                     </CardContent>
                                 </Card>
@@ -77,10 +80,10 @@ export const ResourcesPage = () => {
                                 <Card sx={{ height: '100%', borderTop: '4px solid #FDD550' }}>
                                     <CardContent sx={{ display: 'flex', flexDirection: 'column', height: '100%', p: 3 }}>
                                         <Typography variant="h3" sx={{ mb: 2, color: '#5C528E' }}>
-                                            Community
+                                            {t('resources.cards.community.title')}
                                         </Typography>
                                         <Typography variant="body1" sx={{ mb: 3, flexGrow: 1, color: '#797979' }}>
-                                            MAMBA users share tips, ask questions, and exchange best practices join our community
+                                            {t('resources.cards.community.description')}
                                         </Typography>
                                         <Box sx={{ display: 'flex', gap: 2 }}>
                                             <Button variant="soft" fullWidth>
@@ -99,13 +102,13 @@ export const ResourcesPage = () => {
                                 <Card sx={{ height: '100%', borderTop: '4px solid #736D8D' }}>
                                     <CardContent sx={{ display: 'flex', flexDirection: 'column', height: '100%', p: 3 }}>
                                         <Typography variant="h3" sx={{ mb: 2, color: '#5C528E' }}>
-                                            Documentation
+                                            {t('resources.cards.documentation.title')}
                                         </Typography>
                                         <Typography variant="body1" sx={{ mb: 3, flexGrow: 1, color: '#797979' }}>
-                                            Explore answers to the most frequent questions about using MAMBA
+                                            {t('resources.cards.documentation.description')}
                                         </Typography>
                                         <Button variant="outlined" fullWidth sx={{ fontFamily: 'Hind Siliguri' }}>
-                                            Quick Help
+                                            {t('resources.cards.documentation.button')}
                                         </Button>
                                     </CardContent>
                                 </Card>
@@ -116,13 +119,13 @@ export const ResourcesPage = () => {
                                 <Card sx={{ height: '100%', borderTop: '4px solid #FDD550' }}>
                                     <CardContent sx={{ display: 'flex', flexDirection: 'column', height: '100%', p: 3 }}>
                                         <Typography variant="h3" sx={{ mb: 2, color: '#5C528E' }}>
-                                            Support
+                                            {t('resources.cards.support.title')}
                                         </Typography>
                                         <Typography variant="body1" sx={{ mb: 3, flexGrow: 1, color: '#797979' }}>
-                                            Log in to your MAMBA account so we can help you faster:
+                                            {t('resources.cards.support.description')}
                                         </Typography>
                                         <Button variant="outlined" fullWidth sx={{ fontFamily: 'Hind Siliguri' }}>
-                                            Log in
+                                            {t('resources.cards.support.button')}
                                         </Button>
                                     </CardContent>
                                 </Card>

@@ -87,7 +87,33 @@
         "passwordMatch": "The password you enteres does not match"
     },
     "feedback": {
-        "profileSaved": "Profile saved successfully!",
         "passwordUpdated": "Password updated successfully!"
+    },
+    "resources": {
+        "hero": {
+            "title": "Learn, connect and solve faster",
+            "subtitle": "Access FAQs, practical tips, community insights and dedicated support for MAMBA"
+        },
+        "cards": {
+            "tips": {
+                "title": "Tips&Tricks",
+                "description": "Discover expert shortcuts and practical use cases to work faster and smarter",
+                "button": "See Tips"
+            },
+            "community": {
+                "title": "Community",
+                "description": "MAMBA users share tips, ask questions, and exchange best practices join our community"
+            },
+            "documentation": {
+                "title": "Documentation",
+                "description": "Explore answers to the most frequent questions about using MAMBA",
+                "button": "Quick Help"
+            },
+            "support": {
+                "title": "Support",
+                "description": "Log in to your MAMBA account so we can help you faster:",
+                "button": "Log in"
+            }
+        }
     }
 }

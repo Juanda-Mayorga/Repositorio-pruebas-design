@@ -83,5 +83,32 @@
     "feedback": {
         "profileSaved": "Perfil gardado correctamente!",
         "passwordUpdated": "Contrasinal actualizado correctamente!"
+    },
+    "resources": {
+        "hero": {
+            "title": "Aprende, conecta e resolve máis rápido",
+            "subtitle": "Accede a preguntas frecuentes, consellos prácticos, coñecementos da comunidade e soporte dedicado para MAMBA"
+        },
+        "cards": {
+            "tips": {
+                "title": "Trucos e Consellos",
+                "description": "Descubre atallos de expertos e casos de uso prácticos para traballar máis rápido e de xeito máis intelixente",
+                "button": "Ver Consellos"
+            },
+            "community": {
+                "title": "Comunidade",
+                "description": "Os usuarios de MAMBA comparten consellos, fan preguntas e intercambian mellores prácticas, únete á nosa comunidade"
+            },
+            "documentation": {
+                "title": "Documentación",
+                "description": "Explora respostas ás preguntas máis frecuentes sobre o uso de MAMBA",
+                "button": "Axuda Rápida"
+            },
+            "support": {
+                "title": "Soporte",
+                "description": "Inicia sesión na túa conta de MAMBA para que poidamos axudarche máis rápido:",
+                "button": "Iniciar sesión"
+            }
+        }
     }
 }

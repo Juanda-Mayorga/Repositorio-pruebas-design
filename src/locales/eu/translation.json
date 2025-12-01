@@ -83,5 +83,32 @@
     "feedback": {
         "profileSaved": "Profila ondo gorde da!",
         "passwordUpdated": "Pasahitza ondo eguneratu da!"
+    },
+    "resources": {
+        "hero": {
+            "title": "Ikasi, konektatu eta konpondu azkarrago",
+            "subtitle": "Sar zaitez ohiko galderetara, aholku praktikoetara, komunitatearen ikuspegietara eta MAMBArako laguntza dedikatura"
+        },
+        "cards": {
+            "tips": {
+                "title": "Aholkuak eta Trikimailuak",
+                "description": "Ezagutu adituen lasterbideak eta erabilera kasu praktikoak azkarrago eta hobeto lan egiteko",
+                "button": "Ikusi Aholkuak"
+            },
+            "community": {
+                "title": "Komunitatea",
+                "description": "MAMBA erabiltzaileek aholkuak partekatzen dituzte, galderak egiten dituzte eta jardunbide egokiak trukatzen dituzte, batu gure komunitatera"
+            },
+            "documentation": {
+                "title": "Dokumentazioa",
+                "description": "Arakatu MAMBA erabiltzeari buruzko galdera ohikoenen erantzunak",
+                "button": "Laguntza Azkarra"
+            },
+            "support": {
+                "title": "Laguntza",
+                "description": "Hasi saioa zure MAMBA kontuan azkarrago lagundu ahal izateko:",
+                "button": "Hasi saioa"
+            }
+        }
     }
 }

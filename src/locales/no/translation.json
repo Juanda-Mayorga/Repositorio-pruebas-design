@@ -83,5 +83,32 @@
     "feedback": {
         "profileSaved": "Profil lagret!",
         "passwordUpdated": "Passord oppdatert!"
+    },
+    "resources": {
+        "hero": {
+            "title": "Lær, koble til og løs raskere",
+            "subtitle": "Tilgang til vanlige spørsmål, praktiske tips, fellesskapsinnsikt og dedikert støtte for MAMBA"
+        },
+        "cards": {
+            "tips": {
+                "title": "Tips & Triks",
+                "description": "Oppdag ekspertsnarveier og praktiske brukstilfeller for å jobbe raskere og smartere",
+                "button": "Se Tips"
+            },
+            "community": {
+                "title": "Fellesskap",
+                "description": "MAMBA-brukere deler tips, stiller spørgsmål og utveksler beste praksis, bli med i fellesskapet vårt"
+            },
+            "documentation": {
+                "title": "Dokumentasjon",
+                "description": "Utforsk svar på de vanligste spørsmålene om bruk av MAMBA",
+                "button": "Hurtighjelp"
+            },
+            "support": {
+                "title": "Støtte",
+                "description": "Logg inn på MAMBA-kontoen din slik at vi kan hjelpe deg raskere:",
+                "button": "Logg inn"
+            }
+        }
     }
 }
