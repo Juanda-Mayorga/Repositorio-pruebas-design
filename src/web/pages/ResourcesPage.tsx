@@ -62,7 +62,7 @@ export const ResourcesPage = () => {
                                         <Typography variant="h3" sx={{ mb: 2, color: '#5C528E' }}>
                                             Tips&Tricks
                                         </Typography>
-                                        <Typography variant="body2" color="text.secondary" sx={{ mb: 3, flexGrow: 1, fontFamily: 'Hind Siliguri' }}>
+                                        <Typography variant="body1" sx={{ mb: 3, flexGrow: 1, color: '#797979' }}>
                                             Discover expert shortcuts and practical use cases to work faster and smarter
                                         </Typography>
                                         <Button variant="outlined" fullWidth sx={{ textTransform: 'none', color: '#6366F1', borderColor: '#6366F1', fontFamily: 'Hind Siliguri' }}>
@@ -79,7 +79,7 @@ export const ResourcesPage = () => {
                                         <Typography variant="h3" sx={{ mb: 2, color: '#5C528E' }}>
                                             Community
                                         </Typography>
-                                        <Typography variant="body2" color="text.secondary" sx={{ mb: 3, flexGrow: 1, fontFamily: 'Hind Siliguri' }}>
+                                        <Typography variant="body1" sx={{ mb: 3, flexGrow: 1, color: '#797979' }}>
                                             MAMBA users share tips, ask questions, and exchange best practices join our community
                                         </Typography>
                                         <Box sx={{ display: 'flex', gap: 2 }}>
@@ -101,7 +101,7 @@ export const ResourcesPage = () => {
                                         <Typography variant="h3" sx={{ mb: 2, color: '#5C528E' }}>
                                             Documentation
                                         </Typography>
-                                        <Typography variant="body2" color="text.secondary" sx={{ mb: 3, flexGrow: 1, fontFamily: 'Hind Siliguri' }}>
+                                        <Typography variant="body1" sx={{ mb: 3, flexGrow: 1, color: '#797979' }}>
                                             Explore answers to the most frequent questions about using MAMBA
                                         </Typography>
                                         <Button variant="outlined" fullWidth sx={{ textTransform: 'none', color: '#6366F1', borderColor: '#6366F1', fontFamily: 'Hind Siliguri' }}>
@@ -118,7 +118,7 @@ export const ResourcesPage = () => {
                                         <Typography variant="h3" sx={{ mb: 2, color: '#5C528E' }}>
                                             Support
                                         </Typography>
-                                        <Typography variant="body2" color="text.secondary" sx={{ mb: 3, flexGrow: 1, fontFamily: 'Hind Siliguri' }}>
+                                        <Typography variant="body1" sx={{ mb: 3, flexGrow: 1, color: '#797979' }}>
                                             Log in to your MAMBA account so we can help you faster:
                                         </Typography>
                                         <Button variant="outlined" fullWidth sx={{ textTransform: 'none', color: '#6366F1', borderColor: '#6366F1', fontFamily: 'Hind Siliguri' }}>

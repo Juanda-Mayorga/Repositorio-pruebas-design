@@ -74,9 +74,11 @@ The system uses 5 breakpoints for responsive design:
 
 #### Large Body
 - **Font**: Hind Siliguri
-- **Size**: 18px (xl), 16px (lg-md), 14px (sm-xs)
+- **Size**: 22px (xl), 20px (lg), 18px (md), 16px (sm), 14px (xs)
 - **Weight**: 400 (Regular)
-- **Line Height**: 1.6
+- **Line Height**: 1.4
+- **Usage**: Card body text in Resources page
+- **Color**: #797979
 
 #### Regular Body
 - **Font**: Hind Siliguri

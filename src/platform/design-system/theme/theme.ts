@@ -281,10 +281,19 @@ export const getTheme = (mode: PaletteMode) => createTheme({
         body1: {
             fontFamily: '"Hind Siliguri", sans-serif',
             fontWeight: 400,
-            lineHeight: 1.6,
-            fontSize: '14px', // Mobile base
+            lineHeight: 1.4,
+            fontSize: '14px', // xs: 375x812
+            '@media (min-width:600px)': {
+                fontSize: '16px', // sm: 744x1133
+            },
             '@media (min-width:960px)': {
-                fontSize: '16px',
+                fontSize: '18px', // md: 1133x744
+            },
+            '@media (min-width:1280px)': {
+                fontSize: '20px', // lg: 1440x1024
+            },
+            '@media (min-width:1920px)': {
+                fontSize: '22px', // xl: 1920x1080
             },
         },
         body2: {
