@@ -83,10 +83,10 @@ export const ResourcesPage = () => {
                                             MAMBA users share tips, ask questions, and exchange best practices join our community
                                         </Typography>
                                         <Box sx={{ display: 'flex', gap: 2 }}>
-                                            <Button variant="contained" fullWidth sx={{ bgcolor: '#E0E7FF', color: '#4338CA', '&:hover': { bgcolor: '#C7D2FE' }, boxShadow: 'none' }}>
+                                            <Button variant="soft" fullWidth>
                                                 <WhatsAppIcon />
                                             </Button>
-                                            <Button variant="contained" fullWidth sx={{ bgcolor: '#E0E7FF', color: '#4338CA', '&:hover': { bgcolor: '#C7D2FE' }, boxShadow: 'none' }}>
+                                            <Button variant="soft" fullWidth>
                                                 <TelegramIcon />
                                             </Button>
                                         </Box>

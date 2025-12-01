@@ -79,6 +79,12 @@ declare module '@mui/material/styles' {
     }
 }
 
+declare module '@mui/material/Button' {
+    interface ButtonPropsVariantOverrides {
+        soft: true;
+    }
+}
+
 const mambaPrimary = {
     50: '#F5F3FD',
     100: '#EDEBFB',
@@ -350,7 +356,25 @@ export const getTheme = (mode: PaletteMode) => createTheme({
                         backgroundColor: mambaPrimary[100],
                     },
                 },
+                // @ts-ignore - Custom variant
+                soft: {
+                    backgroundColor: '#EDEBFB', // mambaPrimary[100]
+                    color: '#8A7BD4', // mambaPrimary[500]
+                    '&:hover': {
+                        backgroundColor: '#DFDAF9', // mambaPrimary[300] - slightly darker for hover
+                    },
+                    boxShadow: 'none',
+                },
             },
+            variants: [
+                {
+                    props: { variant: 'soft' },
+                    style: {
+                        backgroundColor: '#EDEBFB',
+                        color: '#8A7BD4',
+                    },
+                },
+            ],
         },
         MuiCard: {
             styleOverrides: {
