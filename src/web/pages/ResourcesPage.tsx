@@ -57,7 +57,7 @@ export const ResourcesPage = () => {
                         <Grid container spacing={3} sx={{ position: 'relative', zIndex: 1 }}>
                             {/* Tips & Tricks Card */}
                             <Grid size={{ xs: 12, md: 3 }}>
-                                <Card sx={{ height: '100%', borderTop: '4px solid #6366F1' }}>
+                                <Card sx={{ height: '100%', borderTop: '4px solid #736D8D' }}>
                                     <CardContent sx={{ display: 'flex', flexDirection: 'column', height: '100%', p: 3 }}>
                                         <Typography variant="h3" sx={{ mb: 2, color: '#5C528E' }}>
                                             Tips&Tricks
@@ -65,7 +65,7 @@ export const ResourcesPage = () => {
                                         <Typography variant="body1" sx={{ mb: 3, flexGrow: 1, color: '#797979' }}>
                                             Discover expert shortcuts and practical use cases to work faster and smarter
                                         </Typography>
-                                        <Button variant="outlined" fullWidth sx={{ textTransform: 'none', color: '#6366F1', borderColor: '#6366F1', fontFamily: 'Hind Siliguri' }}>
+                                        <Button variant="outlined" fullWidth sx={{ fontFamily: 'Hind Siliguri' }}>
                                             See Tips
                                         </Button>
                                     </CardContent>
@@ -74,7 +74,7 @@ export const ResourcesPage = () => {
 
                             {/* Community Card */}
                             <Grid size={{ xs: 12, md: 3 }}>
-                                <Card sx={{ height: '100%', borderTop: '4px solid #FBBF24' }}>
+                                <Card sx={{ height: '100%', borderTop: '4px solid #FDD550' }}>
                                     <CardContent sx={{ display: 'flex', flexDirection: 'column', height: '100%', p: 3 }}>
                                         <Typography variant="h3" sx={{ mb: 2, color: '#5C528E' }}>
                                             Community
@@ -96,7 +96,7 @@ export const ResourcesPage = () => {
 
                             {/* Documentation Card */}
                             <Grid size={{ xs: 12, md: 3 }}>
-                                <Card sx={{ height: '100%', borderTop: '4px solid #6366F1' }}>
+                                <Card sx={{ height: '100%', borderTop: '4px solid #736D8D' }}>
                                     <CardContent sx={{ display: 'flex', flexDirection: 'column', height: '100%', p: 3 }}>
                                         <Typography variant="h3" sx={{ mb: 2, color: '#5C528E' }}>
                                             Documentation
@@ -104,7 +104,7 @@ export const ResourcesPage = () => {
                                         <Typography variant="body1" sx={{ mb: 3, flexGrow: 1, color: '#797979' }}>
                                             Explore answers to the most frequent questions about using MAMBA
                                         </Typography>
-                                        <Button variant="outlined" fullWidth sx={{ textTransform: 'none', color: '#6366F1', borderColor: '#6366F1', fontFamily: 'Hind Siliguri' }}>
+                                        <Button variant="outlined" fullWidth sx={{ fontFamily: 'Hind Siliguri' }}>
                                             Quick Help
                                         </Button>
                                     </CardContent>
@@ -113,7 +113,7 @@ export const ResourcesPage = () => {
 
                             {/* Support Card */}
                             <Grid size={{ xs: 12, md: 3 }}>
-                                <Card sx={{ height: '100%', borderTop: '4px solid #FBBF24' }}>
+                                <Card sx={{ height: '100%', borderTop: '4px solid #FDD550' }}>
                                     <CardContent sx={{ display: 'flex', flexDirection: 'column', height: '100%', p: 3 }}>
                                         <Typography variant="h3" sx={{ mb: 2, color: '#5C528E' }}>
                                             Support
@@ -121,7 +121,7 @@ export const ResourcesPage = () => {
                                         <Typography variant="body1" sx={{ mb: 3, flexGrow: 1, color: '#797979' }}>
                                             Log in to your MAMBA account so we can help you faster:
                                         </Typography>
-                                        <Button variant="outlined" fullWidth sx={{ textTransform: 'none', color: '#6366F1', borderColor: '#6366F1', fontFamily: 'Hind Siliguri' }}>
+                                        <Button variant="outlined" fullWidth sx={{ fontFamily: 'Hind Siliguri' }}>
                                             Log in
                                         </Button>
                                     </CardContent>

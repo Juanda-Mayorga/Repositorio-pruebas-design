@@ -323,11 +323,27 @@ export const getTheme = (mode: PaletteMode) => createTheme({
                     },
                 },
                 outlinedPrimary: {
-                    borderColor: mambaPrimary[300],
+                    backgroundColor: '#FFFFFF',
+                    color: '#7367B1', // mambaPrimary[700]
+                    borderColor: '#7367B1', // mambaPrimary[700]
+                    fontFamily: '"Hind Siliguri", sans-serif',
+                    fontSize: '20px',
+                    fontWeight: 500, // Medium
                     '&:hover': {
-                        backgroundColor: mambaPrimary[50],
-                        borderColor: mambaPrimary[400],
+                        backgroundColor: '#EDEBFB', // mambaPrimary[100]
+                        color: '#7367B1',
+                        borderColor: '#7367B1',
                     },
+                    '&:active': {
+                        backgroundColor: '#DFDAF9', // mambaPrimary[300]
+                        color: '#7367B1',
+                        borderColor: '#7367B1',
+                    },
+                    '&.Mui-selected': { // Covering potential selected state usage
+                        backgroundColor: '#DFDAF9',
+                        color: '#7367B1',
+                        borderColor: '#7367B1',
+                    }
                 },
                 textPrimary: {
                     '&:hover': {
@@ -339,7 +355,9 @@ export const getTheme = (mode: PaletteMode) => createTheme({
         MuiCard: {
             styleOverrides: {
                 root: {
-                    borderRadius: '4px',
+                    backgroundColor: '#FFFFFF',
+                    border: '1px solid #F0F0F0',
+                    borderRadius: '16px',
                     boxShadow: mode === 'light' ? '0px 4px 20px rgba(0, 0, 0, 0.05)' : '0px 4px 20px rgba(0, 0, 0, 0.5)',
                 },
             },
