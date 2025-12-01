@@ -20,10 +20,6 @@ export const ResourcesPage = () => {
                         component="h1"
                         sx={{
                             mb: 2,
-                            background: 'linear-gradient(135deg, #9989EC 0%, #6E659F 50%, #333337 100%)',
-                            WebkitBackgroundClip: 'text',
-                            WebkitTextFillColor: 'transparent',
-                            backgroundClip: 'text',
                         }}
                     >
                         {t('resources.hero.title')}

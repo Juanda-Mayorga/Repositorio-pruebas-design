@@ -12,14 +12,15 @@ export const ContactPage = () => {
                     {/* Header Section */}
                     <Box sx={{ textAlign: 'center', mb: 6 }}>
                         <Typography
-                            variant="h2"
+                            variant="h1"
                             component="h1"
-                            fontWeight="bold"
-                            sx={{ color: '#6366F1', mb: 2 }}
+                            sx={{
+                                mb: 2,
+                            }}
                         >
                             Let's talk
                         </Typography>
-                        <Typography variant="h6" color="text.secondary" sx={{ maxWidth: 600, mx: 'auto' }}>
+                        <Typography variant="h6" sx={{ color: 'text.secondary', maxWidth: 600, mx: 'auto', fontWeight: 'normal', fontFamily: 'Hind Siliguri' }}>
                             Whether you want to explore the product with our team or see it in action, we've got you covered
                         </Typography>
                     </Box>
@@ -63,7 +64,7 @@ export const ContactPage = () => {
                                     }}
                                 >
                                     <CardContent sx={{ p: 0 }}>
-                                        <Typography variant="h5" fontWeight="bold" color="text.primary" gutterBottom>
+                                        <Typography variant="h2" gutterBottom>
                                             Talk to Sales
                                         </Typography>
                                         <Typography variant="body1" color="text.secondary" sx={{ mb: 3 }}>
@@ -102,7 +103,7 @@ export const ContactPage = () => {
                                     }}
                                 >
                                     <CardContent sx={{ p: 0 }}>
-                                        <Typography variant="h5" fontWeight="bold" color="text.primary" gutterBottom>
+                                        <Typography variant="h2" gutterBottom>
                                             Book a Demo
                                         </Typography>
                                         <Typography variant="body1" color="text.secondary" sx={{ mb: 3 }}>
