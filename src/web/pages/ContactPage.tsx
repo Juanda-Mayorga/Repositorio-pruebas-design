@@ -1,6 +1,7 @@
-import { Box, Typography, Container, Button, Card, CardContent, useTheme } from '@mui/material';
+import { Box, Typography, Container, Button, useTheme } from '@mui/material';
 import { PublicHeader } from '../design-system/organisms/PublicHeader';
 import { Footer } from '../design-system/organisms/Footer';
+import { ContentCard } from '../design-system/organisms/ContentCard';
 
 export const ContactPage = () => {
     const theme = useTheme();
@@ -59,25 +60,11 @@ export const ContactPage = () => {
                             {/* Cards Grid */}
                             <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 4, position: 'relative', zIndex: 1 }}>
                                 {/* Talk to Sales Card */}
-                                <Card
-                                    sx={{
-                                        p: 3,
-                                        borderRadius: 2,
-                                        boxShadow: '0 4px 12px rgba(0,0,0,0.08)',
-                                        display: 'flex',
-                                        flexDirection: 'column',
-                                        justifyContent: 'space-between',
-                                        minHeight: 280
-                                    }}
+                                <ContentCard
+                                    title="Talk to Sales"
+                                    description="Get in touch with our team to discuss your needs and discover how MAMBA can help your business"
+                                    variant="contact"
                                 >
-                                    <CardContent sx={{ p: 0 }}>
-                                        <Typography variant="h2" gutterBottom>
-                                            Talk to Sales
-                                        </Typography>
-                                        <Typography variant="body1" color="text.secondary" sx={{ mb: 3 }}>
-                                            Get in touch with our team to discuss your needs and discover how MAMBA can help your business
-                                        </Typography>
-                                    </CardContent>
                                     <Button
                                         variant="outlined"
                                         fullWidth
@@ -95,28 +82,14 @@ export const ContactPage = () => {
                                     >
                                         Contact Sales
                                     </Button>
-                                </Card>
+                                </ContentCard>
 
                                 {/* Book a Demo Card */}
-                                <Card
-                                    sx={{
-                                        p: 3,
-                                        borderRadius: 2,
-                                        boxShadow: '0 4px 12px rgba(0,0,0,0.08)',
-                                        display: 'flex',
-                                        flexDirection: 'column',
-                                        justifyContent: 'space-between',
-                                        minHeight: 280
-                                    }}
+                                <ContentCard
+                                    title="Book a Demo"
+                                    description="See MAMBA in action with a personalized demo tailored to your workflow"
+                                    variant="contact"
                                 >
-                                    <CardContent sx={{ p: 0 }}>
-                                        <Typography variant="h2" gutterBottom>
-                                            Book a Demo
-                                        </Typography>
-                                        <Typography variant="body1" color="text.secondary" sx={{ mb: 3 }}>
-                                            See MAMBA in action with a personalized demo tailored to your workflow
-                                        </Typography>
-                                    </CardContent>
                                     <Button
                                         variant="contained"
                                         fullWidth
@@ -132,7 +105,7 @@ export const ContactPage = () => {
                                     >
                                         Book a Demo
                                     </Button>
-                                </Card>
+                                </ContentCard>
                             </Box>
                         </Box>
                     </Container>
