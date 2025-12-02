@@ -137,5 +137,26 @@
                 "button": "Reservar una Demo"
             }
         }
+    },
+    "contactSales": {
+        "title": "Contacta con nuestro equipo de ventas",
+        "subtitle": "Déjanos tus datos y nuestro equipo de ventas te contactará lo antes posible",
+        "form": {
+            "firstName": "Nombre*",
+            "firstNamePlaceholder": "Introduce tu nombre",
+            "jobTitle": "Cargo*",
+            "jobTitlePlaceholder": "Introduce tu cargo",
+            "lastName": "Apellidos*",
+            "lastNamePlaceholder": "Introduce tus apellidos",
+            "country": "País*",
+            "countryPlaceholder": "Selecciona tu país",
+            "company": "Empresa*",
+            "companyPlaceholder": "Introduce el nombre de tu empresa",
+            "email": "Email*",
+            "emailPlaceholder": "nombre@ejemplo.com",
+            "messagePlaceholder": "Escribe tu mensaje aquí",
+            "terms": "Acepto los términos y condiciones. Autorizo recibir la información útil de MAMBA",
+            "submit": "Enviar"
+        }
     }
 }

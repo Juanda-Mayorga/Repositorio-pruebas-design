@@ -6,6 +6,7 @@ import { ProfilePage } from './platform/pages/ProfilePage';
 import { ResourcesPage } from './web/pages/ResourcesPage';
 import { LandingPage } from './web/pages/LandingPage';
 import { ContactPage } from './web/pages/ContactPage';
+import { ContactSalesPage } from './web/pages/ContactSalesPage';
 import { ThemeProvider } from './platform/design-system/theme/ThemeContext';
 import { WebThemeProvider } from './web/design-system/WebThemeContext';
 
@@ -22,6 +23,7 @@ function App() {
           <Route path="/landing" element={<WebThemeProvider><LandingPage /></WebThemeProvider>} />
           <Route path="/resources" element={<WebThemeProvider><ResourcesPage /></WebThemeProvider>} />
           <Route path="/contact" element={<WebThemeProvider><ContactPage /></WebThemeProvider>} />
+          <Route path="/contact-sales" element={<WebThemeProvider><ContactSalesPage /></WebThemeProvider>} />
 
           {/* Platform routes - wrapped with MainLayout (Sidebar + Header) */}
           <Route path="/subscription" element={<MainLayout><SubscriptionPage /></MainLayout>} />

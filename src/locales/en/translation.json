@@ -131,5 +131,26 @@
                 "button": "Book a Demo"
             }
         }
+    },
+    "contactSales": {
+        "title": "Contact our sales team",
+        "subtitle": "Leave us your details and our sales team will contact you as soon as possible",
+        "form": {
+            "firstName": "First name*",
+            "firstNamePlaceholder": "Enter your first name",
+            "jobTitle": "Job title*",
+            "jobTitlePlaceholder": "Enter your job title",
+            "lastName": "Last name*",
+            "lastNamePlaceholder": "Enter your last name",
+            "country": "Country*",
+            "countryPlaceholder": "Select your country",
+            "company": "Company*",
+            "companyPlaceholder": "Enter your company name",
+            "email": "Email*",
+            "emailPlaceholder": "name@example.com",
+            "messagePlaceholder": "Write your message here",
+            "terms": "I accept the terms and conditions. I authorize receiving useful information from MAMBA",
+            "submit": "Submit"
+        }
     }
 }

@@ -4,10 +4,12 @@ import { Footer } from '../design-system/organisms/Footer';
 import { ContentCard } from '../design-system/molecules/ContentCard';
 import { WebButton } from '../design-system/atoms/WebButton';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 
 export const ContactPage = () => {
     const { t } = useTranslation();
     const theme = useTheme();
+    const navigate = useNavigate();
     return (
         <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', bgcolor: theme.palette.web.background.default }}>
             <PublicHeader />
@@ -68,7 +70,11 @@ export const ContactPage = () => {
                                     description={t('contact.cards.sales.description')}
                                     variant="contact"
                                 >
-                                    <WebButton variant="outlined" fullWidth>
+                                    <WebButton
+                                        variant="outlined"
+                                        fullWidth
+                                        onClick={() => navigate('/contact-sales')}
+                                    >
                                         {t('contact.cards.sales.button')}
                                     </WebButton>
                                 </ContentCard>
