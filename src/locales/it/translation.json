@@ -110,5 +110,21 @@
                 "button": "Accedi"
             }
         }
+    },
+    "contact": {
+        "title": "Parliamone",
+        "subtitle": "Che tu voglia esplorare il prodotto con il nostro team o vederlo in azione, abbiamo quello che fa per te",
+        "cards": {
+            "sales": {
+                "title": "Parla con le Vendite",
+                "description": "Mettiti in contatto con il nostro team per discutere le tue esigenze e scoprire come MAMBA può aiutare la tua azienda",
+                "button": "Contatta le Vendite"
+            },
+            "demo": {
+                "title": "Prenota una Demo",
+                "description": "Vedi MAMBA in azione con una dimostrazione personalizzata su misura per il tuo flusso di lavoro",
+                "button": "Prenota una Demo"
+            }
+        }
     }
 }

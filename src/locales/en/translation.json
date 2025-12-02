@@ -115,5 +115,21 @@
                 "button": "Log in"
             }
         }
+    },
+    "contact": {
+        "title": "Let's talk",
+        "subtitle": "Whether you want to explore the product with our team or see it in action, we've got you covered",
+        "cards": {
+            "sales": {
+                "title": "Talk to Sales",
+                "description": "Get in touch with our team to discuss your needs and discover how MAMBA can help your business",
+                "button": "Contact Sales"
+            },
+            "demo": {
+                "title": "Book a Demo",
+                "description": "See MAMBA in action with a personalized demo tailored to your workflow",
+                "button": "Book a Demo"
+            }
+        }
     }
 }

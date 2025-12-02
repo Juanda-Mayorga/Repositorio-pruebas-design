@@ -110,5 +110,21 @@
                 "button": "Logg inn"
             }
         }
+    },
+    "contact": {
+        "title": "La oss snakke",
+        "subtitle": "Enten du vil utforske produktet med teamet vårt eller se det i aksjon, har vi deg dekket",
+        "cards": {
+            "sales": {
+                "title": "Snakk med Salg",
+                "description": "Ta kontakt med teamet vårt for å diskutere dine behov og oppdage hvordan MAMBA kan hjelpe virksomheten din",
+                "button": "Kontakt Salg"
+            },
+            "demo": {
+                "title": "Book en Demo",
+                "description": "Se MAMBA i aksjon med en personlig demo skreddersydd til arbeidsflyten din",
+                "button": "Book en Demo"
+            }
+        }
     }
 }

@@ -3,8 +3,10 @@ import { PublicHeader } from '../design-system/organisms/PublicHeader';
 import { Footer } from '../design-system/organisms/Footer';
 import { ContentCard } from '../design-system/molecules/ContentCard';
 import { WebButton } from '../design-system/atoms/WebButton';
+import { useTranslation } from 'react-i18next';
 
 export const ContactPage = () => {
+    const { t } = useTranslation();
     const theme = useTheme();
     return (
         <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', bgcolor: theme.palette.web.background.default }}>
@@ -27,10 +29,10 @@ export const ContactPage = () => {
                                 fontWeight: 500,
                             }}
                         >
-                            Let's talk
+                            {t('contact.title')}
                         </Typography>
                         <Typography variant="h6" sx={{ color: 'text.secondary', maxWidth: 600, mx: 'auto', fontWeight: 'normal', fontFamily: 'Hind Siliguri' }}>
-                            Whether you want to explore the product with our team or see it in action, we've got you covered
+                            {t('contact.subtitle')}
                         </Typography>
                     </Box>
 
@@ -62,23 +64,23 @@ export const ContactPage = () => {
                             <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 4, position: 'relative', zIndex: 1 }}>
                                 {/* Talk to Sales Card */}
                                 <ContentCard
-                                    title="Talk to Sales"
-                                    description="Get in touch with our team to discuss your needs and discover how MAMBA can help your business"
+                                    title={t('contact.cards.sales.title')}
+                                    description={t('contact.cards.sales.description')}
                                     variant="contact"
                                 >
                                     <WebButton variant="outlined" fullWidth>
-                                        Contact Sales
+                                        {t('contact.cards.sales.button')}
                                     </WebButton>
                                 </ContentCard>
 
                                 {/* Book a Demo Card */}
                                 <ContentCard
-                                    title="Book a Demo"
-                                    description="See MAMBA in action with a personalized demo tailored to your workflow"
+                                    title={t('contact.cards.demo.title')}
+                                    description={t('contact.cards.demo.description')}
                                     variant="contact"
                                 >
                                     <WebButton variant="contained" fullWidth>
-                                        Book a Demo
+                                        {t('contact.cards.demo.button')}
                                     </WebButton>
                                 </ContentCard>
                             </Box>

@@ -107,7 +107,23 @@
             "support": {
                 "title": "Suporte",
                 "description": "Faça login na sua conta MAMBA para que possamos ajudá-lo mais rapidamente:",
-                "button": "Entrar"
+                "button": "Iniciar sessão"
+            }
+        }
+    },
+    "contact": {
+        "title": "Vamos conversar",
+        "subtitle": "Quer você queira explorar o produto com nossa equipe ou vê-lo em ação, nós temos você coberto",
+        "cards": {
+            "sales": {
+                "title": "Falar com Vendas",
+                "description": "Entre em contato com nossa equipe para discutir suas necessidades e descobrir como o MAMBA pode ajudar seu negócio",
+                "button": "Contactar Vendas"
+            },
+            "demo": {
+                "title": "Agendar uma Demo",
+                "description": "Veja o MAMBA em ação com uma demonstração personalizada adaptada ao seu fluxo de trabalho",
+                "button": "Agendar uma Demo"
             }
         }
     }

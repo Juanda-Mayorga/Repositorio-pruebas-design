@@ -110,5 +110,21 @@
                 "button": "Anmelden"
             }
         }
+    },
+    "contact": {
+        "title": "Lass uns reden",
+        "subtitle": "Ob Sie das Produkt mit unserem Team erkunden oder es in Aktion sehen möchten, wir haben Sie abgedeckt",
+        "cards": {
+            "sales": {
+                "title": "Mit Vertrieb sprechen",
+                "description": "Kontaktieren Sie unser Team, um Ihre Bedürfnisse zu besprechen und zu erfahren, wie MAMBA Ihrem Unternehmen helfen kann",
+                "button": "Vertrieb kontaktieren"
+            },
+            "demo": {
+                "title": "Demo buchen",
+                "description": "Sehen Sie MAMBA in Aktion mit einer personalisierten Demo, die auf Ihren Workflow zugeschnitten ist",
+                "button": "Demo buchen"
+            }
+        }
     }
 }

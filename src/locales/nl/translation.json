@@ -110,5 +110,21 @@
                 "button": "Inloggen"
             }
         }
+    },
+    "contact": {
+        "title": "Laten we praten",
+        "subtitle": "Of u nu het product met ons team wilt verkennen of het in actie wilt zien, wij hebben u gedekt",
+        "cards": {
+            "sales": {
+                "title": "Praat met Verkoop",
+                "description": "Neem contact op met ons team om uw behoeften te bespreken en te ontdekken hoe MAMBA uw bedrijf kan helpen",
+                "button": "Contact Verkoop"
+            },
+            "demo": {
+                "title": "Boek een Demo",
+                "description": "Zie MAMBA in actie met een gepersonaliseerde demo afgestemd op uw workflow",
+                "button": "Boek een Demo"
+            }
+        }
     }
 }

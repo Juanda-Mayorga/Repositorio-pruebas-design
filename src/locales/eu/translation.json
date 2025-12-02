@@ -110,5 +110,21 @@
                 "button": "Hasi saioa"
             }
         }
+    },
+    "contact": {
+        "title": "Hitz egin dezagun",
+        "subtitle": "Produktua gure taldearekin esploratu nahi duzun ala ekintzan ikusi, estali zaitugu",
+        "cards": {
+            "sales": {
+                "title": "Salmentekin Hitz Egin",
+                "description": "Jarri harremanetan gure taldearekin zure beharrak eztabaidatzeko eta MAMBA-k zure negozioari nola lagun dezakeen jakiteko",
+                "button": "Salmentekin Harremanetan Jarri"
+            },
+            "demo": {
+                "title": "Demo bat Erreserbatu",
+                "description": "Ikusi MAMBA ekintzan zure lan-fluxura egokitutako demo pertsonalizatu batekin",
+                "button": "Demo bat Erreserbatu"
+            }
+        }
     }
 }
