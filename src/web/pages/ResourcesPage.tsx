@@ -1,7 +1,8 @@
-import { Box, Typography, Grid, Button, Container, useTheme } from '@mui/material';
+import { Box, Typography, Grid, Container, useTheme } from '@mui/material';
 import { PublicHeader } from '../design-system/organisms/PublicHeader';
 import { Footer } from '../design-system/organisms/Footer';
 import { ContentCard } from '../design-system/molecules/ContentCard';
+import { WebButton } from '../design-system/atoms/WebButton';
 import TelegramIcon from '@mui/icons-material/Telegram';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import { useTranslation } from 'react-i18next';
@@ -63,9 +64,9 @@ export const ResourcesPage = () => {
                                     description={t('resources.cards.tips.description')}
                                     borderTopColor={theme.palette.web.border.primary}
                                 >
-                                    <Button variant="outlined" fullWidth sx={{ fontFamily: 'Hind Siliguri' }}>
+                                    <WebButton variant="outlined" fullWidth>
                                         {t('resources.cards.tips.button')}
-                                    </Button>
+                                    </WebButton>
                                 </ContentCard>
                             </Grid>
 
@@ -77,12 +78,12 @@ export const ResourcesPage = () => {
                                     borderTopColor={theme.palette.web.border.secondary}
                                 >
                                     <Box sx={{ display: 'flex', gap: 2 }}>
-                                        <Button variant="soft" fullWidth>
+                                        <WebButton variant="soft" fullWidth>
                                             <WhatsAppIcon />
-                                        </Button>
-                                        <Button variant="soft" fullWidth>
+                                        </WebButton>
+                                        <WebButton variant="soft" fullWidth>
                                             <TelegramIcon />
-                                        </Button>
+                                        </WebButton>
                                     </Box>
                                 </ContentCard>
                             </Grid>
@@ -94,9 +95,9 @@ export const ResourcesPage = () => {
                                     description={t('resources.cards.documentation.description')}
                                     borderTopColor={theme.palette.web.border.primary}
                                 >
-                                    <Button variant="outlined" fullWidth sx={{ fontFamily: 'Hind Siliguri' }}>
+                                    <WebButton variant="outlined" fullWidth>
                                         {t('resources.cards.documentation.button')}
-                                    </Button>
+                                    </WebButton>
                                 </ContentCard>
                             </Grid>
 
@@ -107,9 +108,9 @@ export const ResourcesPage = () => {
                                     description={t('resources.cards.support.description')}
                                     borderTopColor={theme.palette.web.border.secondary}
                                 >
-                                    <Button variant="outlined" fullWidth sx={{ fontFamily: 'Hind Siliguri' }}>
+                                    <WebButton variant="outlined" fullWidth>
                                         {t('resources.cards.support.button')}
-                                    </Button>
+                                    </WebButton>
                                 </ContentCard>
                             </Grid>
                         </Grid>

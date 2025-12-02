@@ -1,7 +1,8 @@
-import { Box, Typography, Container, Button, useTheme } from '@mui/material';
+import { Box, Typography, Container, useTheme } from '@mui/material';
 import { PublicHeader } from '../design-system/organisms/PublicHeader';
 import { Footer } from '../design-system/organisms/Footer';
 import { ContentCard } from '../design-system/molecules/ContentCard';
+import { WebButton } from '../design-system/atoms/WebButton';
 
 export const ContactPage = () => {
     const theme = useTheme();
@@ -65,23 +66,9 @@ export const ContactPage = () => {
                                     description="Get in touch with our team to discuss your needs and discover how MAMBA can help your business"
                                     variant="contact"
                                 >
-                                    <Button
-                                        variant="outlined"
-                                        fullWidth
-                                        sx={{
-                                            textTransform: 'none',
-                                            fontWeight: 600,
-                                            borderColor: theme.palette.web.action.primary,
-                                            color: theme.palette.web.action.primary,
-                                            py: 1.5,
-                                            '&:hover': {
-                                                borderColor: theme.palette.web.action.primaryHover,
-                                                bgcolor: 'rgba(99, 102, 241, 0.04)'
-                                            }
-                                        }}
-                                    >
+                                    <WebButton variant="outlined" fullWidth>
                                         Contact Sales
-                                    </Button>
+                                    </WebButton>
                                 </ContentCard>
 
                                 {/* Book a Demo Card */}
@@ -90,21 +77,9 @@ export const ContactPage = () => {
                                     description="See MAMBA in action with a personalized demo tailored to your workflow"
                                     variant="contact"
                                 >
-                                    <Button
-                                        variant="contained"
-                                        fullWidth
-                                        sx={{
-                                            textTransform: 'none',
-                                            fontWeight: 600,
-                                            bgcolor: theme.palette.web.action.primary,
-                                            py: 1.5,
-                                            '&:hover': {
-                                                bgcolor: theme.palette.web.action.primaryHover
-                                            }
-                                        }}
-                                    >
+                                    <WebButton variant="contained" fullWidth>
                                         Book a Demo
-                                    </Button>
+                                    </WebButton>
                                 </ContentCard>
                             </Box>
                         </Box>

@@ -18,10 +18,38 @@ web/design-system/
 
 ## Atoms
 
-Currently empty. This directory is reserved for basic, reusable UI elements such as:
-- Buttons (if web-specific variants are needed)
-- Icons
-- Input fields (if web-specific variants are needed)
+### [WebButton](file:///Users/carolinadomenechreal/Desktop/Prueba/Repositorio-pruebas-design/src/web/design-system/atoms/WebButton.tsx)
+
+A reusable button component for web pages with consistent styling.
+
+**Props:**
+- `variant?: 'outlined' | 'contained' | 'soft'` - Button style variant (default: 'outlined')
+- `fullWidth?: boolean` - Whether button should take full width
+- `children: React.ReactNode` - Button content
+- `onClick?: () => void` - Click handler
+- All standard MUI Button props
+
+**Features:**
+- Consistent typography (Hind Siliguri, weight 600)
+- Theme-based colors from `theme.palette.web.action.*`
+- No text transform
+- Padding y: 1.5
+- Variant-specific hover states
+
+**Usage:**
+```tsx
+<WebButton variant="outlined" fullWidth>
+  Click Me
+</WebButton>
+
+<WebButton variant="contained">
+  Submit
+</WebButton>
+
+<WebButton variant="soft">
+  <Icon />
+</WebButton>
+```
 
 ## Molecules
 
@@ -104,6 +132,7 @@ See [typography.md](file:///Users/carolinadomenechreal/Desktop/Prueba/Repositori
 Import components from their respective directories:
 
 ```tsx
+import { WebButton } from '@/web/design-system/atoms/WebButton';
 import { ContentCard } from '@/web/design-system/molecules/ContentCard';
 import { PublicHeader } from '@/web/design-system/organisms/PublicHeader';
 import { Footer } from '@/web/design-system/organisms/Footer';
@@ -120,7 +149,9 @@ function MyPage() {
         description="Description"
         borderTopColor={theme.palette.web.border.primary}
       >
-        <Button>Action</Button>
+        <WebButton variant="outlined" fullWidth>
+          Action
+        </WebButton>
       </ContentCard>
       <Footer />
     </>
