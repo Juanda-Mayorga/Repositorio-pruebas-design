@@ -1,4 +1,4 @@
-# Sistema de Diseño - Tipografía Plataforma
+≤# Sistema de Diseño - Tipografía Plataforma
 
 > **Contexto:** Aplicación de plataforma (`/src/platform`)
 

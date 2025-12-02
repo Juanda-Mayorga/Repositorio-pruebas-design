@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { TextField, InputAdornment, IconButton } from '@mui/material';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
+import { useTranslation } from 'react-i18next';
 
 export type InputFieldVariant =
     | 'name'
@@ -35,11 +36,11 @@ interface InputFieldProps {
     id?: string;
 }
 
-const VARIANT_CONFIG: Record<InputFieldVariant, { label: string; placeholder: string; type?: string }> = {
+const VARIANT_CONFIG: Record<InputFieldVariant, { label: string; placeholder: string; type?: string; helperText?: string }> = {
     name: { label: 'Nombre', placeholder: 'Introduce tu nombre' },
     surname: { label: 'Apellido', placeholder: 'Introduce tu apellido' },
     company: { label: 'Empresa', placeholder: 'Escribe el nombre de tu empresa' },
-    email: { label: 'Correo electrónico', placeholder: 'nombre@ejemplo.com', type: 'email' },
+    email: { label: 'Correo electrónico', placeholder: 'nombre@ejemplo.com', type: 'email', helperText: 'profile.emailTooltip' },
     password: { label: 'Contraseña', placeholder: 'New password', type: 'password' },
     verify_password: { label: 'Verificar Contraseña', placeholder: 'Rewrite password', type: 'password' },
     full_company_name: { label: 'Nombre completo de la empresa', placeholder: 'Razón social completa' },
@@ -67,6 +68,7 @@ export const InputField: React.FC<InputFieldProps> = ({
     name,
     id,
 }) => {
+    const { t } = useTranslation();
     const config = VARIANT_CONFIG[variant];
     const [showPassword, setShowPassword] = useState(false);
 
@@ -85,6 +87,9 @@ export const InputField: React.FC<InputFieldProps> = ({
         return config.type || 'text';
     };
 
+    // Determine helper text: prop takes precedence, then config (translated), then undefined
+    const displayedHelperText = helperText || (config.helperText ? t(config.helperText) : undefined);
+
     return (
         <TextField
             id={id || variant}
@@ -94,7 +99,7 @@ export const InputField: React.FC<InputFieldProps> = ({
             value={value}
             onChange={onChange}
             error={error}
-            helperText={helperText}
+            helperText={displayedHelperText}
             fullWidth={fullWidth}
             disabled={disabled}
             required={required}
