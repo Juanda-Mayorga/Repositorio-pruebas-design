@@ -1,10 +1,11 @@
-import { Box, Typography, Container, Button, Card, CardContent } from '@mui/material';
+import { Box, Typography, Container, Button, Card, CardContent, useTheme } from '@mui/material';
 import { PublicHeader } from '../design-system/organisms/PublicHeader';
 import { Footer } from '../design-system/organisms/Footer';
 
 export const ContactPage = () => {
+    const theme = useTheme();
     return (
-        <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', bgcolor: '#FFFFFF' }}>
+        <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', bgcolor: theme.palette.web.background.default }}>
             <PublicHeader />
 
             <Box component="main" sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', py: 8 }}>
@@ -34,7 +35,7 @@ export const ContactPage = () => {
                     {/* Cards Section */}
                     <Container maxWidth="lg" sx={{ mb: 8 }}>
                         <Box sx={{
-                            bgcolor: '#F3F4F6',
+                            bgcolor: theme.palette.web.background.paper,
                             borderRadius: 4,
                             p: 4,
                             position: 'relative',
@@ -83,11 +84,11 @@ export const ContactPage = () => {
                                         sx={{
                                             textTransform: 'none',
                                             fontWeight: 600,
-                                            borderColor: '#6366F1',
-                                            color: '#6366F1',
+                                            borderColor: theme.palette.web.action.primary,
+                                            color: theme.palette.web.action.primary,
                                             py: 1.5,
                                             '&:hover': {
-                                                borderColor: '#4F46E5',
+                                                borderColor: theme.palette.web.action.primaryHover,
                                                 bgcolor: 'rgba(99, 102, 241, 0.04)'
                                             }
                                         }}
@@ -122,10 +123,10 @@ export const ContactPage = () => {
                                         sx={{
                                             textTransform: 'none',
                                             fontWeight: 600,
-                                            bgcolor: '#6366F1',
+                                            bgcolor: theme.palette.web.action.primary,
                                             py: 1.5,
                                             '&:hover': {
-                                                bgcolor: '#4F46E5'
+                                                bgcolor: theme.palette.web.action.primaryHover
                                             }
                                         }}
                                     >

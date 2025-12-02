@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardContent, Typography } from '@mui/material';
+import { Card, CardContent, Typography, useTheme } from '@mui/material';
 
 interface ContentCardProps {
     title: string;
@@ -14,6 +14,8 @@ export const ContentCard: React.FC<ContentCardProps> = ({
     borderTopColor,
     children
 }) => {
+    const theme = useTheme();
+
     return (
         <Card sx={{
             height: '100%',
@@ -25,10 +27,10 @@ export const ContentCard: React.FC<ContentCardProps> = ({
             }
         }}>
             <CardContent sx={{ display: 'flex', flexDirection: 'column', height: '100%', p: 3 }}>
-                <Typography variant="h3" sx={{ mb: 2, color: '#5C528E' }}>
+                <Typography variant="h3" sx={{ mb: 2, color: theme.palette.web.text.secondary }}>
                     {title}
                 </Typography>
-                <Typography variant="body1" sx={{ mb: 3, flexGrow: 1, color: '#797979' }}>
+                <Typography variant="body1" sx={{ mb: 3, flexGrow: 1, color: theme.palette.web.text.body }}>
                     {description}
                 </Typography>
                 {children}

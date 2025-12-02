@@ -1,4 +1,4 @@
-import { Box, Typography, Grid, Button, Container } from '@mui/material';
+import { Box, Typography, Grid, Button, Container, useTheme } from '@mui/material';
 import { PublicHeader } from '../design-system/organisms/PublicHeader';
 import { Footer } from '../design-system/organisms/Footer';
 import { ContentCard } from '../design-system/organisms/ContentCard';
@@ -8,9 +8,10 @@ import { useTranslation } from 'react-i18next';
 
 export const ResourcesPage = () => {
     const { t } = useTranslation();
+    const theme = useTheme();
 
     return (
-        <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', bgcolor: '#FCFCFC' }}>
+        <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', bgcolor: theme.palette.web.background.default }}>
             <PublicHeader />
 
             <Box component="main" sx={{ flexGrow: 1 }}>
@@ -33,7 +34,7 @@ export const ResourcesPage = () => {
                 {/* Cards Section */}
                 <Container maxWidth="lg" sx={{ mb: 8 }}>
                     <Box sx={{
-                        bgcolor: '#F3F4F6',
+                        bgcolor: theme.palette.web.background.paper,
                         borderRadius: 4,
                         p: 4,
                         position: 'relative',
@@ -60,7 +61,7 @@ export const ResourcesPage = () => {
                                 <ContentCard
                                     title={t('resources.cards.tips.title')}
                                     description={t('resources.cards.tips.description')}
-                                    borderTopColor="#736D8D"
+                                    borderTopColor={theme.palette.web.border.primary}
                                 >
                                     <Button variant="outlined" fullWidth sx={{ fontFamily: 'Hind Siliguri' }}>
                                         {t('resources.cards.tips.button')}
@@ -73,7 +74,7 @@ export const ResourcesPage = () => {
                                 <ContentCard
                                     title={t('resources.cards.community.title')}
                                     description={t('resources.cards.community.description')}
-                                    borderTopColor="#FDD550"
+                                    borderTopColor={theme.palette.web.border.secondary}
                                 >
                                     <Box sx={{ display: 'flex', gap: 2 }}>
                                         <Button variant="soft" fullWidth>
@@ -91,7 +92,7 @@ export const ResourcesPage = () => {
                                 <ContentCard
                                     title={t('resources.cards.documentation.title')}
                                     description={t('resources.cards.documentation.description')}
-                                    borderTopColor="#736D8D"
+                                    borderTopColor={theme.palette.web.border.primary}
                                 >
                                     <Button variant="outlined" fullWidth sx={{ fontFamily: 'Hind Siliguri' }}>
                                         {t('resources.cards.documentation.button')}
@@ -104,7 +105,7 @@ export const ResourcesPage = () => {
                                 <ContentCard
                                     title={t('resources.cards.support.title')}
                                     description={t('resources.cards.support.description')}
-                                    borderTopColor="#FDD550"
+                                    borderTopColor={theme.palette.web.border.secondary}
                                 >
                                     <Button variant="outlined" fullWidth sx={{ fontFamily: 'Hind Siliguri' }}>
                                         {t('resources.cards.support.button')}
