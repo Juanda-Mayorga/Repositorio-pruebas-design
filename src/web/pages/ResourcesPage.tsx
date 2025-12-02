@@ -56,7 +56,15 @@ export const ResourcesPage = () => {
                         <Grid container spacing={3} sx={{ position: 'relative', zIndex: 1 }}>
                             {/* Tips & Tricks Card */}
                             <Grid size={{ xs: 12, md: 3 }}>
-                                <Card sx={{ height: '100%', borderTop: '4px solid #736D8D' }}>
+                                <Card sx={{
+                                    height: '100%',
+                                    borderTop: '4px solid #736D8D',
+                                    transition: 'all 0.3s ease-out',
+                                    '&:hover': {
+                                        transform: 'scale(1.02)',
+                                        boxShadow: '0 12px 24px rgba(0,0,0,0.15)',
+                                    }
+                                }}>
                                     <CardContent sx={{ display: 'flex', flexDirection: 'column', height: '100%', p: 3 }}>
                                         <Typography variant="h3" sx={{ mb: 2, color: '#5C528E' }}>
                                             {t('resources.cards.tips.title')}
@@ -73,7 +81,15 @@ export const ResourcesPage = () => {
 
                             {/* Community Card */}
                             <Grid size={{ xs: 12, md: 3 }}>
-                                <Card sx={{ height: '100%', borderTop: '4px solid #FDD550' }}>
+                                <Card sx={{
+                                    height: '100%',
+                                    borderTop: '4px solid #FDD550',
+                                    transition: 'all 0.3s ease-out',
+                                    '&:hover': {
+                                        transform: 'scale(1.02)',
+                                        boxShadow: '0 12px 24px rgba(0,0,0,0.15)',
+                                    }
+                                }}>
                                     <CardContent sx={{ display: 'flex', flexDirection: 'column', height: '100%', p: 3 }}>
                                         <Typography variant="h3" sx={{ mb: 2, color: '#5C528E' }}>
                                             {t('resources.cards.community.title')}
@@ -95,7 +111,15 @@ export const ResourcesPage = () => {
 
                             {/* Documentation Card */}
                             <Grid size={{ xs: 12, md: 3 }}>
-                                <Card sx={{ height: '100%', borderTop: '4px solid #736D8D' }}>
+                                <Card sx={{
+                                    height: '100%',
+                                    borderTop: '4px solid #736D8D',
+                                    transition: 'all 0.3s ease-out',
+                                    '&:hover': {
+                                        transform: 'scale(1.02)',
+                                        boxShadow: '0 12px 24px rgba(0,0,0,0.15)',
+                                    }
+                                }}>
                                     <CardContent sx={{ display: 'flex', flexDirection: 'column', height: '100%', p: 3 }}>
                                         <Typography variant="h3" sx={{ mb: 2, color: '#5C528E' }}>
                                             {t('resources.cards.documentation.title')}
@@ -112,7 +136,15 @@ export const ResourcesPage = () => {
 
                             {/* Support Card */}
                             <Grid size={{ xs: 12, md: 3 }}>
-                                <Card sx={{ height: '100%', borderTop: '4px solid #FDD550' }}>
+                                <Card sx={{
+                                    height: '100%',
+                                    borderTop: '4px solid #FDD550',
+                                    transition: 'all 0.3s ease-out',
+                                    '&:hover': {
+                                        transform: 'scale(1.02)',
+                                        boxShadow: '0 12px 24px rgba(0,0,0,0.15)',
+                                    }
+                                }}>
                                     <CardContent sx={{ display: 'flex', flexDirection: 'column', height: '100%', p: 3 }}>
                                         <Typography variant="h3" sx={{ mb: 2, color: '#5C528E' }}>
                                             {t('resources.cards.support.title')}
