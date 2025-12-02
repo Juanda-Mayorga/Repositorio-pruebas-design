@@ -41,8 +41,9 @@ export const ContentCard: React.FC<ContentCardProps> = ({
             <CardContent sx={{
                 display: 'flex',
                 flexDirection: 'column',
-                height: isResourcesVariant ? '100%' : 'auto',
-                p: isContactVariant ? 0 : 3
+                height: isResourcesVariant ? '100%' : (isContactVariant ? '100%' : 'auto'),
+                p: isContactVariant ? 0 : 3,
+                '&:last-child': isContactVariant ? { pb: 0 } : undefined, // Remove MUI CardContent default bottom padding
             }}>
                 <Typography
                     variant={isContactVariant ? 'h2' : 'h3'}
@@ -58,7 +59,7 @@ export const ContentCard: React.FC<ContentCardProps> = ({
                     variant="body1"
                     sx={{
                         mb: 3,
-                        flexGrow: isResourcesVariant ? 1 : undefined,
+                        flexGrow: 1, // Always grow to push button to bottom
                         color: isResourcesVariant ? theme.palette.web.text.body : 'text.secondary'
                     }}
                 >
