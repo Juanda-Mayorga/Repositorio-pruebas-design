@@ -1,7 +1,7 @@
 import { Box, Typography, Container, Button, useTheme } from '@mui/material';
 import { PublicHeader } from '../design-system/organisms/PublicHeader';
 import { Footer } from '../design-system/organisms/Footer';
-import { ContentCard } from '../design-system/organisms/ContentCard';
+import { ContentCard } from '../design-system/molecules/ContentCard';
 
 export const ContactPage = () => {
     const theme = useTheme();
