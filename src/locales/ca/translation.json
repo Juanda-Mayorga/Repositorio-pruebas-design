@@ -60,7 +60,7 @@
     },
     "deleteModal": {
         "title": "Lamentamos que te vayas",
-        "subtitle": "Para ayudarnos a mejorar, por favor, cuéntanos por qué quieres eliminar tu cuenta.",
+        "subtitle": "Para ayudarnos a mejorar, por favor, cuéntanos por qué quieres eliminar tu cuenta",
         "emailLabel": "Tu correo electrónico",
         "reasonLabel": "Motivo de la baja",
         "reasonPlaceholder": "Selecciona un motivo...",
@@ -113,7 +113,7 @@
     },
     "contact": {
         "title": "La teva solució comença aquí",
-        "subtitle": "Tant si busques una solució específica com una demostració de MAMBA en acció, estem preparats per ajudar-te a avançar.",
+        "subtitle": "Tant si busques una solució específica com una demostració de MAMBA en acció, estem preparats per ajudar-te a avançar",
         "cards": {
             "sales": {
                 "title": "Parlar amb Vendes",

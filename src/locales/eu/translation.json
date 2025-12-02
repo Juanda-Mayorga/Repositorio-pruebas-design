@@ -60,7 +60,7 @@
     },
     "deleteModal": {
         "title": "Lamentamos que te vayas",
-        "subtitle": "Para ayudarnos a mejorar, por favor, cuéntanos por qué quieres eliminar tu cuenta.",
+        "subtitle": "Para ayudarnos a mejorar, por favor, cuéntanos por qué quieres eliminar tu cuenta",
         "emailLabel": "Tu correo electrónico",
         "reasonLabel": "Motivo de la baja",
         "reasonPlaceholder": "Selecciona un motivo...",
@@ -113,7 +113,7 @@
     },
     "contact": {
         "title": "Zure irtenbidea hemen hasten da",
-        "subtitle": "Irtenbide zehatz bat edo MAMBA ekintzan ikusteko demo bat bilatzen baduzu, aurrera egiten laguntzeko prest gaude.",
+        "subtitle": "Irtenbide zehatz bat edo MAMBA ekintzan ikusteko demo bat bilatzen baduzu, aurrera egiten laguntzeko prest gaude",
         "cards": {
             "sales": {
                 "title": "Salmentekin Hitz Egin",
