@@ -1,6 +1,7 @@
-import { Box, Typography, Card, CardContent, Grid, Button, Container } from '@mui/material';
+import { Box, Typography, Grid, Button, Container } from '@mui/material';
 import { PublicHeader } from '../design-system/organisms/PublicHeader';
 import { Footer } from '../design-system/organisms/Footer';
+import { ContentCard } from '../design-system/organisms/ContentCard';
 import TelegramIcon from '@mui/icons-material/Telegram';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import { useTranslation } from 'react-i18next';
@@ -56,107 +57,59 @@ export const ResourcesPage = () => {
                         <Grid container spacing={3} sx={{ position: 'relative', zIndex: 1 }}>
                             {/* Tips & Tricks Card */}
                             <Grid size={{ xs: 12, md: 3 }}>
-                                <Card sx={{
-                                    height: '100%',
-                                    borderTop: '4px solid #736D8D',
-                                    transition: 'all 0.3s ease-out',
-                                    '&:hover': {
-                                        transform: 'scale(1.02)',
-                                        boxShadow: '0 12px 24px rgba(0,0,0,0.15)',
-                                    }
-                                }}>
-                                    <CardContent sx={{ display: 'flex', flexDirection: 'column', height: '100%', p: 3 }}>
-                                        <Typography variant="h3" sx={{ mb: 2, color: '#5C528E' }}>
-                                            {t('resources.cards.tips.title')}
-                                        </Typography>
-                                        <Typography variant="body1" sx={{ mb: 3, flexGrow: 1, color: '#797979' }}>
-                                            {t('resources.cards.tips.description')}
-                                        </Typography>
-                                        <Button variant="outlined" fullWidth sx={{ fontFamily: 'Hind Siliguri' }}>
-                                            {t('resources.cards.tips.button')}
-                                        </Button>
-                                    </CardContent>
-                                </Card>
+                                <ContentCard
+                                    title={t('resources.cards.tips.title')}
+                                    description={t('resources.cards.tips.description')}
+                                    borderTopColor="#736D8D"
+                                >
+                                    <Button variant="outlined" fullWidth sx={{ fontFamily: 'Hind Siliguri' }}>
+                                        {t('resources.cards.tips.button')}
+                                    </Button>
+                                </ContentCard>
                             </Grid>
 
                             {/* Community Card */}
                             <Grid size={{ xs: 12, md: 3 }}>
-                                <Card sx={{
-                                    height: '100%',
-                                    borderTop: '4px solid #FDD550',
-                                    transition: 'all 0.3s ease-out',
-                                    '&:hover': {
-                                        transform: 'scale(1.02)',
-                                        boxShadow: '0 12px 24px rgba(0,0,0,0.15)',
-                                    }
-                                }}>
-                                    <CardContent sx={{ display: 'flex', flexDirection: 'column', height: '100%', p: 3 }}>
-                                        <Typography variant="h3" sx={{ mb: 2, color: '#5C528E' }}>
-                                            {t('resources.cards.community.title')}
-                                        </Typography>
-                                        <Typography variant="body1" sx={{ mb: 3, flexGrow: 1, color: '#797979' }}>
-                                            {t('resources.cards.community.description')}
-                                        </Typography>
-                                        <Box sx={{ display: 'flex', gap: 2 }}>
-                                            <Button variant="soft" fullWidth>
-                                                <WhatsAppIcon />
-                                            </Button>
-                                            <Button variant="soft" fullWidth>
-                                                <TelegramIcon />
-                                            </Button>
-                                        </Box>
-                                    </CardContent>
-                                </Card>
+                                <ContentCard
+                                    title={t('resources.cards.community.title')}
+                                    description={t('resources.cards.community.description')}
+                                    borderTopColor="#FDD550"
+                                >
+                                    <Box sx={{ display: 'flex', gap: 2 }}>
+                                        <Button variant="soft" fullWidth>
+                                            <WhatsAppIcon />
+                                        </Button>
+                                        <Button variant="soft" fullWidth>
+                                            <TelegramIcon />
+                                        </Button>
+                                    </Box>
+                                </ContentCard>
                             </Grid>
 
                             {/* Documentation Card */}
                             <Grid size={{ xs: 12, md: 3 }}>
-                                <Card sx={{
-                                    height: '100%',
-                                    borderTop: '4px solid #736D8D',
-                                    transition: 'all 0.3s ease-out',
-                                    '&:hover': {
-                                        transform: 'scale(1.02)',
-                                        boxShadow: '0 12px 24px rgba(0,0,0,0.15)',
-                                    }
-                                }}>
-                                    <CardContent sx={{ display: 'flex', flexDirection: 'column', height: '100%', p: 3 }}>
-                                        <Typography variant="h3" sx={{ mb: 2, color: '#5C528E' }}>
-                                            {t('resources.cards.documentation.title')}
-                                        </Typography>
-                                        <Typography variant="body1" sx={{ mb: 3, flexGrow: 1, color: '#797979' }}>
-                                            {t('resources.cards.documentation.description')}
-                                        </Typography>
-                                        <Button variant="outlined" fullWidth sx={{ fontFamily: 'Hind Siliguri' }}>
-                                            {t('resources.cards.documentation.button')}
-                                        </Button>
-                                    </CardContent>
-                                </Card>
+                                <ContentCard
+                                    title={t('resources.cards.documentation.title')}
+                                    description={t('resources.cards.documentation.description')}
+                                    borderTopColor="#736D8D"
+                                >
+                                    <Button variant="outlined" fullWidth sx={{ fontFamily: 'Hind Siliguri' }}>
+                                        {t('resources.cards.documentation.button')}
+                                    </Button>
+                                </ContentCard>
                             </Grid>
 
                             {/* Support Card */}
                             <Grid size={{ xs: 12, md: 3 }}>
-                                <Card sx={{
-                                    height: '100%',
-                                    borderTop: '4px solid #FDD550',
-                                    transition: 'all 0.3s ease-out',
-                                    '&:hover': {
-                                        transform: 'scale(1.02)',
-                                        boxShadow: '0 12px 24px rgba(0,0,0,0.15)',
-                                    }
-                                }}>
-                                    <CardContent sx={{ display: 'flex', flexDirection: 'column', height: '100%', p: 3 }}>
-                                        <Typography variant="h3" sx={{ mb: 2, color: '#5C528E' }}>
-                                            {t('resources.cards.support.title')}
-                                        </Typography>
-                                        <Typography variant="body1" sx={{ mb: 3, flexGrow: 1, color: '#797979' }}>
-                                            {t('resources.cards.support.description')}
-                                        </Typography>
-                                        <Button variant="outlined" fullWidth sx={{ fontFamily: 'Hind Siliguri' }}>
-                                            {t('resources.cards.support.button')}
-                                        </Button>
-                                    </CardContent>
-                                </Card>
+                                <ContentCard
+                                    title={t('resources.cards.support.title')}
+                                    description={t('resources.cards.support.description')}
+                                    borderTopColor="#FDD550"
+                                >
+                                    <Button variant="outlined" fullWidth sx={{ fontFamily: 'Hind Siliguri' }}>
+                                        {t('resources.cards.support.button')}
+                                    </Button>
+                                </ContentCard>
                             </Grid>
                         </Grid>
                     </Box>

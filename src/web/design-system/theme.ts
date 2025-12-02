@@ -8,7 +8,7 @@ export const getWebTheme = (mode: PaletteMode) => {
     return createTheme(baseTheme, {
         typography: {
             h1: {
-                background: 'linear-gradient(135deg, #9989EC 0%, #6E659F 50%, #333337 100%)',
+                background: 'linear-gradient(to right, #9989EC, #6E659F, #333337)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',

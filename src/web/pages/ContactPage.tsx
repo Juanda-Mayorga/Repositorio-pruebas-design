@@ -16,6 +16,12 @@ export const ContactPage = () => {
                             component="h1"
                             sx={{
                                 mb: 2,
+                                background: 'linear-gradient(to right, #9989EC, #6E659F, #333337)',
+                                WebkitBackgroundClip: 'text',
+                                WebkitTextFillColor: 'transparent',
+                                backgroundClip: 'text',
+                                fontFamily: '"Inter", "Hind Siliguri", sans-serif',
+                                fontWeight: 500,
                             }}
                         >
                             Let's talk
