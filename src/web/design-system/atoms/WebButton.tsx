@@ -19,11 +19,16 @@ export const WebButton: React.FC<WebButtonProps> = ({
         switch (variant) {
             case 'outlined':
                 return {
-                    borderColor: theme.palette.web.action.primary,
-                    color: theme.palette.web.action.primary,
+                    bgcolor: '#FFFFFF',
+                    borderColor: '#7367B1',
+                    color: '#7367B1',
                     '&:hover': {
-                        borderColor: theme.palette.web.action.primaryHover,
-                        bgcolor: 'rgba(99, 102, 241, 0.04)'
+                        bgcolor: '#EDEBFB',
+                        borderColor: '#7367B1',
+                    },
+                    '&:active': {
+                        bgcolor: '#DFDAF9',
+                        borderColor: '#7367B1',
                     }
                 };
             case 'contained':
@@ -47,9 +52,12 @@ export const WebButton: React.FC<WebButtonProps> = ({
             fullWidth={fullWidth}
             sx={{
                 textTransform: 'none',
-                fontWeight: 600,
+                fontWeight: variant === 'contained' ? 400 : 400, // All variants use 400
+                fontSize: variant === 'contained' ? '20px' : undefined,
                 fontFamily: 'Hind Siliguri',
-                py: 1.5,
+                minHeight: 44, // Accessibility standard for touch targets
+                maxHeight: 48,
+                py: { xs: 1, sm: 1.25, md: 1.5 }, // Responsive padding
                 ...getVariantStyles(),
                 ...sx
             }}

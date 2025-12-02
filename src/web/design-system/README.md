@@ -30,11 +30,14 @@ A reusable button component for web pages with consistent styling.
 - All standard MUI Button props
 
 **Features:**
-- Consistent typography (Hind Siliguri, weight 600)
+- Consistent typography (Hind Siliguri, weight 400)
+- Contained variant: fontSize 20px
 - Theme-based colors from `theme.palette.web.action.*`
 - No text transform
-- Padding y: 1.5
-- Variant-specific hover states
+- Responsive padding (xs: 8px, sm: 10px, md: 12px)
+- Min height: 44px (accessibility standard)
+- Max height: 48px
+- Variant-specific hover and active states
 
 **Usage:**
 ```tsx

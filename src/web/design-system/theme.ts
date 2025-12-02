@@ -65,8 +65,8 @@ export const getWebTheme = (mode: PaletteMode) => {
                     secondary: '#FDD550',
                 },
                 action: {
-                    primary: '#6366F1',
-                    primaryHover: '#4F46E5',
+                    primary: '#8A7BD4', // mambaPrimary.main
+                    primaryHover: '#7367B1', // mambaPrimary.dark
                 },
             },
         },

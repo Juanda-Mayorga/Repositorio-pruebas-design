@@ -30,8 +30,8 @@ This document outlines the specific design tokens used in the Web application, f
 ### Actions
 | Token Name | Value | Usage |
 | :--- | :--- | :--- |
-| `theme.palette.web.action.primary` | `#6366F1` | Primary action color (Contact buttons) |
-| `theme.palette.web.action.primaryHover` | `#4F46E5` | Primary action hover state |
+| `theme.palette.web.action.primary` | `#8A7BD4` | Primary action color (mambaPrimary.main) |
+| `theme.palette.web.action.primaryHover` | `#7367B1` | Primary action hover state (mambaPrimary.dark) |
 
 ## Gradients
 
