@@ -39,11 +39,9 @@ A reusable button component for web pages with consistent styling.
 - Max height: 48px
 - Variant-specific hover and active states
 
-**Usage:**
 ```tsx
 <WebButton variant="outlined" fullWidth>
-  Click Me
-</WebButton>
+  Click Me</WebButton>
 
 <WebButton variant="contained">
   Submit
@@ -52,6 +50,58 @@ A reusable button component for web pages with consistent styling.
 <WebButton variant="soft">
   <Icon />
 </WebButton>
+```
+
+### [WebInputField](file:///Users/carolinadomenechreal/Desktop/Prueba/Repositorio-pruebas-design/src/web/design-system/atoms/WebInputField.tsx)
+
+A generic input field component for web forms with validation support.
+
+**Props:**
+- `label?: string` - Input label
+- `placeholder?: string` - Placeholder text
+- `value?: string` - Input value
+- `onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void` - Change handler
+- `error?: boolean` - Error state
+- `helperText?: string` - Helper/error text
+- `fullWidth?: boolean` - Full width (default: true)
+- `disabled?: boolean` - Disabled state
+- `required?: boolean` - Required field indicator
+- `name?: string` - Input name
+- `id?: string` - Input ID
+- `type?: 'text' | 'email' | 'tel' | 'number'` - Input type (default: 'text')
+- `multiline?: boolean` - Multi-line textarea
+- `rows?: number` - Number of rows for multiline
+
+**Features:**
+- Consistent styling with web design system
+- Validation state support (error/helperText)
+- Single-line and multi-line support
+- Theme-based colors
+- Border radius: 4px
+- Hover and focus states
+
+**Usage:**
+```tsx
+<WebInputField
+  name="email"
+  label="Email"
+  placeholder="name@example.com"
+  type="email"
+  required
+  value={email}
+  onChange={handleChange}
+  error={!!errors.email}
+  helperText={errors.email}
+/>
+
+<WebInputField
+  name="message"
+  multiline
+  rows={4}
+  placeholder="Your message"
+  value={message}
+  onChange={handleChange}
+/>
 ```
 
 ## Molecules

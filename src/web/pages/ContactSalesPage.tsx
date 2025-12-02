@@ -1,13 +1,61 @@
-import { Box, Typography, Container, useTheme, TextField, Checkbox, FormControlLabel } from '@mui/material';
+import { useState } from 'react';
+import { Box, Typography, Container, useTheme, Checkbox, FormControlLabel } from '@mui/material';
 import { PublicHeader } from '../design-system/organisms/PublicHeader';
 import { Footer } from '../design-system/organisms/Footer';
 import { WebButton } from '../design-system/atoms/WebButton';
-import { InputField } from '../../platform/design-system/molecules/InputField';
+import { WebInputField } from '../design-system/atoms/WebInputField';
 import { useTranslation } from 'react-i18next';
 
 export const ContactSalesPage = () => {
     const { t } = useTranslation();
     const theme = useTheme();
+
+    const [formData, setFormData] = useState({
+        firstName: '',
+        lastName: '',
+        jobTitle: '',
+        country: '',
+        company: '',
+        email: '',
+        message: '',
+        acceptTerms: false
+    });
+
+    const [errors, setErrors] = useState({
+        firstName: '',
+        lastName: '',
+        email: ''
+    });
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const { name, value } = e.target;
+        setFormData(prev => ({ ...prev, [name]: value }));
+
+        // Real-time validation
+        const newErrors = { ...errors };
+
+        if (name === 'firstName') {
+            if (value.length > 0 && value.length < 2) {
+                newErrors.firstName = t('validation.nameRequired');
+            } else {
+                newErrors.firstName = '';
+            }
+        }
+
+        if (name === 'lastName') {
+            if (value.length > 0 && value.length < 2) {
+                newErrors.lastName = t('validation.surnameRequired');
+            } else {
+                newErrors.lastName = '';
+            }
+        }
+
+        setErrors(newErrors);
+    };
+
+    const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setFormData(prev => ({ ...prev, acceptTerms: e.target.checked }));
+    };
 
     return (
         <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', bgcolor: theme.palette.web.background.default }}>
@@ -72,73 +120,89 @@ export const ContactSalesPage = () => {
                         }}>
                             <Box component="form" sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
                                 <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 3 }}>
-                                    <InputField
-                                        variant="name"
+                                    <WebInputField
+                                        name="firstName"
                                         label={t('contactSales.form.firstName')}
                                         placeholder={t('contactSales.form.firstNamePlaceholder')}
+                                        value={formData.firstName}
+                                        onChange={handleChange}
+                                        error={!!errors.firstName}
+                                        helperText={errors.firstName}
                                         fullWidth
                                         required
                                     />
-                                    <InputField
-                                        variant="company" // Reusing company variant style for Job Title
+                                    <WebInputField
+                                        name="jobTitle"
                                         label={t('contactSales.form.jobTitle')}
                                         placeholder={t('contactSales.form.jobTitlePlaceholder')}
+                                        value={formData.jobTitle}
+                                        onChange={handleChange}
                                         fullWidth
                                         required
                                     />
-                                    <InputField
-                                        variant="surname"
+                                    <WebInputField
+                                        name="lastName"
                                         label={t('contactSales.form.lastName')}
                                         placeholder={t('contactSales.form.lastNamePlaceholder')}
+                                        value={formData.lastName}
+                                        onChange={handleChange}
+                                        error={!!errors.lastName}
+                                        helperText={errors.lastName}
                                         fullWidth
                                         required
                                     />
-                                    <InputField
-                                        variant="country"
+                                    <WebInputField
+                                        name="country"
                                         label={t('contactSales.form.country')}
                                         placeholder={t('contactSales.form.countryPlaceholder')}
+                                        value={formData.country}
+                                        onChange={handleChange}
                                         fullWidth
                                         required
                                     />
-                                    <InputField
-                                        variant="company"
+                                    <WebInputField
+                                        name="company"
                                         label={t('contactSales.form.company')}
                                         placeholder={t('contactSales.form.companyPlaceholder')}
+                                        value={formData.company}
+                                        onChange={handleChange}
                                         fullWidth
                                         required
                                     />
-                                    <InputField
-                                        variant="email"
+                                    <WebInputField
+                                        name="email"
+                                        type="email"
                                         label={t('contactSales.form.email')}
                                         placeholder={t('contactSales.form.emailPlaceholder')}
+                                        value={formData.email}
+                                        onChange={handleChange}
+                                        error={!!errors.email}
+                                        helperText={errors.email}
                                         fullWidth
                                         required
                                     />
                                 </Box>
 
                                 <Box>
-                                    <TextField
+                                    <WebInputField
+                                        name="message"
                                         multiline
                                         rows={4}
                                         fullWidth
                                         placeholder={t('contactSales.form.messagePlaceholder')}
-                                        sx={{
-                                            '& .MuiOutlinedInput-root': {
-                                                borderRadius: 1,
-                                                bgcolor: 'background.paper',
-                                                '& fieldset': {
-                                                    borderColor: 'divider',
-                                                },
-                                                '&:hover fieldset': {
-                                                    borderColor: 'primary.main',
-                                                },
-                                            }
-                                        }}
+                                        value={formData.message}
+                                        onChange={handleChange}
                                     />
                                 </Box>
 
                                 <FormControlLabel
-                                    control={<Checkbox sx={{ color: '#D1D5DB', '&.Mui-checked': { color: '#7367B1' } }} />}
+                                    control={
+                                        <Checkbox
+                                            checked={formData.acceptTerms}
+                                            onChange={handleCheckboxChange}
+                                            sx={{ color: '#D1D5DB', '&.Mui-checked': { color: '#7367B1' } }}
+                                        />
+                                    }
                                     label={
                                         <Typography variant="body2" color="text.secondary">
                                             {t('contactSales.form.terms')}
