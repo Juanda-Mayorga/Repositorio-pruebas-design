@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Box, Typography, Container, useTheme, Checkbox, FormControlLabel } from '@mui/material';
+import { Box, Typography, Container, useTheme } from '@mui/material';
 import { PublicHeader } from '../design-system/organisms/PublicHeader';
 import { Footer } from '../design-system/organisms/Footer';
 import { WebButton } from '../design-system/atoms/WebButton';
@@ -98,9 +98,10 @@ export const ContactSalesPage = () => {
         setErrors(newErrors);
     };
 
-    const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setFormData(prev => ({ ...prev, acceptTerms: e.target.checked }));
-    };
+    // TODO: Uncomment when Terms and Conditions checkbox is re-enabled
+    // const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    //     setFormData(prev => ({ ...prev, acceptTerms: e.target.checked }));
+    // };
 
     return (
         <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', bgcolor: theme.palette.web.background.default }}>
@@ -262,6 +263,9 @@ export const ContactSalesPage = () => {
                                     All fields marked with <span style={{ color: '#E63C3D' }}>*</span> are required
                                 </Typography>
 
+                                {/* TODO: Uncomment this section when Terms and Conditions are available
+                                    Currently commented out because we don't have T&C ready yet.
+                                    This will be implemented in a future version.
                                 <FormControlLabel
                                     control={
                                         <Checkbox
@@ -276,6 +280,7 @@ export const ContactSalesPage = () => {
                                         </Typography>
                                     }
                                 />
+                                */}
 
                                 <Box sx={{ display: 'flex', justifyContent: 'center', mt: 2 }}>
                                     <WebButton variant="contained" size="large" sx={{ minWidth: 200, px: 6 }}>
