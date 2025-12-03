@@ -18,6 +18,7 @@ export const ContactSalesPage = () => {
         country: '',
         company: '',
         email: '',
+        phone: '',
         message: '',
         acceptTerms: false
     });
@@ -28,7 +29,8 @@ export const ContactSalesPage = () => {
         email: '',
         jobTitle: '',
         company: '',
-        country: ''
+        country: '',
+        phone: ''
     });
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -175,6 +177,17 @@ export const ContactSalesPage = () => {
                                         required
                                     />
                                     <WebInputField
+                                        name="lastName"
+                                        label={t('contactSales.form.lastName')}
+                                        placeholder={t('contactSales.form.lastNamePlaceholder')}
+                                        value={formData.lastName}
+                                        onChange={handleChange}
+                                        error={!!errors.lastName}
+                                        helperText={errors.lastName}
+                                        fullWidth
+                                        required
+                                    />
+                                    <WebInputField
                                         name="jobTitle"
                                         label={t('contactSales.form.jobTitle')}
                                         placeholder={t('contactSales.form.jobTitlePlaceholder')}
@@ -186,13 +199,13 @@ export const ContactSalesPage = () => {
                                         required
                                     />
                                     <WebInputField
-                                        name="lastName"
-                                        label={t('contactSales.form.lastName')}
-                                        placeholder={t('contactSales.form.lastNamePlaceholder')}
-                                        value={formData.lastName}
+                                        name="company"
+                                        label={t('contactSales.form.company')}
+                                        placeholder={t('contactSales.form.companyPlaceholder')}
+                                        value={formData.company}
                                         onChange={handleChange}
-                                        error={!!errors.lastName}
-                                        helperText={errors.lastName}
+                                        error={!!errors.company}
+                                        helperText={errors.company}
                                         fullWidth
                                         required
                                     />
@@ -209,29 +222,29 @@ export const ContactSalesPage = () => {
                                         required
                                     />
                                     <WebInputField
-                                        name="company"
-                                        label={t('contactSales.form.company')}
-                                        placeholder={t('contactSales.form.companyPlaceholder')}
-                                        value={formData.company}
+                                        name="phone"
+                                        type="tel"
+                                        label="Móvil"
+                                        value={formData.phone}
                                         onChange={handleChange}
-                                        error={!!errors.company}
-                                        helperText={errors.company}
+                                        error={!!errors.phone}
+                                        helperText={errors.phone}
                                         fullWidth
-                                        required
-                                    />
-                                    <WebInputField
-                                        name="email"
-                                        type="email"
-                                        label={t('contactSales.form.email')}
-                                        placeholder={t('contactSales.form.emailPlaceholder')}
-                                        value={formData.email}
-                                        onChange={handleChange}
-                                        error={!!errors.email}
-                                        helperText={errors.email}
-                                        fullWidth
-                                        required
                                     />
                                 </Box>
+
+                                <WebInputField
+                                    name="email"
+                                    type="email"
+                                    label={t('contactSales.form.email')}
+                                    placeholder={t('contactSales.form.emailPlaceholder')}
+                                    value={formData.email}
+                                    onChange={handleChange}
+                                    error={!!errors.email}
+                                    helperText={errors.email}
+                                    fullWidth
+                                    required
+                                />
 
                                 <Box>
                                     <WebInputField
