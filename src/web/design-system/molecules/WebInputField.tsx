@@ -88,9 +88,28 @@ export const WebInputField: React.FC<WebInputFieldProps> = ({
         return true;
     };
 
+    const validatePhone = (phone: string) => {
+        if (!phone) return true;
+
+        // Remove non-digit characters for length check
+        const digits = phone.replace(/\D/g, '');
+
+        if (digits.length < 7) {
+            setInternalError(true);
+            setInternalHelperText('El número de móvil debe tener al menos 7 dígitos');
+            return false;
+        }
+
+        setInternalError(false);
+        setInternalHelperText('');
+        return true;
+    };
+
     const handleBlur = (event: React.FocusEvent<HTMLInputElement>) => {
         if (type === 'email') {
             validateEmail(event.target.value);
+        } else if (type === 'tel') {
+            validatePhone(event.target.value);
         }
     };
 
@@ -110,12 +129,15 @@ export const WebInputField: React.FC<WebInputFieldProps> = ({
     const showError = error || internalError;
     const currentHelperText = error ? helperText : (internalError ? internalHelperText : helperText);
 
+    // Default placeholder for phone input
+    const effectivePlaceholder = placeholder || (type === 'tel' ? 'Introduce tu número de móvil' : undefined);
+
     return (
         <TextField
             id={id}
             name={name}
             label={label}
-            placeholder={placeholder}
+            placeholder={effectivePlaceholder}
             value={value}
             onChange={handleChange}
             onBlur={handleBlur}
