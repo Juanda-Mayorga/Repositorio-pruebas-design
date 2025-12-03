@@ -70,29 +70,70 @@ export const WebInputField: React.FC<WebInputFieldProps> = ({
             type={type}
             multiline={multiline}
             rows={rows}
+            variant="outlined"
+            InputLabelProps={{
+                shrink: true,
+            }}
             sx={{
                 '& .MuiOutlinedInput-root': {
-                    borderRadius: 1,
-                    bgcolor: 'background.paper',
+                    borderRadius: '4px',
+                    backgroundColor: '#FFFFFF',
                     '& fieldset': {
-                        borderColor: 'divider',
+                        borderColor: '#CCCCCC',
                     },
                     '&:hover fieldset': {
-                        borderColor: 'primary.main',
+                        borderColor: '#AAAAAA',
                     },
                     '&.Mui-focused fieldset': {
-                        borderColor: 'primary.main',
+                        borderColor: '#666666',
+                        borderWidth: '1px',
                     },
                     '&.Mui-error fieldset': {
-                        borderColor: 'error.main',
+                        borderColor: '#d32f2f',
+                    },
+                    '&.Mui-disabled': {
+                        backgroundColor: '#F5F5F5',
+                        '& fieldset': {
+                            borderColor: '#DEDEDE',
+                        },
+                    },
+                    '& input': {
+                        color: '#434343',
+                        fontFamily: '"Hind Siliguri", sans-serif',
+                        height: '48px', // Set explicit height
+                        padding: '0 14px',
+                        boxSizing: 'border-box',
+                        '&::placeholder': {
+                            color: '#797D80',
+                            opacity: 1,
+                            fontSize: '16px',
+                            fontFamily: '"Hind Siliguri", sans-serif',
+                        },
+                        '&.Mui-disabled': {
+                            color: '#AAAAAA',
+                            WebkitTextFillColor: '#AAAAAA',
+                            '&::placeholder': {
+                                color: '#AAAAAA',
+                                opacity: 1,
+                            },
+                        },
                     },
                 },
                 '& .MuiInputLabel-root': {
+                    color: '#434343',
+                    fontSize: '16px',
+                    fontFamily: '"Hind Siliguri", sans-serif',
                     '&.Mui-focused': {
-                        color: 'primary.main',
+                        color: '#434343',
                     },
                     '&.Mui-error': {
-                        color: 'error.main',
+                        color: '#d32f2f',
+                    },
+                    '&.Mui-disabled': {
+                        color: '#AAAAAA',
+                    },
+                    '& .MuiFormLabel-asterisk': {
+                        color: '#E63C3D',
                     },
                 },
             }}

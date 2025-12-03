@@ -3,7 +3,7 @@ import { Box, Typography, Container, useTheme, Checkbox, FormControlLabel } from
 import { PublicHeader } from '../design-system/organisms/PublicHeader';
 import { Footer } from '../design-system/organisms/Footer';
 import { WebButton } from '../design-system/atoms/WebButton';
-import { WebInputField } from '../design-system/atoms/WebInputField';
+import { WebInputField } from '../design-system/molecules/WebInputField';
 import { useTranslation } from 'react-i18next';
 
 export const ContactSalesPage = () => {
