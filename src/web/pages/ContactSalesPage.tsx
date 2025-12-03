@@ -34,6 +34,44 @@ export const ContactSalesPage = () => {
         phone: ''
     });
 
+    // List of common disposable email domains
+    const disposableDomains = [
+        'yopmail.com', 'temp-mail.org', 'guerrillamail.com', '10minutemail.com',
+        'mailinator.com', 'throwawaymail.com', 'tempmail.com', 'maildrop.cc',
+        'getairmail.com', 'dispostable.com'
+    ];
+
+    const validateEmail = (email: string) => {
+        if (!email) return { isValid: true, message: '' }; // Let required check handle empty
+
+        // 1. Validate email format
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            return { isValid: false, message: 'Please enter a valid email address' };
+        }
+
+        // 2. Validate temporary email
+        const domain = email.split('@')[1]?.toLowerCase();
+        if (domain && disposableDomains.includes(domain)) {
+            return { isValid: false, message: 'Temporary email addresses are not allowed' };
+        }
+
+        return { isValid: true, message: '' };
+    };
+
+    const validatePhone = (phone: string) => {
+        if (!phone) return { isValid: true, message: '' };
+
+        // Remove non-digit characters for length check
+        const digits = phone.replace(/\D/g, '');
+
+        if (digits.length < 7) {
+            return { isValid: false, message: 'El número de móvil debe tener al menos 7 dígitos' };
+        }
+
+        return { isValid: true, message: '' };
+    };
+
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target;
         setFormData(prev => ({ ...prev, [name]: value }));
@@ -81,6 +119,24 @@ export const ContactSalesPage = () => {
             }
         }
 
+        if (name === 'email') {
+            const { isValid, message } = validateEmail(value);
+            if (!isValid) {
+                newErrors.email = message;
+            } else {
+                newErrors.email = '';
+            }
+        }
+
+        if (name === 'phone') {
+            const { isValid, message } = validatePhone(value);
+            if (!isValid) {
+                newErrors.phone = message;
+            } else {
+                newErrors.phone = '';
+            }
+        }
+
         setErrors(newErrors);
     };
 
@@ -93,6 +149,24 @@ export const ContactSalesPage = () => {
                 newErrors.country = "Por favor, selecciona tu país";
             } else {
                 newErrors.country = '';
+            }
+        }
+
+        if (name === 'email') {
+            const { isValid, message } = validateEmail(value);
+            if (!isValid) {
+                newErrors.email = message;
+            } else {
+                newErrors.email = '';
+            }
+        }
+
+        if (name === 'phone') {
+            const { isValid, message } = validatePhone(value);
+            if (!isValid) {
+                newErrors.phone = message;
+            } else {
+                newErrors.phone = '';
             }
         }
 
