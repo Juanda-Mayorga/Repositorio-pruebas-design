@@ -54,6 +54,62 @@ export const WebInputField: React.FC<WebInputFieldProps> = ({
     multiline = false,
     rows,
 }) => {
+    const [internalError, setInternalError] = React.useState(false);
+    const [internalHelperText, setInternalHelperText] = React.useState('');
+
+    // List of common disposable email domains
+    const disposableDomains = [
+        'yopmail.com', 'temp-mail.org', 'guerrillamail.com', '10minutemail.com',
+        'mailinator.com', 'throwawaymail.com', 'tempmail.com', 'maildrop.cc',
+        'getairmail.com', 'dispostable.com'
+    ];
+
+    const validateEmail = (email: string) => {
+        if (!email) return true; // Let required prop handle empty state if needed
+
+        // 1. Validate email format
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            setInternalError(true);
+            setInternalHelperText('Please enter a valid email address');
+            return false;
+        }
+
+        // 2. Validate temporary email
+        const domain = email.split('@')[1]?.toLowerCase();
+        if (domain && disposableDomains.includes(domain)) {
+            setInternalError(true);
+            setInternalHelperText('Temporary email addresses are not allowed');
+            return false;
+        }
+
+        setInternalError(false);
+        setInternalHelperText('');
+        return true;
+    };
+
+    const handleBlur = (event: React.FocusEvent<HTMLInputElement>) => {
+        if (type === 'email') {
+            validateEmail(event.target.value);
+        }
+    };
+
+    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        // Clear error on change if there was one
+        if (internalError) {
+            setInternalError(false);
+            setInternalHelperText('');
+        }
+        if (onChange) {
+            onChange(event);
+        }
+    };
+
+    // Determine if we should show external or internal error/helperText
+    // External props take precedence if provided and true (for error)
+    const showError = error || internalError;
+    const currentHelperText = error ? helperText : (internalError ? internalHelperText : helperText);
+
     return (
         <TextField
             id={id}
@@ -61,9 +117,10 @@ export const WebInputField: React.FC<WebInputFieldProps> = ({
             label={label}
             placeholder={placeholder}
             value={value}
-            onChange={onChange}
-            error={error}
-            helperText={helperText}
+            onChange={handleChange}
+            onBlur={handleBlur}
+            error={showError}
+            helperText={currentHelperText}
             fullWidth={fullWidth}
             disabled={disabled}
             required={required}

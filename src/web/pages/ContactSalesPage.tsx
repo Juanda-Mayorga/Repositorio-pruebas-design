@@ -24,7 +24,9 @@ export const ContactSalesPage = () => {
     const [errors, setErrors] = useState({
         firstName: '',
         lastName: '',
-        email: ''
+        email: '',
+        jobTitle: '',
+        company: ''
     });
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -47,6 +49,22 @@ export const ContactSalesPage = () => {
                 newErrors.lastName = t('validation.surnameRequired');
             } else {
                 newErrors.lastName = '';
+            }
+        }
+
+        if (name === 'jobTitle') {
+            if (value.length > 0 && value.length < 2) {
+                newErrors.jobTitle = "El cargo debe tener al menos 2 caracteres";
+            } else {
+                newErrors.jobTitle = '';
+            }
+        }
+
+        if (name === 'company') {
+            if (value.length > 0 && value.length < 2) {
+                newErrors.company = "El nombre de la empresa debe tener al menos 2 caracteres";
+            } else {
+                newErrors.company = '';
             }
         }
 
@@ -137,6 +155,8 @@ export const ContactSalesPage = () => {
                                         placeholder={t('contactSales.form.jobTitlePlaceholder')}
                                         value={formData.jobTitle}
                                         onChange={handleChange}
+                                        error={!!errors.jobTitle}
+                                        helperText={errors.jobTitle}
                                         fullWidth
                                         required
                                     />
@@ -166,6 +186,8 @@ export const ContactSalesPage = () => {
                                         placeholder={t('contactSales.form.companyPlaceholder')}
                                         value={formData.company}
                                         onChange={handleChange}
+                                        error={!!errors.company}
+                                        helperText={errors.company}
                                         fullWidth
                                         required
                                     />
