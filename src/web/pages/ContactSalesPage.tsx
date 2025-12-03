@@ -4,6 +4,7 @@ import { PublicHeader } from '../design-system/organisms/PublicHeader';
 import { Footer } from '../design-system/organisms/Footer';
 import { WebButton } from '../design-system/atoms/WebButton';
 import { WebInputField } from '../design-system/molecules/WebInputField';
+import { WebCountrySelector } from '../design-system/molecules/WebCountrySelector';
 import { useTranslation } from 'react-i18next';
 
 export const ContactSalesPage = () => {
@@ -26,7 +27,8 @@ export const ContactSalesPage = () => {
         lastName: '',
         email: '',
         jobTitle: '',
-        company: ''
+        company: '',
+        country: ''
     });
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -65,6 +67,29 @@ export const ContactSalesPage = () => {
                 newErrors.company = "El nombre de la empresa debe tener al menos 2 caracteres";
             } else {
                 newErrors.company = '';
+            }
+        }
+
+        if (name === 'country') {
+            if (!value) {
+                newErrors.country = "Por favor, selecciona tu país";
+            } else {
+                newErrors.country = '';
+            }
+        }
+
+        setErrors(newErrors);
+    };
+
+    const handleBlur = (e: React.FocusEvent<HTMLInputElement>) => {
+        const { name, value } = e.target;
+        const newErrors = { ...errors };
+
+        if (name === 'country') {
+            if (!value) {
+                newErrors.country = "Por favor, selecciona tu país";
+            } else {
+                newErrors.country = '';
             }
         }
 
@@ -171,12 +196,15 @@ export const ContactSalesPage = () => {
                                         fullWidth
                                         required
                                     />
-                                    <WebInputField
+                                    <WebCountrySelector
                                         name="country"
                                         label={t('contactSales.form.country')}
                                         placeholder={t('contactSales.form.countryPlaceholder')}
                                         value={formData.country}
                                         onChange={handleChange}
+                                        onBlur={handleBlur}
+                                        error={!!errors.country}
+                                        helperText={errors.country}
                                         fullWidth
                                         required
                                     />
