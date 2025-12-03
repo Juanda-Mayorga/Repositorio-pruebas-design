@@ -39,7 +39,22 @@ export const PublicHeader = () => {
     };
 
     return (
-        <Box component="header" sx={{ height: 64, borderBottom: '1px solid', borderColor: 'divider', display: 'flex', alignItems: 'center', justifyContent: 'space-between', px: 4, bgcolor: '#FFFFFF' }}>
+        <Box component="header" sx={{
+            height: 64,
+            borderBottom: '1px solid',
+            borderColor: 'divider',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            px: 4,
+            bgcolor: '#FFFFFF',
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            right: 0,
+            zIndex: 1100,
+            width: '100%'
+        }}>
             {/* Logo */}
             <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, cursor: 'pointer' }} onClick={() => navigate('/landing')}>
                 <Box sx={{ width: 32, height: 32, bgcolor: 'primary.main', borderRadius: 1 }} />
