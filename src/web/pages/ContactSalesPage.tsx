@@ -258,6 +258,10 @@ export const ContactSalesPage = () => {
                                     />
                                 </Box>
 
+                                <Typography variant="body2" sx={{ color: '#797D80', fontSize: '14px', fontFamily: '"Hind Siliguri", sans-serif' }}>
+                                    All fields marked with <span style={{ color: '#E63C3D' }}>*</span> are required
+                                </Typography>
+
                                 <FormControlLabel
                                     control={
                                         <Checkbox

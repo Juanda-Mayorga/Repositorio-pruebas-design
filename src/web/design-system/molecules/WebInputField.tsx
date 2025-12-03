@@ -197,6 +197,26 @@ export const WebInputField: React.FC<WebInputFieldProps> = ({
                             },
                         },
                     },
+                    '& textarea': {
+                        color: '#434343',
+                        fontFamily: '"Hind Siliguri", sans-serif',
+                        padding: '14px 14px',
+                        boxSizing: 'border-box',
+                        '&::placeholder': {
+                            color: '#797D80',
+                            opacity: 1,
+                            fontSize: '16px',
+                            fontFamily: '"Hind Siliguri", sans-serif',
+                        },
+                        '&.Mui-disabled': {
+                            color: '#AAAAAA',
+                            WebkitTextFillColor: '#AAAAAA',
+                            '&::placeholder': {
+                                color: '#AAAAAA',
+                                opacity: 1,
+                            },
+                        },
+                    },
                 },
                 '& .MuiInputLabel-root': {
                     color: '#434343',
