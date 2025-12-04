@@ -8,6 +8,7 @@ import { LandingPage } from './web/pages/LandingPage';
 import { ContactPage } from './web/pages/ContactPage';
 import { ContactSalesPage } from './web/pages/ContactSalesPage';
 import { ContactSalesSubmittingPage } from './web/pages/ContactSalesSubmittingPage';
+import { ContactSalesSuccessPage } from './web/pages/ContactSalesSuccessPage';
 import { ThemeProvider } from './platform/design-system/theme/ThemeContext';
 import { WebThemeProvider } from './web/design-system/WebThemeContext';
 
@@ -26,6 +27,7 @@ function App() {
           <Route path="/contact" element={<WebThemeProvider><ContactPage /></WebThemeProvider>} />
           <Route path="/contact-sales" element={<WebThemeProvider><ContactSalesPage /></WebThemeProvider>} />
           <Route path="/contact-sales/submitting" element={<WebThemeProvider><ContactSalesSubmittingPage /></WebThemeProvider>} />
+          <Route path="/contact-sales/success" element={<WebThemeProvider><ContactSalesSuccessPage /></WebThemeProvider>} />
 
           {/* Platform routes - wrapped with MainLayout (Sidebar + Header) */}
           <Route path="/subscription" element={<MainLayout><SubscriptionPage /></MainLayout>} />

@@ -166,6 +166,11 @@
             "terms": "I accept the terms and conditions. I authorize receiving useful information from MAMBA",
             "submit": "Submit",
             "submitting": "Sending..."
+        },
+        "success": {
+            "title": "Thank you! Your request has been sent.",
+            "subtitle": "Our sales team will review your request and get in touch with you shortly. In the meantime, you can explore useful content about MAMBA and BIM methodology.",
+            "cta": "View Resources"
         }
     }
 }

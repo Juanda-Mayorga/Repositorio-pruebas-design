@@ -7,11 +7,12 @@ import { WebCountrySelector } from '../design-system/molecules/WebCountrySelecto
 import { WebTooltip } from '../design-system/atoms/WebTooltip';
 import { WebBreadcrumb } from '../design-system/molecules/WebBreadcrumb';
 import { useTranslation } from 'react-i18next';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 export const ContactSalesSubmittingPage = () => {
     const { t } = useTranslation();
     const location = useLocation();
+    const navigate = useNavigate();
 
     const formData = location.state?.formData || {
         firstName: '',
@@ -31,14 +32,12 @@ export const ContactSalesSubmittingPage = () => {
     useEffect(() => {
         // Simulate API call completion after 2 seconds
         const timer = setTimeout(() => {
-            // Here we would normally navigate to a success page or show a success message
-            // For now, we'll just log it, or maybe navigate back?
-            // The user only asked for the submitting state page.
-            console.log('Submission complete');
+            // Navigate to success page after submission completes
+            navigate('/contact-sales/success');
         }, 2000);
 
         return () => clearTimeout(timer);
-    }, []);
+    }, [navigate]);
 
     return (
         <ContactLayout>
