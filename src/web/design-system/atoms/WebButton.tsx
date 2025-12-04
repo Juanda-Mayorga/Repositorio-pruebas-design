@@ -34,8 +34,10 @@ export const WebButton: React.FC<WebButtonProps> = ({
             case 'contained':
                 return {
                     bgcolor: theme.palette.web.action.primary,
+                    boxShadow: 'none',
                     '&:hover': {
-                        bgcolor: theme.palette.web.action.primaryHover
+                        bgcolor: theme.palette.web.action.primaryHover,
+                        boxShadow: 'none',
                     }
                 };
             case 'soft':
