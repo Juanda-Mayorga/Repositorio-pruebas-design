@@ -216,13 +216,13 @@ export const ContactSalesPage = () => {
                 </Box>
 
                 {/* Header Section */}
-                <Box sx={{ textAlign: 'center', mb: 6 }}>
+                <Box sx={{ textAlign: 'center', mb: { xs: 2, md: 3 } }}>
 
                     <Typography
                         variant="h1"
                         component="h1"
                         sx={{
-                            mb: 2,
+                            mb: 1,
                             color: '#7367B1', // Mamba Primary Dark
                             fontFamily: '"Inter", "Hind Siliguri", sans-serif',
                             fontWeight: 500,
@@ -240,11 +240,11 @@ export const ContactSalesPage = () => {
                     position: 'relative',
                     borderRadius: 8,
                     overflow: 'hidden',
-                    minHeight: 600,
+                    minHeight: 400,
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    py: 8,
+                    py: { xs: 3, md: 4 },
                     px: 2
                 }}>
                     {/* Background Image */}
@@ -266,13 +266,13 @@ export const ContactSalesPage = () => {
                         zIndex: 1,
                         bgcolor: '#FFFFFF',
                         borderRadius: 2,
-                        p: { xs: 4, md: 6 },
+                        p: { xs: 3, md: 4 },
                         maxWidth: 800,
                         width: '100%',
                         boxShadow: '0 4px 20px rgba(0,0,0,0.05)'
                     }}>
-                        <Box component="form" sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
-                            <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 3 }}>
+                        <Box component="form" sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+                            <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 2 }}>
                                 <WebInputField
                                     name="firstName"
                                     label={t('contactSales.form.firstName')}
@@ -365,7 +365,7 @@ export const ContactSalesPage = () => {
                                 <WebInputField
                                     name="message"
                                     multiline
-                                    rows={4}
+                                    rows={2}
 
                                     fullWidth
                                     placeholder={t('contactSales.form.messagePlaceholder')}

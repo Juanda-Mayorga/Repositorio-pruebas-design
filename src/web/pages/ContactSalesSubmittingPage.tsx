@@ -174,7 +174,7 @@ export const ContactSalesSubmittingPage = () => {
                                 <WebInputField
                                     name="message"
                                     multiline
-                                    rows={4}
+                                    rows={2}
                                     disabled={isSubmitting}
                                     fullWidth
                                     value={formData.message}
