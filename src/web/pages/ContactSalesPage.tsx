@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { Box, Typography, Container, useTheme } from '@mui/material';
-import { PublicHeader } from '../design-system/organisms/PublicHeader';
-import { Footer } from '../design-system/organisms/Footer';
+import { Box, Typography, Container } from '@mui/material';
+import { ContactLayout } from '../design-system/templates/ContactLayout';
 import { WebButton } from '../design-system/atoms/WebButton';
 import { WebInputField } from '../design-system/molecules/WebInputField';
 import { WebCountrySelector } from '../design-system/molecules/WebCountrySelector';
@@ -11,7 +10,6 @@ import { useTranslation } from 'react-i18next';
 
 export const ContactSalesPage = () => {
     const { t } = useTranslation();
-    const theme = useTheme();
 
     const [formData, setFormData] = useState({
         firstName: '',
@@ -195,184 +193,181 @@ export const ContactSalesPage = () => {
         !errors.email;
 
     return (
-        <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', bgcolor: theme.palette.web.background.default }}>
-            <PublicHeader />
+        <ContactLayout>
+            <Container maxWidth="lg">
+                {/* Breadcrumb */}
+                <Box sx={{ mb: { xs: '8px', sm: '17px', md: '25px', lg: '32px', xl: '43px' } }}>
+                    <WebBreadcrumb
+                        items={[
+                            { label: t('contactSales.breadcrumb.contact'), href: '/contact' },
+                            { label: t('contactSales.breadcrumb.contactSales') }
+                        ]}
+                    />
+                </Box>
 
-            <Box component="main" sx={{ flexGrow: 1, pt: theme.webLayout.headerSpacing, pb: 8, mt: '64px' }}>
-                <Container maxWidth="lg">
-                    {/* Breadcrumb */}
-                    <Box sx={{ mb: { xs: '8px', sm: '17px', md: '25px', lg: '32px', xl: '43px' } }}>
-                        <WebBreadcrumb
-                            items={[
-                                { label: t('contactSales.breadcrumb.contact'), href: '/contact' },
-                                { label: t('contactSales.breadcrumb.contactSales') }
-                            ]}
-                        />
-                    </Box>
+                {/* Header Section */}
+                <Box sx={{ textAlign: 'center', mb: 6 }}>
 
-                    {/* Header Section */}
-                    <Box sx={{ textAlign: 'center', mb: 6 }}>
+                    <Typography
+                        variant="h1"
+                        component="h1"
+                        sx={{
+                            mb: 2,
+                            color: '#7367B1', // Mamba Primary Dark
+                            fontFamily: '"Inter", "Hind Siliguri", sans-serif',
+                            fontWeight: 500,
+                        }}
+                    >
+                        {t('contactSales.title')}
+                    </Typography>
+                    <Typography variant="h6" sx={{ color: 'text.secondary', maxWidth: 600, mx: 'auto', fontWeight: 'normal', fontFamily: 'Hind Siliguri' }}>
+                        {t('contactSales.subtitle')}
+                    </Typography>
+                </Box>
 
-                        <Typography
-                            variant="h1"
-                            component="h1"
-                            sx={{
-                                mb: 2,
-                                color: '#7367B1', // Mamba Primary Dark
-                                fontFamily: '"Inter", "Hind Siliguri", sans-serif',
-                                fontWeight: 500,
-                            }}
-                        >
-                            {t('contactSales.title')}
-                        </Typography>
-                        <Typography variant="h6" sx={{ color: 'text.secondary', maxWidth: 600, mx: 'auto', fontWeight: 'normal', fontFamily: 'Hind Siliguri' }}>
-                            {t('contactSales.subtitle')}
-                        </Typography>
-                    </Box>
+                {/* Form Container with Background */}
+                <Box sx={{
+                    position: 'relative',
+                    borderRadius: 8,
+                    overflow: 'hidden',
+                    minHeight: 600,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    py: 8,
+                    px: 2
+                }}>
+                    {/* Background Image */}
+                    <Box sx={{
+                        position: 'absolute',
+                        top: 0,
+                        left: 0,
+                        right: 0,
+                        bottom: 0,
+                        backgroundImage: 'url(/src/assets/contact-sales-bg.png)',
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center',
+                        zIndex: 0
+                    }} />
 
-                    {/* Form Container with Background */}
+                    {/* White Form Card */}
                     <Box sx={{
                         position: 'relative',
-                        borderRadius: 8,
-                        overflow: 'hidden',
-                        minHeight: 600,
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        py: 8,
-                        px: 2
+                        zIndex: 1,
+                        bgcolor: '#FFFFFF',
+                        borderRadius: 2,
+                        p: { xs: 4, md: 6 },
+                        maxWidth: 800,
+                        width: '100%',
+                        boxShadow: '0 4px 20px rgba(0,0,0,0.05)'
                     }}>
-                        {/* Background Image */}
-                        <Box sx={{
-                            position: 'absolute',
-                            top: 0,
-                            left: 0,
-                            right: 0,
-                            bottom: 0,
-                            backgroundImage: 'url(/src/assets/contact-sales-bg.png)',
-                            backgroundSize: 'cover',
-                            backgroundPosition: 'center',
-                            zIndex: 0
-                        }} />
-
-                        {/* White Form Card */}
-                        <Box sx={{
-                            position: 'relative',
-                            zIndex: 1,
-                            bgcolor: '#FFFFFF',
-                            borderRadius: 2,
-                            p: { xs: 4, md: 6 },
-                            maxWidth: 800,
-                            width: '100%',
-                            boxShadow: '0 4px 20px rgba(0,0,0,0.05)'
-                        }}>
-                            <Box component="form" sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
-                                <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 3 }}>
-                                    <WebInputField
-                                        name="firstName"
-                                        label={t('contactSales.form.firstName')}
-                                        placeholder={t('contactSales.form.firstNamePlaceholder')}
-                                        value={formData.firstName}
-                                        onChange={handleChange}
-                                        error={!!errors.firstName}
-                                        helperText={errors.firstName ? t(errors.firstName) : ''}
-                                        fullWidth
-                                        required
-                                    />
-                                    <WebInputField
-                                        name="lastName"
-                                        label={t('contactSales.form.lastName')}
-                                        placeholder={t('contactSales.form.lastNamePlaceholder')}
-                                        value={formData.lastName}
-                                        onChange={handleChange}
-                                        error={!!errors.lastName}
-                                        helperText={errors.lastName ? t(errors.lastName) : ''}
-                                        fullWidth
-                                        required
-                                    />
-                                    <WebInputField
-                                        name="jobTitle"
-                                        label={t('contactSales.form.jobTitle')}
-                                        placeholder={t('contactSales.form.jobTitlePlaceholder')}
-                                        value={formData.jobTitle}
-                                        onChange={handleChange}
-                                        error={!!errors.jobTitle}
-                                        helperText={errors.jobTitle ? t(errors.jobTitle) : ''}
-                                        fullWidth
-                                        required
-                                    />
-                                    <WebInputField
-                                        name="company"
-                                        label={t('contactSales.form.company')}
-                                        placeholder={t('contactSales.form.companyPlaceholder')}
-                                        value={formData.company}
-                                        onChange={handleChange}
-                                        error={!!errors.company}
-                                        helperText={errors.company ? t(errors.company) : ''}
-                                        fullWidth
-                                        required
-                                    />
-                                    <WebCountrySelector
-                                        name="country"
-                                        label={t('contactSales.form.country')}
-                                        placeholder={t('contactSales.form.countryPlaceholder')}
-                                        value={formData.country}
-                                        onChange={handleChange}
-                                        onBlur={handleBlur}
-                                        error={!!errors.country}
-                                        helperText={errors.country ? t(errors.country) : ''}
-                                        fullWidth
-                                        required
-                                    />
-                                    <WebInputField
-                                        name="phone"
-                                        type="tel"
-                                        label={t('contactSales.form.phoneLabel')}
-                                        placeholder={t('contactSales.form.phonePlaceholder')}
-                                        value={formData.phone}
-                                        onChange={handleChange}
-                                        error={!!errors.phone}
-                                        helperText={errors.phone ? t(errors.phone) : ''}
-                                        fullWidth
-                                    />
-                                </Box>
-
+                        <Box component="form" sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
+                            <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 3 }}>
                                 <WebInputField
-                                    name="email"
-                                    type="email"
-                                    label={t('contactSales.form.email')}
-                                    placeholder={t('contactSales.form.emailPlaceholder')}
-                                    value={formData.email}
+                                    name="firstName"
+                                    label={t('contactSales.form.firstName')}
+                                    placeholder={t('contactSales.form.firstNamePlaceholder')}
+                                    value={formData.firstName}
                                     onChange={handleChange}
-                                    error={!!errors.email}
-                                    helperText={errors.email ? t(errors.email) : ''}
+                                    error={!!errors.firstName}
+                                    helperText={errors.firstName ? t(errors.firstName) : ''}
                                     fullWidth
                                     required
                                 />
+                                <WebInputField
+                                    name="lastName"
+                                    label={t('contactSales.form.lastName')}
+                                    placeholder={t('contactSales.form.lastNamePlaceholder')}
+                                    value={formData.lastName}
+                                    onChange={handleChange}
+                                    error={!!errors.lastName}
+                                    helperText={errors.lastName ? t(errors.lastName) : ''}
+                                    fullWidth
+                                    required
+                                />
+                                <WebInputField
+                                    name="jobTitle"
+                                    label={t('contactSales.form.jobTitle')}
+                                    placeholder={t('contactSales.form.jobTitlePlaceholder')}
+                                    value={formData.jobTitle}
+                                    onChange={handleChange}
+                                    error={!!errors.jobTitle}
+                                    helperText={errors.jobTitle ? t(errors.jobTitle) : ''}
+                                    fullWidth
+                                    required
+                                />
+                                <WebInputField
+                                    name="company"
+                                    label={t('contactSales.form.company')}
+                                    placeholder={t('contactSales.form.companyPlaceholder')}
+                                    value={formData.company}
+                                    onChange={handleChange}
+                                    error={!!errors.company}
+                                    helperText={errors.company ? t(errors.company) : ''}
+                                    fullWidth
+                                    required
+                                />
+                                <WebCountrySelector
+                                    name="country"
+                                    label={t('contactSales.form.country')}
+                                    placeholder={t('contactSales.form.countryPlaceholder')}
+                                    value={formData.country}
+                                    onChange={handleChange}
+                                    onBlur={handleBlur}
+                                    error={!!errors.country}
+                                    helperText={errors.country ? t(errors.country) : ''}
+                                    fullWidth
+                                    required
+                                />
+                                <WebInputField
+                                    name="phone"
+                                    type="tel"
+                                    label={t('contactSales.form.phoneLabel')}
+                                    placeholder={t('contactSales.form.phonePlaceholder')}
+                                    value={formData.phone}
+                                    onChange={handleChange}
+                                    error={!!errors.phone}
+                                    helperText={errors.phone ? t(errors.phone) : ''}
+                                    fullWidth
+                                />
+                            </Box>
 
-                                <Box>
-                                    <WebInputField
-                                        name="message"
-                                        multiline
-                                        rows={4}
-                                        fullWidth
-                                        placeholder={t('contactSales.form.messagePlaceholder')}
-                                        value={formData.message}
-                                        onChange={handleChange}
-                                    />
-                                </Box>
+                            <WebInputField
+                                name="email"
+                                type="email"
+                                label={t('contactSales.form.email')}
+                                placeholder={t('contactSales.form.emailPlaceholder')}
+                                value={formData.email}
+                                onChange={handleChange}
+                                error={!!errors.email}
+                                helperText={errors.email ? t(errors.email) : ''}
+                                fullWidth
+                                required
+                            />
 
-                                <Typography variant="body2" sx={{ color: '#797D80', fontSize: '14px', fontFamily: '"Hind Siliguri", sans-serif' }}>
-                                    {t('contactSales.form.requiredFieldsNotice', { returnObjects: false }).split('*').map((part, index, array) => (
-                                        index < array.length - 1 ? (
-                                            <React.Fragment key={index}>
-                                                {part}<span style={{ color: '#E63C3D' }}>*</span>
-                                            </React.Fragment>
-                                        ) : part
-                                    ))}
-                                </Typography>
+                            <Box>
+                                <WebInputField
+                                    name="message"
+                                    multiline
+                                    rows={4}
+                                    fullWidth
+                                    placeholder={t('contactSales.form.messagePlaceholder')}
+                                    value={formData.message}
+                                    onChange={handleChange}
+                                />
+                            </Box>
 
-                                {/* TODO: Uncomment this section when Terms and Conditions are available
+                            <Typography variant="body2" sx={{ color: '#797D80', fontSize: '14px', fontFamily: '"Hind Siliguri", sans-serif' }}>
+                                {t('contactSales.form.requiredFieldsNotice', { returnObjects: false }).split('*').map((part, index, array) => (
+                                    index < array.length - 1 ? (
+                                        <React.Fragment key={index}>
+                                            {part}<span style={{ color: '#E63C3D' }}>*</span>
+                                        </React.Fragment>
+                                    ) : part
+                                ))}
+                            </Typography>
+
+                            {/* TODO: Uncomment this section when Terms and Conditions are available
                                     Currently commented out because we don't have T&C ready yet.
                                     This will be implemented in a future version.
                                 <FormControlLabel
@@ -391,30 +386,27 @@ export const ContactSalesPage = () => {
                                 />
                                 */}
 
-                                <Box sx={{ display: 'flex', justifyContent: 'center', mt: 2 }}>
-                                    <WebTooltip
-                                        title={!isFormValid ? t('contactSales.form.submitTooltip') : ""}
-                                        placement="top"
-                                    >
-                                        <span>
-                                            <WebButton
-                                                variant="contained"
-                                                size="large"
-                                                sx={{ minWidth: 200, px: 6 }}
-                                                disabled={!isFormValid}
-                                            >
-                                                {t('contactSales.form.submit')}
-                                            </WebButton>
-                                        </span>
-                                    </WebTooltip>
-                                </Box>
+                            <Box sx={{ display: 'flex', justifyContent: 'center', mt: 2 }}>
+                                <WebTooltip
+                                    title={!isFormValid ? t('contactSales.form.submitTooltip') : ""}
+                                    placement="top"
+                                >
+                                    <span>
+                                        <WebButton
+                                            variant="contained"
+                                            size="large"
+                                            sx={{ minWidth: 200, px: 6 }}
+                                            disabled={!isFormValid}
+                                        >
+                                            {t('contactSales.form.submit')}
+                                        </WebButton>
+                                    </span>
+                                </WebTooltip>
                             </Box>
                         </Box>
                     </Box>
-                </Container>
-            </Box>
-
-            <Footer />
-        </Box>
+                </Box>
+            </Container>
+        </ContactLayout>
     );
 };
