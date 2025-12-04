@@ -42,34 +42,34 @@ export const ContactSalesPage = () => {
     ];
 
     const validateEmail = (email: string) => {
-        if (!email) return { isValid: true, message: '' }; // Let required check handle empty
+        if (!email) return { isValid: true, errorKey: '' }; // Let required check handle empty
 
         // 1. Validate email format
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(email)) {
-            return { isValid: false, message: t('validation.emailInvalid') };
+            return { isValid: false, errorKey: 'validation.emailInvalid' };
         }
 
         // 2. Validate temporary email
         const domain = email.split('@')[1]?.toLowerCase();
         if (domain && disposableDomains.includes(domain)) {
-            return { isValid: false, message: t('validation.emailTemporary') };
+            return { isValid: false, errorKey: 'validation.emailTemporary' };
         }
 
-        return { isValid: true, message: '' };
+        return { isValid: true, errorKey: '' };
     };
 
     const validatePhone = (phone: string) => {
-        if (!phone) return { isValid: true, message: '' };
+        if (!phone) return { isValid: true, errorKey: '' };
 
         // Remove non-digit characters for length check
         const digits = phone.replace(/\D/g, '');
 
         if (digits.length < 7) {
-            return { isValid: false, message: t('validation.phoneInvalid') };
+            return { isValid: false, errorKey: 'validation.phoneInvalid' };
         }
 
-        return { isValid: true, message: '' };
+        return { isValid: true, errorKey: '' };
     };
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -81,7 +81,7 @@ export const ContactSalesPage = () => {
 
         if (name === 'firstName') {
             if (value.length > 0 && value.length < 2) {
-                newErrors.firstName = t('validation.nameRequired');
+                newErrors.firstName = 'validation.nameRequired';
             } else {
                 newErrors.firstName = '';
             }
@@ -89,7 +89,7 @@ export const ContactSalesPage = () => {
 
         if (name === 'lastName') {
             if (value.length > 0 && value.length < 2) {
-                newErrors.lastName = t('validation.surnameRequired');
+                newErrors.lastName = 'validation.surnameRequired';
             } else {
                 newErrors.lastName = '';
             }
@@ -97,7 +97,7 @@ export const ContactSalesPage = () => {
 
         if (name === 'jobTitle') {
             if (value.length > 0 && value.length < 2) {
-                newErrors.jobTitle = t('validation.jobTitleRequired');
+                newErrors.jobTitle = 'validation.jobTitleRequired';
             } else {
                 newErrors.jobTitle = '';
             }
@@ -105,7 +105,7 @@ export const ContactSalesPage = () => {
 
         if (name === 'company') {
             if (value.length > 0 && value.length < 2) {
-                newErrors.company = t('validation.companyRequired');
+                newErrors.company = 'validation.companyRequired';
             } else {
                 newErrors.company = '';
             }
@@ -113,25 +113,25 @@ export const ContactSalesPage = () => {
 
         if (name === 'country') {
             if (!value) {
-                newErrors.country = t('validation.countryRequired');
+                newErrors.country = 'validation.countryRequired';
             } else {
                 newErrors.country = '';
             }
         }
 
         if (name === 'email') {
-            const { isValid, message } = validateEmail(value);
+            const { isValid, errorKey } = validateEmail(value);
             if (!isValid) {
-                newErrors.email = message;
+                newErrors.email = errorKey;
             } else {
                 newErrors.email = '';
             }
         }
 
         if (name === 'phone') {
-            const { isValid, message } = validatePhone(value);
+            const { isValid, errorKey } = validatePhone(value);
             if (!isValid) {
-                newErrors.phone = message;
+                newErrors.phone = errorKey;
             } else {
                 newErrors.phone = '';
             }
@@ -146,25 +146,25 @@ export const ContactSalesPage = () => {
 
         if (name === 'country') {
             if (!value) {
-                newErrors.country = t('validation.countryRequired');
+                newErrors.country = 'validation.countryRequired';
             } else {
                 newErrors.country = '';
             }
         }
 
         if (name === 'email') {
-            const { isValid, message } = validateEmail(value);
+            const { isValid, errorKey } = validateEmail(value);
             if (!isValid) {
-                newErrors.email = message;
+                newErrors.email = errorKey;
             } else {
                 newErrors.email = '';
             }
         }
 
         if (name === 'phone') {
-            const { isValid, message } = validatePhone(value);
+            const { isValid, errorKey } = validatePhone(value);
             if (!isValid) {
-                newErrors.phone = message;
+                newErrors.phone = errorKey;
             } else {
                 newErrors.phone = '';
             }
@@ -263,7 +263,7 @@ export const ContactSalesPage = () => {
                                         value={formData.firstName}
                                         onChange={handleChange}
                                         error={!!errors.firstName}
-                                        helperText={errors.firstName}
+                                        helperText={errors.firstName ? t(errors.firstName) : ''}
                                         fullWidth
                                         required
                                     />
@@ -274,7 +274,7 @@ export const ContactSalesPage = () => {
                                         value={formData.lastName}
                                         onChange={handleChange}
                                         error={!!errors.lastName}
-                                        helperText={errors.lastName}
+                                        helperText={errors.lastName ? t(errors.lastName) : ''}
                                         fullWidth
                                         required
                                     />
@@ -285,7 +285,7 @@ export const ContactSalesPage = () => {
                                         value={formData.jobTitle}
                                         onChange={handleChange}
                                         error={!!errors.jobTitle}
-                                        helperText={errors.jobTitle}
+                                        helperText={errors.jobTitle ? t(errors.jobTitle) : ''}
                                         fullWidth
                                         required
                                     />
@@ -296,7 +296,7 @@ export const ContactSalesPage = () => {
                                         value={formData.company}
                                         onChange={handleChange}
                                         error={!!errors.company}
-                                        helperText={errors.company}
+                                        helperText={errors.company ? t(errors.company) : ''}
                                         fullWidth
                                         required
                                     />
@@ -308,7 +308,7 @@ export const ContactSalesPage = () => {
                                         onChange={handleChange}
                                         onBlur={handleBlur}
                                         error={!!errors.country}
-                                        helperText={errors.country}
+                                        helperText={errors.country ? t(errors.country) : ''}
                                         fullWidth
                                         required
                                     />
@@ -320,7 +320,7 @@ export const ContactSalesPage = () => {
                                         value={formData.phone}
                                         onChange={handleChange}
                                         error={!!errors.phone}
-                                        helperText={errors.phone}
+                                        helperText={errors.phone ? t(errors.phone) : ''}
                                         fullWidth
                                     />
                                 </Box>
@@ -333,7 +333,7 @@ export const ContactSalesPage = () => {
                                     value={formData.email}
                                     onChange={handleChange}
                                     error={!!errors.email}
-                                    helperText={errors.email}
+                                    helperText={errors.email ? t(errors.email) : ''}
                                     fullWidth
                                     required
                                 />
