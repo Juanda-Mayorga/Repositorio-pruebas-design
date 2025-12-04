@@ -155,7 +155,8 @@
             "requiredFieldsNotice": "Tous les champs marqués d'un * sont obligatoires",
             "submitTooltip": "Remplissez tous les champs obligatoires pour soumettre le formulaire",
             "terms": "J'accepte les termes et conditions. J'autorise la réception d'informations utiles de MAMBA",
-            "submit": "Soumettre"
+            "submit": "Soumettre",
+            "submitting": "Envoi en cours..."
         },
         "breadcrumb": {
             "contact": "Contact",

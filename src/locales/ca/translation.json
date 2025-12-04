@@ -155,7 +155,8 @@
             "requiredFieldsNotice": "Tots els camps marcats amb * són obligatoris",
             "submitTooltip": "Completa tots els camps obligatoris per enviar el formulari",
             "terms": "Accepto els termes i condicions. Autoritzo rebre informació útil de MAMBA",
-            "submit": "Enviar"
+            "submit": "Enviar",
+            "submitting": "Enviant..."
         },
         "breadcrumb": {
             "contact": "Contacte",

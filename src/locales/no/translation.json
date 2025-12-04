@@ -155,7 +155,8 @@
             "requiredFieldsNotice": "Alle felt merket med * er obligatoriske",
             "submitTooltip": "Fyll ut alle obligatoriske felt for å sende inn skjemaet",
             "terms": "Jeg godtar vilkårene. Jeg gir tillatelse til å motta nyttig informasjon fra MAMBA",
-            "submit": "Send inn"
+            "submit": "Send inn",
+            "submitting": "Sender..."
         },
         "breadcrumb": {
             "contact": "Kontakt",

@@ -155,7 +155,8 @@
             "requiredFieldsNotice": "Alle mit * markierten Felder sind Pflichtfelder",
             "submitTooltip": "Füllen Sie alle Pflichtfelder aus, um das Formular abzusenden",
             "terms": "Ich akzeptiere die Allgemeinen Geschäftsbedingungen. Ich erlaube den Erhalt nützlicher Informationen von MAMBA",
-            "submit": "Absenden"
+            "submit": "Absenden",
+            "submitting": "Senden..."
         },
         "breadcrumb": {
             "contact": "Kontakt",

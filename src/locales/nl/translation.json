@@ -155,7 +155,8 @@
             "requiredFieldsNotice": "Alle velden gemarkeerd met * zijn verplicht",
             "submitTooltip": "Vul alle verplichte velden in om het formulier te verzenden",
             "terms": "Ik accepteer de algemene voorwaarden. Ik geef toestemming om nuttige informatie van MAMBA te ontvangen",
-            "submit": "Verzenden"
+            "submit": "Verzenden",
+            "submitting": "Verzenden..."
         },
         "breadcrumb": {
             "contact": "Contact",

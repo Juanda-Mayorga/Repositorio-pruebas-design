@@ -155,7 +155,8 @@
             "requiredFieldsNotice": "* ikurrarekin markatutako eremu guztiak derrigorrezkoak dira",
             "submitTooltip": "Bete derrigorrezko eremu guztiak formularioa bidaltzeko",
             "terms": "Onartzen ditut baldintzak. Baimena ematen dut MAMBAtik informazio erabilgarria jasotzeko",
-            "submit": "Bidali"
+            "submit": "Bidali",
+            "submitting": "Bidaltzen..."
         },
         "breadcrumb": {
             "contact": "Kontaktua",
