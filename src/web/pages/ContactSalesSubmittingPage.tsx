@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Box, Typography, Container, CircularProgress } from '@mui/material';
+import { Box, Typography, Container } from '@mui/material';
 import { ContactLayout } from '../design-system/templates/ContactLayout';
 import { WebButton } from '../design-system/atoms/WebButton';
 import { WebInputField } from '../design-system/molecules/WebInputField';
@@ -201,8 +201,7 @@ export const ContactSalesSubmittingPage = () => {
                                         <WebButton
                                             variant="contained"
                                             fullWidth
-                                            disabled={true}
-                                            startIcon={<CircularProgress size={20} color="inherit" />}
+                                            loading={true}
                                         >
                                             {t('contactSales.form.submitting')}
                                         </WebButton>

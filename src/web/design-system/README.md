@@ -25,6 +25,7 @@ A reusable button component for web pages with consistent styling.
 **Props:**
 - `variant?: 'outlined' | 'contained' | 'soft'` - Button style variant (default: 'outlined')
 - `fullWidth?: boolean` - Whether button should take full width
+- `loading?: boolean` - If true, displays a loading spinner and disables the button
 - `children: React.ReactNode` - Button content
 - `onClick?: () => void` - Click handler
 - All standard MUI Button props
@@ -38,6 +39,7 @@ A reusable button component for web pages with consistent styling.
 - Min height: 44px (accessibility standard)
 - Max height: 48px
 - Variant-specific hover and active states
+- Loading state with CircularProgress spinner
 
 ```tsx
 <WebButton variant="outlined" fullWidth>
@@ -45,6 +47,10 @@ A reusable button component for web pages with consistent styling.
 
 <WebButton variant="contained">
   Submit
+</WebButton>
+
+<WebButton variant="contained" loading={isSubmitting}>
+  Submitting...
 </WebButton>
 
 <WebButton variant="soft">
