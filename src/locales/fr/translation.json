@@ -75,10 +75,16 @@
         }
     },
     "validation": {
-        "nameRequired": "Votre nom doit contenir au moins 2 caractères",
-        "surnameRequired": "Votre nom de famille doit contenir au moins 2 caractères",
-        "passwordLength": "Doit contenir au moins 6 caractères",
-        "passwordMatch": "Le mot de passe que vous avez entré ne correspond pas"
+        "nameRequired": "Votre nom doit comporter au moins 2 caractères",
+        "surnameRequired": "Votre nom de famille doit comporter au moins 2 caractères",
+        "passwordLength": "Doit comporter au moins 6 caractères",
+        "passwordMatch": "Le mot de passe que vous avez entré ne correspond pas",
+        "jobTitleRequired": "Le titre du poste doit comporter au moins 2 caractères",
+        "companyRequired": "Le nom de l'entreprise doit comporter au moins 2 caractères",
+        "countryRequired": "Veuillez sélectionner votre pays",
+        "emailInvalid": "Veuillez entrer une adresse e-mail valide",
+        "emailTemporary": "Les adresses e-mail temporaires ne sont pas autorisées",
+        "phoneInvalid": "Le numéro de mobile doit comporter au moins 7 chiffres"
     },
     "feedback": {
         "profileSaved": "Profil enregistré avec succès !",
@@ -125,6 +131,30 @@
                 "description": "Voyez MAMBA en action avec une démonstration personnalisée adaptée à votre flux de travail",
                 "button": "Réserver une Démo"
             }
+        }
+    },
+    "contactSales": {
+        "title": "Contactez notre équipe commerciale",
+        "subtitle": "Laissez-nous vos coordonnées et notre équipe commerciale vous contactera dans les plus brefs délais",
+        "form": {
+            "firstName": "Prénom",
+            "firstNamePlaceholder": "Entrez votre prénom",
+            "jobTitle": "Titre du poste",
+            "jobTitlePlaceholder": "Entrez votre titre de poste",
+            "lastName": "Nom de famille",
+            "lastNamePlaceholder": "Entrez votre nom de famille",
+            "country": "Pays",
+            "countryPlaceholder": "Sélectionnez votre pays",
+            "company": "Entreprise",
+            "companyPlaceholder": "Entrez le nom de votre entreprise",
+            "email": "Email",
+            "emailPlaceholder": "nom@exemple.com",
+            "phoneLabel": "Mobile",
+            "messagePlaceholder": "Écrivez votre message ici",
+            "requiredFieldsNotice": "Tous les champs marqués d'un * sont obligatoires",
+            "submitTooltip": "Remplissez tous les champs obligatoires pour soumettre le formulaire",
+            "terms": "J'accepte les termes et conditions. J'autorise la réception d'informations utiles de MAMBA",
+            "submit": "Soumettre"
         }
     }
 }

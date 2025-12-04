@@ -78,7 +78,13 @@
         "nameRequired": "Zure izenak gutxienez 2 karaktere izan behar ditu",
         "surnameRequired": "Zure abizenak gutxienez 2 karaktere izan behar ditu",
         "passwordLength": "Gutxienez 6 karaktere izan behar ditu",
-        "passwordMatch": "Sartu duzun pasahitza ez dator bat"
+        "passwordMatch": "Sartu duzun pasahitza ez dator bat",
+        "jobTitleRequired": "Karguak gutxienez 2 karaktere izan behar ditu",
+        "companyRequired": "Enpresaren izenak gutxienez 2 karaktere izan behar ditu",
+        "countryRequired": "Mesedez, hautatu zure herrialdea",
+        "emailInvalid": "Mesedez, sartu baliozko helbide elektronikoa",
+        "emailTemporary": "Ez dira onartzen behin-behineko helbide elektronikoak",
+        "phoneInvalid": "Mugikorreko zenbakiak gutxienez 7 digitu izan behar ditu"
     },
     "feedback": {
         "profileSaved": "Profila ondo gorde da!",
@@ -125,6 +131,30 @@
                 "description": "Ikusi MAMBA ekintzan zure lan-fluxura egokitutako demo pertsonalizatu batekin",
                 "button": "Demo bat Erreserbatu"
             }
+        }
+    },
+    "contactSales": {
+        "title": "Jarri harremanetan gure salmenta taldearekin",
+        "subtitle": "Utzi zure datuak eta gure salmenta taldeak ahalik eta azkarren harremanetan jarriko da zurekin",
+        "form": {
+            "firstName": "Izena",
+            "firstNamePlaceholder": "Sartu zure izena",
+            "jobTitle": "Kargua",
+            "jobTitlePlaceholder": "Sartu zure kargua",
+            "lastName": "Abizenak",
+            "lastNamePlaceholder": "Sartu zure abizenak",
+            "country": "Herrialdea",
+            "countryPlaceholder": "Hautatu zure herrialdea",
+            "company": "Enpresa",
+            "companyPlaceholder": "Sartu zure enpresaren izena",
+            "email": "Email",
+            "emailPlaceholder": "izena@adibidea.com",
+            "phoneLabel": "Mugikorra",
+            "messagePlaceholder": "Idatzi zure mezua hemen",
+            "requiredFieldsNotice": "* ikurrarekin markatutako eremu guztiak derrigorrezkoak dira",
+            "submitTooltip": "Bete derrigorrezko eremu guztiak formularioa bidaltzeko",
+            "terms": "Onartzen ditut baldintzak. Baimena ematen dut MAMBAtik informazio erabilgarria jasotzeko",
+            "submit": "Bidali"
         }
     }
 }

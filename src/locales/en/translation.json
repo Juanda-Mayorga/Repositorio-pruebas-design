@@ -84,7 +84,13 @@
         "nameRequired": "Your name must be at least 2 characters long",
         "surnameRequired": "Your surname must be at least 2 characters long",
         "passwordLength": "Must be at least 6 characters long",
-        "passwordMatch": "The password you enteres does not match"
+        "passwordMatch": "The password you enteres does not match",
+        "jobTitleRequired": "Job title must be at least 2 characters",
+        "companyRequired": "Company name must be at least 2 characters",
+        "countryRequired": "Please select your country",
+        "emailInvalid": "Please enter a valid email address",
+        "emailTemporary": "Temporary email addresses are not allowed",
+        "phoneInvalid": "Mobile number must be at least 7 digits"
     },
     "feedback": {
         "passwordUpdated": "Password updated successfully!"
@@ -148,7 +154,10 @@
             "companyPlaceholder": "Enter your company name",
             "email": "Email",
             "emailPlaceholder": "name@example.com",
+            "phoneLabel": "Mobile",
             "messagePlaceholder": "Write your message here",
+            "requiredFieldsNotice": "All fields marked with * are required",
+            "submitTooltip": "Complete all required fields to submit the form",
             "terms": "I accept the terms and conditions. I authorize receiving useful information from MAMBA",
             "submit": "Submit"
         }

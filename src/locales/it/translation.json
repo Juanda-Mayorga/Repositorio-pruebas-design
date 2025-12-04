@@ -78,7 +78,13 @@
         "nameRequired": "Il tuo nome deve contenere almeno 2 caratteri",
         "surnameRequired": "Il tuo cognome deve contenere almeno 2 caratteri",
         "passwordLength": "Deve contenere almeno 6 caratteri",
-        "passwordMatch": "La password inserita non corrisponde"
+        "passwordMatch": "La password inserita non corrisponde",
+        "jobTitleRequired": "La qualifica deve contenere almeno 2 caratteri",
+        "companyRequired": "Il nome dell'azienda deve contenere almeno 2 caratteri",
+        "countryRequired": "Seleziona il tuo paese",
+        "emailInvalid": "Inserisci un indirizzo email valido",
+        "emailTemporary": "Gli indirizzi email temporanei non sono consentiti",
+        "phoneInvalid": "Il numero di cellulare deve contenere almeno 7 cifre"
     },
     "feedback": {
         "profileSaved": "Profilo salvato con successo!",
@@ -125,6 +131,30 @@
                 "description": "Vedi MAMBA in azione con una dimostrazione personalizzata su misura per il tuo flusso di lavoro",
                 "button": "Prenota una Demo"
             }
+        }
+    },
+    "contactSales": {
+        "title": "Contatta il nostro team di vendita",
+        "subtitle": "Lasciaci i tuoi dati e il nostro team di vendita ti contatterà il prima possibile",
+        "form": {
+            "firstName": "Nome",
+            "firstNamePlaceholder": "Inserisci il tuo nome",
+            "jobTitle": "Qualifica",
+            "jobTitlePlaceholder": "Inserisci la tua qualifica",
+            "lastName": "Cognome",
+            "lastNamePlaceholder": "Inserisci il tuo cognome",
+            "country": "Paese",
+            "countryPlaceholder": "Seleziona il tuo paese",
+            "company": "Azienda",
+            "companyPlaceholder": "Inserisci il nome della tua azienda",
+            "email": "Email",
+            "emailPlaceholder": "nome@esempio.com",
+            "phoneLabel": "Cellulare",
+            "messagePlaceholder": "Scrivi il tuo messaggio qui",
+            "requiredFieldsNotice": "Tutti i campi contrassegnati con * sono obbligatori",
+            "submitTooltip": "Compila tutti i campi obbligatori per inviare il modulo",
+            "terms": "Accetto i termini e le condizioni. Autorizzo la ricezione di informazioni utili da MAMBA",
+            "submit": "Invia"
         }
     }
 }

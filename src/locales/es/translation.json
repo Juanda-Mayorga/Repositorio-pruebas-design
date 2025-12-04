@@ -89,7 +89,13 @@
         "nameRequired": "Tu nombre debe tener al menos 2 caracteres",
         "surnameRequired": "Tu apellido debe tener al menos 2 caracteres",
         "passwordLength": "Debe tener al menos 6 caracteres",
-        "passwordMatch": "La contraseña que ingresaste no coincide"
+        "passwordMatch": "La contraseña que ingresaste no coincide",
+        "jobTitleRequired": "El cargo debe tener al menos 2 caracteres",
+        "companyRequired": "El nombre de la empresa debe tener al menos 2 caracteres",
+        "countryRequired": "Por favor, selecciona tu país",
+        "emailInvalid": "Por favor, introduce una dirección de correo válida",
+        "emailTemporary": "No se permiten direcciones de correo temporales",
+        "phoneInvalid": "El número de móvil debe tener al menos 7 dígitos"
     },
     "feedback": {
         "profileSaved": "¡Perfil guardado correctamente!",
@@ -154,7 +160,10 @@
             "companyPlaceholder": "Introduce el nombre de tu empresa",
             "email": "Email",
             "emailPlaceholder": "nombre@ejemplo.com",
+            "phoneLabel": "Móvil",
             "messagePlaceholder": "Escribe tu mensaje aquí",
+            "requiredFieldsNotice": "Todos los campos marcados con * son obligatorios",
+            "submitTooltip": "Completa todos los campos obligatorios para enviar el formulario",
             "terms": "Acepto los términos y condiciones. Autorizo recibir la información útil de MAMBA",
             "submit": "Enviar"
         }

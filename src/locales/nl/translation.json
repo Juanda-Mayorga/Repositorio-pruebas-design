@@ -75,10 +75,16 @@
         }
     },
     "validation": {
-        "nameRequired": "Uw naam moet minimaal 2 tekens lang zijn",
-        "surnameRequired": "Uw achternaam moet minimaal 2 tekens lang zijn",
-        "passwordLength": "Moet minimaal 6 tekens lang zijn",
-        "passwordMatch": "Het ingevoerde wachtwoord komt niet overeen"
+        "nameRequired": "Uw naam moet minimaal 2 tekens bevatten",
+        "surnameRequired": "Uw achternaam moet minimaal 2 tekens bevatten",
+        "passwordLength": "Moet minimaal 6 tekens bevatten",
+        "passwordMatch": "Het ingevoerde wachtwoord komt niet overeen",
+        "jobTitleRequired": "Functietitel moet minimaal 2 tekens bevatten",
+        "companyRequired": "Bedrijfsnaam moet minimaal 2 tekens bevatten",
+        "countryRequired": "Selecteer uw land",
+        "emailInvalid": "Voer een geldig e-mailadres in",
+        "emailTemporary": "Tijdelijke e-mailadressen zijn niet toegestaan",
+        "phoneInvalid": "Mobiel nummer moet minimaal 7 cijfers bevatten"
     },
     "feedback": {
         "profileSaved": "Profiel succesvol opgeslagen!",
@@ -125,6 +131,30 @@
                 "description": "Zie MAMBA in actie met een gepersonaliseerde demo afgestemd op uw workflow",
                 "button": "Boek een Demo"
             }
+        }
+    },
+    "contactSales": {
+        "title": "Neem contact op met ons verkoopteam",
+        "subtitle": "Laat uw gegevens achter en ons verkoopteam neemt zo snel mogelijk contact met u op",
+        "form": {
+            "firstName": "Voornaam",
+            "firstNamePlaceholder": "Voer uw voornaam in",
+            "jobTitle": "Functietitel",
+            "jobTitlePlaceholder": "Voer uw functietitel in",
+            "lastName": "Achternaam",
+            "lastNamePlaceholder": "Voer uw achternaam in",
+            "country": "Land",
+            "countryPlaceholder": "Selecteer uw land",
+            "company": "Bedrijf",
+            "companyPlaceholder": "Voer uw bedrijfsnaam in",
+            "email": "Email",
+            "emailPlaceholder": "naam@voorbeeld.com",
+            "phoneLabel": "Mobiel",
+            "messagePlaceholder": "Schrijf hier uw bericht",
+            "requiredFieldsNotice": "Alle velden gemarkeerd met * zijn verplicht",
+            "submitTooltip": "Vul alle verplichte velden in om het formulier te verzenden",
+            "terms": "Ik accepteer de algemene voorwaarden. Ik geef toestemming om nuttige informatie van MAMBA te ontvangen",
+            "submit": "Verzenden"
         }
     }
 }

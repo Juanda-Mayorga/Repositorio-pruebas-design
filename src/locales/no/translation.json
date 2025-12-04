@@ -75,10 +75,16 @@
         }
     },
     "validation": {
-        "nameRequired": "Navnet ditt må være minst 2 tegn langt",
-        "surnameRequired": "Etternavnet ditt må være minst 2 tegn langt",
-        "passwordLength": "Må være minst 6 tegn langt",
-        "passwordMatch": "Passordet du skrev inn stemmer ikke"
+        "nameRequired": "Navnet ditt må være på minst 2 tegn",
+        "surnameRequired": "Etternavnet ditt må være på minst 2 tegn",
+        "passwordLength": "Må være på minst 6 tegn",
+        "passwordMatch": "Passordet du skrev inn samsvarer ikke",
+        "jobTitleRequired": "Stillingstittel må være på minst 2 tegn",
+        "companyRequired": "Firmanavn må være på minst 2 tegn",
+        "countryRequired": "Vennligst velg ditt land",
+        "emailInvalid": "Vennligst skriv inn en gyldig e-postadresse",
+        "emailTemporary": "Midlertidige e-postadresser er ikke tillatt",
+        "phoneInvalid": "Mobilnummer må være på minst 7 sifre"
     },
     "feedback": {
         "profileSaved": "Profil lagret!",
@@ -125,6 +131,30 @@
                 "description": "Se MAMBA i aksjon med en personlig demo skreddersydd til arbeidsflyten din",
                 "button": "Book en Demo"
             }
+        }
+    },
+    "contactSales": {
+        "title": "Kontakt vårt salgsteam",
+        "subtitle": "Legg igjen dine detaljer og vårt salgsteam vil kontakte deg så snart som mulig",
+        "form": {
+            "firstName": "Fornavn",
+            "firstNamePlaceholder": "Skriv inn fornavnet ditt",
+            "jobTitle": "Stillingstittel",
+            "jobTitlePlaceholder": "Skriv inn stillingstittel",
+            "lastName": "Etternavn",
+            "lastNamePlaceholder": "Skriv inn etternavnet ditt",
+            "country": "Land",
+            "countryPlaceholder": "Velg ditt land",
+            "company": "Firma",
+            "companyPlaceholder": "Skriv inn firmanavnet ditt",
+            "email": "E-post",
+            "emailPlaceholder": "navn@eksempel.com",
+            "phoneLabel": "Mobil",
+            "messagePlaceholder": "Skriv meldingen din her",
+            "requiredFieldsNotice": "Alle felt merket med * er obligatoriske",
+            "submitTooltip": "Fyll ut alle obligatoriske felt for å sende inn skjemaet",
+            "terms": "Jeg godtar vilkårene. Jeg gir tillatelse til å motta nyttig informasjon fra MAMBA",
+            "submit": "Send inn"
         }
     }
 }

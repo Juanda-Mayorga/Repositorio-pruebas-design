@@ -78,7 +78,13 @@
         "nameRequired": "El teu nom ha de tenir almenys 2 caràcters",
         "surnameRequired": "El teu cognom ha de tenir almenys 2 caràcters",
         "passwordLength": "Ha de tenir almenys 6 caràcters",
-        "passwordMatch": "La contrasenya que has introduït no coincideix"
+        "passwordMatch": "La contrasenya que has introduït no coincideix",
+        "jobTitleRequired": "El càrrec ha de tenir almenys 2 caràcters",
+        "companyRequired": "El nom de l'empresa ha de tenir almenys 2 caràcters",
+        "countryRequired": "Si us plau, selecciona el teu país",
+        "emailInvalid": "Si us plau, introdueix una adreça de correu electrònic vàlida",
+        "emailTemporary": "No es permeten adreces de correu temporal",
+        "phoneInvalid": "El número de mòbil ha de tenir almenys 7 dígits"
     },
     "feedback": {
         "profileSaved": "Perfil desat correctament!",
@@ -125,6 +131,30 @@
                 "description": "Veu MAMBA en acció amb una demostració personalitzada adaptada al teu flux de treball",
                 "button": "Reservar una Demo"
             }
+        }
+    },
+    "contactSales": {
+        "title": "Contacta amb el nostre equip de vendes",
+        "subtitle": "Deixa'ns les teves dades i el nostre equip de vendes et contactarà el més aviat possible",
+        "form": {
+            "firstName": "Nom",
+            "firstNamePlaceholder": "Introdueix el teu nom",
+            "jobTitle": "Càrrec",
+            "jobTitlePlaceholder": "Introdueix el teu càrrec",
+            "lastName": "Cognoms",
+            "lastNamePlaceholder": "Introdueix els teus cognoms",
+            "country": "País",
+            "countryPlaceholder": "Selecciona el teu país",
+            "company": "Empresa",
+            "companyPlaceholder": "Introdueix el nom de la teva empresa",
+            "email": "Email",
+            "emailPlaceholder": "nom@exemple.com",
+            "phoneLabel": "Mòbil",
+            "messagePlaceholder": "Escriu el teu missatge aquí",
+            "requiredFieldsNotice": "Tots els camps marcats amb * són obligatoris",
+            "submitTooltip": "Completa tots els camps obligatoris per enviar el formulari",
+            "terms": "Accepto els termes i condicions. Autoritzo rebre informació útil de MAMBA",
+            "submit": "Enviar"
         }
     }
 }

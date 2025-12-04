@@ -78,7 +78,13 @@
         "nameRequired": "Dit navn skal være mindst 2 tegn langt",
         "surnameRequired": "Dit efternavn skal være mindst 2 tegn langt",
         "passwordLength": "Skal være mindst 6 tegn langt",
-        "passwordMatch": "Adgangskoden du indtastede matcher ikke"
+        "passwordMatch": "Adgangskoden du indtastede matcher ikke",
+        "jobTitleRequired": "Jobtitel skal være på mindst 2 tegn",
+        "companyRequired": "Firmanavn skal være på mindst 2 tegn",
+        "countryRequired": "Vælg venligst dit land",
+        "emailInvalid": "Indtast venligst en gyldig e-mailadresse",
+        "emailTemporary": "Midlertidige e-mailadresser er ikke tilladt",
+        "phoneInvalid": "Mobilnummer skal være på mindst 7 cifre"
     },
     "feedback": {
         "profileSaved": "Profil gemt!",
@@ -125,6 +131,30 @@
                 "description": "Se MAMBA i aktion med en personlig demo skræddersyet til dit workflow",
                 "button": "Book en Demo"
             }
+        }
+    },
+    "contactSales": {
+        "title": "Kontakt vores salgsteam",
+        "subtitle": "Efterlad dine oplysninger, og vores salgsteam vil kontakte dig så hurtigt som muligt",
+        "form": {
+            "firstName": "Fornavn",
+            "firstNamePlaceholder": "Indtast dit fornavn",
+            "jobTitle": "Jobtitel",
+            "jobTitlePlaceholder": "Indtast din jobtitel",
+            "lastName": "Efternavn",
+            "lastNamePlaceholder": "Indtast dit efternavn",
+            "country": "Land",
+            "countryPlaceholder": "Vælg dit land",
+            "company": "Virksomhed",
+            "companyPlaceholder": "Indtast dit firmanavn",
+            "email": "E-mail",
+            "emailPlaceholder": "navn@eksempel.com",
+            "phoneLabel": "Mobil",
+            "messagePlaceholder": "Skriv din besked her",
+            "requiredFieldsNotice": "Alle felter markeret med * er påkrævede",
+            "submitTooltip": "Udfyld alle obligatoriske felter for at indsende formularen",
+            "terms": "Jeg accepterer vilkårene og betingelserne. Jeg giver tilladelse til at modtage nyttig information fra MAMBA",
+            "submit": "Indsend"
         }
     }
 }

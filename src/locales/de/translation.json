@@ -78,7 +78,13 @@
         "nameRequired": "Ihr Name muss mindestens 2 Zeichen lang sein",
         "surnameRequired": "Ihr Nachname muss mindestens 2 Zeichen lang sein",
         "passwordLength": "Muss mindestens 6 Zeichen lang sein",
-        "passwordMatch": "Das eingegebene Passwort stimmt nicht überein"
+        "passwordMatch": "Das eingegebene Passwort stimmt nicht überein",
+        "jobTitleRequired": "Die Berufsbezeichnung muss mindestens 2 Zeichen lang sein",
+        "companyRequired": "Der Firmenname muss mindestens 2 Zeichen lang sein",
+        "countryRequired": "Bitte wählen Sie Ihr Land aus",
+        "emailInvalid": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+        "emailTemporary": "Temporäre E-Mail-Adressen sind nicht erlaubt",
+        "phoneInvalid": "Die Handynummer muss mindestens 7 Ziffern lang sein"
     },
     "feedback": {
         "profileSaved": "Profil erfolgreich gespeichert!",
@@ -125,6 +131,30 @@
                 "description": "Sehen Sie MAMBA in Aktion mit einer personalisierten Demo, die auf Ihren Workflow zugeschnitten ist",
                 "button": "Demo buchen"
             }
+        }
+    },
+    "contactSales": {
+        "title": "Kontaktieren Sie unser Vertriebsteam",
+        "subtitle": "Hinterlassen Sie Ihre Daten und unser Vertriebsteam wird sich so schnell wie möglich mit Ihnen in Verbindung setzen",
+        "form": {
+            "firstName": "Vorname",
+            "firstNamePlaceholder": "Geben Sie Ihren Vornamen ein",
+            "jobTitle": "Berufsbezeichnung",
+            "jobTitlePlaceholder": "Geben Sie Ihre Berufsbezeichnung ein",
+            "lastName": "Nachname",
+            "lastNamePlaceholder": "Geben Sie Ihren Nachnamen ein",
+            "country": "Land",
+            "countryPlaceholder": "Wählen Sie Ihr Land",
+            "company": "Unternehmen",
+            "companyPlaceholder": "Geben Sie Ihren Firmennamen ein",
+            "email": "E-Mail",
+            "emailPlaceholder": "name@beispiel.com",
+            "phoneLabel": "Mobil",
+            "messagePlaceholder": "Schreiben Sie hier Ihre Nachricht",
+            "requiredFieldsNotice": "Alle mit * markierten Felder sind Pflichtfelder",
+            "submitTooltip": "Füllen Sie alle Pflichtfelder aus, um das Formular abzusenden",
+            "terms": "Ich akzeptiere die Allgemeinen Geschäftsbedingungen. Ich erlaube den Erhalt nützlicher Informationen von MAMBA",
+            "submit": "Absenden"
         }
     }
 }

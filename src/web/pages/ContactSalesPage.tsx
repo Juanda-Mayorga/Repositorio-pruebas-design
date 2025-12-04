@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Box, Typography, Container, useTheme } from '@mui/material';
 import { PublicHeader } from '../design-system/organisms/PublicHeader';
 import { Footer } from '../design-system/organisms/Footer';
@@ -47,13 +47,13 @@ export const ContactSalesPage = () => {
         // 1. Validate email format
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(email)) {
-            return { isValid: false, message: 'Please enter a valid email address' };
+            return { isValid: false, message: t('validation.emailInvalid') };
         }
 
         // 2. Validate temporary email
         const domain = email.split('@')[1]?.toLowerCase();
         if (domain && disposableDomains.includes(domain)) {
-            return { isValid: false, message: 'Temporary email addresses are not allowed' };
+            return { isValid: false, message: t('validation.emailTemporary') };
         }
 
         return { isValid: true, message: '' };
@@ -66,7 +66,7 @@ export const ContactSalesPage = () => {
         const digits = phone.replace(/\D/g, '');
 
         if (digits.length < 7) {
-            return { isValid: false, message: 'El número de móvil debe tener al menos 7 dígitos' };
+            return { isValid: false, message: t('validation.phoneInvalid') };
         }
 
         return { isValid: true, message: '' };
@@ -97,7 +97,7 @@ export const ContactSalesPage = () => {
 
         if (name === 'jobTitle') {
             if (value.length > 0 && value.length < 2) {
-                newErrors.jobTitle = "El cargo debe tener al menos 2 caracteres";
+                newErrors.jobTitle = t('validation.jobTitleRequired');
             } else {
                 newErrors.jobTitle = '';
             }
@@ -105,7 +105,7 @@ export const ContactSalesPage = () => {
 
         if (name === 'company') {
             if (value.length > 0 && value.length < 2) {
-                newErrors.company = "El nombre de la empresa debe tener al menos 2 caracteres";
+                newErrors.company = t('validation.companyRequired');
             } else {
                 newErrors.company = '';
             }
@@ -113,7 +113,7 @@ export const ContactSalesPage = () => {
 
         if (name === 'country') {
             if (!value) {
-                newErrors.country = "Por favor, selecciona tu país";
+                newErrors.country = t('validation.countryRequired');
             } else {
                 newErrors.country = '';
             }
@@ -146,7 +146,7 @@ export const ContactSalesPage = () => {
 
         if (name === 'country') {
             if (!value) {
-                newErrors.country = "Por favor, selecciona tu país";
+                newErrors.country = t('validation.countryRequired');
             } else {
                 newErrors.country = '';
             }
@@ -315,7 +315,7 @@ export const ContactSalesPage = () => {
                                     <WebInputField
                                         name="phone"
                                         type="tel"
-                                        label="Móvil"
+                                        label={t('contactSales.form.phoneLabel')}
                                         value={formData.phone}
                                         onChange={handleChange}
                                         error={!!errors.phone}
@@ -350,7 +350,13 @@ export const ContactSalesPage = () => {
                                 </Box>
 
                                 <Typography variant="body2" sx={{ color: '#797D80', fontSize: '14px', fontFamily: '"Hind Siliguri", sans-serif' }}>
-                                    All fields marked with <span style={{ color: '#E63C3D' }}>*</span> are required
+                                    {t('contactSales.form.requiredFieldsNotice', { returnObjects: false }).split('*').map((part, index, array) => (
+                                        index < array.length - 1 ? (
+                                            <React.Fragment key={index}>
+                                                {part}<span style={{ color: '#E63C3D' }}>*</span>
+                                            </React.Fragment>
+                                        ) : part
+                                    ))}
                                 </Typography>
 
                                 {/* TODO: Uncomment this section when Terms and Conditions are available
@@ -374,7 +380,7 @@ export const ContactSalesPage = () => {
 
                                 <Box sx={{ display: 'flex', justifyContent: 'center', mt: 2 }}>
                                     <WebTooltip
-                                        title={!isFormValid ? "Completa todos los campos obligatorios para enviar el formulario" : ""}
+                                        title={!isFormValid ? t('contactSales.form.submitTooltip') : ""}
                                         placement="top"
                                     >
                                         <span>
