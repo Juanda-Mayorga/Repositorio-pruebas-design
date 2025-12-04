@@ -106,6 +106,37 @@ A generic input field component for web forms with validation support.
 
 ## Molecules
 
+### [WebBreadcrumb](file:///Users/carolinadomenechreal/Desktop/Prueba/Repositorio-pruebas-design/src/web/design-system/molecules/WebBreadcrumb.tsx)
+
+A navigation breadcrumb component that shows the current page hierarchy.
+
+**Props:**
+- `items: Array<{ label: string; href?: string }>` - Array of breadcrumb items
+  - `label: string` - Text to display for the breadcrumb item
+  - `href?: string` - Optional link URL (if not provided or is last item, renders as text)
+
+**Features:**
+- Responsive font sizes:
+  - Mobile (xs): 12px
+  - Tablet (sm): 14px
+  - Desktop (lg+): 18px
+- Color scheme:
+  - Links: `#434343` (gray) with hover to `#2A2A2A` (darker gray)
+  - Current page: `#7367B1` (purple) with semibold weight
+- Hover state: underline on links
+- Arrow separator (NavigateNextIcon) between items
+- Typography: Hind Siliguri font family
+
+**Usage:**
+```tsx
+<WebBreadcrumb
+  items={[
+    { label: t('contactSales.breadcrumb.contact'), href: '/contact' },
+    { label: t('contactSales.breadcrumb.contactSales') }
+  ]}
+/>
+```
+
 ### [ContentCard](file:///Users/carolinadomenechreal/Desktop/Prueba/Repositorio-pruebas-design/src/web/design-system/molecules/ContentCard.tsx)
 
 A versatile card component with two variants:
