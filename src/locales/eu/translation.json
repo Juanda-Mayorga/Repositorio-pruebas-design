@@ -156,6 +156,10 @@
             "submitTooltip": "Bete derrigorrezko eremu guztiak formularioa bidaltzeko",
             "terms": "Onartzen ditut baldintzak. Baimena ematen dut MAMBAtik informazio erabilgarria jasotzeko",
             "submit": "Bidali"
+        },
+        "breadcrumb": {
+            "contact": "Kontaktua",
+            "contactSales": "Salmentak kontaktatu"
         }
     }
 }

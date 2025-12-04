@@ -156,6 +156,10 @@
             "submitTooltip": "Vul alle verplichte velden in om het formulier te verzenden",
             "terms": "Ik accepteer de algemene voorwaarden. Ik geef toestemming om nuttige informatie van MAMBA te ontvangen",
             "submit": "Verzenden"
+        },
+        "breadcrumb": {
+            "contact": "Contact",
+            "contactSales": "Neem contact op met verkoop"
         }
     }
 }

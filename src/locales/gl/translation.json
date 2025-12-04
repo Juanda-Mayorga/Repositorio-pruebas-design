@@ -156,6 +156,10 @@
             "submitTooltip": "Completa todos os campos obrigatorios para enviar o formulario",
             "terms": "Acepto os termos e condicións. Autorizo recibir información útil de MAMBA",
             "submit": "Enviar"
+        },
+        "breadcrumb": {
+            "contact": "Contacto",
+            "contactSales": "Contactar con vendas"
         }
     }
 }

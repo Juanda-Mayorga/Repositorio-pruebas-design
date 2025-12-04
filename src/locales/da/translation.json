@@ -156,6 +156,10 @@
             "submitTooltip": "Udfyld alle obligatoriske felter for at indsende formularen",
             "terms": "Jeg accepterer vilkårene og betingelserne. Jeg giver tilladelse til at modtage nyttig information fra MAMBA",
             "submit": "Indsend"
+        },
+        "breadcrumb": {
+            "contact": "Kontakt",
+            "contactSales": "Kontakt salg"
         }
     }
 }

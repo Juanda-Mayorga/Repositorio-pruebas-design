@@ -141,6 +141,10 @@
     "contactSales": {
         "title": "Contact our sales team",
         "subtitle": "Leave us your details and our sales team will contact you as soon as possible",
+        "breadcrumb": {
+            "contact": "Contact",
+            "contactSales": "Contact sales"
+        },
         "form": {
             "firstName": "First name",
             "firstNamePlaceholder": "Enter your first name",

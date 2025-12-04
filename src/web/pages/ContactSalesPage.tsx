@@ -6,6 +6,7 @@ import { WebButton } from '../design-system/atoms/WebButton';
 import { WebInputField } from '../design-system/molecules/WebInputField';
 import { WebCountrySelector } from '../design-system/molecules/WebCountrySelector';
 import { WebTooltip } from '../design-system/atoms/WebTooltip';
+import { WebBreadcrumb } from '../design-system/molecules/WebBreadcrumb';
 import { useTranslation } from 'react-i18next';
 
 export const ContactSalesPage = () => {
@@ -199,8 +200,19 @@ export const ContactSalesPage = () => {
 
             <Box component="main" sx={{ flexGrow: 1, pt: theme.webLayout.headerSpacing, pb: 8, mt: '64px' }}>
                 <Container maxWidth="lg">
+                    {/* Breadcrumb */}
+                    <Box sx={{ mb: 3 }}>
+                        <WebBreadcrumb
+                            items={[
+                                { label: t('contactSales.breadcrumb.contact'), href: '/contact' },
+                                { label: t('contactSales.breadcrumb.contactSales') }
+                            ]}
+                        />
+                    </Box>
+
                     {/* Header Section */}
                     <Box sx={{ textAlign: 'center', mb: 6 }}>
+
                         <Typography
                             variant="h1"
                             component="h1"

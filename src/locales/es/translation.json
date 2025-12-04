@@ -147,6 +147,10 @@
     "contactSales": {
         "title": "Contacta con nuestro equipo de ventas",
         "subtitle": "Déjanos tus datos y nuestro equipo de ventas te contactará lo antes posible",
+        "breadcrumb": {
+            "contact": "Contacto",
+            "contactSales": "Contactar con ventas"
+        },
         "form": {
             "firstName": "Nombre",
             "firstNamePlaceholder": "Introduce tu nombre",
