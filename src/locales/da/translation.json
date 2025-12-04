@@ -150,6 +150,7 @@
             "email": "E-mail",
             "emailPlaceholder": "navn@eksempel.com",
             "phoneLabel": "Mobil",
+            "phonePlaceholder": "Indtast dit mobilnummer",
             "messagePlaceholder": "Skriv din besked her",
             "requiredFieldsNotice": "Alle felter markeret med * er påkrævede",
             "submitTooltip": "Udfyld alle obligatoriske felter for at indsende formularen",

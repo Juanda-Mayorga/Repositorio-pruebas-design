@@ -155,6 +155,7 @@
             "email": "Email",
             "emailPlaceholder": "name@example.com",
             "phoneLabel": "Mobile",
+            "phonePlaceholder": "Enter your mobile number",
             "messagePlaceholder": "Write your message here",
             "requiredFieldsNotice": "All fields marked with * are required",
             "submitTooltip": "Complete all required fields to submit the form",

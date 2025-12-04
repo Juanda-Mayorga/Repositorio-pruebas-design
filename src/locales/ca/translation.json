@@ -150,6 +150,7 @@
             "email": "Email",
             "emailPlaceholder": "nom@exemple.com",
             "phoneLabel": "Mòbil",
+            "phonePlaceholder": "Introdueix el teu número de mòbil",
             "messagePlaceholder": "Escriu el teu missatge aquí",
             "requiredFieldsNotice": "Tots els camps marcats amb * són obligatoris",
             "submitTooltip": "Completa tots els camps obligatoris per enviar el formulari",

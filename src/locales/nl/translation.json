@@ -150,6 +150,7 @@
             "email": "Email",
             "emailPlaceholder": "naam@voorbeeld.com",
             "phoneLabel": "Mobiel",
+            "phonePlaceholder": "Voer uw mobiele nummer in",
             "messagePlaceholder": "Schrijf hier uw bericht",
             "requiredFieldsNotice": "Alle velden gemarkeerd met * zijn verplicht",
             "submitTooltip": "Vul alle verplichte velden in om het formulier te verzenden",

@@ -150,6 +150,7 @@
             "email": "Email",
             "emailPlaceholder": "izena@adibidea.com",
             "phoneLabel": "Mugikorra",
+            "phonePlaceholder": "Sartu zure mugikorraren zenbakia",
             "messagePlaceholder": "Idatzi zure mezua hemen",
             "requiredFieldsNotice": "* ikurrarekin markatutako eremu guztiak derrigorrezkoak dira",
             "submitTooltip": "Bete derrigorrezko eremu guztiak formularioa bidaltzeko",

@@ -150,6 +150,7 @@
             "email": "E-post",
             "emailPlaceholder": "navn@eksempel.com",
             "phoneLabel": "Mobil",
+            "phonePlaceholder": "Skriv inn mobilnummeret ditt",
             "messagePlaceholder": "Skriv meldingen din her",
             "requiredFieldsNotice": "Alle felt merket med * er obligatoriske",
             "submitTooltip": "Fyll ut alle obligatoriske felt for å sende inn skjemaet",

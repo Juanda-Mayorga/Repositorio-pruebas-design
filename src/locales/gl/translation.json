@@ -150,6 +150,7 @@
             "email": "Email",
             "emailPlaceholder": "nome@exemplo.com",
             "phoneLabel": "Móbil",
+            "phonePlaceholder": "Introduce o teu número de móbil",
             "messagePlaceholder": "Escribe a túa mensaxe aquí",
             "requiredFieldsNotice": "Todos os campos marcados con * son obrigatorios",
             "submitTooltip": "Completa todos os campos obrigatorios para enviar o formulario",

@@ -316,6 +316,7 @@ export const ContactSalesPage = () => {
                                         name="phone"
                                         type="tel"
                                         label={t('contactSales.form.phoneLabel')}
+                                        placeholder={t('contactSales.form.phonePlaceholder')}
                                         value={formData.phone}
                                         onChange={handleChange}
                                         error={!!errors.phone}
