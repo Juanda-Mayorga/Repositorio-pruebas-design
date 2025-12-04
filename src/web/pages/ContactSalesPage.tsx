@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Box, Typography, Container } from '@mui/material';
 import { ContactLayout } from '../design-system/templates/ContactLayout';
 import { WebButton } from '../design-system/atoms/WebButton';
@@ -32,6 +33,8 @@ export const ContactSalesPage = () => {
         country: '',
         phone: ''
     });
+
+
 
     // List of common disposable email domains
     const disposableDomains = [
@@ -172,6 +175,13 @@ export const ContactSalesPage = () => {
         setErrors(newErrors);
     };
 
+    const navigate = useNavigate();
+
+    const handleSubmit = () => {
+        if (!isFormValid) return;
+        navigate('/contact-sales/submitting', { state: { formData } });
+    };
+
     // TODO: Uncomment when Terms and Conditions checkbox is re-enabled
     // const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     //     setFormData(prev => ({ ...prev, acceptTerms: e.target.checked }));
@@ -273,6 +283,7 @@ export const ContactSalesPage = () => {
                                     helperText={errors.firstName ? t(errors.firstName) : ''}
                                     fullWidth
                                     required
+
                                 />
                                 <WebInputField
                                     name="lastName"
@@ -284,6 +295,7 @@ export const ContactSalesPage = () => {
                                     helperText={errors.lastName ? t(errors.lastName) : ''}
                                     fullWidth
                                     required
+
                                 />
                                 <WebInputField
                                     name="jobTitle"
@@ -295,6 +307,7 @@ export const ContactSalesPage = () => {
                                     helperText={errors.jobTitle ? t(errors.jobTitle) : ''}
                                     fullWidth
                                     required
+
                                 />
                                 <WebInputField
                                     name="company"
@@ -306,6 +319,7 @@ export const ContactSalesPage = () => {
                                     helperText={errors.company ? t(errors.company) : ''}
                                     fullWidth
                                     required
+
                                 />
                                 <WebCountrySelector
                                     name="country"
@@ -318,6 +332,7 @@ export const ContactSalesPage = () => {
                                     helperText={errors.country ? t(errors.country) : ''}
                                     fullWidth
                                     required
+
                                 />
                                 <WebInputField
                                     name="phone"
@@ -329,6 +344,7 @@ export const ContactSalesPage = () => {
                                     error={!!errors.phone}
                                     helperText={errors.phone ? t(errors.phone) : ''}
                                     fullWidth
+
                                 />
                             </Box>
 
@@ -350,6 +366,7 @@ export const ContactSalesPage = () => {
                                     name="message"
                                     multiline
                                     rows={4}
+
                                     fullWidth
                                     placeholder={t('contactSales.form.messagePlaceholder')}
                                     value={formData.message}
@@ -394,9 +411,9 @@ export const ContactSalesPage = () => {
                                     <span>
                                         <WebButton
                                             variant="contained"
-                                            size="large"
-                                            sx={{ minWidth: 200, px: 6 }}
+                                            fullWidth
                                             disabled={!isFormValid}
+                                            onClick={handleSubmit}
                                         >
                                             {t('contactSales.form.submit')}
                                         </WebButton>

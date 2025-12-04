@@ -164,7 +164,8 @@
             "requiredFieldsNotice": "All fields marked with * are required",
             "submitTooltip": "Complete all required fields to submit the form",
             "terms": "I accept the terms and conditions. I authorize receiving useful information from MAMBA",
-            "submit": "Submit"
+            "submit": "Submit",
+            "submitting": "Sending..."
         }
     }
 }

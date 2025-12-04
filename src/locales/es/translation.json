@@ -170,7 +170,8 @@
             "requiredFieldsNotice": "Todos los campos marcados con * son obligatorios",
             "submitTooltip": "Completa todos los campos obligatorios para enviar el formulario",
             "terms": "Acepto los términos y condiciones. Autorizo recibir la información útil de MAMBA",
-            "submit": "Enviar"
+            "submit": "Enviar",
+            "submitting": "Enviando..."
         }
     }
 }
