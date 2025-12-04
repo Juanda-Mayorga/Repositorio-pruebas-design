@@ -15,9 +15,9 @@ export const ResourcesPage = () => {
         <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', bgcolor: theme.palette.web.background.default }}>
             <PublicHeader />
 
-            <Box component="main" sx={{ flexGrow: 1 }}>
+            <Box component="main" sx={{ flexGrow: 1, mt: '64px' }}>
                 {/* Hero Section */}
-                <Box sx={{ textAlign: 'center', py: 8, px: 2 }}>
+                <Box sx={{ textAlign: 'center', pt: theme.webLayout.headerSpacing, pb: 8, px: 2 }}>
                     <Typography
                         variant="h1"
                         component="h1"

@@ -44,6 +44,28 @@ declare module '@mui/material/styles' {
             };
         };
     }
+    interface Theme {
+        webLayout: {
+            headerSpacing: {
+                xs: string;
+                sm: string;
+                md: string;
+                lg: string;
+                xl: string;
+            };
+        };
+    }
+    interface ThemeOptions {
+        webLayout?: {
+            headerSpacing?: {
+                xs?: string;
+                sm?: string;
+                md?: string;
+                lg?: string;
+                xl?: string;
+            };
+        };
+    }
 }
 
 export const getWebTheme = (mode: PaletteMode) => {
@@ -68,6 +90,15 @@ export const getWebTheme = (mode: PaletteMode) => {
                     primary: '#8A7BD4', // mambaPrimary.main
                     primaryHover: '#7367B1', // mambaPrimary.dark
                 },
+            },
+        },
+        webLayout: {
+            headerSpacing: {
+                xs: '14px',
+                sm: '28px',
+                md: '42px',
+                lg: '54px',
+                xl: '72px',
             },
         },
         typography: {

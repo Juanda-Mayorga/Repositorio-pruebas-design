@@ -14,7 +14,7 @@ export const ContactPage = () => {
         <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', bgcolor: theme.palette.web.background.default }}>
             <PublicHeader />
 
-            <Box component="main" sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', py: 8 }}>
+            <Box component="main" sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', pt: theme.webLayout.headerSpacing, pb: 8, mt: '64px' }}>
                 <Container maxWidth="lg">
                     {/* Header Section */}
                     <Box sx={{ textAlign: 'center', mb: 6 }}>
