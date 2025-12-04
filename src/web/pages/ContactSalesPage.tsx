@@ -201,7 +201,7 @@ export const ContactSalesPage = () => {
             <Box component="main" sx={{ flexGrow: 1, pt: theme.webLayout.headerSpacing, pb: 8, mt: '64px' }}>
                 <Container maxWidth="lg">
                     {/* Breadcrumb */}
-                    <Box sx={{ mb: 3 }}>
+                    <Box sx={{ mb: { xs: '8px', sm: '17px', md: '25px', lg: '32px', xl: '43px' } }}>
                         <WebBreadcrumb
                             items={[
                                 { label: t('contactSales.breadcrumb.contact'), href: '/contact' },

@@ -11,11 +11,18 @@ interface WebBreadcrumbProps {
 export const WebBreadcrumb = ({ items }: WebBreadcrumbProps) => {
     return (
         <Breadcrumbs
-            separator={<NavigateNextIcon sx={{ fontSize: '18px', color: '#434343' }} />}
+            separator={
+                <NavigateNextIcon
+                    sx={{
+                        fontSize: { xs: '12px', sm: '14px', lg: '18px' },
+                        color: '#434343'
+                    }}
+                />
+            }
             aria-label="breadcrumb"
             sx={{
                 '& .MuiBreadcrumbs-separator': {
-                    mx: 1,
+                    mx: { xs: 0.5, lg: 1 },
                 }
             }}
         >
@@ -28,7 +35,7 @@ export const WebBreadcrumb = ({ items }: WebBreadcrumbProps) => {
                             key={index}
                             sx={{
                                 color: '#7367B1',
-                                fontSize: '18px',
+                                fontSize: { xs: '12px', sm: '14px', lg: '18px' },
                                 fontFamily: '"Hind Siliguri", sans-serif',
                                 fontWeight: 600, // semibold
                             }}
@@ -45,7 +52,7 @@ export const WebBreadcrumb = ({ items }: WebBreadcrumbProps) => {
                         underline="none"
                         sx={{
                             color: '#434343',
-                            fontSize: '18px',
+                            fontSize: { xs: '12px', sm: '14px', lg: '18px' },
                             fontFamily: '"Hind Siliguri", sans-serif',
                             fontWeight: 400,
                             textDecoration: 'none',
