@@ -2,7 +2,8 @@ import { Box, Typography, Button, Menu, MenuItem } from '@mui/material';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
+import { HeaderNavLink } from '../atoms/HeaderNavLink';
 
 const languages = [
     { code: 'da', label: 'Dansk' },
@@ -24,6 +25,7 @@ export const PublicHeader = () => {
     const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
     const open = Boolean(anchorEl);
     const navigate = useNavigate();
+    const location = useLocation();
 
     const handleClick = (event: React.MouseEvent<HTMLElement>) => {
         setAnchorEl(event.currentTarget);
@@ -66,19 +68,26 @@ export const PublicHeader = () => {
             {/* Navigation & Actions */}
             <Box sx={{ display: 'flex', alignItems: 'center', gap: 4 }}>
                 {/* Menu Items */}
-                <Box sx={{ display: 'flex', alignItems: 'center', gap: 3 }}>
-                    <Box sx={{ display: 'flex', alignItems: 'center', cursor: 'pointer', color: 'text.primary', fontWeight: 500 }}>
+                {/* Menu Items */}
+                <Box sx={{ display: 'flex', alignItems: 'center', gap: 4 }}>
+                    <HeaderNavLink>
                         Solution <KeyboardArrowDownIcon fontSize="small" />
-                    </Box>
-                    <Typography sx={{ cursor: 'pointer', color: 'text.primary', fontWeight: 500 }} onClick={() => navigate('/resources')}>
+                    </HeaderNavLink>
+                    <HeaderNavLink
+                        onClick={() => navigate('/resources')}
+                        selected={location.pathname === '/resources'}
+                    >
                         Resources
-                    </Typography>
-                    <Typography sx={{ cursor: 'pointer', color: 'text.primary', fontWeight: 500 }} onClick={() => navigate('/contact')}>
+                    </HeaderNavLink>
+                    <HeaderNavLink
+                        onClick={() => navigate('/contact')}
+                        selected={location.pathname === '/contact'}
+                    >
                         Contact
-                    </Typography>
-                    <Typography sx={{ cursor: 'pointer', color: 'text.primary', fontWeight: 500 }}>
+                    </HeaderNavLink>
+                    <HeaderNavLink>
                         Pricings
-                    </Typography>
+                    </HeaderNavLink>
                 </Box>
 
                 {/* Log in Button */}
