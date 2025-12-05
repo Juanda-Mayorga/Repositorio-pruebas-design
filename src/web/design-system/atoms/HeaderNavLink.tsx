@@ -5,18 +5,23 @@ interface HeaderNavLinkProps {
     children: React.ReactNode;
     selected?: boolean;
     onClick?: (event: React.MouseEvent<HTMLElement>) => void;
+    onMouseEnter?: (event: React.MouseEvent<HTMLElement>) => void;
+    onMouseLeave?: (event: React.MouseEvent<HTMLElement>) => void;
+    active?: boolean;
 }
 
-export const HeaderNavLink = ({ children, selected = false, onClick }: HeaderNavLinkProps) => {
+export const HeaderNavLink = ({ children, selected = false, active = false, onClick, onMouseEnter, onMouseLeave }: HeaderNavLinkProps) => {
     return (
         <Box
             onClick={onClick}
+            onMouseEnter={onMouseEnter}
+            onMouseLeave={onMouseLeave}
             sx={{
                 cursor: 'pointer',
                 padding: '8px',
                 borderRadius: '4px',
                 color: selected ? '#6B46C1' : '#2F2F32',
-                backgroundColor: 'transparent',
+                backgroundColor: active ? '#F4F4F7' : 'transparent',
                 display: 'flex',
                 alignItems: 'center',
                 gap: 0.5,

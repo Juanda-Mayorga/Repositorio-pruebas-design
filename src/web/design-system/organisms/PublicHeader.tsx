@@ -20,9 +20,12 @@ const languages = [
     { code: 'pt', label: 'Português' },
 ];
 
+import { SolutionDropdown } from '../molecules/SolutionDropdown';
+
 export const PublicHeader = () => {
     const { i18n } = useTranslation();
     const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+    const [showSolutionMenu, setShowSolutionMenu] = useState(false);
     const open = Boolean(anchorEl);
     const navigate = useNavigate();
     const location = useLocation();
@@ -70,9 +73,29 @@ export const PublicHeader = () => {
                 {/* Menu Items */}
                 {/* Menu Items */}
                 <Box sx={{ display: 'flex', alignItems: 'center', gap: 4 }}>
-                    <HeaderNavLink>
-                        Solution <KeyboardArrowDownIcon fontSize="small" />
-                    </HeaderNavLink>
+                    <Box
+                        onMouseEnter={() => setShowSolutionMenu(true)}
+                        onMouseLeave={() => setShowSolutionMenu(false)}
+                        sx={{ position: 'relative' }}
+                    >
+                        <HeaderNavLink selected={false} active={showSolutionMenu}>
+                            Solution <KeyboardArrowDownIcon fontSize="small" sx={{
+                                transform: showSolutionMenu ? 'rotate(180deg)' : 'none',
+                                transition: 'transform 0.2s'
+                            }} />
+                        </HeaderNavLink>
+                        {showSolutionMenu && (
+                            <Box sx={{
+                                position: 'absolute',
+                                top: '100%',
+                                left: 0,
+                                pt: 1, // 8px padding to create the gap but keep hover area
+                                zIndex: 1200
+                            }}>
+                                <SolutionDropdown />
+                            </Box>
+                        )}
+                    </Box>
                     <HeaderNavLink
                         onClick={() => navigate('/resources')}
                         selected={location.pathname === '/resources'}
