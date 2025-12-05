@@ -1,4 +1,4 @@
-import { Box, Typography, Button, Menu, MenuItem } from '@mui/material';
+import { Box, Typography, Menu, MenuItem } from '@mui/material';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
@@ -21,11 +21,13 @@ const languages = [
 ];
 
 import { SolutionDropdown } from '../molecules/SolutionDropdown';
+import { LoginDropdown } from '../molecules/LoginDropdown';
 
 export const PublicHeader = () => {
     const { i18n } = useTranslation();
     const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
     const [showSolutionMenu, setShowSolutionMenu] = useState(false);
+    const [showLoginMenu, setShowLoginMenu] = useState(false);
     const open = Boolean(anchorEl);
     const navigate = useNavigate();
     const location = useLocation();
@@ -114,9 +116,58 @@ export const PublicHeader = () => {
                 </Box>
 
                 {/* Log in Button */}
-                <Button variant="contained" sx={{ bgcolor: '#6366F1', textTransform: 'none', fontWeight: 600, '&:hover': { bgcolor: '#4F46E5' } }} onClick={() => navigate('/subscription')}>
-                    Log in
-                </Button>
+                {/* Log in Button / Dropdown */}
+                <Box
+                    onMouseEnter={() => setShowLoginMenu(true)}
+                    onMouseLeave={() => setShowLoginMenu(false)}
+                    sx={{ position: 'relative' }}
+                >
+                    <Box sx={{
+                        backgroundColor: '#7A6EBD',
+                        padding: '8px 16px',
+                        borderRadius: '4px',
+                        cursor: 'pointer',
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: 0.5,
+                        color: '#FFFFFF',
+                        transition: 'all 0.2s',
+                        '&:hover': {
+                            backgroundColor: '#6B5EA9' // Slightly darker on hover
+                        }
+                    }}>
+                        <Typography
+                            variant="body1"
+                            component="span"
+                            sx={{
+                                fontWeight: 500,
+                                fontFamily: '"Hind Siliguri", sans-serif',
+                                color: 'inherit',
+                                '@media (min-width:1440px)': {
+                                    fontSize: '20px',
+                                }
+                            }}
+                        >
+                            Log in
+                        </Typography>
+                        <KeyboardArrowDownIcon fontSize="small" sx={{
+                            transform: showLoginMenu ? 'rotate(180deg)' : 'none',
+                            transition: 'transform 0.2s',
+                            color: 'inherit'
+                        }} />
+                    </Box>
+                    {showLoginMenu && (
+                        <Box sx={{
+                            position: 'absolute',
+                            top: '100%',
+                            right: 0,
+                            pt: 1,
+                            zIndex: 1200
+                        }}>
+                            <LoginDropdown />
+                        </Box>
+                    )}
+                </Box>
 
                 {/* Language Selector */}
                 <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, cursor: 'pointer', border: '1px solid', borderColor: 'divider', borderRadius: 1, px: 1, py: 0.5 }} onClick={handleClick}>
