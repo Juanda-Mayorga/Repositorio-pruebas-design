@@ -21,10 +21,10 @@ export const HeaderNavLink = ({ children, selected = false, onClick }: HeaderNav
                 alignItems: 'center',
                 gap: 0.5,
                 transition: 'all 0.2s ease-in-out',
-                '&:hover': {
+                '&:hover': !selected ? {
                     backgroundColor: '#F4F4F7',
                     color: '#2F2F32',
-                },
+                } : {},
                 // Ensure typography inherits color
                 '& .MuiTypography-root': {
                     fontWeight: 500,

@@ -81,7 +81,7 @@ export const PublicHeader = () => {
                     </HeaderNavLink>
                     <HeaderNavLink
                         onClick={() => navigate('/contact')}
-                        selected={location.pathname === '/contact'}
+                        selected={location.pathname.startsWith('/contact')}
                     >
                         Contact
                     </HeaderNavLink>
