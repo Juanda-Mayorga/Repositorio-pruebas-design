@@ -13,7 +13,8 @@ web/design-system/
 ├── organisms/      # Complex UI components
 ├── theme.ts        # MUI theme configuration with web-specific tokens
 ├── TOKENS.md       # Design tokens documentation
-└── typography.md   # Typography system documentation
+├── typography.md   # Typography system documentation
+└── animation.md    # Animation and transition guidelines
 ```
 
 ## Atoms
@@ -216,6 +217,10 @@ See [TOKENS.md](file:///Users/carolinadomenechreal/Desktop/Prueba/Repositorio-pr
 ## Typography
 
 See [typography.md](file:///Users/carolinadomenechreal/Desktop/Prueba/Repositorio-pruebas-design/src/web/design-system/typography.md) for typography guidelines and usage.
+
+## Animations
+
+See [animation.md](file:///Users/carolinadomenechreal/Desktop/Prueba/Repositorio-pruebas-design/src/web/design-system/animation.md) for guidelines on page transitions, motion principles, and specific documentation for page interactions (Contact, Sales, Resources).
 
 ## Usage
 
