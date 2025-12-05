@@ -4,6 +4,7 @@ import { WebButton } from '../design-system/atoms/WebButton';
 import { WebBreadcrumb } from '../design-system/molecules/WebBreadcrumb';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 export const ContactSalesSuccessPage = () => {
     const { t } = useTranslation();
@@ -83,62 +84,79 @@ export const ContactSalesSuccessPage = () => {
                         textAlign: 'center'
                     }}>
                         {/* Success Icon/Checkmark */}
-                        <Box sx={{
-                            width: 80,
-                            height: 80,
-                            borderRadius: '50%',
-                            bgcolor: '#4CAF50',
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            margin: '0 auto 24px',
-                        }}>
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" fill="white" />
-                            </svg>
-                        </Box>
-
-                        {/* Success Title */}
-                        <Typography
-                            variant="h3"
-                            component="h2"
-                            sx={{
-                                mb: 2,
-                                color: '#434343',
-                                fontFamily: '"Inter", "Hind Siliguri", sans-serif',
-                                fontWeight: 600,
-                                fontSize: { xs: '24px', md: '32px' }
-                            }}
+                        <motion.div
+                            initial={{ scale: 0 }}
+                            animate={{ scale: [0, 1.2, 1] }}
+                            transition={{ duration: 0.4, ease: "easeInOut" }}
                         >
-                            {t('contactSales.success.title')}
-                        </Typography>
+                            <Box sx={{
+                                width: 80,
+                                height: 80,
+                                borderRadius: '50%',
+                                bgcolor: '#4CAF50',
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                margin: '0 auto 24px',
+                            }}>
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" fill="white" />
+                                </svg>
+                            </Box>
+                        </motion.div>
 
-                        {/* Success Subtitle */}
-                        <Typography
-                            variant="body1"
-                            sx={{
-                                mb: 3,
-                                color: '#797D80',
-                                fontFamily: 'Hind Siliguri',
-                                fontSize: { xs: '16px', md: '18px' },
-                                lineHeight: 1.6,
-                                maxWidth: 600,
-                                mx: 'auto'
-                            }}
+                        {/* Success Title & Subtitle */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.35, delay: 0.15 }}
                         >
-                            {t('contactSales.success.subtitle')}
-                        </Typography>
+                            <Typography
+                                variant="h3"
+                                component="h2"
+                                sx={{
+                                    mb: 2,
+                                    color: '#434343',
+                                    fontFamily: '"Inter", "Hind Siliguri", sans-serif',
+                                    fontWeight: 600,
+                                    fontSize: { xs: '24px', md: '32px' }
+                                }}
+                            >
+                                {t('contactSales.success.title')}
+                            </Typography>
+
+                            <Typography
+                                variant="body1"
+                                sx={{
+                                    mb: 3,
+                                    color: '#797D80',
+                                    fontFamily: 'Hind Siliguri',
+                                    fontSize: { xs: '16px', md: '18px' },
+                                    lineHeight: 1.6,
+                                    maxWidth: 600,
+                                    mx: 'auto'
+                                }}
+                            >
+                                {t('contactSales.success.subtitle')}
+                            </Typography>
+                        </motion.div>
 
                         {/* CTA Button */}
-                        <Box sx={{ display: 'flex', justifyContent: 'center', mt: 4 }}>
-                            <WebButton
-                                variant="contained"
-                                onClick={handleViewResources}
-                                sx={{ minWidth: 200 }}
-                            >
-                                {t('contactSales.success.cta')}
-                            </WebButton>
-                        </Box>
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.95 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{ duration: 0.3, delay: 0.3 }}
+                        >
+                            <Box sx={{ display: 'flex', justifyContent: 'center', mt: 4 }}>
+                                <WebButton
+                                    variant="contained"
+                                    onClick={handleViewResources}
+                                    sx={{ minWidth: 200 }}
+                                >
+                                    {t('contactSales.success.cta')}
+                                </WebButton>
+                            </Box>
+                        </motion.div>
                     </Box>
                 </Box>
             </Container>

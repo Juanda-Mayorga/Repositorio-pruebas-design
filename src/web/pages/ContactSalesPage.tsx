@@ -11,6 +11,7 @@ import { useTranslation } from 'react-i18next';
 
 export const ContactSalesPage = () => {
     const { t } = useTranslation();
+    const navigate = useNavigate();
 
     const [formData, setFormData] = useState({
         firstName: '',
@@ -175,7 +176,6 @@ export const ContactSalesPage = () => {
         setErrors(newErrors);
     };
 
-    const navigate = useNavigate();
 
     const handleSubmit = () => {
         if (!isFormValid) return;
@@ -206,7 +206,7 @@ export const ContactSalesPage = () => {
         <ContactLayout>
             <Container maxWidth="lg">
                 {/* Breadcrumb */}
-                <Box sx={{ mb: { xs: '8px', sm: '17px', md: '25px', lg: '32px', xl: '43px' } }}>
+                <Box sx={{ mt: { xs: '8px', sm: '17px', md: '25px', lg: '16px', xl: '20px' }, mb: { xs: '8px', sm: '17px', md: '25px', lg: '16px', xl: '20px' } }}>
                     <WebBreadcrumb
                         items={[
                             { label: t('contactSales.breadcrumb.contact'), href: '/contact' },
