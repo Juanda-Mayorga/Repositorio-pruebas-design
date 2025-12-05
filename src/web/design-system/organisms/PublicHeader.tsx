@@ -80,7 +80,10 @@ export const PublicHeader = () => {
                         onMouseLeave={() => setShowSolutionMenu(false)}
                         sx={{ position: 'relative' }}
                     >
-                        <HeaderNavLink selected={false} active={showSolutionMenu}>
+                        <HeaderNavLink
+                            selected={['/product', '/cloud-services', '/support'].some(path => location.pathname.startsWith(path))}
+                            active={showSolutionMenu}
+                        >
                             Solution <KeyboardArrowDownIcon fontSize="small" sx={{
                                 transform: showSolutionMenu ? 'rotate(180deg)' : 'none',
                                 transition: 'transform 0.2s'
