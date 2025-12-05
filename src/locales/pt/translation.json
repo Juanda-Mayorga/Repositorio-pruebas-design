@@ -161,6 +161,11 @@
         "breadcrumb": {
             "contact": "Contacto",
             "contactSales": "Contactar vendas"
+        },
+        "success": {
+            "title": "Obrigado! O seu pedido foi enviado",
+            "subtitle": "A nossa equipa de vendas irá analisar o seu pedido e entrará em contacto consigo em breve. Entretanto, pode explorar conteúdos úteis sobre o MAMBA e a metodologia BIM.",
+            "cta": "Ver recursos"
         }
     }
 }

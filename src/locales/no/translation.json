@@ -161,6 +161,11 @@
         "breadcrumb": {
             "contact": "Kontakt",
             "contactSales": "Kontakt salg"
+        },
+        "success": {
+            "title": "Takk! Forespørselen din er sendt",
+            "subtitle": "Salgsteamet vårt vil gjennomgå forespørselen din og kontakte deg snart. I mellomtiden kan du utforske nyttig innhold om MAMBA og BIM-metodikken.",
+            "cta": "Se ressurser"
         }
     }
 }
