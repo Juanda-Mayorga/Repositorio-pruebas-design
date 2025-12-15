@@ -59,6 +59,27 @@ A reusable button component for web pages with consistent styling.
 </WebButton>
 ```
 
+
+### [MambaLogo](file:///Users/carolinadomenechreal/Desktop/Prueba/Repositorio-pruebas-design/src/web/design-system/atoms/MambaLogo.tsx)
+
+A self-contained logo component that renders the Mamba brand icon and text.
+
+**Props:**
+- All standard MUI Box props (extends `BoxProps`).
+
+**Features:**
+- SVG Icon: 283x253 vector scaled to fit.
+- Typography: "MAMBA" in Inter font, Medium weight (500), 32px size, -0.02em letter spacing.
+- Responsive container (default 40px icon).
+- Flexbox layout (Icon + Text).
+
+**Usage:**
+```tsx
+<MambaLogo />
+// With custom click handler or styles
+<MambaLogo onClick={handleClick} sx={{ cursor: 'pointer' }} />
+```
+
 ### [WebInputField](file:///Users/carolinadomenechreal/Desktop/Prueba/Repositorio-pruebas-design/src/web/design-system/atoms/WebInputField.tsx)
 
 A generic input field component for web forms with validation support.
@@ -202,6 +223,9 @@ A dropdown menu component for solution selection, featuring persistent selection
   - Icon Background: `#DFDAF9`
 - Hover effects that match the selection state or provide visual feedback.
 - Responsive typography (adjusts at 1440px breakpoint).
+- **Internationalization (i18n):**
+  - Content (Title/Description) is fully translated to 12 languages.
+  - Dynamically updates based on selected language.
 
 **Usage:**
 Used internally within the `PublicHeader` component.
@@ -214,7 +238,14 @@ Used internally within the `PublicHeader` component.
 
 ### [PublicHeader](file:///Users/carolinadomenechreal/Desktop/Prueba/Repositorio-pruebas-design/src/web/design-system/organisms/PublicHeader.tsx)
 
+### [PublicHeader](file:///Users/carolinadomenechreal/Desktop/Prueba/Repositorio-pruebas-design/src/web/design-system/organisms/PublicHeader.tsx)
+
 Navigation header for public pages with logo, menu items, and login button.
+
+**Features:**
+- Uses `MambaLogo` for consistent branding.
+- Fully internationalized menu items ("Solution", "Resources", etc.).
+- Responsive navigation links with active states.
 
 ### [Footer](file:///Users/carolinadomenechreal/Desktop/Prueba/Repositorio-pruebas-design/src/web/design-system/organisms/Footer.tsx)
 
