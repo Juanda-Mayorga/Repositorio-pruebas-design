@@ -41,10 +41,25 @@ export const MambaLogo = (props: BoxProps) => {
                 sx={{
                     fontFamily: '"Inter", sans-serif',
                     fontWeight: 500,
-                    fontSize: '32px',
+                    // Responsive Scaling
+                    // mobile (<1133): 22px
+                    // tablet horizontal (1133): 24px
+                    // desktop standard (1440): 28px
+                    // desktop large (1920): 32px
+                    fontSize: '22px',
+                    '@media (min-width:1133px)': {
+                        fontSize: '24px'
+                    },
+                    '@media (min-width:1440px)': {
+                        fontSize: '28px'
+                    },
+                    '@media (min-width:1920px)': {
+                        fontSize: '32px'
+                    },
                     color: '#2F2F32',
                     lineHeight: 1,
-                    letterSpacing: '-0.02em'
+                    letterSpacing: '-0.02em',
+                    transition: 'font-size 0.2s'
                 }}
             >
                 MAMBA

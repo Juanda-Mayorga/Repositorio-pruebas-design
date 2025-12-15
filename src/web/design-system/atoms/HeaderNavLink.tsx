@@ -44,25 +44,19 @@ export const HeaderNavLink = ({ children, selected = false, active = false, onCl
                     sx={{
                         fontWeight: 500,
                         fontFamily: '"Hind Siliguri", sans-serif',
-                        '@media (min-width:1440px)': {
-                            fontSize: '20px',
-                        }
+                        color: 'inherit'
                     }}
                 >
                     {children}
                 </Typography>
             ) : (
-                // If children is complex (e.g. icon + text), we apply styles to a wrapper or rely on inheritance.
-                // However, the user specifically asked for text styling.
                 <Box sx={{
                     display: 'flex',
                     alignItems: 'center',
                     gap: 0.5,
                     fontFamily: '"Hind Siliguri", sans-serif',
                     fontWeight: 500,
-                    '@media (min-width:1440px)': {
-                        fontSize: '20px',
-                    }
+                    color: 'inherit'
                 }}>
                     {children}
                 </Box>
