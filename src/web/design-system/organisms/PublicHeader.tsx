@@ -3,7 +3,7 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import { useTranslation } from 'react-i18next';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useMediaQuery } from '@mui/material';
 import { HeaderNavLink } from '../atoms/HeaderNavLink';
@@ -37,6 +37,21 @@ export const PublicHeader = () => {
     const open = Boolean(anchorEl);
     const navigate = useNavigate();
     const location = useLocation();
+
+    const solutionMenuTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+    const handleSolutionEnter = () => {
+        if (solutionMenuTimer.current) {
+            clearTimeout(solutionMenuTimer.current);
+        }
+        setShowSolutionMenu(true);
+    };
+
+    const handleSolutionLeave = () => {
+        solutionMenuTimer.current = setTimeout(() => {
+            setShowSolutionMenu(false);
+        }, 200); // 200ms delay to allow bridging the gap
+    };
 
     // Responsive Breakpoints
     // 1133px is the cutoff for Mobile/Tablet Horizontal vs Desktop
@@ -121,8 +136,8 @@ export const PublicHeader = () => {
                     transform: 'translateX(-50%)'
                 }}>
                     <Box
-                        onMouseEnter={() => setShowSolutionMenu(true)}
-                        onMouseLeave={() => setShowSolutionMenu(false)}
+                        onMouseEnter={handleSolutionEnter}
+                        onMouseLeave={handleSolutionLeave}
                         sx={{ position: 'relative' }}
                     >
                         <HeaderNavLink
@@ -140,13 +155,17 @@ export const PublicHeader = () => {
                             </Box>
                         </HeaderNavLink>
                         {showSolutionMenu && (
-                            <Box sx={{
-                                position: 'absolute',
-                                top: '100%',
-                                left: 0,
-                                pt: 1,
-                                zIndex: 1200
-                            }}>
+                            <Box
+                                onMouseEnter={handleSolutionEnter}
+                                onMouseLeave={handleSolutionLeave}
+                                sx={{
+                                    position: 'fixed',
+                                    top: 64,
+                                    left: '50%',
+                                    transform: 'translateX(-50%)',
+                                    pt: 1, // 8px visual gap (using padding to maintain hover path)
+                                    zIndex: 1200
+                                }}>
                                 <SolutionDropdown />
                             </Box>
                         )}

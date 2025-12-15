@@ -36,7 +36,7 @@ export const SolutionDropdown = () => {
         <Paper
             elevation={0}
             sx={{
-                width: 380,
+                width: 'max-content',
                 p: 2,
                 borderRadius: 2,
                 bgcolor: '#FFFFFF',
@@ -44,7 +44,7 @@ export const SolutionDropdown = () => {
                 boxShadow: '0px 4px 24px rgba(0, 0, 0, 0.06)',
                 display: 'flex',
                 gap: 2,
-                flexDirection: 'column'
+                flexDirection: 'row'
             }}
         >
             {items.map((item, index) => {
@@ -63,6 +63,7 @@ export const SolutionDropdown = () => {
                             transition: 'all 0.2s',
                             bgcolor: isSelected ? '#F5F3FD' : 'transparent',
                             border: isSelected ? '1px solid #7A6EBD' : '1px solid transparent',
+                            maxWidth: '260px', // Restrict width to prevent overlap
                             '&:hover': {
                                 bgcolor: isSelected ? '#F5F3FD' : '#F9F9F9',
                                 ...(isSelected && {
