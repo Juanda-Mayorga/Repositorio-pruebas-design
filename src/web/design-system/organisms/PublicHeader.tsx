@@ -61,11 +61,13 @@ export const PublicHeader = () => {
     // 1440px - 1919px: 16px
     // 1920px+: 20px
     const navLinkFontSize = {
+        fontFamily: '"Hind Siliguri", sans-serif',
+        fontWeight: 500,
         fontSize: '14px',
-        '@media (min-width:1440px)': {
-            fontSize: '16px'
+        '@media (min-width: 1440px)': {
+            fontSize: '18px'
         },
-        '@media (min-width:1920px)': {
+        '@media (min-width: 1920px)': {
             fontSize: '20px'
         }
     };
@@ -127,8 +129,10 @@ export const PublicHeader = () => {
                             selected={['/product', '/cloud-services', '/support'].some(path => location.pathname.startsWith(path))}
                             active={showSolutionMenu}
                         >
-                            <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5, ...navLinkFontSize }}>
-                                {t('publicHeader.solution')}
+                            <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
+                                <Typography component="span" sx={{ ...navLinkFontSize, lineHeight: 1 }}>
+                                    {t('publicHeader.solution')}
+                                </Typography>
                                 <KeyboardArrowDownIcon fontSize="small" sx={{
                                     transform: showSolutionMenu ? 'rotate(180deg)' : 'none',
                                     transition: 'transform 0.2s'
@@ -151,22 +155,22 @@ export const PublicHeader = () => {
                         onClick={() => navigate('/resources')}
                         selected={location.pathname === '/resources'}
                     >
-                        <Box sx={{ ...navLinkFontSize }}>
+                        <Typography component="span" sx={{ ...navLinkFontSize, lineHeight: 1 }}>
                             {t('publicHeader.resources')}
-                        </Box>
+                        </Typography>
                     </HeaderNavLink>
                     <HeaderNavLink
                         onClick={() => navigate('/contact')}
                         selected={location.pathname.startsWith('/contact')}
                     >
-                        <Box sx={{ ...navLinkFontSize }}>
+                        <Typography component="span" sx={{ ...navLinkFontSize, lineHeight: 1 }}>
                             {t('publicHeader.contact')}
-                        </Box>
+                        </Typography>
                     </HeaderNavLink>
                     <HeaderNavLink>
-                        <Box sx={{ ...navLinkFontSize }}>
+                        <Typography component="span" sx={{ ...navLinkFontSize, lineHeight: 1 }}>
                             {t('publicHeader.pricing')}
-                        </Box>
+                        </Typography>
                     </HeaderNavLink>
                 </Box>
             )}
@@ -182,7 +186,7 @@ export const PublicHeader = () => {
                     >
                         <Box sx={{
                             backgroundColor: '#7A6EBD',
-                            padding: { md: '6px 12px', lg: '8px 16px' },
+                            padding: '8px 16px', // Standardized to match HeaderNavLink vertical padding (8px)
                             borderRadius: '4px',
                             cursor: 'pointer',
                             display: 'flex',
@@ -195,13 +199,11 @@ export const PublicHeader = () => {
                             }
                         }}>
                             <Typography
-                                variant="body1"
                                 component="span"
                                 sx={{
-                                    fontWeight: 500,
-                                    fontFamily: '"Hind Siliguri", sans-serif',
                                     color: 'inherit',
-                                    ...navLinkFontSize
+                                    ...navLinkFontSize,
+                                    lineHeight: 1
                                 }}
                             >
                                 {t('publicHeader.login')}

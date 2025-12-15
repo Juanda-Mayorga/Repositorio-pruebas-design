@@ -96,14 +96,29 @@ export const SolutionDropdown = () => {
                                     color: '#2F2F32',
                                     fontWeight: 500,
                                     fontFamily: '"Hind Siliguri", sans-serif',
+                                    fontSize: '14px',
                                     '@media (min-width:1440px)': {
+                                        fontSize: '18px',
+                                    },
+                                    '@media (min-width:1920px)': {
                                         fontSize: '20px',
                                     }
                                 }}
                             >
                                 {item.title}
                             </Typography>
-                            <Typography variant="body2" color="text.secondary" sx={{ lineHeight: 1.4, fontSize: '0.875rem' }}>
+                            <Typography variant="body2" color="text.secondary" sx={{
+                                lineHeight: 1.4,
+                                fontFamily: '"Inter", sans-serif',
+                                fontSize: '14px',
+                                transition: 'color 0.2s',
+                                '@media (min-width:1440px)': {
+                                    fontSize: '18px',
+                                },
+                                '@media (min-width:1920px)': {
+                                    fontSize: '20px',
+                                }
+                            }}>
                                 {item.description}
                             </Typography>
                         </Box>

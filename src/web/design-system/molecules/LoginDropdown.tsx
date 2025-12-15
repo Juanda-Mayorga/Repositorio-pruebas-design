@@ -56,9 +56,12 @@ export const LoginDropdown = () => {
                                 color: '#2F2F32',
                                 fontWeight: 500,
                                 fontFamily: '"Inter", sans-serif',
-                                fontSize: '16px',
+                                fontSize: '14px',
                                 transition: 'color 0.2s',
                                 '@media (min-width:1440px)': {
+                                    fontSize: '18px',
+                                },
+                                '@media (min-width:1920px)': {
                                     fontSize: '20px',
                                 }
                             }}
