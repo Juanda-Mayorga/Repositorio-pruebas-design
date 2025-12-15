@@ -8,9 +8,10 @@ interface HeaderNavLinkProps {
     onMouseEnter?: (event: React.MouseEvent<HTMLElement>) => void;
     onMouseLeave?: (event: React.MouseEvent<HTMLElement>) => void;
     active?: boolean;
+    disableHover?: boolean;
 }
 
-export const HeaderNavLink = ({ children, selected = false, active = false, onClick, onMouseEnter, onMouseLeave }: HeaderNavLinkProps) => {
+export const HeaderNavLink = ({ children, selected = false, active = false, disableHover = false, onClick, onMouseEnter, onMouseLeave }: HeaderNavLinkProps) => {
     return (
         <Box
             onClick={onClick}
@@ -26,10 +27,10 @@ export const HeaderNavLink = ({ children, selected = false, active = false, onCl
                 alignItems: 'center',
                 gap: 0.5,
                 transition: 'all 0.2s ease-in-out',
-                '&:hover': !selected ? {
+                '&:hover': disableHover ? {} : (!selected ? {
                     backgroundColor: '#F4F4F7',
                     color: '#2F2F32',
-                } : {},
+                } : {}),
                 // Ensure typography inherits color
                 '& .MuiTypography-root': {
                     fontWeight: 500,

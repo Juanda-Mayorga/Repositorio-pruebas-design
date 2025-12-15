@@ -1,7 +1,10 @@
-import { Box, Typography, Menu, MenuItem, IconButton, Drawer, List, ListItemButton, ListItemText, Collapse } from '@mui/material';
+import { Box, Typography, Menu, MenuItem, IconButton, Drawer, Collapse } from '@mui/material';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
+import LaptopMacIcon from '@mui/icons-material/LaptopMac';
+import CloudQueueIcon from '@mui/icons-material/CloudQueue';
+import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
 import { useTranslation } from 'react-i18next';
 import { useState, useRef } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
@@ -288,56 +291,168 @@ export const PublicHeader = () => {
                         <CloseIcon />
                     </IconButton>
                 </Box>
-                <Box sx={{ px: 2, mb: 2 }}>
-                    <MambaLogo onClick={() => { navigate('/landing'); setMobileMenuOpen(false); }} />
-                </Box>
-                <List>
-                    {/* Solution Accordion in Mobile */}
-                    <ListItemButton onClick={() => setMobileSolutionOpen(!mobileSolutionOpen)}>
-                        <ListItemText primary={t('publicHeader.solution')} primaryTypographyProps={{ fontWeight: 500 }} />
-                        <KeyboardArrowDownIcon sx={{ transform: mobileSolutionOpen ? 'rotate(180deg)' : 'none', transition: 'transform 0.2s' }} />
-                    </ListItemButton>
-                    <Collapse in={mobileSolutionOpen} timeout="auto" unmountOnExit>
-                        <List component="div" disablePadding>
-                            <ListItemButton sx={{ pl: 4 }} onClick={() => { navigate('/product'); setMobileMenuOpen(false); }}>
-                                <ListItemText primary={t('solutionDropdown.product.title')} />
-                            </ListItemButton>
-                            <ListItemButton sx={{ pl: 4 }} onClick={() => { navigate('/cloud-services'); setMobileMenuOpen(false); }}>
-                                <ListItemText primary={t('solutionDropdown.cloudServices.title')} />
-                            </ListItemButton>
-                            <ListItemButton sx={{ pl: 4 }} onClick={() => { navigate('/support'); setMobileMenuOpen(false); }}>
-                                <ListItemText primary={t('solutionDropdown.support.title')} />
-                            </ListItemButton>
-                        </List>
-                    </Collapse>
+                {/* Mobile Menu Content */}
+                <Box sx={{ px: 2, display: 'flex', flexDirection: 'column', gap: 3 }}>
 
-                    <ListItemButton onClick={() => { navigate('/resources'); setMobileMenuOpen(false); }}>
-                        <ListItemText primary={t('publicHeader.resources')} primaryTypographyProps={{ fontWeight: 500 }} />
-                    </ListItemButton>
-                    <ListItemButton onClick={() => { navigate('/contact'); setMobileMenuOpen(false); }}>
-                        <ListItemText primary={t('publicHeader.contact')} primaryTypographyProps={{ fontWeight: 500 }} />
-                    </ListItemButton>
-                    <ListItemButton>
-                        <ListItemText primary={t('publicHeader.pricing')} primaryTypographyProps={{ fontWeight: 500 }} />
-                    </ListItemButton>
-                </List>
+                    {/* Solution Accordion */}
+                    <Box>
+                        <Box
+                            onClick={() => setMobileSolutionOpen(!mobileSolutionOpen)}
+                            sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', cursor: 'pointer', mb: mobileSolutionOpen ? 2 : 0 }}
+                        >
+                            <HeaderNavLink active={mobileSolutionOpen} disableHover>
+                                <Typography component="span" sx={{ ...navLinkFontSize, lineHeight: 1 }}>
+                                    {t('publicHeader.solution')}
+                                </Typography>
+                            </HeaderNavLink>
+                            <KeyboardArrowDownIcon sx={{ transform: mobileSolutionOpen ? 'rotate(180deg)' : 'none', transition: 'transform 0.2s', color: '#7A6EBD' }} />
+                        </Box>
+                        <Collapse in={mobileSolutionOpen} timeout="auto" unmountOnExit>
+                            <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
 
-                <Box sx={{ p: 2, mt: 'auto', borderTop: '1px solid', borderColor: 'divider' }}>
-                    <Box sx={{
-                        backgroundColor: '#7A6EBD',
-                        padding: '12px',
-                        borderRadius: '4px',
-                        cursor: 'pointer',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        color: '#FFFFFF',
-                        mb: 2
-                    }}>
-                        <Typography fontWeight={500}>
-                            {t('publicHeader.login')}
-                        </Typography>
+                                {/* Product Card */}
+                                <Box
+                                    onClick={() => { navigate('/product'); setMobileMenuOpen(false); }}
+                                    sx={{
+                                        p: 2,
+                                        borderRadius: 1,
+                                        border: location.pathname.startsWith('/product') ? '1px solid #7A6EBD' : '1px solid #E8E8E8',
+                                        bgcolor: location.pathname.startsWith('/product') ? '#F5F3FD' : '#FFFFFF',
+                                        cursor: 'pointer',
+                                    }}
+                                >
+                                    <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5, mb: 1 }}>
+                                        <Box sx={{ color: '#8A7BD4', display: 'flex' }}><LaptopMacIcon /></Box>
+                                        <Typography sx={{ fontWeight: 500, fontFamily: '"Hind Siliguri", sans-serif', color: '#2F2F32' }}>
+                                            {t('solutionDropdown.product.title')}
+                                        </Typography>
+                                    </Box>
+                                    <Typography variant="body2" color="text.secondary" sx={{ fontFamily: '"Inter", sans-serif', fontSize: '13px', lineHeight: 1.4 }}>
+                                        {t('solutionDropdown.product.description')}
+                                    </Typography>
+                                </Box>
+
+                                {/* Cloud Services Card */}
+                                <Box
+                                    onClick={() => { navigate('/cloud-services'); setMobileMenuOpen(false); }}
+                                    sx={{
+                                        p: 2,
+                                        borderRadius: 1,
+                                        border: location.pathname.startsWith('/cloud-services') ? '1px solid #7A6EBD' : '1px solid #E8E8E8',
+                                        bgcolor: location.pathname.startsWith('/cloud-services') ? '#F5F3FD' : '#FFFFFF',
+                                        cursor: 'pointer',
+                                    }}
+                                >
+                                    <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5, mb: 1 }}>
+                                        <Box sx={{ color: '#8A7BD4', display: 'flex' }}><CloudQueueIcon /></Box>
+                                        <Typography sx={{ fontWeight: 500, fontFamily: '"Hind Siliguri", sans-serif', color: '#2F2F32' }}>
+                                            {t('solutionDropdown.cloudServices.title')}
+                                        </Typography>
+                                    </Box>
+                                    <Typography variant="body2" color="text.secondary" sx={{ fontFamily: '"Inter", sans-serif', fontSize: '13px', lineHeight: 1.4 }}>
+                                        {t('solutionDropdown.cloudServices.description')}
+                                    </Typography>
+                                </Box>
+
+                                {/* Support Card */}
+                                <Box
+                                    onClick={() => { navigate('/support'); setMobileMenuOpen(false); }}
+                                    sx={{
+                                        p: 2,
+                                        borderRadius: 1,
+                                        border: location.pathname.startsWith('/support') ? '1px solid #7A6EBD' : '1px solid #E8E8E8',
+                                        bgcolor: location.pathname.startsWith('/support') ? '#F5F3FD' : '#FFFFFF',
+                                        cursor: 'pointer',
+                                    }}
+                                >
+                                    <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5, mb: 1 }}>
+                                        <Box sx={{ color: '#8A7BD4', display: 'flex' }}><ChatBubbleOutlineIcon /></Box>
+                                        <Typography sx={{ fontWeight: 500, fontFamily: '"Hind Siliguri", sans-serif', color: '#2F2F32' }}>
+                                            {t('solutionDropdown.support.title')}
+                                        </Typography>
+                                    </Box>
+                                    <Typography variant="body2" color="text.secondary" sx={{ fontFamily: '"Inter", sans-serif', fontSize: '13px', lineHeight: 1.4 }}>
+                                        {t('solutionDropdown.support.description')}
+                                    </Typography>
+                                </Box>
+
+                            </Box>
+                        </Collapse>
                     </Box>
+
+                    {/* Resources */}
+                    <Box>
+                        <HeaderNavLink onClick={() => { navigate('/resources'); setMobileMenuOpen(false); }} disableHover>
+                            <Typography component="span" sx={{ ...navLinkFontSize, lineHeight: 1 }}>
+                                {t('publicHeader.resources')}
+                            </Typography>
+                        </HeaderNavLink>
+                    </Box>
+
+                    {/* Contact */}
+                    <Box>
+                        <HeaderNavLink onClick={() => { navigate('/contact'); setMobileMenuOpen(false); }} disableHover>
+                            <Typography component="span" sx={{ ...navLinkFontSize, lineHeight: 1 }}>
+                                {t('publicHeader.contact')}
+                            </Typography>
+                        </HeaderNavLink>
+                    </Box>
+
+                    {/* Pricing */}
+                    <Box>
+                        <HeaderNavLink disableHover>
+                            <Typography component="span" sx={{ ...navLinkFontSize, lineHeight: 1 }}>
+                                {t('publicHeader.pricing')}
+                            </Typography>
+                        </HeaderNavLink>
+                    </Box>
+
+                    {/* Login Accordion (Moved from bottom) */}
+                    <Box>
+                        <Box
+                            onClick={() => setShowLoginMenu(!showLoginMenu)}
+                            sx={{
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'space-between',
+                                cursor: 'pointer',
+                                bgcolor: '#7A6EBD',
+                                p: '8px 16px',
+                                borderRadius: 1,
+                                color: '#FFFFFF',
+                                transition: 'background-color 0.2s'
+                            }}
+                        >
+                            <Typography sx={{ fontWeight: 500, fontFamily: '"Hind Siliguri", sans-serif' }}>
+                                {t('publicHeader.login')}
+                            </Typography>
+                            <KeyboardArrowDownIcon sx={{ transform: showLoginMenu ? 'rotate(180deg)' : 'none', transition: 'transform 0.2s', color: '#FFFFFF' }} />
+                        </Box>
+                        {/* We reuse the LogicDropdown Logic or similar listing.
+                            Since LoginDropdown is a popup component, for mobile we might want a simple list like Solution
+                            or we can just reuse the component if it fits, but usually accordions are better.
+                            The user said "uses the same behavior that you use in ... this component",
+                            which likely means EXPANDABLE list.
+                            I will hardcode the login links here for mobile simplicity based on previous context ("MAMBA 23", "MAMBA 26")
+                            OR I can assume LoginDropdown is usable if stripped of paper.
+                            Let's use a simple list for robust mobile UX as requested "apilado".
+                        */}
+                        <Collapse in={showLoginMenu} timeout="auto" unmountOnExit>
+                            <Box sx={{ pl: 2, display: 'flex', flexDirection: 'column', gap: 2, mt: 2 }}>
+                                <HeaderNavLink onClick={() => { navigate('/login-23'); setMobileMenuOpen(false); }} disableHover>
+                                    <Typography component="span" sx={{ ...navLinkFontSize, lineHeight: 1 }}>
+                                        MAMBA 23
+                                    </Typography>
+                                </HeaderNavLink>
+                                <HeaderNavLink onClick={() => { navigate('/subscription'); setMobileMenuOpen(false); }} disableHover>
+                                    <Typography component="span" sx={{ ...navLinkFontSize, lineHeight: 1 }}>
+                                        MAMBA 26
+                                    </Typography>
+                                </HeaderNavLink>
+                            </Box>
+                        </Collapse>
+                    </Box>
+
                 </Box>
             </Drawer>
         </Box>
