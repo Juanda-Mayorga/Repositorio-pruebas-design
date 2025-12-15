@@ -4,6 +4,9 @@ import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { HeaderNavLink } from '../atoms/HeaderNavLink';
+import { SolutionDropdown } from '../molecules/SolutionDropdown';
+import { LoginDropdown } from '../molecules/LoginDropdown';
+import { MambaLogo } from '../atoms/MambaLogo';
 
 const languages = [
     { code: 'da', label: 'Dansk' },
@@ -19,9 +22,6 @@ const languages = [
     { code: 'no', label: 'Norsk' },
     { code: 'pt', label: 'Português' },
 ];
-
-import { SolutionDropdown } from '../molecules/SolutionDropdown';
-import { LoginDropdown } from '../molecules/LoginDropdown';
 
 export const PublicHeader = () => {
     const { i18n } = useTranslation();
@@ -63,16 +63,24 @@ export const PublicHeader = () => {
             width: '100%'
         }}>
             {/* Logo */}
-            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, cursor: 'pointer' }} onClick={() => navigate('/landing')}>
-                <Box sx={{ width: 32, height: 32, bgcolor: 'primary.main', borderRadius: 1 }} />
-                <Typography variant="h6" fontWeight="bold" color="text.primary">
+            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5, cursor: 'pointer' }} onClick={() => navigate('/landing')}>
+                <MambaLogo sx={{ width: 32, height: 32 }} />
+                <Typography
+                    variant="h6" // Maintain variant for semantic readiness but override styles
+                    sx={{
+                        fontFamily: '"Inter", sans-serif',
+                        fontWeight: 500,
+                        fontSize: '32px',
+                        color: '#2F2F32',
+                        lineHeight: 1
+                    }}
+                >
                     MAMBA
                 </Typography>
             </Box>
 
             {/* Navigation & Actions */}
             <Box sx={{ display: 'flex', alignItems: 'center', gap: 4 }}>
-                {/* Menu Items */}
                 {/* Menu Items */}
                 <Box sx={{ display: 'flex', alignItems: 'center', gap: 4 }}>
                     <Box
@@ -119,7 +127,6 @@ export const PublicHeader = () => {
                 </Box>
 
                 {/* Log in Button */}
-                {/* Log in Button / Dropdown */}
                 <Box
                     onMouseEnter={() => setShowLoginMenu(true)}
                     onMouseLeave={() => setShowLoginMenu(false)}
