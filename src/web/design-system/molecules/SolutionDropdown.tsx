@@ -56,14 +56,15 @@ export const SolutionDropdown = () => {
                         onClick={() => navigate(item.path)}
                         sx={{
                             display: 'flex',
-                            gap: 2,
+                            flexDirection: 'column', // Stack Content Vertically
+                            gap: 1, // Gap between Header (Icon+Title) and Description
                             p: 1.5,
                             borderRadius: 1,
                             cursor: 'pointer',
                             transition: 'all 0.2s',
                             bgcolor: isSelected ? '#F5F3FD' : 'transparent',
                             border: isSelected ? '1px solid #7A6EBD' : '1px solid transparent',
-                            maxWidth: '260px', // Restrict width to prevent overlap
+                            maxWidth: '260px',
                             '&:hover': {
                                 bgcolor: isSelected ? '#F5F3FD' : '#F9F9F9',
                                 ...(isSelected && {
@@ -72,28 +73,28 @@ export const SolutionDropdown = () => {
                             }
                         }}
                     >
-                        <Box
-                            sx={{
-                                width: 40,
-                                height: 40,
-                                display: 'flex',
-                                alignItems: 'center',
-                                justifyContent: 'center',
-                                borderRadius: 1,
-                                bgcolor: isSelected ? '#DFDAF9' : '#F5F3FD',
-                                color: '#8A7BD4',
-                                flexShrink: 0,
-                                transition: 'all 0.2s'
-                            }}
-                        >
-                            {item.icon}
-                        </Box>
-                        <Box>
+                        {/* Header: Icon + Title */}
+                        <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}>
+                            <Box
+                                sx={{
+                                    width: 40,
+                                    height: 40,
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    borderRadius: 1,
+                                    bgcolor: isSelected ? '#DFDAF9' : '#F5F3FD',
+                                    color: '#8A7BD4',
+                                    flexShrink: 0,
+                                    transition: 'all 0.2s'
+                                }}
+                            >
+                                {item.icon}
+                            </Box>
                             <Typography
                                 variant="subtitle1"
                                 sx={{
                                     lineHeight: 1.2,
-                                    mb: 0.5,
                                     color: '#2F2F32',
                                     fontWeight: 500,
                                     fontFamily: '"Hind Siliguri", sans-serif',
@@ -108,21 +109,23 @@ export const SolutionDropdown = () => {
                             >
                                 {item.title}
                             </Typography>
-                            <Typography variant="body2" color="text.secondary" sx={{
-                                lineHeight: 1.4,
-                                fontFamily: '"Inter", sans-serif',
-                                fontSize: '14px',
-                                transition: 'color 0.2s',
-                                '@media (min-width:1440px)': {
-                                    fontSize: '18px',
-                                },
-                                '@media (min-width:1920px)': {
-                                    fontSize: '20px',
-                                }
-                            }}>
-                                {item.description}
-                            </Typography>
                         </Box>
+
+                        {/* Description */}
+                        <Typography variant="body2" color="text.secondary" sx={{
+                            lineHeight: 1.4,
+                            fontFamily: '"Inter", sans-serif',
+                            fontSize: '12px',
+                            transition: 'color 0.2s',
+                            '@media (min-width:1440px)': {
+                                fontSize: '14px',
+                            },
+                            '@media (min-width:1920px)': {
+                                fontSize: '16px',
+                            }
+                        }}>
+                            {item.description}
+                        </Typography>
                     </Box>
                 );
             })}
