@@ -108,64 +108,73 @@ export const PublicHeader = () => {
                 />
             </Box>
 
-            {/* Desktop Navigation */}
+            {/* Desktop Navigation (Centered) */}
             {!isMobile && (
-                <Box sx={{ display: 'flex', alignItems: 'center', gap: { md: 2, lg: 4 } }}>
-                    {/* Menu Items */}
-                    <Box sx={{ display: 'flex', alignItems: 'center', gap: { md: 2, lg: 4 } }}>
-                        <Box
-                            onMouseEnter={() => setShowSolutionMenu(true)}
-                            onMouseLeave={() => setShowSolutionMenu(false)}
-                            sx={{ position: 'relative' }}
-                        >
-                            <HeaderNavLink
-                                selected={['/product', '/cloud-services', '/support'].some(path => location.pathname.startsWith(path))}
-                                active={showSolutionMenu}
-                            >
-                                <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5, ...navLinkFontSize }}>
-                                    {t('publicHeader.solution')}
-                                    <KeyboardArrowDownIcon fontSize="small" sx={{
-                                        transform: showSolutionMenu ? 'rotate(180deg)' : 'none',
-                                        transition: 'transform 0.2s'
-                                    }} />
-                                </Box>
-                            </HeaderNavLink>
-                            {showSolutionMenu && (
-                                <Box sx={{
-                                    position: 'absolute',
-                                    top: '100%',
-                                    left: 0,
-                                    pt: 1,
-                                    zIndex: 1200
-                                }}>
-                                    <SolutionDropdown />
-                                </Box>
-                            )}
-                        </Box>
+                <Box sx={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: { md: 2, lg: 4 },
+                    position: 'absolute',
+                    left: '50%',
+                    transform: 'translateX(-50%)'
+                }}>
+                    <Box
+                        onMouseEnter={() => setShowSolutionMenu(true)}
+                        onMouseLeave={() => setShowSolutionMenu(false)}
+                        sx={{ position: 'relative' }}
+                    >
                         <HeaderNavLink
-                            onClick={() => navigate('/resources')}
-                            selected={location.pathname === '/resources'}
+                            selected={['/product', '/cloud-services', '/support'].some(path => location.pathname.startsWith(path))}
+                            active={showSolutionMenu}
                         >
-                            <Box sx={{ ...navLinkFontSize }}>
-                                {t('publicHeader.resources')}
+                            <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5, ...navLinkFontSize }}>
+                                {t('publicHeader.solution')}
+                                <KeyboardArrowDownIcon fontSize="small" sx={{
+                                    transform: showSolutionMenu ? 'rotate(180deg)' : 'none',
+                                    transition: 'transform 0.2s'
+                                }} />
                             </Box>
                         </HeaderNavLink>
-                        <HeaderNavLink
-                            onClick={() => navigate('/contact')}
-                            selected={location.pathname.startsWith('/contact')}
-                        >
-                            <Box sx={{ ...navLinkFontSize }}>
-                                {t('publicHeader.contact')}
+                        {showSolutionMenu && (
+                            <Box sx={{
+                                position: 'absolute',
+                                top: '100%',
+                                left: 0,
+                                pt: 1,
+                                zIndex: 1200
+                            }}>
+                                <SolutionDropdown />
                             </Box>
-                        </HeaderNavLink>
-                        <HeaderNavLink>
-                            <Box sx={{ ...navLinkFontSize }}>
-                                {t('publicHeader.pricing')}
-                            </Box>
-                        </HeaderNavLink>
+                        )}
                     </Box>
+                    <HeaderNavLink
+                        onClick={() => navigate('/resources')}
+                        selected={location.pathname === '/resources'}
+                    >
+                        <Box sx={{ ...navLinkFontSize }}>
+                            {t('publicHeader.resources')}
+                        </Box>
+                    </HeaderNavLink>
+                    <HeaderNavLink
+                        onClick={() => navigate('/contact')}
+                        selected={location.pathname.startsWith('/contact')}
+                    >
+                        <Box sx={{ ...navLinkFontSize }}>
+                            {t('publicHeader.contact')}
+                        </Box>
+                    </HeaderNavLink>
+                    <HeaderNavLink>
+                        <Box sx={{ ...navLinkFontSize }}>
+                            {t('publicHeader.pricing')}
+                        </Box>
+                    </HeaderNavLink>
+                </Box>
+            )}
 
-                    {/* Log in Button */}
+            {/* Right Section: Actions Group (Login + Language) */}
+            <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+                {/* Log in Button (Desktop Only) */}
+                {!isMobile && (
                     <Box
                         onMouseEnter={() => setShowLoginMenu(true)}
                         onMouseLeave={() => setShowLoginMenu(false)}
@@ -215,19 +224,20 @@ export const PublicHeader = () => {
                             </Box>
                         )}
                     </Box>
-                </Box>
-            )}
+                )}
 
-            {/* Language Selector (Always visible or maybe hidden in mobile? Usually kept or moved to drawer. Keeping visible for now as requested structure implied NavLinks and Auth hide) */}
-            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, cursor: 'pointer', border: '1px solid', borderColor: 'divider', borderRadius: 1, px: 1, py: 0.5 }} onClick={handleClick}>
-                <Box sx={{ width: 20, height: 14, bgcolor: 'action.hover', borderRadius: 0.5, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '10px', overflow: 'hidden' }}>
-                    {i18n.language === 'es' ? '🇪🇸' : i18n.language.toUpperCase()}
+                {/* Language Selector */}
+                <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, cursor: 'pointer', border: '1px solid', borderColor: 'divider', borderRadius: 1, px: 1, py: 0.5 }} onClick={handleClick}>
+                    <Box sx={{ width: 20, height: 14, bgcolor: 'action.hover', borderRadius: 0.5, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '10px', overflow: 'hidden' }}>
+                        {i18n.language === 'es' ? '🇪🇸' : i18n.language.toUpperCase()}
+                    </Box>
+                    <Typography variant="body2" fontWeight="medium" sx={{ display: { xs: 'none', sm: 'block' } }}>
+                        {i18n.language.toUpperCase()}
+                    </Typography>
+                    <KeyboardArrowDownIcon fontSize="small" color="action" />
                 </Box>
-                <Typography variant="body2" fontWeight="medium" sx={{ display: { xs: 'none', sm: 'block' } }}>
-                    {i18n.language.toUpperCase()}
-                </Typography>
-                <KeyboardArrowDownIcon fontSize="small" color="action" />
             </Box>
+
             <Menu
                 anchorEl={anchorEl}
                 open={open}
