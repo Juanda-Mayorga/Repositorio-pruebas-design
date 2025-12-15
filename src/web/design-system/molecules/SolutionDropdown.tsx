@@ -2,33 +2,35 @@ import { Box, Paper, Typography } from '@mui/material';
 import LaptopMacIcon from '@mui/icons-material/LaptopMac';
 import CloudQueueIcon from '@mui/icons-material/CloudQueue';
 import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
+import { useTranslation } from 'react-i18next';
 
 import { useNavigate, useLocation } from 'react-router-dom';
 
-const items = [
-    {
-        title: 'Product',
-        description: 'Automate BIM audits, measurements, and estimates with all-in-one software',
-        icon: <LaptopMacIcon sx={{ fontSize: 24 }} />,
-        path: '/product'
-    },
-    {
-        title: 'Cloud Services',
-        description: 'Manage your teams, licenses, BIM projects and training from a single cloud platform',
-        icon: <CloudQueueIcon sx={{ fontSize: 24 }} />,
-        path: '/cloud-services'
-    },
-    {
-        title: 'Support',
-        description: 'Continuous assistance, rapid incident resolution, and expert support through every phase of the project',
-        icon: <ChatBubbleOutlineIcon sx={{ fontSize: 24 }} />,
-        path: '/support'
-    }
-];
-
 export const SolutionDropdown = () => {
+    const { t } = useTranslation();
     const navigate = useNavigate();
     const location = useLocation();
+
+    const items = [
+        {
+            title: t('solutionDropdown.product.title'),
+            description: t('solutionDropdown.product.description'),
+            icon: <LaptopMacIcon sx={{ fontSize: 24 }} />,
+            path: '/product'
+        },
+        {
+            title: t('solutionDropdown.cloudServices.title'),
+            description: t('solutionDropdown.cloudServices.description'),
+            icon: <CloudQueueIcon sx={{ fontSize: 24 }} />,
+            path: '/cloud-services'
+        },
+        {
+            title: t('solutionDropdown.support.title'),
+            description: t('solutionDropdown.support.description'),
+            icon: <ChatBubbleOutlineIcon sx={{ fontSize: 24 }} />,
+            path: '/support'
+        }
+    ];
 
     return (
         <Paper

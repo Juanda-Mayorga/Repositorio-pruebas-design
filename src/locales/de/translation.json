@@ -174,5 +174,19 @@
         "contact": "Kontakt",
         "pricing": "Preise",
         "login": "Anmelden"
+    },
+    "solutionDropdown": {
+        "product": {
+            "title": "Produkt",
+            "description": "Automatisieren Sie BIM-Audits, Messungen und Schätzungen mit einer All-in-One-Software"
+        },
+        "cloudServices": {
+            "title": "Cloud-Dienste",
+            "description": "Verwalten Sie Ihre Teams, Lizenzen, BIM-Projekte und Schulungen von einer einzigen Cloud-Plattform aus"
+        },
+        "support": {
+            "title": "Support",
+            "description": "Kontinuierliche Unterstützung, schnelle Störungsbehebung und Experten-Support in jeder Projektphase"
+        }
     }
 }

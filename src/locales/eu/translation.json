@@ -174,5 +174,19 @@
         "contact": "Kontaktua",
         "pricing": "Prezioak",
         "login": "Saioa hasi"
+    },
+    "solutionDropdown": {
+        "product": {
+            "title": "Produktua",
+            "description": "Automatizatu BIM auditoriak, neurketak eta estimazioak software bakar batekin"
+        },
+        "cloudServices": {
+            "title": "Hodei Zerbitzuak",
+            "description": "Kudeatu zure taldeak, lizentziak, BIM proiektuak eta prestakuntza hodeiko plataforma bakar batetik"
+        },
+        "support": {
+            "title": "Laguntza",
+            "description": "Etengabeko laguntza, intzidentzien berehalako konponketa eta laguntza aditua proiektuaren fase guztietan"
+        }
     }
 }

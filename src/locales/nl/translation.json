@@ -174,5 +174,19 @@
         "contact": "Contact",
         "pricing": "Prijzen",
         "login": "Inloggen"
+    },
+    "solutionDropdown": {
+        "product": {
+            "title": "Product",
+            "description": "Automatiseer BIM-audits, metingen en schattingen met alles-in-één software"
+        },
+        "cloudServices": {
+            "title": "Cloud Diensten",
+            "description": "Beheer uw teams, licenties, BIM-projecten en trainingen vanaf één cloudplatform"
+        },
+        "support": {
+            "title": "Ondersteuning",
+            "description": "Continue assistentie, snelle incidentoplossing en deskundige ondersteuning in elke fase van het project"
+        }
     }
 }

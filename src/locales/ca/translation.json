@@ -174,5 +174,19 @@
         "contact": "Contacte",
         "pricing": "Preus",
         "login": "Iniciar sessió"
+    },
+    "solutionDropdown": {
+        "product": {
+            "title": "Producte",
+            "description": "Automatitza auditories BIM, amidaments i estimacions amb un programari tot en un"
+        },
+        "cloudServices": {
+            "title": "Serveis al Núvol",
+            "description": "Gestiona els teus equips, llicències, projectes BIM i formació des d'una única plataforma al núvol"
+        },
+        "support": {
+            "title": "Suport",
+            "description": "Assistència contínua, resolució ràpida d'incidències i suport expert en cada fase del projecte"
+        }
     }
 }

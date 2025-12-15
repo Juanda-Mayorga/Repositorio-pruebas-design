@@ -174,5 +174,19 @@
         "contact": "Contato",
         "pricing": "Preços",
         "login": "Entrar"
+    },
+    "solutionDropdown": {
+        "product": {
+            "title": "Produto",
+            "description": "Automatize auditorias BIM, medições e estimativas com um software tudo-em-um"
+        },
+        "cloudServices": {
+            "title": "Serviços na Nuvem",
+            "description": "Gerencie suas equipes, licenças, projetos BIM e treinamento a partir de uma única plataforma na nuvem"
+        },
+        "support": {
+            "title": "Suporte",
+            "description": "Assistência contínua, resolução rápida de incidentes e suporte especializado em cada fase do projeto"
+        }
     }
 }

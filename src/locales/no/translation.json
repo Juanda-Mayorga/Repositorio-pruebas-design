@@ -174,5 +174,19 @@
         "contact": "Kontakt",
         "pricing": "Priser",
         "login": "Logg inn"
+    },
+    "solutionDropdown": {
+        "product": {
+            "title": "Produkt",
+            "description": "Automatiser BIM-revisjoner, målinger og estimater med alt-i-ett-programvare"
+        },
+        "cloudServices": {
+            "title": "Skytjenester",
+            "description": "Administrer teamene, lisensene, BIM-prosjektene og opplæringen fra en enkelt skyplattform"
+        },
+        "support": {
+            "title": "Support",
+            "description": "Kontinuerlig assistanse, rask hendelsesløsning og ekspertstøtte gjennom hver fase av prosjektet"
+        }
     }
 }
