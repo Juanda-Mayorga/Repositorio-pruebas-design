@@ -59,8 +59,8 @@ export const SolutionDropdown = () => {
                             borderRadius: 1,
                             cursor: 'pointer',
                             transition: 'all 0.2s',
-                            bgcolor: 'transparent',
-                            border: '1px solid transparent',
+                            bgcolor: isSelected ? '#F5F3FD' : 'transparent',
+                            border: isSelected ? '1px solid #7A6EBD' : '1px solid transparent',
                             '&:hover': {
                                 bgcolor: isSelected ? '#F5F3FD' : '#F9F9F9',
                                 ...(isSelected && {

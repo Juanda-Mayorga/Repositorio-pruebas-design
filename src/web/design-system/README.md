@@ -186,6 +186,30 @@ A versatile card component with two variants:
 </ContentCard>
 ```
 
+### [SolutionDropdown](file:///Users/carolinadomenechreal/Desktop/Prueba/Repositorio-pruebas-design/src/web/design-system/molecules/SolutionDropdown.tsx)
+
+A dropdown menu component for solution selection, featuring persistent selection states based on the current route.
+
+**Props:**
+- None (internal navigation logic)
+
+**Features:**
+- Displays a list of solutions with icons, titles, and descriptions.
+- Highlights the currently active solution based on the URL path.
+- **Active State Styles:**
+  - Background: `#F5F3FD`
+  - Border: `#7A6EBD`
+  - Icon Background: `#DFDAF9`
+- Hover effects that match the selection state or provide visual feedback.
+- Responsive typography (adjusts at 1440px breakpoint).
+
+**Usage:**
+Used internally within the `PublicHeader` component.
+
+```tsx
+<SolutionDropdown />
+```
+
 ## Organisms
 
 ### [PublicHeader](file:///Users/carolinadomenechreal/Desktop/Prueba/Repositorio-pruebas-design/src/web/design-system/organisms/PublicHeader.tsx)
