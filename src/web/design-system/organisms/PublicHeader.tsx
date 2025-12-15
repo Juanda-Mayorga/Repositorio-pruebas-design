@@ -63,21 +63,11 @@ export const PublicHeader = () => {
             width: '100%'
         }}>
             {/* Logo */}
-            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5, cursor: 'pointer' }} onClick={() => navigate('/landing')}>
-                <MambaLogo sx={{ width: 32, height: 32 }} />
-                <Typography
-                    variant="h6" // Maintain variant for semantic readiness but override styles
-                    sx={{
-                        fontFamily: '"Inter", sans-serif',
-                        fontWeight: 500,
-                        fontSize: '32px',
-                        color: '#2F2F32',
-                        lineHeight: 1
-                    }}
-                >
-                    MAMBA
-                </Typography>
-            </Box>
+            {/* Logo */}
+            <MambaLogo
+                onClick={() => navigate('/landing')}
+                sx={{ cursor: 'pointer' }}
+            />
 
             {/* Navigation & Actions */}
             <Box sx={{ display: 'flex', alignItems: 'center', gap: 4 }}>
