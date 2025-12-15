@@ -82,7 +82,7 @@ export const PublicHeader = () => {
                             selected={['/product', '/cloud-services', '/support'].some(path => location.pathname.startsWith(path))}
                             active={showSolutionMenu}
                         >
-                            Solution <KeyboardArrowDownIcon fontSize="small" sx={{
+                            {i18n.t('publicHeader.solution')} <KeyboardArrowDownIcon fontSize="small" sx={{
                                 transform: showSolutionMenu ? 'rotate(180deg)' : 'none',
                                 transition: 'transform 0.2s'
                             }} />
@@ -103,16 +103,16 @@ export const PublicHeader = () => {
                         onClick={() => navigate('/resources')}
                         selected={location.pathname === '/resources'}
                     >
-                        Resources
+                        {i18n.t('publicHeader.resources')}
                     </HeaderNavLink>
                     <HeaderNavLink
                         onClick={() => navigate('/contact')}
                         selected={location.pathname.startsWith('/contact')}
                     >
-                        Contact
+                        {i18n.t('publicHeader.contact')}
                     </HeaderNavLink>
                     <HeaderNavLink>
-                        Pricings
+                        {i18n.t('publicHeader.pricing')}
                     </HeaderNavLink>
                 </Box>
 
@@ -148,7 +148,7 @@ export const PublicHeader = () => {
                                 }
                             }}
                         >
-                            Log in
+                            {i18n.t('publicHeader.login')}
                         </Typography>
                         <KeyboardArrowDownIcon fontSize="small" sx={{
                             transform: showLoginMenu ? 'rotate(180deg)' : 'none',

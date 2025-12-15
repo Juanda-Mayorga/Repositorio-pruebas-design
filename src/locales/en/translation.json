@@ -172,5 +172,12 @@
             "subtitle": "Our sales team will review your request and get in touch with you shortly. In the meantime, you can explore useful content about MAMBA and BIM methodology.",
             "cta": "View Resources"
         }
+    },
+    "publicHeader": {
+        "solution": "Solution",
+        "resources": "Resources",
+        "contact": "Contact",
+        "pricing": "Pricings",
+        "login": "Log in"
     }
 }

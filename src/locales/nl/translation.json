@@ -167,5 +167,12 @@
             "subtitle": "Ons verkoopteam zal uw aanvraag beoordelen en binnenkort contact met u opnemen. In de tussentijd kunt u nuttige inhoud over MAMBA en de BIM-methodologie bekijken.",
             "cta": "Bekijk bronnen"
         }
+    },
+    "publicHeader": {
+        "solution": "Oplossing",
+        "resources": "Bronnen",
+        "contact": "Contact",
+        "pricing": "Prijzen",
+        "login": "Inloggen"
     }
 }

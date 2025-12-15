@@ -167,5 +167,12 @@
             "subtitle": "Salgsteamet vårt vil gjennomgå forespørselen din og kontakte deg snart. I mellomtiden kan du utforske nyttig innhold om MAMBA og BIM-metodikken.",
             "cta": "Se ressurser"
         }
+    },
+    "publicHeader": {
+        "solution": "Løsning",
+        "resources": "Ressurser",
+        "contact": "Kontakt",
+        "pricing": "Priser",
+        "login": "Logg inn"
     }
 }

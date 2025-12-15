@@ -167,5 +167,12 @@
             "subtitle": "Gure salmenta-taldeak zure eskaera aztertuko du eta zurekin harremanetan jarriko da laster. Bitartean, MAMBA eta BIM metodologiari buruzko eduki erabilgarria arakatu dezakezu.",
             "cta": "Ikusi baliabideak"
         }
+    },
+    "publicHeader": {
+        "solution": "Soluzioa",
+        "resources": "Baliabideak",
+        "contact": "Kontaktua",
+        "pricing": "Prezioak",
+        "login": "Saioa hasi"
     }
 }

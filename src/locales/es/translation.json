@@ -178,5 +178,12 @@
             "subtitle": "Nuestro equipo de ventas revisará tu solicitud y se pondrá en contacto contigo en breve. Mientras tanto, puedes explorar contenido útil sobre MAMBA y la metodología BIM.",
             "cta": "Ver Recursos"
         }
+    },
+    "publicHeader": {
+        "solution": "Solución",
+        "resources": "Recursos",
+        "contact": "Contacto",
+        "pricing": "Precios",
+        "login": "Iniciar sesión"
     }
 }
