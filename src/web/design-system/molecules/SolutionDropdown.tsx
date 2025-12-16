@@ -6,7 +6,13 @@ import { useTranslation } from 'react-i18next';
 
 import { useNavigate, useLocation } from 'react-router-dom';
 
-export const SolutionDropdown = () => {
+
+interface SolutionDropdownProps {
+    isMobile?: boolean;
+    onItemClick?: () => void;
+}
+
+export const SolutionDropdown = ({ isMobile = false, onItemClick }: SolutionDropdownProps) => {
     const { t } = useTranslation();
     const navigate = useNavigate();
     const location = useLocation();
@@ -34,17 +40,17 @@ export const SolutionDropdown = () => {
 
     return (
         <Paper
-            elevation={0}
+            elevation={isMobile ? 0 : 0}
             sx={{
-                width: 'max-content',
-                p: 2,
-                borderRadius: 2,
-                bgcolor: '#FFFFFF',
-                border: '1px solid #E8E8E8',
-                boxShadow: '0px 4px 24px rgba(0, 0, 0, 0.06)',
+                width: isMobile ? '100%' : 'max-content',
+                p: isMobile ? 0 : 2,
+                borderRadius: isMobile ? 0 : 2,
+                bgcolor: isMobile ? 'transparent' : '#FFFFFF',
+                border: isMobile ? 'none' : '1px solid #E8E8E8',
+                boxShadow: isMobile ? 'none' : '0px 4px 24px rgba(0, 0, 0, 0.06)',
                 display: 'flex',
                 gap: 2,
-                flexDirection: 'row'
+                flexDirection: isMobile ? 'column' : 'row'
             }}
         >
             {items.map((item, index) => {
@@ -53,19 +59,22 @@ export const SolutionDropdown = () => {
                 return (
                     <Box
                         key={index}
-                        onClick={() => navigate(item.path)}
+                        onClick={() => {
+                            navigate(item.path);
+                            if (onItemClick) onItemClick();
+                        }}
                         sx={{
                             display: 'flex',
                             flexDirection: 'column', // Stack Content Vertically
                             gap: 1, // Gap between Header (Icon+Title) and Description
-                            p: 1.5,
+                            p: isMobile ? 2 : 1.5,
                             borderRadius: 1,
                             cursor: 'pointer',
                             transition: 'all 0.2s',
-                            bgcolor: isSelected ? '#F5F3FD' : 'transparent',
-                            border: isSelected ? '1px solid #7A6EBD' : '1px solid transparent',
-                            maxWidth: '260px',
-                            '&:hover': {
+                            bgcolor: isSelected ? '#F5F3FD' : (isMobile ? '#FFFFFF' : 'transparent'),
+                            border: isSelected ? '1px solid #7A6EBD' : (isMobile ? '1px solid #E8E8E8' : '1px solid transparent'),
+                            maxWidth: isMobile ? '100%' : '260px',
+                            '&:hover': isMobile ? {} : {
                                 bgcolor: isSelected ? '#F5F3FD' : '#F9F9F9',
                                 ...(isSelected && {
                                     borderColor: '#7A6EBD'
@@ -95,7 +104,7 @@ export const SolutionDropdown = () => {
                                 variant="subtitle1"
                                 sx={{
                                     lineHeight: 1.2,
-                                    color: '#2F2F32',
+                                    color: isSelected ? '#6b46c1' : '#2F2F32',
                                     fontWeight: 500,
                                     fontFamily: '"Hind Siliguri", sans-serif',
                                     fontSize: '14px',
