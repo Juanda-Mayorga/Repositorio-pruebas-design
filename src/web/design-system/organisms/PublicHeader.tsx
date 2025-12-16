@@ -3,7 +3,7 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import { useTranslation } from 'react-i18next';
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useMediaQuery } from '@mui/material';
 import { HeaderNavLink } from '../atoms/HeaderNavLink';
@@ -86,6 +86,16 @@ export const PublicHeader = () => {
             fontSize: '20px'
         }
     };
+
+    // Auto-expand solution dropdown in mobile when on a solution route
+    useEffect(() => {
+        const solutionRoutes = ['/product', '/cloud-services', '/support'];
+        const isOnSolutionRoute = solutionRoutes.some(route => location.pathname.startsWith(route));
+
+        if (isOnSolutionRoute && isMobile) {
+            setMobileSolutionOpen(true);
+        }
+    }, [location.pathname, isMobile]);
 
     return (
         <Box component="header" sx={{
