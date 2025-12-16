@@ -67,12 +67,12 @@ export const SolutionDropdown = ({ isMobile = false, onItemClick }: SolutionDrop
                             display: 'flex',
                             flexDirection: 'column', // Stack Content Vertically
                             gap: 1, // Gap between Header (Icon+Title) and Description
-                            p: isMobile ? 2 : 1.5,
+                            p: isMobile ? 1 : 1.5,
                             borderRadius: 1,
                             cursor: 'pointer',
                             transition: 'all 0.2s',
                             bgcolor: isSelected ? '#F5F3FD' : (isMobile ? '#FFFFFF' : 'transparent'),
-                            border: isSelected ? '1px solid #7A6EBD' : (isMobile ? '1px solid #E8E8E8' : '1px solid transparent'),
+                            border: isSelected ? (isMobile ? '1px solid #6b46c1' : '1px solid #7A6EBD') : (isMobile ? '1px solid #E8E8E8' : '1px solid transparent'),
                             maxWidth: isMobile ? '100%' : '260px',
                             '&:hover': isMobile ? {} : {
                                 bgcolor: isSelected ? '#F5F3FD' : '#F9F9F9',
@@ -86,8 +86,8 @@ export const SolutionDropdown = ({ isMobile = false, onItemClick }: SolutionDrop
                         <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}>
                             <Box
                                 sx={{
-                                    width: 40,
-                                    height: 40,
+                                    width: isMobile ? 32 : 40,
+                                    height: isMobile ? 32 : 40,
                                     display: 'flex',
                                     alignItems: 'center',
                                     justifyContent: 'center',
@@ -104,7 +104,7 @@ export const SolutionDropdown = ({ isMobile = false, onItemClick }: SolutionDrop
                                 variant="subtitle1"
                                 sx={{
                                     lineHeight: 1.2,
-                                    color: isSelected ? '#6b46c1' : '#2F2F32',
+                                    color: (isSelected && !isMobile) ? '#6b46c1' : '#2F2F32',
                                     fontWeight: 500,
                                     fontFamily: '"Hind Siliguri", sans-serif',
                                     fontSize: '14px',
