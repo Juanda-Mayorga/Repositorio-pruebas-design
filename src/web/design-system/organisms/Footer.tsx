@@ -65,6 +65,7 @@ export const Footer = () => {
                         </Box>
                     </Grid>
 
+                    {/* 
                     <Grid size={{ xs: 6, md: 2 }}>
                         <Typography variant="subtitle1" fontWeight="bold" gutterBottom>
                             Privacy
@@ -73,7 +74,9 @@ export const Footer = () => {
                             <Link href="#" color="text.secondary" underline="hover">Cookies policy</Link>
                             <Link href="#" color="text.secondary" underline="hover">Privacy policy</Link>
                         </Box>
-                    </Grid>
+                    </Grid> 
+                    The privacy section is removed for the moment because we do not have the necessary documents for the user to read 
+                    */}
                 </Grid>
 
                 <Box sx={{ mt: 8, textAlign: 'center' }}>
