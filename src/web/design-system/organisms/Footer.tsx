@@ -57,7 +57,8 @@ export const Footer = () => {
                                             justifyContent: 'space-between',
                                             alignItems: 'center',
                                             py: 1.5,
-                                            cursor: 'pointer'
+                                            cursor: 'pointer',
+                                            userSelect: 'none' // Prevent text selection on quick toggles
                                         }}
                                     >
                                         <Typography
@@ -79,7 +80,7 @@ export const Footer = () => {
                                             }}
                                         />
                                     </Box>
-                                    <Collapse in={!!openSections[column.title]}>
+                                    <Collapse in={!!openSections[column.title]} timeout="auto" unmountOnExit>
                                         <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, pb: 2 }}>
                                             {column.items.map((item) => (
                                                 <Link
