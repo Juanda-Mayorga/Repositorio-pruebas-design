@@ -27,7 +27,14 @@ export const ResourcesPage = () => {
                     >
                         {t('resources.hero.title')}
                     </Typography>
-                    <Typography variant="h6" sx={{ color: 'text.secondary', maxWidth: 600, mx: 'auto', fontWeight: 'normal', fontFamily: 'Hind Siliguri' }}>
+                    <Typography
+                        variant="subtitle1"
+                        sx={{
+                            color: 'text.secondary',
+                            maxWidth: 600,
+                            mx: 'auto'
+                        }}
+                    >
                         {t('resources.hero.subtitle')}
                     </Typography>
                 </Box>

@@ -24,13 +24,12 @@ export const ProductPage = () => {
                         Product Features
                     </Typography>
                     <Typography
-                        variant="body1"
+                        variant="subtitle1"
                         sx={{
                             color: 'text.secondary',
                             maxWidth: 600,
                             mx: 'auto',
                             textAlign: 'center',
-                            fontSize: { xs: '16px', lg: '20px' } // 20px at 1440px (lg)
                         }}
                     >
                         Each feature is designed to save you time, reduce errors, and scale your workflow

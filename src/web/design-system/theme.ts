@@ -128,6 +128,15 @@ export const getWebTheme = (mode: PaletteMode) => {
                 '@media (min-width:1920px)': {
                     fontSize: '40px',
                 },
+            },
+            subtitle1: {
+                fontFamily: '"Hind Siliguri", "Inter", sans-serif',
+                fontWeight: 400,
+                color: '#5C528E', // text.secondary
+                fontSize: '16px', // Default (mobile)
+                '@media (min-width:1200px)': { // lg breakpoint
+                    fontSize: '20px',
+                },
             }
         }
     });
