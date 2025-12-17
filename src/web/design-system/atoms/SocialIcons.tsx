@@ -12,16 +12,44 @@ interface SocialIconsProps {
 export const SocialIcons = ({ containerSx, iconSx }: SocialIconsProps) => {
     return (
         <Box sx={{ display: 'flex', gap: 1, ...containerSx }}>
-            <IconButton color="inherit" size="small">
+            <IconButton
+                component="a"
+                href="https://www.facebook.com/MAMBAbim"
+                target="_blank"
+                rel="noopener noreferrer"
+                color="inherit"
+                size="small"
+            >
                 <FacebookIcon sx={iconSx} />
             </IconButton>
-            <IconButton color="inherit" size="small">
+            <IconButton
+                component="a"
+                href="https://x.com/MAMBAbimmate"
+                target="_blank"
+                rel="noopener noreferrer"
+                color="inherit"
+                size="small"
+            >
                 <TwitterIcon sx={iconSx} />
             </IconButton>
-            <IconButton color="inherit" size="small">
+            <IconButton
+                component="a"
+                href="https://www.linkedin.com/company/mambacentro/"
+                target="_blank"
+                rel="noopener noreferrer"
+                color="inherit"
+                size="small"
+            >
                 <LinkedInIcon sx={iconSx} />
             </IconButton>
-            <IconButton color="inherit" size="small">
+            <IconButton
+                component="a"
+                href="https://www.youtube.com/@MAMBAbim"
+                target="_blank"
+                rel="noopener noreferrer"
+                color="inherit"
+                size="small"
+            >
                 <YouTubeIcon sx={iconSx} />
             </IconButton>
         </Box>
