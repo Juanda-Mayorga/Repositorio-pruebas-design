@@ -16,11 +16,23 @@ export const ProductPage = () => {
                     <Typography
                         variant="h1"
                         component="h1"
-                        sx={{ mb: 2, fontSize: { xs: '32px', md: '48px' } }}
+                        sx={{
+                            mb: 2,
+                            fontSize: { xs: '32px', lg: '56px' } // 56px at 1440px (lg)
+                        }}
                     >
                         Product Features
                     </Typography>
-                    <Typography variant="body1" sx={{ color: 'text.secondary', maxWidth: 600, mx: 'auto', textAlign: 'center' }}>
+                    <Typography
+                        variant="body1"
+                        sx={{
+                            color: 'text.secondary',
+                            maxWidth: 600,
+                            mx: 'auto',
+                            textAlign: 'center',
+                            fontSize: { xs: '16px', lg: '20px' } // 20px at 1440px (lg)
+                        }}
+                    >
                         Each feature is designed to save you time, reduce errors, and scale your workflow
                     </Typography>
                 </Box>
