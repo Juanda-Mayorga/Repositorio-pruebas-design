@@ -188,5 +188,20 @@
             "title": "Laguntza",
             "description": "Etengabeko laguntza, intzidentzien berehalako konponketa eta laguntza aditua proiektuaren fase guztietan"
         }
+    },
+    "footer": {
+        "solution": "Irtenbidea",
+        "product": "Produktua",
+        "cloudServices": "Hodei zerbitzuak",
+        "support": "Laguntza",
+        "resources": "Baliabideak",
+        "tipsAndTricks": "Aholkuak eta trikimailuak",
+        "community": "Komunitatea",
+        "helpCenter": "Laguntza zentroa",
+        "contact": "Kontaktua",
+        "talkToSales": "Salmentekin harremanetan jarri",
+        "bookADemo": "Demo bat erreserbatu",
+        "description": "Irtenbide indartsua, software aurreratu, hodei zerbitzu eta laguntzaz bultzatua",
+        "copyright": "Copyright @2024 BiMMate"
     }
 }

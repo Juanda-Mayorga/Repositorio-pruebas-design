@@ -2,12 +2,14 @@ import { Box, Container, Grid, Typography, Link, Collapse, useMediaQuery } from 
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { useState } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { MambaLogo } from '../atoms/MambaLogo';
 import { SocialIcons } from '../atoms/SocialIcons';
 
 export const Footer = () => {
     const isMobile = useMediaQuery('(max-width: 1132px)');
     const [openSections, setOpenSections] = useState<Record<string, boolean>>({});
+    const { t } = useTranslation();
 
     const handleToggle = (title: string) => {
         setOpenSections((prev) => ({ ...prev, [title]: !prev[title] }));
@@ -15,27 +17,27 @@ export const Footer = () => {
 
     const navigationItems = [
         {
-            title: 'Solution',
+            title: t('footer.solution'),
             items: [
-                { label: 'Product', href: '/product' },
-                { label: 'Cloud Services', href: '/cloud-services' },
-                { label: 'Support', href: '/support' }
+                { label: t('footer.product'), href: '/product' },
+                { label: t('footer.cloudServices'), href: '/cloud-services' },
+                { label: t('footer.support'), href: '/support' }
             ]
         },
         {
-            title: 'Resources',
+            title: t('footer.resources'),
             items: [
-                { label: 'Tips&Tricks', href: '#' },
-                { label: 'Community', href: '#' },
-                { label: 'Help Center', href: '#' },
-                { label: 'Support', href: '#' }
+                { label: t('footer.tipsAndTricks'), href: '#' },
+                { label: t('footer.community'), href: '#' },
+                { label: t('footer.helpCenter'), href: '#' },
+                { label: t('footer.support'), href: '#' }
             ]
         },
         {
-            title: 'Contact',
+            title: t('footer.contact'),
             items: [
-                { label: 'Talk to sales', href: '/contact-sales' },
-                { label: 'Book a demo', href: '#' }
+                { label: t('footer.talkToSales'), href: '/contact-sales' },
+                { label: t('footer.bookADemo'), href: '#' }
             ]
         }
     ];
@@ -52,7 +54,7 @@ export const Footer = () => {
                                 <MambaLogo />
                             </Box>
                             <Typography variant="body2" color="text.secondary" sx={{ maxWidth: '300px', fontSize: '14px' }}>
-                                A powerful solution, driven by advanced software, cloud services and support
+                                {t('footer.description')}
                             </Typography>
                         </Box>
 
@@ -183,7 +185,7 @@ export const Footer = () => {
 
                 <Box sx={{ mt: 4, textAlign: 'center' }}>
                     <Typography variant="body2" color="text.secondary" sx={{ fontSize: '12px' }}>
-                        Copyright @2024 BiMMate
+                        {t('footer.copyright')}
                     </Typography>
                 </Box>
             </Container>

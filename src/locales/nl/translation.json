@@ -188,5 +188,20 @@
             "title": "Ondersteuning",
             "description": "Continue assistentie, snelle incidentoplossing en deskundige ondersteuning in elke fase van het project"
         }
+    },
+    "footer": {
+        "solution": "Oplossing",
+        "product": "Product",
+        "cloudServices": "Cloudservices",
+        "support": "Ondersteuning",
+        "resources": "Bronnen",
+        "tipsAndTricks": "Tips & Trucs",
+        "community": "Gemeenschap",
+        "helpCenter": "Helpcentrum",
+        "contact": "Contact",
+        "talkToSales": "Neem contact op met verkoop",
+        "bookADemo": "Boek een demo",
+        "description": "Een krachtige oplossing, aangedreven door geavanceerde software, cloudservices en ondersteuning",
+        "copyright": "Copyright @2024 BiMMate"
     }
 }

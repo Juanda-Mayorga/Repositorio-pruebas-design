@@ -188,5 +188,20 @@
             "title": "Support",
             "description": "Kontinuerlig assistanse, rask hendelsesløsning og ekspertstøtte gjennom hver fase av prosjektet"
         }
+    },
+    "footer": {
+        "solution": "Løsning",
+        "product": "Produkt",
+        "cloudServices": "Skytjenester",
+        "support": "Støtte",
+        "resources": "Ressurser",
+        "tipsAndTricks": "Tips og triks",
+        "community": "Fellesskap",
+        "helpCenter": "Hjelpesenter",
+        "contact": "Kontakt",
+        "talkToSales": "Kontakt salg",
+        "bookADemo": "Bestill en demo",
+        "description": "En kraftig løsning, drevet av avansert programvare, skytjenester og støtte",
+        "copyright": "Copyright @2024 BiMMate"
     }
 }

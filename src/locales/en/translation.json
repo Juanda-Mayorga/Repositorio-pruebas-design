@@ -193,5 +193,20 @@
             "title": "Support",
             "description": "Continuous assistance, rapid incident resolution, and expert support through every phase of the project"
         }
+    },
+    "footer": {
+        "solution": "Solution",
+        "product": "Product",
+        "cloudServices": "Cloud Services",
+        "support": "Support",
+        "resources": "Resources",
+        "tipsAndTricks": "Tips&Tricks",
+        "community": "Community",
+        "helpCenter": "Help Center",
+        "contact": "Contact",
+        "talkToSales": "Talk to sales",
+        "bookADemo": "Book a demo",
+        "description": "A powerful solution, driven by advanced software, cloud services and support",
+        "copyright": "Copyright @2024 BiMMate"
     }
 }

@@ -199,5 +199,20 @@
             "title": "Soporte",
             "description": "Asistencia continua, resolución rápida de incidentes y soporte experto en cada fase del proyecto"
         }
+    },
+    "footer": {
+        "solution": "Solución",
+        "product": "Producto",
+        "cloudServices": "Servicios en la nube",
+        "support": "Soporte",
+        "resources": "Recursos",
+        "tipsAndTricks": "Consejos y trucos",
+        "community": "Comunidad",
+        "helpCenter": "Centro de ayuda",
+        "contact": "Contacto",
+        "talkToSales": "Contactar ventas",
+        "bookADemo": "Reservar demo",
+        "description": "Una solución potente, impulsada por software avanzado, servicios en la nube y soporte",
+        "copyright": "Copyright @2024 BiMMate"
     }
 }
