@@ -101,19 +101,16 @@ export const ProductPage = () => {
                         </Grid>
                         <Grid size={{ xs: 12, md: 6 }}>
                             <Box
+                                component="img"
+                                src="/src/assets/feature-cost-estimating.png"
+                                alt="Cost Estimating"
                                 sx={{
                                     width: '100%',
-                                    height: '300px',
-                                    bgcolor: '#eee',
+                                    height: 'auto',
                                     borderRadius: '12px',
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    justifyContent: 'center',
-                                    border: '1px solid #ddd'
+                                    boxShadow: '0px 4px 24px rgba(0, 0, 0, 0.1)',
                                 }}
-                            >
-                                <Typography color="text.secondary">Cost Estimating Image</Typography>
-                            </Box>
+                            />
                         </Grid>
                     </Grid>
 
@@ -121,19 +118,16 @@ export const ProductPage = () => {
                     <Grid container spacing={8} sx={{ mb: 12, alignItems: 'center', flexDirection: { xs: 'column-reverse', md: 'row' } }}>
                         <Grid size={{ xs: 12, md: 6 }}>
                             <Box
+                                component="img"
+                                src="/src/assets/feature-model-audit.png"
+                                alt="Automatic Model Audit"
                                 sx={{
                                     width: '100%',
-                                    height: '300px',
-                                    bgcolor: '#eee',
+                                    height: 'auto',
                                     borderRadius: '12px',
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    justifyContent: 'center',
-                                    border: '1px solid #ddd'
+                                    boxShadow: '0px 4px 24px rgba(0, 0, 0, 0.1)',
                                 }}
-                            >
-                                <Typography color="text.secondary">Model Audit Image</Typography>
-                            </Box>
+                            />
                         </Grid>
                         <Grid size={{ xs: 12, md: 6 }}>
                             <Typography variant="h2" sx={{ mb: 2 }}>
@@ -163,19 +157,16 @@ export const ProductPage = () => {
                         </Grid>
                         <Grid size={{ xs: 12, md: 6 }}>
                             <Box
+                                component="img"
+                                src="/src/assets/feature-waste-calculation.png"
+                                alt="Automatic Waste Calculation"
                                 sx={{
                                     width: '100%',
-                                    height: '300px',
-                                    bgcolor: '#eee',
+                                    height: 'auto',
                                     borderRadius: '12px',
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    justifyContent: 'center',
-                                    border: '1px solid #ddd'
+                                    boxShadow: '0px 4px 24px rgba(0, 0, 0, 0.1)',
                                 }}
-                            >
-                                <Typography color="text.secondary">Waste Calc Image</Typography>
-                            </Box>
+                            />
                         </Grid>
                     </Grid>
 
