@@ -5,6 +5,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { useState } from 'react';
+import { Link as RouterLink } from 'react-router-dom';
 import { MambaLogo } from '../atoms/MambaLogo';
 
 export const Footer = () => {
@@ -18,15 +19,27 @@ export const Footer = () => {
     const navigationItems = [
         {
             title: 'Solution',
-            items: ['Product', 'Cloud Services', 'Support']
+            items: [
+                { label: 'Product', href: '/product' },
+                { label: 'Cloud Services', href: '/cloud-services' },
+                { label: 'Support', href: '/support' }
+            ]
         },
         {
             title: 'Resources',
-            items: ['Tips&Tricks', 'Community', 'Help Center', 'Support']
+            items: [
+                { label: 'Tips&Tricks', href: '#' },
+                { label: 'Community', href: '#' },
+                { label: 'Help Center', href: '#' },
+                { label: 'Support', href: '#' }
+            ]
         },
         {
             title: 'Contact',
-            items: ['Talk to sales', 'Book a demo']
+            items: [
+                { label: 'Talk to sales', href: '/contact-sales' },
+                { label: 'Book a demo', href: '#' }
+            ]
         }
     ];
 
@@ -84,8 +97,10 @@ export const Footer = () => {
                                         <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, pb: 2 }}>
                                             {column.items.map((item) => (
                                                 <Link
-                                                    key={item}
-                                                    href="#"
+                                                    key={item.label}
+                                                    component={item.href !== '#' ? RouterLink : 'a'}
+                                                    to={item.href !== '#' ? item.href : undefined}
+                                                    href={item.href === '#' ? '#' : undefined}
                                                     color="text.secondary"
                                                     underline="hover"
                                                     sx={{
@@ -94,7 +109,7 @@ export const Footer = () => {
                                                         fontSize: '14px' // 375: 14px
                                                     }}
                                                 >
-                                                    {item}
+                                                    {item.label}
                                                 </Link>
                                             ))}
                                         </Box>
@@ -166,8 +181,10 @@ export const Footer = () => {
                                     <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1, alignItems: 'flex-end' }}>
                                         {column.items.map((item) => (
                                             <Link
-                                                key={item}
-                                                href="#"
+                                                key={item.label}
+                                                component={item.href !== '#' ? RouterLink : 'a'}
+                                                to={item.href !== '#' ? item.href : undefined}
+                                                href={item.href === '#' ? '#' : undefined}
                                                 color="text.secondary"
                                                 underline="hover"
                                                 sx={{
@@ -181,7 +198,7 @@ export const Footer = () => {
                                                     }
                                                 }}
                                             >
-                                                {item}
+                                                {item.label}
                                             </Link>
                                         ))}
                                     </Box>
