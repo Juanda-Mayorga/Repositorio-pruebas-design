@@ -132,6 +132,29 @@ A generic input field component for web forms with validation support.
 />
 ```
 
+
+### [SocialIcons](file:///Users/carolinadomenechreal/Desktop/Prueba/Repositorio-pruebas-design/src/web/design-system/atoms/SocialIcons.tsx)
+
+A reusable component that renders social media icons (Facebook, Twitter, LinkedIn, YouTube) as external links.
+
+**Props:**
+- `containerSx?: SxProps<Theme>` - Styles for the container Box.
+- `iconSx?: SxProps<Theme>` - Styles for the icons.
+
+**Features:**
+- Pre-configured links to Mamba's social media profiles.
+- Opens links in a new tab (`target="_blank"`).
+- Customizable styling via props.
+- Uses MUI `IconButton` and Material Icons.
+
+**Usage:**
+```tsx
+<SocialIcons
+  containerSx={{ justifyContent: 'center', mt: 1 }}
+  iconSx={{ fontSize: 28, color: '#2F2F32' }}
+/>
+```
+
 ## Molecules
 
 ### [WebBreadcrumb](file:///Users/carolinadomenechreal/Desktop/Prueba/Repositorio-pruebas-design/src/web/design-system/molecules/WebBreadcrumb.tsx)
@@ -249,7 +272,25 @@ Navigation header for public pages with logo, menu items, and login button.
 
 ### [Footer](file:///Users/carolinadomenechreal/Desktop/Prueba/Repositorio-pruebas-design/src/web/design-system/organisms/Footer.tsx)
 
-Footer component for public pages.
+Footer component for public pages containing navigation links, branding, and social media links.
+
+**Features:**
+- **Responsive Layout:**
+  - **Mobile:** Accordion-style dropdowns for navigation sections ("Solution", "Resources", "Contact"). Social icons centered at the bottom.
+  - **Desktop:** Multi-column layout with links. Social icons under the logo.
+- **Navigation:**
+  - Uses `RouterLink` for internal client-side navigation (e.g., `/product`, `/contact-sales`).
+  - Supports placeholder links (`#`) for future pages.
+- **Internationalization (i18n):**
+  - All text content (titles, links, descriptions, copyrights) is fully translated to 12 languages.
+- **Components Integrated:**
+  - `MambaLogo`
+  - `SocialIcons`
+
+**Usage:**
+```tsx
+<Footer />
+```
 
 ## Theme
 
