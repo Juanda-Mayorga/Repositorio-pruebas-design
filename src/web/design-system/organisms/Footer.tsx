@@ -1,12 +1,9 @@
-import { Box, Container, Grid, Typography, IconButton, Link, Collapse, useMediaQuery } from '@mui/material';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import YouTubeIcon from '@mui/icons-material/YouTube';
+import { Box, Container, Grid, Typography, Link, Collapse, useMediaQuery } from '@mui/material';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { useState } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import { MambaLogo } from '../atoms/MambaLogo';
+import { SocialIcons } from '../atoms/SocialIcons';
 
 export const Footer = () => {
     const isMobile = useMediaQuery('(max-width: 1132px)');
@@ -119,21 +116,10 @@ export const Footer = () => {
                         </Box>
 
                         {/* Social Icons - Centered Bottom */}
-                        <Box sx={{ display: 'flex', gap: 1, justifyContent: 'center', mt: 1 }}>
-                            <IconButton color="inherit" size="small">
-                                <FacebookIcon sx={{ fontSize: 28, color: '#2F2F32' }} />
-                            </IconButton>
-                            {/* Using TwitterIcon as placeholder for X, styling to match dark theme described or implied */}
-                            <IconButton color="inherit" size="small">
-                                <TwitterIcon sx={{ fontSize: 28, color: '#2F2F32' }} />
-                            </IconButton>
-                            <IconButton color="inherit" size="small">
-                                <LinkedInIcon sx={{ fontSize: 28, color: '#2F2F32' }} />
-                            </IconButton>
-                            <IconButton color="inherit" size="small">
-                                <YouTubeIcon sx={{ fontSize: 28, color: '#2F2F32' }} />
-                            </IconButton>
-                        </Box>
+                        <SocialIcons
+                            containerSx={{ justifyContent: 'center', mt: 1 }}
+                            iconSx={{ fontSize: 28, color: '#2F2F32' }}
+                        />
                     </Box>
                 ) : (
                     // Desktop Layout (Columns)
@@ -142,20 +128,7 @@ export const Footer = () => {
                             <Box sx={{ mb: 2 }}>
                                 <MambaLogo />
                             </Box>
-                            <Box sx={{ display: 'flex', gap: 1 }}>
-                                <IconButton size="small" color="inherit">
-                                    <FacebookIcon />
-                                </IconButton>
-                                <IconButton size="small" color="inherit">
-                                    <TwitterIcon />
-                                </IconButton>
-                                <IconButton size="small" color="inherit">
-                                    <LinkedInIcon />
-                                </IconButton>
-                                <IconButton size="small" color="inherit">
-                                    <YouTubeIcon />
-                                </IconButton>
-                            </Box>
+                            <SocialIcons />
                         </Grid>
 
                         <Grid size={{ xs: 12, md: 8 }} container spacing={4} sx={{ justifyContent: 'flex-end', textAlign: 'right' }}>
