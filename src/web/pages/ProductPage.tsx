@@ -40,22 +40,18 @@ export const ProductPage = () => {
                     >
                         {/* Hero Image Area (Left) */}
                         <Box sx={{ flex: 1, p: { xs: 3, md: 6 }, display: 'flex', justifyContent: 'center' }}>
-                            {/* Placeholder for Image */}
                             <Box
+                                component="img"
+                                src="/src/assets/product-hero-qto.png"
+                                alt="Automatic Quantity Take-Off"
                                 sx={{
                                     width: '100%',
                                     maxWidth: '500px',
-                                    height: '300px',
+                                    height: 'auto',
                                     borderRadius: '8px',
-                                    bgcolor: 'rgba(255,255,255,0.3)', // Semi-transparent placeholder
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    justifyContent: 'center',
-                                    border: '2px dashed rgba(255,255,255,0.5)'
+                                    boxShadow: '0px 4px 24px rgba(0, 0, 0, 0.15)', // Added shadow for better integration
                                 }}
-                            >
-                                <Typography sx={{ color: 'white' }}>Hero Image Placeholder</Typography>
-                            </Box>
+                            />
                         </Box>
 
                         {/* Hero Content Area (Right) */}
