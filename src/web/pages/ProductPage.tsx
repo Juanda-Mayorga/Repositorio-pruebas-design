@@ -40,7 +40,8 @@ export const ProductPage = () => {
                     {/* Hero Section */}
                     <Box
                         sx={{
-                            background: 'linear-gradient(90deg, #A890FE 0%, #9989EC 100%)', // Approximate gradient from design
+                            position: 'relative', // Context for absolute background
+                            bgcolor: '#9989EC', // Fallback color
                             borderRadius: '16px', // Matching design rounding
                             overflow: 'hidden',
                             mb: 12, // Spacing before next section
@@ -49,56 +50,74 @@ export const ProductPage = () => {
                             alignItems: 'center',
                         }}
                     >
-                        {/* Hero Image Area (Left) */}
-                        <Box sx={{ flex: 1, p: { xs: 3, md: 6 }, display: 'flex', justifyContent: 'center' }}>
-                            <Box
-                                component="img"
-                                src="/src/assets/product-hero-qto.png"
-                                alt="Automatic Quantity Take-Off"
-                                sx={{
-                                    width: '100%',
-                                    maxWidth: '500px',
-                                    height: 'auto',
-                                    borderRadius: '8px',
-                                    boxShadow: '0px 4px 24px rgba(0, 0, 0, 0.15)', // Added shadow for better integration
-                                }}
-                            />
-                        </Box>
+                        {/* Background Image Layer */}
+                        <Box sx={{
+                            position: 'absolute',
+                            top: 0,
+                            left: 0,
+                            right: 0,
+                            bottom: 0,
+                            backgroundImage: 'url(/src/assets/product-hero-background.png)',
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center',
+                            zIndex: 0,
+                        }} />
 
-                        {/* Hero Content Area (Right) */}
-                        <Box sx={{ flex: 1, p: { xs: 3, md: 6 }, textAlign: 'left' }}>
-                            <Typography variant="h3" sx={{ color: 'white', fontWeight: 600, mb: 2, fontFamily: 'Hind Siliguri', fontSize: { xs: '28px', md: '36px' } }}>
-                                Automatic Quantity Take-Off (QTO)
-                            </Typography>
-                            <Typography sx={{ color: 'white', mb: 1, fontWeight: 500 }}>
-                                Get accurate quantities in seconds from your BIM model.
-                            </Typography>
-                            <Typography sx={{ color: 'rgba(255,255,255,0.9)', mb: 4, fontFamily: 'Hind Siliguri' }}>
-                                MAMBA automates Quantity Take-Off. Remove manual work and errors. Keep quantities up to date for better project control and faster decisions.
-                            </Typography>
-                            <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap' }}>
-                                <WebButton
+                        {/* Content Wrapper to ensure Z-Index above background */}
+                        <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, width: '100%', position: 'relative', zIndex: 1 }}>
+                            {/* Hero Image Area (Left) */}
+                            <Box sx={{ flex: 1, p: { xs: 3, md: 6 }, display: 'flex', justifyContent: 'center' }}>
+                                <Box
+                                    component="img"
+                                    src="/src/assets/product-hero-qto.png"
+                                    alt="Automatic Quantity Take-Off"
                                     sx={{
-                                        color: '#7367B1',
-                                        bgcolor: 'white',
-                                        borderColor: 'white',
-                                        '&:hover': { bgcolor: '#f5f5f5', borderColor: 'white' }
+                                        width: '100%',
+                                        maxWidth: '500px',
+                                        height: 'auto',
+                                        borderRadius: '8px',
+                                        boxShadow: '0px 4px 24px rgba(0, 0, 0, 0.15)', // Added shadow for better integration
                                     }}
-                                >
-                                    View plans and prices
-                                </WebButton>
-                                <WebButton
-                                    variant="contained"
-                                    sx={{
-                                        bgcolor: '#7367B1',
-                                        '&:hover': { bgcolor: '#5E5494' }
-                                    }}
-                                >
-                                    Try it for free
-                                </WebButton>
+                                />
+                            </Box>
+
+                            {/* Hero Content Area (Right) */}
+                            <Box sx={{ flex: 1, p: { xs: 3, md: 6 }, textAlign: 'left' }}>
+                                <Typography variant="h3" sx={{ color: 'white', fontWeight: 600, mb: 2, fontFamily: 'Hind Siliguri', fontSize: { xs: '28px', md: '36px' } }}>
+                                    Automatic Quantity Take-Off (QTO)
+                                </Typography>
+                                <Typography sx={{ color: 'white', mb: 1, fontWeight: 500 }}>
+                                    Get accurate quantities in seconds from your BIM model.
+                                </Typography>
+                                <Typography sx={{ color: 'rgba(255,255,255,0.9)', mb: 4, fontFamily: 'Hind Siliguri' }}>
+                                    MAMBA automates Quantity Take-Off. Remove manual work and errors. Keep quantities up to date for better project control and faster decisions.
+                                </Typography>
+                                <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap' }}>
+                                    <WebButton
+                                        sx={{
+                                            color: '#7367B1',
+                                            bgcolor: 'white',
+                                            borderColor: 'white',
+                                            '&:hover': { bgcolor: '#f5f5f5', borderColor: 'white' }
+                                        }}
+                                    >
+                                        View plans and prices
+                                    </WebButton>
+                                    <WebButton
+                                        variant="contained"
+                                        sx={{
+                                            bgcolor: '#7367B1',
+                                            '&:hover': { bgcolor: '#5E5494' }
+                                        }}
+                                    >
+                                        Try it for free
+                                    </WebButton>
+                                </Box>
                             </Box>
                         </Box>
+
                     </Box>
+
 
                     {/* Feature 1: Cost Estimating */}
                     <Grid container spacing={8} sx={{ mb: 12, alignItems: 'center' }}>
