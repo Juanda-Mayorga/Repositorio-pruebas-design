@@ -41,7 +41,7 @@ export const ProductPage = () => {
                     <Box
                         sx={{
                             position: 'relative', // Context for absolute background
-                            bgcolor: '#9989EC', // Fallback color
+                            bgcolor: theme.palette.web.background.paper, // Light gray for consistency
                             borderRadius: '16px', // Matching design rounding
                             overflow: 'hidden',
                             mb: 12, // Spacing before next section
@@ -61,6 +61,7 @@ export const ProductPage = () => {
                             backgroundSize: 'cover',
                             backgroundPosition: 'center',
                             zIndex: 0,
+                            opacity: 0.1, // Reduced opacity for colored text legibility if needed, or keep as is if background is light
                         }} />
 
                         {/* Content Wrapper to ensure Z-Index above background */}
@@ -83,13 +84,13 @@ export const ProductPage = () => {
 
                             {/* Hero Content Area (Right) */}
                             <Box sx={{ flex: 1, p: { xs: 3, md: 6 }, textAlign: 'left' }}>
-                                <Typography variant="h3" sx={{ color: 'white', fontWeight: 600, mb: 2, fontFamily: 'Hind Siliguri', fontSize: { xs: '28px', md: '36px' } }}>
+                                <Typography variant="h3" sx={{ color: 'text.secondary', mb: 2 }}>
                                     Automatic Quantity Take-Off (QTO)
                                 </Typography>
-                                <Typography sx={{ color: 'white', mb: 1, fontWeight: 500 }}>
+                                <Typography variant="body1" sx={{ color: 'text.secondary', mb: 1, fontWeight: 500 }}>
                                     Get accurate quantities in seconds from your BIM model.
                                 </Typography>
-                                <Typography sx={{ color: 'rgba(255,255,255,0.9)', mb: 4, fontFamily: 'Hind Siliguri' }}>
+                                <Typography variant="body1" sx={{ color: 'text.secondary', mb: 4 }}>
                                     MAMBA automates Quantity Take-Off. Remove manual work and errors. Keep quantities up to date for better project control and faster decisions.
                                 </Typography>
                                 <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap' }}>
