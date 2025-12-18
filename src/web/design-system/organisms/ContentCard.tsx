@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardContent, Typography, useTheme } from '@mui/material';
+import { Card, CardContent, Typography } from '@mui/material';
 
 interface ContentCardProps {
     title: string;
@@ -16,8 +16,6 @@ export const ContentCard: React.FC<ContentCardProps> = ({
     children,
     variant = 'resources'
 }) => {
-    const theme = useTheme();
-
     const isResourcesVariant = variant === 'resources';
     const isContactVariant = variant === 'contact';
 
