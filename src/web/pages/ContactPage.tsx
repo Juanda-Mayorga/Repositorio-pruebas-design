@@ -1,6 +1,6 @@
 import { Box, Typography, Container, useTheme } from '@mui/material';
 import { ContactLayout } from '../design-system/templates/ContactLayout';
-import { ContentCard } from '../design-system/molecules/ContentCard';
+import { WebContactCard } from '../design-system/molecules/WebContactCard';
 import { WebButton } from '../design-system/atoms/WebButton';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
@@ -68,10 +68,9 @@ export const ContactPage = () => {
                         {/* Cards Grid */}
                         <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 4, position: 'relative', zIndex: 1 }}>
                             {/* Talk to Sales Card */}
-                            <ContentCard
+                            <WebContactCard
                                 title={t('contact.cards.sales.title')}
                                 description={t('contact.cards.sales.description')}
-                                variant="contact"
                             >
                                 <WebButton
                                     variant="outlined"
@@ -80,18 +79,17 @@ export const ContactPage = () => {
                                 >
                                     {t('contact.cards.sales.button')}
                                 </WebButton>
-                            </ContentCard>
+                            </WebContactCard>
 
                             {/* Book a Demo Card */}
-                            <ContentCard
+                            <WebContactCard
                                 title={t('contact.cards.demo.title')}
                                 description={t('contact.cards.demo.description')}
-                                variant="contact"
                             >
                                 <WebButton variant="contained" fullWidth>
                                     {t('contact.cards.demo.button')}
                                 </WebButton>
-                            </ContentCard>
+                            </WebContactCard>
                         </Box>
                     </Box>
                 </Container>

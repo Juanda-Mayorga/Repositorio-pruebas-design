@@ -1,7 +1,7 @@
 import { Box, Typography, Grid, Container, useTheme } from '@mui/material';
 import { PublicHeader } from '../design-system/organisms/PublicHeader';
 import { Footer } from '../design-system/organisms/Footer';
-import { ContentCard } from '../design-system/molecules/ContentCard';
+import { WebResourceCard } from '../design-system/molecules/WebResourceCard';
 import { WebButton } from '../design-system/atoms/WebButton';
 import TelegramIcon from '@mui/icons-material/Telegram';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
@@ -66,7 +66,7 @@ export const ResourcesPage = () => {
                         <Grid container spacing={3} sx={{ position: 'relative', zIndex: 1 }}>
                             {/* Tips & Tricks Card */}
                             <Grid size={{ xs: 12, md: 3 }}>
-                                <ContentCard
+                                <WebResourceCard
                                     title={t('resources.cards.tips.title')}
                                     description={t('resources.cards.tips.description')}
                                     borderTopColor={theme.palette.web.border.primary}
@@ -74,12 +74,12 @@ export const ResourcesPage = () => {
                                     <WebButton variant="outlined" fullWidth>
                                         {t('resources.cards.tips.button')}
                                     </WebButton>
-                                </ContentCard>
+                                </WebResourceCard>
                             </Grid>
 
                             {/* Community Card */}
                             <Grid size={{ xs: 12, md: 3 }}>
-                                <ContentCard
+                                <WebResourceCard
                                     title={t('resources.cards.community.title')}
                                     description={t('resources.cards.community.description')}
                                     borderTopColor={theme.palette.web.border.secondary}
@@ -92,12 +92,12 @@ export const ResourcesPage = () => {
                                             <TelegramIcon />
                                         </WebButton>
                                     </Box>
-                                </ContentCard>
+                                </WebResourceCard>
                             </Grid>
 
                             {/* Documentation Card */}
                             <Grid size={{ xs: 12, md: 3 }}>
-                                <ContentCard
+                                <WebResourceCard
                                     title={t('resources.cards.documentation.title')}
                                     description={t('resources.cards.documentation.description')}
                                     borderTopColor={theme.palette.web.border.primary}
@@ -105,12 +105,12 @@ export const ResourcesPage = () => {
                                     <WebButton variant="outlined" fullWidth>
                                         {t('resources.cards.documentation.button')}
                                     </WebButton>
-                                </ContentCard>
+                                </WebResourceCard>
                             </Grid>
 
                             {/* Support Card */}
                             <Grid size={{ xs: 12, md: 3 }}>
-                                <ContentCard
+                                <WebResourceCard
                                     title={t('resources.cards.support.title')}
                                     description={t('resources.cards.support.description')}
                                     borderTopColor={theme.palette.web.border.secondary}
@@ -118,7 +118,7 @@ export const ResourcesPage = () => {
                                     <WebButton variant="outlined" fullWidth>
                                         {t('resources.cards.support.button')}
                                     </WebButton>
-                                </ContentCard>
+                                </WebResourceCard>
                             </Grid>
                         </Grid>
                     </Box>
