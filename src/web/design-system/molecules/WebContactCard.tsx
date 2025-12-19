@@ -16,7 +16,7 @@ export const WebContactCard = ({
     return (
         <Card sx={{
             height: 'auto',
-            minHeight: 280,
+            minHeight: { xs: 280, sm: 'auto', md: 280 },
             borderRadius: 2,
             boxShadow: '0 4px 12px rgba(0,0,0,0.08)',
             transition: 'all 0.3s ease-out',
@@ -47,8 +47,7 @@ export const WebContactCard = ({
                 <Typography
                     variant="body1"
                     sx={{
-                        mb: 3,
-                        flexGrow: 1,
+                        mb: { xs: 4, sm: 4, md: 3 },
                         color: 'text.secondary'
                     }}
                 >
