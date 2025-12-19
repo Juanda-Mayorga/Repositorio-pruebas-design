@@ -113,8 +113,6 @@ export const ProductPage = () => {
                     {/* Feature 1: Cost Estimating */}
                     <Box
                         sx={{
-                            bgcolor: 'rgba(122, 110, 189, 0.05)',
-                            borderRadius: '16px',
                             p: { xs: 4, md: 6 },
                             mb: 8,
                         }}
@@ -150,8 +148,6 @@ export const ProductPage = () => {
                     {/* Feature 2: Automatic Model Audit */}
                     <Box
                         sx={{
-                            bgcolor: 'rgba(122, 110, 189, 0.05)',
-                            borderRadius: '16px',
                             p: { xs: 4, md: 6 },
                             mb: 8,
                         }}
@@ -190,8 +186,6 @@ export const ProductPage = () => {
                     {/* Feature 3: Automatic Waste Calculation */}
                     <Box
                         sx={{
-                            bgcolor: 'rgba(122, 110, 189, 0.05)',
-                            borderRadius: '16px',
                             p: { xs: 4, md: 6 },
                             mb: 0,
                         }}
