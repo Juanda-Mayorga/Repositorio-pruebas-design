@@ -45,7 +45,9 @@ export const WebProductCard = ({
                     size={{ xs: 12, md: 6 }}
                     sx={{
                         textAlign: 'left',
-                        order: { xs: 2, md: isImageLeft ? 2 : 1 }
+                        order: { xs: 2, md: isImageLeft ? 2 : 1 },
+                        maxWidth: { xs: imageMaxWidth, md: 'none' },
+                        mx: { xs: 'auto', md: 0 }
                     }}
                 >
                     <Typography variant="h2" sx={{ mb: 2 }}>
