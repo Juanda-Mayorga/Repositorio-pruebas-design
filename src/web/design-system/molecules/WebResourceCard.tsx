@@ -21,7 +21,7 @@ export const WebResourceCard: React.FC<WebResourceCardProps> = ({
             height: '100%',
             borderTop: borderTopColor ? `4px solid ${borderTopColor}` : undefined,
             transition: 'all 0.3s ease-out',
-            bgcolor: theme.palette.web.background.paper,
+            bgcolor: '#FFFFFF',
             '&:hover': {
                 transform: 'scale(1.02)',
                 boxShadow: '0 12px 24px rgba(0,0,0,0.15)',

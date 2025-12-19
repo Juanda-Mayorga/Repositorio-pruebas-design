@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardContent, Typography, useTheme } from '@mui/material';
+import { Card, CardContent, Typography } from '@mui/material';
 
 interface WebContactCardProps {
     title: string;
@@ -12,7 +12,6 @@ export const WebContactCard: React.FC<WebContactCardProps> = ({
     description,
     children
 }) => {
-    const theme = useTheme();
 
     return (
         <Card sx={{
@@ -24,7 +23,7 @@ export const WebContactCard: React.FC<WebContactCardProps> = ({
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'space-between',
-            bgcolor: theme.palette.web.background.paper,
+            bgcolor: '#FFFFFF',
             p: 3,
             '&:hover': {
                 transform: 'scale(1.02)',
