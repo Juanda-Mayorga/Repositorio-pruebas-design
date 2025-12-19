@@ -203,5 +203,27 @@
         "bookADemo": "Réserver une démo",
         "description": "Une solution puissante, propulsée par des logiciels avancés, des services cloud et du support",
         "copyright": "Copyright @2024 BiMMate"
+    },
+    "productPage": {
+        "title": "Caractéristiques du Produit",
+        "subtitle": "Chaque fonctionnalité est conçue pour vous faire gagner du temps, réduire les erreurs et faire évoluer votre flux de travail",
+        "heroTitle": "Relevés Quantitatifs Automatiques (QTO)",
+        "heroHighlight": "Obtenez des quantités précises en quelques secondes à partir de votre maquette BIM.",
+        "heroDescription": "MAMBA automatise le Relevé Quantitatif. Éliminez le travail manuel et les erreurs. Gardez les quantités à jour pour un meilleur contrôle du projet et des décisions plus rapides.",
+        "heroCta": "Essayer gratuitement",
+        "costEstimating": {
+            "title": "Estimation des Coûts",
+            "description": "Liez vos relevés quantitatifs à vos bases de données de coûts et obtenez instantanément des estimations budgétaires. Prenez des décisions financières éclairées dès les premières phases du projet."
+        },
+        "modelAudit": {
+            "title": "Audit Automatique de Maquette",
+            "highlight": "Détectez les problèmes dans votre maquette dès le début et maintenez la fiabilité de vos données BIM.",
+            "description": "MAMBA vérifie automatiquement votre maquette BIM pour les erreurs et les conflits de règles, vous aidant à réduire les reprises et à assurer la cohérence des données."
+        },
+        "wasteCalculation": {
+            "title": "Calcul Automatique des Déchets",
+            "description": "Réduisez les déchets et les coûts grâce à l'analyse prédictive du modèle. Améliorez l'efficacité et minimisez l'impact environnemental.",
+            "cta": "Voir les plans et les tarifs"
+        }
     }
 }

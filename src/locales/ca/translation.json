@@ -203,5 +203,27 @@
         "bookADemo": "Reservar demo",
         "description": "Una solució potent, impulsada per programari avançat, serveis al núvol i suport",
         "copyright": "Copyright @2024 BiMMate"
+    },
+    "productPage": {
+        "title": "Característiques del Producte",
+        "subtitle": "Cada funció està dissenyada per estalviar-te temps, reduir errors i escalar el teu flux de treball",
+        "heroTitle": "Amidaments Automàtics (QTO)",
+        "heroHighlight": "Obté amidaments precisos en segons des del teu model BIM.",
+        "heroDescription": "MAMBA automatitza els Amidaments. Elimina el treball manual i els errors. Manté les quantitats actualitzades per a un millor control del projecte i decisions més ràpides.",
+        "heroCta": "Prova-ho gratis",
+        "costEstimating": {
+            "title": "Estimació de Costos",
+            "description": "Vincula els teus amidaments a les teves bases de dades de costos i obté pressupostos instantanis. Pren decisions financeres informades des de les etapes més primerenques del projecte."
+        },
+        "modelAudit": {
+            "title": "Auditoria Automàtica del Model",
+            "highlight": "Detecta problemes en el teu model de manera primerenca i mantén la fiabilitat de les teves dades BIM.",
+            "description": "MAMBA comprova automàticament el teu model BIM a la recerca d'errors i conflictes de regles, ajudant-te a reduir treballs i assegurar la consistencia de les dades."
+        },
+        "wasteCalculation": {
+            "title": "Càlcul Automàtic de Residus",
+            "description": "Redueix residus i costos amb l'anàlisi predictiva del model. Millora l'eficiència i minimitza l'impacte ambiental.",
+            "cta": "Veure plans i preus"
+        }
     }
 }

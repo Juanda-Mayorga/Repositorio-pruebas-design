@@ -55,7 +55,7 @@
         "emailTooltip": "E-mailen er din unikke identifikator og kan ikke ændres",
         "deleteAccount": "Slet Konto",
         "deleteAccountSubtitle": "Administrer den permanente lukning af din konto",
-        "deleteWarning": "Sletning af din konto er irreversibel og kræver en bekræftelsesanmodning. For at beskytte dine data og overholde sikkerhedsreglerne behandler vores team hver opsigelsesanmodning manuelt.",
+        "deleteWarning": "Sletning af din konto est irreversibel og kræver en bekræftelsesanmodning. For at beskytte dine data og overholde sikkerhedsreglerne behandler vores team hver opsigelsesanmodning manuelt.",
         "deleteButton": "Start opsigelsesproces"
     },
     "deleteModal": {
@@ -203,5 +203,27 @@
         "bookADemo": "Book en demo",
         "description": "En kraftfuld løsning, drevet af avanceret software, cloud-tjenester og support",
         "copyright": "Copyright @2024 BiMMate"
+    },
+    "productPage": {
+        "title": "Produktfunktioner",
+        "subtitle": "Hver funktion er designet til at spare dig tid, reducere fejl og skalere din arbejdsgang",
+        "heroTitle": "Automatisk mængdeberegning (QTO)",
+        "heroHighlight": "Få nøjagtige mængder på få sekunder fra din BIM-model.",
+        "heroDescription": "MAMBA automatiserer mængdeberegning. Fjern manuelt arbejde og fejl. Hold mængderne opdateret for bedre projektkontrol og hurtigere beslutninger.",
+        "heroCta": "Prøv det gratis",
+        "costEstimating": {
+            "title": "Omkostningsberegning",
+            "description": "Forbind dine mængdeberegninger til dine omkostningsdatabaser og få øjeblikkelige budgetoverslag. Træf informerede økonomiske beslutninger fra projektets tidligste faser."
+        },
+        "modelAudit": {
+            "title": "Automatisk modelaudit",
+            "highlight": "Opdag problemer i din model tidligt og oprethold pålideligheden af dine BIM-data.",
+            "description": "MAMBA kontrollerer automatisk din BIM-model for fejl og regelkonflikter, hvilket hjælper dig med at reducere omearbejde og sikre datakonsistens."
+        },
+        "wasteCalculation": {
+            "title": "Automatisk affaldsberegning",
+            "description": "Reducer affald og omkostninger med prædiktiv modelanalyse. Forbedr effektiviteten og minimer miljøpåvirkningen.",
+            "cta": "Se planer og priser"
+        }
     }
 }

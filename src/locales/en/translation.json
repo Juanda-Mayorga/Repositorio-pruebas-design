@@ -210,24 +210,25 @@
         "copyright": "Copyright @2024 BiMMate"
     },
     "productPage": {
-        "qto": {
-            "title": "Automatic Quantity Take-Off (QTO)",
-            "description": "Get accurate quantities in seconds from your BIM model.\nMAMBA automates Quantity Take-Off. Remove manual work and errors. Keep quantities up to date for better project control and faster decisions.",
-            "viewPlans": "View plans and prices",
-            "tryFree": "Try it for free"
-        },
+        "title": "Product Features",
+        "subtitle": "Each feature is designed to save you time, reduce errors, and scale your workflow",
+        "heroTitle": "Automatic Quantity Take-Off (QTO)",
+        "heroHighlight": "Get accurate quantities in seconds from your BIM model.",
+        "heroDescription": "MAMBA automates Quantity Take-Off. Remove manual work and errors. Keep quantities up to date for better project control and faster decisions.",
+        "heroCta": "Try it for free",
         "costEstimating": {
             "title": "Cost Estimating",
             "description": "Link your quantity take-offs to your cost databases and get instant budget estimates. Make informed financial decisions from the earliest stages of the project."
         },
         "modelAudit": {
             "title": "Automatic Model Audit",
-            "description": "Detect problems in your model early and maintain the reliability of your BIM data.\nMAMBA automatically checks your BIM model for errors and rule conflicts, helping you reduce rework and ensure data consistency."
+            "highlight": "Detect problems in your model early and maintain the reliability of your BIM data.",
+            "description": "MAMBA automatically checks your BIM model for errors and rule conflicts, helping you reduce rework and ensure data consistency."
         },
         "wasteCalculation": {
             "title": "Automatic Waste Calculation",
-            "description": "Reduce waste and costs with predictive model analysis. Improve efficiency and minimize environmental impact",
-            "button": "See how it works"
+            "description": "Reduce waste and costs with predictive model analysis. Improve efficiency and minimize environmental impact.",
+            "cta": "View plans and prices"
         }
     }
 }

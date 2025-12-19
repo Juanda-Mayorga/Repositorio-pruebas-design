@@ -214,5 +214,27 @@
         "bookADemo": "Reservar demo",
         "description": "Una solución potente, impulsada por software avanzado, servicios en la nube y soporte",
         "copyright": "Copyright @2024 BiMMate"
+    },
+    "productPage": {
+        "title": "Características del Producto",
+        "subtitle": "Cada función está diseñada para ahorrarte tiempo, reducir errores y escalar tu flujo de trabajo",
+        "heroTitle": "Mediciones Automáticas (QTO)",
+        "heroHighlight": "Obtén mediciones precisas en segundos desde tu modelo BIM.",
+        "heroDescription": "MAMBA automatiza las Mediciones. Elimina el trabajo manual y los errores. Mantén las cantidades actualizadas para un mejor control del proyecto y decisiones más rápidas.",
+        "heroCta": "Pruébalo gratis",
+        "costEstimating": {
+            "title": "Estimación de Costes",
+            "description": "Vincula tus mediciones a tus bases de datos de costes y obtén presupuestos instantáneos. Toma decisiones financieras informadas desde las etapas más tempranas del proyecto."
+        },
+        "modelAudit": {
+            "title": "Auditoría Automática del Modelo",
+            "highlight": "Detecta problemas en tu modelo de manera temprana y mantén la fiabilidad de tus datos BIM.",
+            "description": "MAMBA comprueba automáticamente tu modelo BIM en busca de errores y conflictos de reglas, ayudándote a reducir repasos y asegurar la consistencia de los datos."
+        },
+        "wasteCalculation": {
+            "title": "Cálculo Automático de Residuos",
+            "description": "Reduce residuos y costes con el análisis predictivo del modelo. Mejora la eficiencia y minimiza el impacto ambiental.",
+            "cta": "Ver planes y precios"
+        }
     }
 }

@@ -102,7 +102,7 @@
                 "button": "Vedi Suggerimenti"
             },
             "community": {
-                "title": "Community",
+                "title": "Comunità",
                 "description": "Gli utenti MAMBA condividono consigli, fanno domande e scambiano best practice, unisciti alla nostra community"
             },
             "documentation": {
@@ -203,5 +203,27 @@
         "bookADemo": "Prenota una demo",
         "description": "Una soluzione potente, guidata da software avanzato, servizi cloud e supporto",
         "copyright": "Copyright @2024 BiMMate"
+    },
+    "productPage": {
+        "title": "Caratteristiche del Prodotto",
+        "subtitle": "Ogni funzione è progettata per farti risparmiare tempo, ridurre gli errori e scalare il tuo flusso di lavoro",
+        "heroTitle": "Computo Metrico Automatico (QTO)",
+        "heroHighlight": "Ottieni quantità accurate in pochi secondi dal tuo modello BIM.",
+        "heroDescription": "MAMBA automatizza il Computo Metrico. Elimina il lavoro manuale e gli errori. Mantieni le quantità aggiornate per un migliore controllo del progetto e decisioni più rapide.",
+        "heroCta": "Provalo gratis",
+        "costEstimating": {
+            "title": "Stima dei Costi",
+            "description": "Collega i tuoi computi metrici ai tuoi database dei costi e ottieni stime di budget istantanee. Prendi decisioni finanziarie informate sin dalle prime fasi del progetto."
+        },
+        "modelAudit": {
+            "title": "Audit Automatico del Modello",
+            "highlight": "Rileva precocemente i problemi nel tuo modello e mantieni l'affidabilità dei tuoi dati BIM.",
+            "description": "MAMBA controlla automaticamente il tuo modello BIM per errori e conflitti di regole, aiutandoti a ridurre le rilavorazioni e a garantire la coerenza dei dati."
+        },
+        "wasteCalculation": {
+            "title": "Calcolo Automatico dei Rifiuti",
+            "description": "Riduci i rifiuti e i costi con l'analisi predittiva del modello. Migliora l'efficienza e minimizza l'impatto ambientale.",
+            "cta": "Visualizza piani e prezzi"
+        }
     }
 }

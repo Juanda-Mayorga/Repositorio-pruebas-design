@@ -56,7 +56,7 @@
         "deleteAccount": "Eliminar Conta",
         "deleteAccountSubtitle": "Xestiona o peche permanente da túa conta",
         "deleteWarning": "A eliminación da túa conta é irreversible e require unha solicitude de verificación. Para protexer os teus datos e cumprir a normativa de seguridade, o noso equipo procesa cada solicitude de baixa de forma manual.",
-        "deleteButton": "Iniciar proceso de baixa"
+        "deleteButton": "Iniciar procés de baixa"
     },
     "deleteModal": {
         "title": "Lamentamos que te vayas",
@@ -118,7 +118,7 @@
         }
     },
     "contact": {
-        "title": "A túa solución comeza aquí",
+        "title": "A túa solución comece aquí",
         "subtitle": "Tanto se buscas unha solución específica como unha demostración de MAMBA en acción, estamos listos para axudarche a avanzar",
         "cards": {
             "sales": {
@@ -203,5 +203,27 @@
         "bookADemo": "Reservar demostración",
         "description": "Unha solución potente, impulsada por software avanzado, servizos na nube e soporte",
         "copyright": "Copyright @2024 BiMMate"
+    },
+    "productPage": {
+        "title": "Características do Produto",
+        "subtitle": "Cada función está deseñada para aforrarte tempo, reducir erros e escalar o teu fluxo de traballo",
+        "heroTitle": "Medicións Automáticas (QTO)",
+        "heroHighlight": "Obtén medicións precisas en segundos desde o teu modelo BIM.",
+        "heroDescription": "MAMBA automatiza as Medicións. Elimina o traballo manual e os erros. Mantén as cantidades actualizadas para un mellor control do proxecto e decisións máis rápidas.",
+        "heroCta": "Próbao gratis",
+        "costEstimating": {
+            "title": "Estimación de Custos",
+            "description": "Vincula as túas medicións ás túas bases de datos de custos e obtén orzamentos instantáneos. Toma decisións financeiras informadas desde as etapas máis temperás do proxecto."
+        },
+        "modelAudit": {
+            "title": "Auditoría Automática do Modelo",
+            "highlight": "Detecta problemas no teu modelo de xeito temperán e mantén a fiabilidade dos teus datos BIM.",
+            "description": "MAMBA comproba automaticamente o teu modelo BIM en busca de erros e conflitos de regras, axudándote a reducir repeticións de traballos e asegurar a consistencia dos datos."
+        },
+        "wasteCalculation": {
+            "title": "Cálculo Automático de Residuos",
+            "description": "Reduce residuos e custos coa análise predictiva do modelo. Mellora a eficiencia e minimiza o impacto ambiental.",
+            "cta": "Ver plans e prezos"
+        }
     }
 }

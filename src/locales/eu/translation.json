@@ -203,5 +203,27 @@
         "bookADemo": "Demo bat erreserbatu",
         "description": "Irtenbide indartsua, software aurreratu, hodei zerbitzu eta laguntzaz bultzatua",
         "copyright": "Copyright @2024 BiMMate"
+    },
+    "productPage": {
+        "title": "Produktuaren Ezaugarriak",
+        "subtitle": "Funtzio bakoitza denbora aurrezteko, akatsak murrizteko eta zure lan-fluxua eskalatzeko diseinatuta dago",
+        "heroTitle": "Neurketa Automatikoak (QTO)",
+        "heroHighlight": "Lortu neurketa zehatzak segundotan zure BIM modelotik.",
+        "heroDescription": "MAMBAk neurketak automatizatzen ditu. Kendu eskuzko lana eta akatsak. Mantendu kantitateak eguneratuta proiektua hobeto kontrolatzeko eta erabakiak azkarrago hartzeko.",
+        "heroCta": "Probatu doan",
+        "costEstimating": {
+            "title": "Kostuen Estimazioa",
+            "description": "Lotu zure neurketak zure kostuen datu-baseekin eta lortu berehalako aurrekontu-estimazioak. Hartu erabaki finantzario informatuak proiektuaren lehen faseetatik."
+        },
+        "modelAudit": {
+            "title": "Modeloaren Auditoria Automatikoa",
+            "highlight": "Detektatu arazoak zure modeloan garaiz eta mantendu zure BIM datuen fidagarritasuna.",
+            "description": "MAMBAk automatikoki egiaztatzen du zure BIM modeloa akatsen eta arau-konfliktoen bila, berrantolaketa murrizten eta datuen koherentzia ziurtatzen lagunduz."
+        },
+        "wasteCalculation": {
+            "title": "Hondakinen Kalkulu Automatikoa",
+            "description": "Murriztu hondakinak eta kostuak modeloaren analisi prediktiboarekin. Hobetu eraginkortasuna eta minimizatu ingurumen-inpaktua.",
+            "cta": "Ikusi planak eta prezioak"
+        }
     }
 }

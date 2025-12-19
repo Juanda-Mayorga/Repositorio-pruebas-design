@@ -1,4 +1,5 @@
 import { Box, Container, Typography, useTheme } from '@mui/material';
+import { useTranslation } from 'react-i18next';
 import { PublicHeader } from '../design-system/organisms/PublicHeader';
 import { Footer } from '../design-system/organisms/Footer';
 import { WebButton } from '../design-system/atoms/WebButton';
@@ -6,6 +7,7 @@ import { WebProductCard } from '../design-system/molecules/WebProductCard';
 
 export const ProductPage = () => {
     const theme = useTheme();
+    const { t } = useTranslation();
 
     return (
         <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', bgcolor: theme.palette.web.background.default }}>
@@ -19,10 +21,10 @@ export const ProductPage = () => {
                         component="h1"
                         sx={{
                             mb: 2,
-                            fontSize: { xs: '32px', lg: '56px' } // 56px at 1440px (lg)
+                            fontSize: { xs: '32px', lg: '56px' }
                         }}
                     >
-                        Product Features
+                        {t('productPage.title')}
                     </Typography>
                     <Typography
                         variant="subtitle1"
@@ -33,7 +35,7 @@ export const ProductPage = () => {
                             textAlign: 'center',
                         }}
                     >
-                        Each feature is designed to save you time, reduce errors, and scale your workflow
+                        {t('productPage.subtitle')}
                     </Typography>
                 </Box>
 
@@ -41,17 +43,16 @@ export const ProductPage = () => {
                     {/* Hero Section */}
                     <Box
                         sx={{
-                            position: 'relative', // Context for absolute background
-                            bgcolor: theme.palette.web.background.paper, // Light gray for consistency
-                            borderRadius: '16px', // Matching design rounding
+                            position: 'relative',
+                            bgcolor: theme.palette.web.background.paper,
+                            borderRadius: '16px',
                             overflow: 'hidden',
-                            mb: 12, // Spacing before next section
+                            mb: 12,
                             display: 'flex',
                             flexDirection: { xs: 'column', md: 'row' },
                             alignItems: 'center',
                         }}
                     >
-                        {/* Background Image Layer */}
                         <Box sx={{
                             position: 'absolute',
                             top: 0,
@@ -62,37 +63,34 @@ export const ProductPage = () => {
                             backgroundSize: 'cover',
                             backgroundPosition: 'center',
                             zIndex: 0,
-                            opacity: 0.1, // Reduced opacity for colored text legibility if needed, or keep as is if background is light
+                            opacity: 0.1,
                         }} />
 
-                        {/* Content Wrapper to ensure Z-Index above background */}
                         <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, width: '100%', position: 'relative', zIndex: 1 }}>
-                            {/* Hero Image Area (Left) */}
                             <Box sx={{ flex: 1, p: { xs: 3, md: 6 }, display: 'flex', justifyContent: 'center' }}>
                                 <Box
                                     component="img"
                                     src="/src/assets/product-hero-qto.png"
-                                    alt="Automatic Quantity Take-Off"
+                                    alt={t('productPage.heroTitle')}
                                     sx={{
                                         width: '100%',
                                         maxWidth: '500px',
                                         height: 'auto',
                                         borderRadius: '8px',
-                                        boxShadow: '0px 4px 24px rgba(0, 0, 0, 0.15)', // Added shadow for better integration
+                                        boxShadow: '0px 4px 24px rgba(0, 0, 0, 0.15)',
                                     }}
                                 />
                             </Box>
 
-                            {/* Hero Content Area (Right) */}
                             <Box sx={{ flex: 1, p: { xs: 3, md: 6 }, textAlign: 'left' }}>
                                 <Typography variant="h2" sx={{ mb: 2 }}>
-                                    Automatic Quantity Take-Off (QTO)
+                                    {t('productPage.heroTitle')}
                                 </Typography>
                                 <Typography sx={{ color: 'text.secondary', fontFamily: 'Hind Siliguri', mb: 1 }}>
-                                    <strong>Get accurate quantities in seconds from your BIM model.</strong>
+                                    <strong>{t('productPage.heroHighlight')}</strong>
                                 </Typography>
                                 <Typography variant="body1" sx={{ color: 'text.secondary', mb: 4 }}>
-                                    MAMBA automates Quantity Take-Off. Remove manual work and errors. Keep quantities up to date for better project control and faster decisions.
+                                    {t('productPage.heroDescription')}
                                 </Typography>
                                 <WebButton
                                     variant="contained"
@@ -103,53 +101,43 @@ export const ProductPage = () => {
                                         mx: 'auto'
                                     }}
                                 >
-                                    Try it for free
+                                    {t('productPage.heroCta')}
                                 </WebButton>
                             </Box>
                         </Box>
-
                     </Box>
-
 
                     {/* Feature 1: Cost Estimating */}
                     <WebProductCard
-                        title="Cost Estimating"
-                        description={
-                            <>
-                                Link your quantity take-offs to your cost databases and get <strong>instant budget</strong> estimates. Make informed financial decisions from the earliest stages of the project.
-                            </>
-                        }
+                        title={t('productPage.costEstimating.title')}
+                        description={t('productPage.costEstimating.description')}
                         image="/src/assets/feature-cost-estimating.png"
-                        imageAlt="Cost Estimating"
+                        imageAlt={t('productPage.costEstimating.title')}
                         sx={{ mb: 8 }}
                     />
 
                     {/* Feature 2: Automatic Model Audit */}
                     <WebProductCard
-                        title="Automatic Model Audit"
+                        title={t('productPage.modelAudit.title')}
                         imagePosition="left"
                         description={
                             <>
-                                <strong>Detect problems in your model early and maintain the reliability of your BIM data.</strong>
+                                <strong>{t('productPage.modelAudit.highlight')}</strong>
                                 <br /><br />
-                                MAMBA automatically checks your BIM model for errors and rule conflicts, helping you reduce rework and ensure data consistency.
+                                {t('productPage.modelAudit.description')}
                             </>
                         }
                         image="/src/assets/feature-model-audit.png"
-                        imageAlt="Automatic Model Audit"
+                        imageAlt={t('productPage.modelAudit.title')}
                         sx={{ mb: 8 }}
                     />
 
                     {/* Feature 3: Automatic Waste Calculation */}
                     <WebProductCard
-                        title="Automatic Waste Calculation"
-                        description={
-                            <>
-                                <strong>Reduce waste and costs</strong> with predictive model analysis. Improve efficiency and minimize environmental impact.
-                            </>
-                        }
+                        title={t('productPage.wasteCalculation.title')}
+                        description={t('productPage.wasteCalculation.description')}
                         image="/src/assets/feature-waste-calculation.png"
-                        imageAlt="Automatic Waste Calculation"
+                        imageAlt={t('productPage.wasteCalculation.title')}
                         sx={{ mb: 0 }}
                     >
                         <WebButton
@@ -161,7 +149,7 @@ export const ProductPage = () => {
                                 mx: 'auto'
                             }}
                         >
-                            View plans and prices
+                            {t('productPage.wasteCalculation.cta')}
                         </WebButton>
                     </WebProductCard>
 

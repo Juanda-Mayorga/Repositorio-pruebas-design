@@ -203,5 +203,27 @@
         "bookADemo": "Demo buchen",
         "description": "Eine leistungsstarke Lösung, angetrieben durch fortschrittliche Software, Cloud-Dienste und Support",
         "copyright": "Copyright @2024 BiMMate"
+    },
+    "productPage": {
+        "title": "Produktmerkmale",
+        "subtitle": "Jede Funktion ist darauf ausgelegt, Ihnen Zeit zu sparen, Fehler zu reduzieren und Ihren Workflow zu skalieren",
+        "heroTitle": "Automatische Mengenermittlung (QTO)",
+        "heroHighlight": "Erhalten Sie in Sekundenschnelle präzise Mengen aus Ihrem BIM-Modell.",
+        "heroDescription": "MAMBA automatisiert die Mengenermittlung. Eliminieren Sie manuelle Arbeit und Fehler. Halten Sie Mengen auf dem neuesten Stand für eine bessere Projektkontrolle und schnellere Entscheidungen.",
+        "heroCta": "Kostenlos ausprobieren",
+        "costEstimating": {
+            "title": "Kostenschätzung",
+            "description": "Verknüpfen Sie Ihre Mengenermittlungen mit Ihren Kostendatenbanken und erhalten Sie sofortige Budgetschätzungen. Treffen Sie fundierte finanzielle Entscheidungen bereits in den frühesten Phasen des Projekts."
+        },
+        "modelAudit": {
+            "title": "Automatische Modellauditierung",
+            "highlight": "Erkennen Sie Probleme in Ihrem Modell frühzeitig und erhalten Sie die Zuverlässigkeit Ihrer BIM-Daten aufrecht.",
+            "description": "MAMBA prüft Ihr BIM-Modell automatisch auf Fehler und Regelkonflikte und hilft Ihnen so, Nacharbeiten zu reduzieren und die Datenkonsistenz zu gewährleisten."
+        },
+        "wasteCalculation": {
+            "title": "Automatische Abfallberechnung",
+            "description": "Reduzieren Sie Abfall und Kosten durch vorausschauende Modellanalyse. Verbessern Sie die Effizienz und minimieren Sie die Umweltbelastung.",
+            "cta": "Pläne und Preise anzeigen"
+        }
     }
 }

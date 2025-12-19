@@ -111,7 +111,7 @@
                 "button": "Snelle Hulp"
             },
             "support": {
-                "title": "Ondersteuning",
+                "title": "Support",
                 "description": "Log in op uw MAMBA-account zodat we u sneller kunnen helpen:",
                 "button": "Inloggen"
             }
@@ -203,5 +203,27 @@
         "bookADemo": "Boek een demo",
         "description": "Een krachtige oplossing, aangedreven door geavanceerde software, cloudservices en ondersteuning",
         "copyright": "Copyright @2024 BiMMate"
+    },
+    "productPage": {
+        "title": "Productkenmerken",
+        "subtitle": "Elke functie is ontworpen om u tijd te besparen, fouten te verminderen en uw workflow op te schalen",
+        "heroTitle": "Automatische Hoeveelheidsbepaling (QTO)",
+        "heroHighlight": "Krijg binnen enkele seconden nauwkeurige hoeveelheden uit uw BIM-model.",
+        "heroDescription": "MAMBA automatiseert Hoeveelheidsbepaling. Elimineer handmatig werk en fouten. Houd hoeveelheden up-to-date voor betere projectbeheersing en snellere beslissingen.",
+        "heroCta": "Probeer het gratis",
+        "costEstimating": {
+            "title": "Kostenraming",
+            "description": "Koppel uw hoeveelheidsbepalingen aan uw kostendatabases en ontvang direct budgetramingen. Neem weloverwogen financiële beslissingen vanaf de vroegste stadia van het project."
+        },
+        "modelAudit": {
+            "title": "Automatische Modelaudit",
+            "highlight": "Detecteer problemen in uw model in een vroeg stadium en behoud de betrouwbaarheid van uw BIM-data.",
+            "description": "MAMBA controleert uw BIM-model automatisch op fouten en regelconflicten, waardoor u minder hoeft te herstellen en de dataconsistentie gewaarborgd blijft."
+        },
+        "wasteCalculation": {
+            "title": "Automatische Afvalberekening",
+            "description": "Verminder afval en kosten met voorspellende modelanalyse. Verbeter de efficiëntie en minimaliseer de milieu-impact.",
+            "cta": "Bekijk plannen en prijzen"
+        }
     }
 }
