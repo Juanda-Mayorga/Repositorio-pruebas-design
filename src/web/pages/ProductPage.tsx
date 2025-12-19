@@ -83,7 +83,7 @@ export const ProductPage = () => {
                             </Box>
 
                             {/* Hero Content Area (Right) */}
-                            <Box sx={{ flex: 1, p: { xs: 3, md: 6 }, textAlign: 'left' }}>
+                            <Box sx={{ flex: 1, p: { xs: 3, md: 6 }, textAlign: { xs: 'center', md: 'left' } }}>
                                 <Typography variant="h2" sx={{ mb: 2 }}>
                                     Automatic Quantity Take-Off (QTO)
                                 </Typography>
@@ -97,7 +97,8 @@ export const ProductPage = () => {
                                     variant="contained"
                                     sx={{
                                         width: '100%',
-                                        maxWidth: '480px'
+                                        maxWidth: '480px',
+                                        mx: 'auto'
                                     }}
                                 >
                                     Try it for free
@@ -110,7 +111,7 @@ export const ProductPage = () => {
 
                     {/* Feature 1: Cost Estimating */}
                     <Grid container spacing={8} sx={{ mb: 12, alignItems: 'center', px: { xs: 4, md: 10 } }}>
-                        <Grid size={{ xs: 12, md: 6 }}>
+                        <Grid size={{ xs: 12, md: 6 }} sx={{ textAlign: { xs: 'center', md: 'left' } }}>
                             <Typography variant="h2" sx={{ mb: 2 }}>
                                 Cost Estimating
                             </Typography>
@@ -154,7 +155,7 @@ export const ProductPage = () => {
                                 }}
                             />
                         </Grid>
-                        <Grid size={{ xs: 12, md: 6 }}>
+                        <Grid size={{ xs: 12, md: 6 }} sx={{ textAlign: { xs: 'center', md: 'left' } }}>
                             <Typography variant="h2" sx={{ mb: 2 }}>
                                 Automatic Model Audit
                             </Typography>
@@ -169,7 +170,7 @@ export const ProductPage = () => {
 
                     {/* Feature 3: Automatic Waste Calculation */}
                     <Grid container spacing={8} sx={{ mb: 0, alignItems: 'center', px: { xs: 4, md: 10 } }}>
-                        <Grid size={{ xs: 12, md: 6 }}>
+                        <Grid size={{ xs: 12, md: 6 }} sx={{ textAlign: { xs: 'center', md: 'left' } }}>
                             <Typography variant="h2" sx={{ mb: 2 }}>
                                 Automatic Waste Calculation
                             </Typography>
@@ -180,7 +181,8 @@ export const ProductPage = () => {
                                 variant="contained"
                                 sx={{
                                     width: '100%',
-                                    maxWidth: '480px'
+                                    maxWidth: '480px',
+                                    mx: 'auto'
                                 }}
                             >
                                 View plans and prices
