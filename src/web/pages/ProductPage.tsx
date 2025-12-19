@@ -1,7 +1,8 @@
-import { Box, Container, Grid, Typography, useTheme } from '@mui/material';
+import { Box, Container, Typography, useTheme } from '@mui/material';
 import { PublicHeader } from '../design-system/organisms/PublicHeader';
 import { Footer } from '../design-system/organisms/Footer';
 import { WebButton } from '../design-system/atoms/WebButton';
+import { WebProductCard } from '../design-system/molecules/WebProductCard';
 
 export const ProductPage = () => {
     const theme = useTheme();
@@ -111,123 +112,59 @@ export const ProductPage = () => {
 
 
                     {/* Feature 1: Cost Estimating */}
-                    <Box
-                        sx={{
-                            p: { xs: 4, md: 6 },
-                            mb: 8,
-                        }}
-                    >
-                        <Grid container spacing={8} sx={{ alignItems: 'center' }}>
-                            <Grid size={{ xs: 12, md: 6 }} sx={{ textAlign: 'left' }}>
-                                <Typography variant="h2" sx={{ mb: 2 }}>
-                                    Cost Estimating
-                                </Typography>
-                                <Typography sx={{ color: 'text.secondary', fontFamily: 'Hind Siliguri', mb: 2 }}>
-                                    Link your quantity take-offs to your cost databases and get <strong>instant budget</strong> estimates. Make informed financial decisions from the earliest stages of the project.
-                                </Typography>
-                            </Grid>
-                            <Grid size={{ xs: 12, md: 6 }}>
-                                <Box
-                                    component="img"
-                                    src="/src/assets/feature-cost-estimating.png"
-                                    alt="Cost Estimating"
-                                    sx={{
-                                        width: '100%',
-                                        maxWidth: '420px',
-                                        height: 'auto',
-                                        display: 'block',
-                                        mx: 'auto',
-                                        borderRadius: '12px',
-                                        boxShadow: '0px 4px 24px rgba(0, 0, 0, 0.1)',
-                                    }}
-                                />
-                            </Grid>
-                        </Grid>
-                    </Box>
+                    <WebProductCard
+                        title="Cost Estimating"
+                        description={
+                            <>
+                                Link your quantity take-offs to your cost databases and get <strong>instant budget</strong> estimates. Make informed financial decisions from the earliest stages of the project.
+                            </>
+                        }
+                        image="/src/assets/feature-cost-estimating.png"
+                        imageAlt="Cost Estimating"
+                        sx={{ mb: 8 }}
+                    />
 
                     {/* Feature 2: Automatic Model Audit */}
-                    <Box
-                        sx={{
-                            p: { xs: 4, md: 6 },
-                            mb: 8,
-                        }}
-                    >
-                        <Grid container spacing={8} sx={{ alignItems: 'center', flexDirection: { xs: 'column-reverse', md: 'row' } }}>
-                            <Grid size={{ xs: 12, md: 6 }}>
-                                <Box
-                                    component="img"
-                                    src="/src/assets/feature-model-audit.png"
-                                    alt="Automatic Model Audit"
-                                    sx={{
-                                        width: '100%',
-                                        maxWidth: '420px',
-                                        height: 'auto',
-                                        display: 'block',
-                                        mx: 'auto',
-                                        borderRadius: '12px',
-                                        boxShadow: '0px 4px 24px rgba(0, 0, 0, 0.1)',
-                                    }}
-                                />
-                            </Grid>
-                            <Grid size={{ xs: 12, md: 6 }} sx={{ textAlign: 'left' }}>
-                                <Typography variant="h2" sx={{ mb: 2 }}>
-                                    Automatic Model Audit
-                                </Typography>
-                                <Typography sx={{ color: 'text.secondary', fontFamily: 'Hind Siliguri', mb: 1 }}>
-                                    <strong>Detect problems in your model early and maintain the reliability of your BIM data.</strong>
-                                </Typography>
-                                <Typography sx={{ color: 'text.secondary', fontFamily: 'Hind Siliguri' }}>
-                                    MAMBA automatically checks your BIM model for errors and rule conflicts, helping you reduce rework and ensure data consistency.
-                                </Typography>
-                            </Grid>
-                        </Grid>
-                    </Box>
+                    <WebProductCard
+                        title="Automatic Model Audit"
+                        imagePosition="left"
+                        description={
+                            <>
+                                <strong>Detect problems in your model early and maintain the reliability of your BIM data.</strong>
+                                <br /><br />
+                                MAMBA automatically checks your BIM model for errors and rule conflicts, helping you reduce rework and ensure data consistency.
+                            </>
+                        }
+                        image="/src/assets/feature-model-audit.png"
+                        imageAlt="Automatic Model Audit"
+                        sx={{ mb: 8 }}
+                    />
 
                     {/* Feature 3: Automatic Waste Calculation */}
-                    <Box
-                        sx={{
-                            p: { xs: 4, md: 6 },
-                            mb: 0,
-                        }}
+                    <WebProductCard
+                        title="Automatic Waste Calculation"
+                        description={
+                            <>
+                                <strong>Reduce waste and costs</strong> with predictive model analysis. Improve efficiency and minimize environmental impact.
+                            </>
+                        }
+                        image="/src/assets/feature-waste-calculation.png"
+                        imageAlt="Automatic Waste Calculation"
+                        sx={{ mb: 0 }}
                     >
-                        <Grid container spacing={8} sx={{ alignItems: 'center' }}>
-                            <Grid size={{ xs: 12, md: 6 }} sx={{ textAlign: 'left' }}>
-                                <Typography variant="h2" sx={{ mb: 2 }}>
-                                    Automatic Waste Calculation
-                                </Typography>
-                                <Typography sx={{ color: 'text.secondary', fontFamily: 'Hind Siliguri', mb: 3 }}>
-                                    <strong>Reduce waste and costs</strong> with predictive model analysis. Improve efficiency and minimize environmental impact.
-                                </Typography>
-                                <WebButton
-                                    variant="contained"
-                                    sx={{
-                                        width: '100%',
-                                        maxWidth: '480px',
-                                        display: 'block',
-                                        mx: 'auto'
-                                    }}
-                                >
-                                    View plans and prices
-                                </WebButton>
-                            </Grid>
-                            <Grid size={{ xs: 12, md: 6 }}>
-                                <Box
-                                    component="img"
-                                    src="/src/assets/feature-waste-calculation.png"
-                                    alt="Automatic Waste Calculation"
-                                    sx={{
-                                        width: '100%',
-                                        maxWidth: '420px',
-                                        height: 'auto',
-                                        display: 'block',
-                                        mx: 'auto',
-                                        borderRadius: '12px',
-                                        boxShadow: '0px 4px 24px rgba(0, 0, 0, 0.1)',
-                                    }}
-                                />
-                            </Grid>
-                        </Grid>
-                    </Box>
+                        <WebButton
+                            variant="contained"
+                            sx={{
+                                width: '100%',
+                                maxWidth: '480px',
+                                display: 'block',
+                                mx: 'auto'
+                            }}
+                        >
+                            View plans and prices
+                        </WebButton>
+                    </WebProductCard>
+
 
                 </Container>
             </Box>

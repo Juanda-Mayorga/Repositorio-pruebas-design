@@ -1,17 +1,17 @@
-import React from 'react';
+import type { ReactNode } from 'react';
 import { Card, CardContent, Typography } from '@mui/material';
 
 interface WebContactCardProps {
     title: string;
     description: string;
-    children: React.ReactNode;
+    children: ReactNode;
 }
 
-export const WebContactCard: React.FC<WebContactCardProps> = ({
+export const WebContactCard = ({
     title,
     description,
     children
-}) => {
+}: WebContactCardProps) => {
 
     return (
         <Card sx={{

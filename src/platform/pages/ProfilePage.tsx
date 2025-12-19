@@ -127,7 +127,6 @@ export const ProfilePage = () => {
 
     const handleSavePersonalDetails = () => {
         if (validatePersonalDetails()) {
-            console.log('Personal details saved:', { name: formData.name, surname: formData.surname });
             setSnackbar({
                 open: true,
                 message: t('feedback.profileSaved'),
@@ -138,7 +137,6 @@ export const ProfilePage = () => {
 
     const handleUpdatePassword = () => {
         if (validatePassword()) {
-            console.log('Password updated');
             setSnackbar({
                 open: true,
                 message: t('feedback.passwordUpdated'),
