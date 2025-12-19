@@ -121,7 +121,7 @@ export const ProductPage = () => {
 
 
                     {/* Feature 1: Cost Estimating */}
-                    <Grid container spacing={8} sx={{ mb: 12, alignItems: 'center' }}>
+                    <Grid container spacing={8} sx={{ mb: 12, alignItems: 'center', px: { xs: 4, md: 10 } }}>
                         <Grid size={{ xs: 12, md: 6 }}>
                             <Typography variant="h2" sx={{ mb: 2 }}>
                                 Cost Estimating
@@ -149,7 +149,7 @@ export const ProductPage = () => {
                     </Grid>
 
                     {/* Feature 2: Automatic Model Audit */}
-                    <Grid container spacing={8} sx={{ mb: 12, alignItems: 'center', flexDirection: { xs: 'column-reverse', md: 'row' } }}>
+                    <Grid container spacing={8} sx={{ mb: 12, alignItems: 'center', flexDirection: { xs: 'column-reverse', md: 'row' }, px: { xs: 4, md: 10 } }}>
                         <Grid size={{ xs: 12, md: 6 }}>
                             <Box
                                 component="img"
@@ -180,7 +180,7 @@ export const ProductPage = () => {
                     </Grid>
 
                     {/* Feature 3: Automatic Waste Calculation */}
-                    <Grid container spacing={8} sx={{ mb: 0, alignItems: 'center' }}>
+                    <Grid container spacing={8} sx={{ mb: 0, alignItems: 'center', px: { xs: 4, md: 10 } }}>
                         <Grid size={{ xs: 12, md: 6 }}>
                             <Typography variant="h2" sx={{ mb: 2 }}>
                                 Automatic Waste Calculation
