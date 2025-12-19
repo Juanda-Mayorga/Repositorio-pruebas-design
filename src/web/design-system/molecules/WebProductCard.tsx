@@ -37,7 +37,7 @@ export const WebProductCard = ({
                 spacing={8}
                 sx={{
                     alignItems: 'center',
-                    flexDirection: isImageLeft ? { xs: 'column-reverse', md: 'row' } : 'row'
+                    flexDirection: 'row'
                 }}
             >
                 {/* Content Side */}
@@ -45,7 +45,7 @@ export const WebProductCard = ({
                     size={{ xs: 12, md: 6 }}
                     sx={{
                         textAlign: 'left',
-                        order: isImageLeft ? { xs: 2, md: 2 } : { xs: 2, md: 1 }
+                        order: { xs: 2, md: isImageLeft ? 2 : 1 }
                     }}
                 >
                     <Typography variant="h2" sx={{ mb: 2 }}>
@@ -61,7 +61,7 @@ export const WebProductCard = ({
                 <Grid
                     size={{ xs: 12, md: 6 }}
                     sx={{
-                        order: isImageLeft ? { xs: 1, md: 1 } : { xs: 1, md: 2 }
+                        order: { xs: 1, md: isImageLeft ? 1 : 2 }
                     }}
                 >
                     <Box
