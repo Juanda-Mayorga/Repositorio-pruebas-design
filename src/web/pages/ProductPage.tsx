@@ -95,16 +95,6 @@ export const ProductPage = () => {
                                 </Typography>
                                 <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap' }}>
                                     <WebButton
-                                        sx={{
-                                            color: '#7367B1',
-                                            bgcolor: 'white',
-                                            borderColor: 'white',
-                                            '&:hover': { bgcolor: '#f5f5f5', borderColor: 'white' }
-                                        }}
-                                    >
-                                        View plans and prices
-                                    </WebButton>
-                                    <WebButton
                                         variant="contained"
                                         sx={{
                                             bgcolor: '#7367B1',
@@ -189,7 +179,7 @@ export const ProductPage = () => {
                                 <strong>Reduce waste and costs</strong> with predictive model analysis. Improve efficiency and minimize environmental impact.
                             </Typography>
                             <WebButton variant="contained">
-                                See how it works
+                                View plans and prices
                             </WebButton>
                         </Grid>
                         <Grid size={{ xs: 12, md: 6 }}>
