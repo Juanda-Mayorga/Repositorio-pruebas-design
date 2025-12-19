@@ -137,7 +137,10 @@ export const ProductPage = () => {
                                 alt="Cost Estimating"
                                 sx={{
                                     width: '100%',
+                                    maxWidth: '420px',
                                     height: 'auto',
+                                    display: 'block',
+                                    mx: 'auto',
                                     borderRadius: '12px',
                                     boxShadow: '0px 4px 24px rgba(0, 0, 0, 0.1)',
                                 }}
@@ -154,7 +157,10 @@ export const ProductPage = () => {
                                 alt="Automatic Model Audit"
                                 sx={{
                                     width: '100%',
+                                    maxWidth: '420px',
                                     height: 'auto',
+                                    display: 'block',
+                                    mx: 'auto',
                                     borderRadius: '12px',
                                     boxShadow: '0px 4px 24px rgba(0, 0, 0, 0.1)',
                                 }}
@@ -193,7 +199,10 @@ export const ProductPage = () => {
                                 alt="Automatic Waste Calculation"
                                 sx={{
                                     width: '100%',
+                                    maxWidth: '420px',
                                     height: 'auto',
+                                    display: 'block',
+                                    mx: 'auto',
                                     borderRadius: '12px',
                                     boxShadow: '0px 4px 24px rgba(0, 0, 0, 0.1)',
                                 }}
