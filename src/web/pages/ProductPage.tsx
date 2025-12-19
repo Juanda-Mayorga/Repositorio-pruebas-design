@@ -87,8 +87,8 @@ export const ProductPage = () => {
                                 <Typography variant="h2" sx={{ mb: 2 }}>
                                     Automatic Quantity Take-Off (QTO)
                                 </Typography>
-                                <Typography variant="body1" sx={{ color: 'text.secondary', mb: 1, fontWeight: 500 }}>
-                                    Get accurate quantities in seconds from your BIM model.
+                                <Typography sx={{ color: 'text.secondary', fontFamily: 'Hind Siliguri', mb: 1 }}>
+                                    <strong>Get accurate quantities in seconds from your BIM model.</strong>
                                 </Typography>
                                 <Typography variant="body1" sx={{ color: 'text.secondary', mb: 4 }}>
                                     MAMBA automates Quantity Take-Off. Remove manual work and errors. Keep quantities up to date for better project control and faster decisions.
