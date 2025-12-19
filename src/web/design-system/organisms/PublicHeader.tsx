@@ -10,6 +10,7 @@ import { HeaderNavLink } from '../atoms/HeaderNavLink';
 import { SolutionDropdown } from '../molecules/SolutionDropdown';
 import { LoginDropdown } from '../molecules/LoginDropdown';
 import { MambaLogo } from '../atoms/MambaLogo';
+import { WebButton } from '../atoms/WebButton';
 
 const languages = [
     { code: 'da', label: 'Dansk' },
@@ -213,36 +214,12 @@ export const PublicHeader = () => {
                         onMouseLeave={() => setShowLoginMenu(false)}
                         sx={{ position: 'relative' }}
                     >
-                        <Box sx={{
-                            backgroundColor: '#7A6EBD',
-                            padding: '8px 16px', // Standardized to match HeaderNavLink vertical padding (8px)
-                            borderRadius: '4px',
-                            cursor: 'pointer',
-                            display: 'flex',
-                            alignItems: 'center',
-                            gap: 0.5,
-                            color: '#FFFFFF',
-                            transition: 'all 0.2s',
-                            '&:hover': {
-                                backgroundColor: '#6B5EA9'
-                            }
-                        }}>
-                            <Typography
-                                component="span"
-                                sx={{
-                                    color: 'inherit',
-                                    ...navLinkFontSize,
-                                    lineHeight: 1
-                                }}
-                            >
-                                {t('publicHeader.login')}
-                            </Typography>
-                            <KeyboardArrowDownIcon fontSize="small" sx={{
-                                transform: showLoginMenu ? 'rotate(180deg)' : 'none',
-                                transition: 'transform 0.2s',
-                                color: 'inherit'
-                            }} />
-                        </Box>
+                        <WebButton
+                            variant="dropdown"
+                            isOpen={showLoginMenu}
+                        >
+                            {t('publicHeader.login')}
+                        </WebButton>
                         {showLoginMenu && (
                             <Box sx={{
                                 position: 'absolute',
@@ -308,11 +285,11 @@ export const PublicHeader = () => {
                             sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', cursor: 'pointer', mb: mobileSolutionOpen ? 2 : 0 }}
                         >
                             <HeaderNavLink active={mobileSolutionOpen} disableHover>
-                                <Typography component="span" sx={{ ...navLinkFontSize, lineHeight: 1, color: mobileSolutionOpen ? '#6b46c1' : '#2F2F32' }}>
+                                <Typography component="span" sx={{ ...navLinkFontSize, lineHeight: 1, color: mobileSolutionOpen ? '#7A6EBD' : '#2F2F32' }}>
                                     {t('publicHeader.solution')}
                                 </Typography>
                             </HeaderNavLink>
-                            <KeyboardArrowDownIcon sx={{ transform: mobileSolutionOpen ? 'rotate(180deg)' : 'none', transition: 'transform 0.2s', color: mobileSolutionOpen ? '#6b46c1' : '#2F2F32' }} />
+                            <KeyboardArrowDownIcon sx={{ transform: mobileSolutionOpen ? 'rotate(180deg)' : 'none', transition: 'transform 0.2s', color: mobileSolutionOpen ? '#7A6EBD' : '#2F2F32' }} />
                         </Box>
                         <Collapse in={mobileSolutionOpen} timeout="auto" unmountOnExit>
                             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
@@ -358,25 +335,14 @@ export const PublicHeader = () => {
 
                     {/* Login Accordion (Moved from bottom) */}
                     <Box>
-                        <Box
+                        <WebButton
+                            variant="dropdown"
+                            isOpen={showLoginMenu}
+                            fullWidth
                             onClick={() => setShowLoginMenu(!showLoginMenu)}
-                            sx={{
-                                display: 'flex',
-                                alignItems: 'center',
-                                justifyContent: 'space-between',
-                                cursor: 'pointer',
-                                bgcolor: '#7A6EBD',
-                                p: '8px 16px',
-                                borderRadius: 1,
-                                color: '#FFFFFF',
-                                transition: 'background-color 0.2s'
-                            }}
                         >
-                            <Typography sx={{ fontWeight: 500, fontFamily: '"Hind Siliguri", sans-serif' }}>
-                                {t('publicHeader.login')}
-                            </Typography>
-                            <KeyboardArrowDownIcon sx={{ transform: showLoginMenu ? 'rotate(180deg)' : 'none', transition: 'transform 0.2s', color: '#FFFFFF' }} />
-                        </Box>
+                            {t('publicHeader.login')}
+                        </WebButton>
                         {/* We reuse the LogicDropdown Logic or similar listing.
                             Since LoginDropdown is a popup component, for mobile we might want a simple list like Solution
                             or we can just reuse the component if it fits, but usually accordions are better.

@@ -79,7 +79,7 @@ export const getWebTheme = (mode: PaletteMode) => {
                     paper: '#F3F4F6',
                 },
                 text: {
-                    secondary: '#5C528E',
+                    secondary: '#7A6EBD',
                     body: '#797979',
                 },
                 border: {
@@ -87,8 +87,8 @@ export const getWebTheme = (mode: PaletteMode) => {
                     secondary: '#FDD550',
                 },
                 action: {
-                    primary: '#8A7BD4', // mambaPrimary.main
-                    primaryHover: '#7367B1', // mambaPrimary.dark
+                    primary: '#7A6EBD',
+                    primaryHover: '#6B5EA9', // Slightly darker for hover
                 },
             },
         },
@@ -113,7 +113,7 @@ export const getWebTheme = (mode: PaletteMode) => {
             h2: {
                 fontFamily: '"Inter", "Hind Siliguri", sans-serif',
                 fontWeight: 500,
-                color: '#5C528E',
+                color: '#7A6EBD',
                 lineHeight: 1.3,
                 fontSize: '24px',
                 '@media (min-width:600px)': {
@@ -132,7 +132,7 @@ export const getWebTheme = (mode: PaletteMode) => {
             subtitle1: {
                 fontFamily: '"Hind Siliguri", "Inter", sans-serif',
                 fontWeight: 400,
-                color: '#5C528E', // text.secondary
+                color: '#7A6EBD', // text.secondary
                 fontSize: '16px', // Default (mobile)
                 '@media (min-width:1200px)': { // lg breakpoint
                     fontSize: '20px',

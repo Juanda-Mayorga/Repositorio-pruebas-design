@@ -21,7 +21,7 @@ export const HeaderNavLink = ({ children, selected = false, active = false, disa
                 cursor: 'pointer',
                 padding: '8px',
                 borderRadius: '4px',
-                color: selected ? '#6B46C1' : '#2F2F32',
+                color: selected ? '#7A6EBD' : '#2F2F32',
                 backgroundColor: active ? '#F4F4F7' : 'transparent',
                 display: 'flex',
                 alignItems: 'center',

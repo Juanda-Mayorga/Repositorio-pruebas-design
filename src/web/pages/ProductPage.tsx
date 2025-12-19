@@ -93,17 +93,15 @@ export const ProductPage = () => {
                                 <Typography variant="body1" sx={{ color: 'text.secondary', mb: 4 }}>
                                     MAMBA automates Quantity Take-Off. Remove manual work and errors. Keep quantities up to date for better project control and faster decisions.
                                 </Typography>
-                                <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap' }}>
-                                    <WebButton
-                                        variant="contained"
-                                        sx={{
-                                            bgcolor: '#7367B1',
-                                            '&:hover': { bgcolor: '#5E5494' }
-                                        }}
-                                    >
-                                        Try it for free
-                                    </WebButton>
-                                </Box>
+                                <WebButton
+                                    variant="contained"
+                                    sx={{
+                                        width: '100%',
+                                        maxWidth: '480px'
+                                    }}
+                                >
+                                    Try it for free
+                                </WebButton>
                             </Box>
                         </Box>
 
@@ -178,7 +176,13 @@ export const ProductPage = () => {
                             <Typography sx={{ color: 'text.secondary', fontFamily: 'Hind Siliguri', mb: 3 }}>
                                 <strong>Reduce waste and costs</strong> with predictive model analysis. Improve efficiency and minimize environmental impact.
                             </Typography>
-                            <WebButton variant="contained">
+                            <WebButton
+                                variant="contained"
+                                sx={{
+                                    width: '100%',
+                                    maxWidth: '480px'
+                                }}
+                            >
                                 View plans and prices
                             </WebButton>
                         </Grid>
