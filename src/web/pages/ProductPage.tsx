@@ -84,7 +84,7 @@ export const ProductPage = () => {
 
                             {/* Hero Content Area (Right) */}
                             <Box sx={{ flex: 1, p: { xs: 3, md: 6 }, textAlign: 'left' }}>
-                                <Typography variant="h3" sx={{ color: 'text.secondary', mb: 2 }}>
+                                <Typography variant="h2" sx={{ mb: 2 }}>
                                     Automatic Quantity Take-Off (QTO)
                                 </Typography>
                                 <Typography variant="body1" sx={{ color: 'text.secondary', mb: 1, fontWeight: 500 }}>
