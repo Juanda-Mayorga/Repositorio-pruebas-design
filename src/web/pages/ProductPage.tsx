@@ -86,12 +86,8 @@ export const ProductPage = () => {
                                 <Typography variant="h2" sx={{ mb: 2 }}>
                                     {t('productPage.heroTitle')}
                                 </Typography>
-                                <Typography sx={{ color: 'text.secondary', fontFamily: 'Hind Siliguri', mb: 1 }}>
-                                    <strong>{t('productPage.heroHighlight')}</strong>
-                                </Typography>
-                                <Typography variant="body1" sx={{ color: 'text.secondary', mb: 4, whiteSpace: 'pre-line' }}>
-                                    {t('productPage.heroDescription')}
-                                </Typography>
+                                <Typography sx={{ color: 'text.secondary', fontFamily: 'Hind Siliguri', mb: 1 }} dangerouslySetInnerHTML={{ __html: t('productPage.heroHighlight') }} />
+                                <Typography variant="body1" sx={{ color: 'text.secondary', mb: 4, whiteSpace: 'pre-line' }} dangerouslySetInnerHTML={{ __html: t('productPage.heroDescription') }} />
                                 <WebButton
                                     variant="contained"
                                     sx={{

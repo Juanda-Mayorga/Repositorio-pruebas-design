@@ -220,19 +220,19 @@
         "subtitle": "Cada función está diseñada para ahorrarte tiempo, reducir errores y escalar tu flujo de trabajo",
         "heroTitle": "Mediciones Automáticas (QTO)",
         "heroHighlight": "Extrae cantidades exactas de tu modelo en segundos.",
-        "heroDescription": "Olvídate de las tareas repetitivas y manuales. MAMBA procesa la geometría de tu proyecto para generar mediciones dinámicas que se actualizan automáticamente ante cualquier cambio de diseño.",
+        "heroDescription": "Olvídate de las tareas repetitivas y manuales. MAMBA procesa la geometría de tu proyecto para generar <strong>mediciones dinámicas</strong> que se actualizan automáticamente ante cualquier cambio de diseño.",
         "heroCta": "Pruébalo gratis",
         "costEstimating": {
             "title": "Estimación de Costes",
-            "description": "Vincula directamente las mediciones de tu modelo con tus bases de precios. Esta integración te permite generar presupuestos precisos de forma inmediata, ayudándote a evaluar el impacto financiero de cada decisión desde las fases iniciales."
+            "description": "Vincula directamente las mediciones de tu modelo con tus bases de precios. Esta integración te permite generar <strong>presupuestos precisos</strong> de forma inmediata, ayudándote a evaluar el impacto financiero de cada decisión desde las fases iniciales."
         },
         "modelAudit": {
             "title": "Auditoría Automática del Modelo",
-            "description": "Mediante reglas automáticas, MAMBA verifica la correcta definición del modelo BIM, detectando incoherencias y errores de información.\nRefuerza la calidad y consistencia de los datos del proyecto."
+            "description": "Mediante reglas automáticas, MAMBA verifica la correcta definición del modelo BIM, detectando incoherencias y errores de información.\nRefuerza la <strong>calidad y consistencia</strong> de los datos del proyecto."
         },
         "wasteCalculation": {
             "title": "Cálculo Automático de Residuos",
-            "description": "Determina el volumen de residuos asociado a cada elemento constructivo partiendo de los datos de tu modelo. MAMBA te facilita el cumplimiento de la normativa ambiental y optimiza la logística de recursos, permitiéndote realizar proyectos más eficientes y responsables con el entorno.",
+            "description": "Determina el volumen de residuos asociado a cada elemento constructivo partiendo de los datos de tu modelo. MAMBA te facilita el cumplimiento de la normativa ambiental y optimiza la logística de recursos, permitiéndote realizar <strong>proyectos más eficientes y responsables</strong> con el entorno.",
             "cta": "Ver planes y precios"
         }
     }

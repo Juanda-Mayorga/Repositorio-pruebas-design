@@ -53,9 +53,16 @@ export const WebProductCard = ({
                     <Typography variant="h2" sx={{ mb: 2 }}>
                         {title}
                     </Typography>
-                    <Typography sx={{ color: 'text.secondary', fontFamily: 'Hind Siliguri', mb: children ? 3 : 0 }}>
-                        {description}
-                    </Typography>
+                    {typeof description === 'string' ? (
+                        <Typography
+                            sx={{ color: 'text.secondary', fontFamily: 'Hind Siliguri', mb: children ? 3 : 0, whiteSpace: 'pre-line' }}
+                            dangerouslySetInnerHTML={{ __html: description }}
+                        />
+                    ) : (
+                        <Typography sx={{ color: 'text.secondary', fontFamily: 'Hind Siliguri', mb: children ? 3 : 0 }}>
+                            {description}
+                        </Typography>
+                    )}
                     {children}
                 </Grid>
 
