@@ -47,13 +47,15 @@ export const ProductPage = () => {
 
                 <Container maxWidth="lg" sx={{ px: { xs: 2, md: 4 }, pb: 10 }}>
                     {/* Hero Section */}
+                    {/* Hero Section */}
+                    {/* Hero Section */}
                     <Box
                         sx={{
                             position: 'relative',
                             bgcolor: theme.palette.web.background.paper,
                             borderRadius: '16px',
                             overflow: 'hidden',
-                            mb: 12,
+                            mb: { xs: 4, md: 12 },
                             display: 'flex',
                             flexDirection: { xs: 'column', md: 'row' },
                             alignItems: 'center',
@@ -99,8 +101,18 @@ export const ProductPage = () => {
                                 <Typography variant="h2" sx={{ mb: 2 }}>
                                     {t('productPage.heroTitle')}
                                 </Typography>
-                                <Typography sx={{ color: 'text.secondary', fontFamily: 'Hind Siliguri', mb: 1 }} dangerouslySetInnerHTML={{ __html: t('productPage.heroHighlight') }} />
-                                <Typography variant="body1" sx={{ color: 'text.secondary', mb: 4, whiteSpace: 'pre-line' }} dangerouslySetInnerHTML={{ __html: t('productPage.heroDescription') }} />
+                                <Typography sx={{
+                                    color: 'text.secondary',
+                                    fontFamily: 'Hind Siliguri',
+                                    mb: 1,
+                                    fontSize: { xs: '16px', md: '18px' }
+                                }} dangerouslySetInnerHTML={{ __html: t('productPage.heroHighlight') }} />
+                                <Typography variant="body1" sx={{
+                                    color: 'text.secondary',
+                                    mb: 4,
+                                    whiteSpace: 'pre-line',
+                                    fontSize: { xs: '16px', md: '18px' }
+                                }} dangerouslySetInnerHTML={{ __html: t('productPage.heroDescription') }} />
                                 <WebButton
                                     variant="contained"
                                     sx={{
@@ -122,7 +134,7 @@ export const ProductPage = () => {
                         description={t('productPage.costEstimating.description')}
                         image="/src/assets/feature-cost-estimating.png"
                         imageAlt={t('productPage.costEstimating.title')}
-                        sx={{ mb: 8 }}
+                        sx={{ mb: { xs: 4, md: 8 } }}
                     />
 
                     {/* Feature 2: Automatic Model Audit */}
@@ -132,7 +144,7 @@ export const ProductPage = () => {
                         description={t('productPage.modelAudit.description')}
                         image="/src/assets/feature-model-audit.png"
                         imageAlt={t('productPage.modelAudit.title')}
-                        sx={{ mb: 8 }}
+                        sx={{ mb: { xs: 4, md: 8 } }}
                     />
 
                     {/* Feature 3: Automatic Waste Calculation */}

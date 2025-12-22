@@ -55,11 +55,22 @@ export const WebProductCard = ({
                     </Typography>
                     {typeof description === 'string' ? (
                         <Typography
-                            sx={{ color: 'text.secondary', fontFamily: 'Hind Siliguri', mb: children ? 3 : 0, whiteSpace: 'pre-line' }}
+                            sx={{
+                                color: 'text.secondary',
+                                fontFamily: 'Hind Siliguri',
+                                mb: children ? 3 : 0,
+                                whiteSpace: 'pre-line',
+                                fontSize: { xs: '16px', md: '18px' }
+                            }}
                             dangerouslySetInnerHTML={{ __html: description }}
                         />
                     ) : (
-                        <Typography sx={{ color: 'text.secondary', fontFamily: 'Hind Siliguri', mb: children ? 3 : 0 }}>
+                        <Typography sx={{
+                            color: 'text.secondary',
+                            fontFamily: 'Hind Siliguri',
+                            mb: children ? 3 : 0,
+                            fontSize: { xs: '16px', md: '18px' }
+                        }}>
                             {description}
                         </Typography>
                     )}
