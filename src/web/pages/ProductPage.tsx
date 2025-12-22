@@ -89,7 +89,7 @@ export const ProductPage = () => {
                                 <Typography sx={{ color: 'text.secondary', fontFamily: 'Hind Siliguri', mb: 1 }}>
                                     <strong>{t('productPage.heroHighlight')}</strong>
                                 </Typography>
-                                <Typography variant="body1" sx={{ color: 'text.secondary', mb: 4 }}>
+                                <Typography variant="body1" sx={{ color: 'text.secondary', mb: 4, whiteSpace: 'pre-line' }}>
                                     {t('productPage.heroDescription')}
                                 </Typography>
                                 <WebButton
@@ -120,13 +120,7 @@ export const ProductPage = () => {
                     <WebProductCard
                         title={t('productPage.modelAudit.title')}
                         imagePosition="left"
-                        description={
-                            <>
-                                <strong>{t('productPage.modelAudit.highlight')}</strong>
-                                <br /><br />
-                                {t('productPage.modelAudit.description')}
-                            </>
-                        }
+                        description={t('productPage.modelAudit.description')}
                         image="/src/assets/feature-model-audit.png"
                         imageAlt={t('productPage.modelAudit.title')}
                         sx={{ mb: 8 }}
