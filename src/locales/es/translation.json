@@ -219,12 +219,12 @@
         "title": "Características del Producto",
         "subtitle": "Cada función está diseñada para ahorrarte tiempo, reducir errores y escalar tu flujo de trabajo",
         "heroTitle": "Mediciones Automáticas (QTO)",
-        "heroHighlight": "Obtén mediciones precisas en segundos desde tu modelo BIM.",
-        "heroDescription": "MAMBA extrae y actualiza automáticamente las cantidades directamente desde el modelo BIM, eliminando errores y tareas manuales.\nObtén datos fiables en tiempo real para controlar el proyecto y tomar decisiones con total confianza.",
+        "heroHighlight": "Extrae cantidades exactas de tu modelo en segundos.",
+        "heroDescription": "Olvídate de las tareas repetitivas y manuales. MAMBA procesa la geometría de tu proyecto para generar mediciones dinámicas que se actualizan automáticamente ante cualquier cambio de diseño.",
         "heroCta": "Pruébalo gratis",
         "costEstimating": {
             "title": "Estimación de Costes",
-            "description": "Vincula automáticamente las mediciones del modelo BIM a tus bases de datos de costes y genera presupuestos al instante. Anticípate al impacto económico del proyecto y toma decisiones financieras con datos fiables desde el primer día."
+            "description": "Vincula directamente las mediciones de tu modelo con tus bases de precios. Esta integración te permite generar presupuestos precisos de forma inmediata, ayudándote a evaluar el impacto financiero de cada decisión desde las fases iniciales."
         },
         "modelAudit": {
             "title": "Auditoría Automática del Modelo",
@@ -232,7 +232,7 @@
         },
         "wasteCalculation": {
             "title": "Cálculo Automático de Residuos",
-            "description": "A partir de las cantidades del modelo BIM, MAMBA calcula automáticamente los residuos asociados a cada elemento constructivo.\nFacilita el control ambiental del proyecto y la optimización de costes y recursos durante todo el ciclo de vida.",
+            "description": "Determina el volumen de residuos asociado a cada elemento constructivo partiendo de los datos de tu modelo. MAMBA te facilita el cumplimiento de la normativa ambiental y optimiza la logística de recursos, permitiéndote realizar proyectos más eficientes y responsables con el entorno.",
             "cta": "Ver planes y precios"
         }
     }
