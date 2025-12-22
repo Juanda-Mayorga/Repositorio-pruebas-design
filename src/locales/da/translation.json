@@ -207,22 +207,21 @@
     "productPage": {
         "title": "Produktfunktioner",
         "subtitle": "Hver funktion er designet til at spare dig tid, reducere fejl og skalere din arbejdsgang",
-        "heroTitle": "Automatisk mængdeberegning (QTO)",
-        "heroHighlight": "Få nøjagtige mængder på få sekunder fra din BIM-model.",
-        "heroDescription": "MAMBA automatiserer mængdeberegning. Fjern manuelt arbejde og fejl. Hold mængderne opdateret for bedre projektkontrol og hurtigere beslutninger.",
+        "heroTitle": "Automatisk Mængdeberegning (QTO)",
+        "heroHighlight": "Utræk nøjagtige mængder fra din model på sekunder.",
+        "heroDescription": "Glem gentagne og manuelle opgaver. MAMBA behandler geometrien i dit projekt for at generere <strong>dynamiske målinger</strong>, der opdateres automatisk ved enhver designændring.",
         "heroCta": "Prøv det gratis",
         "costEstimating": {
-            "title": "Omkostningsberegning",
-            "description": "Forbind dine mængdeberegninger til dine omkostningsdatabaser og få øjeblikkelige budgetoverslag. Træf informerede økonomiske beslutninger fra projektets tidligste faser."
+            "title": "Omkostningsestimering",
+            "description": "Link direkte målingerne fra din model med dine prisdatabaser. Denne integration giver dig mulighed for at generere <strong>præcise budgetter</strong> med det samme, hvilket hjælper dig med at vurdere den økonomiske konsekvens af hver beslutning fra de indledende faser."
         },
         "modelAudit": {
-            "title": "Automatisk modelaudit",
-            "highlight": "Opdag problemer i din model tidligt og oprethold pålideligheden af dine BIM-data.",
-            "description": "MAMBA kontrollerer automatisk din BIM-model for fejl og regelkonflikter, hvilket hjælper dig med at reducere omearbejde og sikre datakonsistens."
+            "title": "Automatisk Modelrevision",
+            "description": "Ved hjælp af automatiske regler verificerer MAMBA den korrekte definition af BIM-modellen og opdager inkonsekvenser og informationsfejl.\nStyrk <strong>kvaliteten og konsistensen</strong> af projektdataene."
         },
         "wasteCalculation": {
-            "title": "Automatisk affaldsberegning",
-            "description": "Reducer affald og omkostninger med prædiktiv modelanalyse. Forbedr effektiviteten og minimer miljøpåvirkningen.",
+            "title": "Automatisk Affaldsberegning",
+            "description": "Bestem affaldsvolumenet forbundet med hvert bygningselement ud fra dine modeldata. MAMBA letter overholdelsen af miljøbestemmelser og optimerer ressourcelogistikken, hvilket giver dig mulighed for at gennemføre <strong>mere effektive og ansvarlige projekter</strong> over for miljøet.",
             "cta": "Se planer og priser"
         }
     }

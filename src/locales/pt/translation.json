@@ -205,24 +205,23 @@
         "copyright": "Copyright @2024 BiMMate"
     },
     "productPage": {
-        "title": "Funcionalidades do Produto",
-        "subtitle": "Cada função foi concebida para lhe poupar tempo, reduzir erros e escalar o seu fluxo de trabalho",
+        "title": "Características do Produto",
+        "subtitle": "Cada função é projetada para economizar seu tempo, reduzir erros e escalar seu fluxo de trabalho",
         "heroTitle": "Medições Automáticas (QTO)",
-        "heroHighlight": "Obtenha quantidades precisas em segundos a partir do seu modelo BIM.",
-        "heroDescription": "O MAMBA automatiza as medições. Elimine o trabalho manual e os erros. Mantenha as quantidades atualizadas para um melhor controlo do projeto e decisões mais rápidas.",
-        "heroCta": "Experimentar gratuitamente",
+        "heroHighlight": "Extraia quantidades exatas do seu modelo em segundos.",
+        "heroDescription": "Esqueça as tarefas repetitivas e manuais. O MAMBA processa a geometria do seu projeto para gerar <strong>medições dinâmicas</strong> que se atualizam automaticamente diante de qualquer alteração de design.",
+        "heroCta": "Experimente grátis",
         "costEstimating": {
             "title": "Estimativa de Custos",
-            "description": "Associe as suas medições às suas bases de dados de custos e obtenha estimativas orçamentais instantâneas. Tome decisões financeiras informadas desde as fases iniciais do projeto."
+            "description": "Vincule diretamente as medições do seu modelo com suas bases de preços. Esta integração permite gerar <strong>orçamentos precisos</strong> de forma imediata, ajudando a avaliar o impacto financeiro de cada decisão desde as fases iniciais."
         },
         "modelAudit": {
             "title": "Auditoria Automática do Modelo",
-            "highlight": "Detete problemas no seu modelo precocemente e mantenha a fiabilidade dos seus dados BIM.",
-            "description": "O MAMBA verifica automaticamente o seu modelo BIM em busca de erros e conflitos de regras, ajudando-o a reduzir o retrabalho e a garantir a consistência dos dados."
+            "description": "Através de regras automáticas, o MAMBA verifica a correta definição do modelo BIM, detectando incoerências e erros de informação.\nReforce a <strong>qualidade e consistência</strong> dos dados do projeto."
         },
         "wasteCalculation": {
             "title": "Cálculo Automático de Resíduos",
-            "description": "Reduza o desperdício e os custos com a análise preditiva do modelo. Melhore a eficiência e minimize o impacto ambiental.",
+            "description": "Determine o volume de resíduos associado a cada elemento construtivo a partir dos dados do seu modelo. O MAMBA facilita o cumprimento da normativa ambiental e otimiza a logística de recursos, permitindo realizar <strong>projetos mais eficientes e responsáveis</strong> com o meio ambiente.",
             "cta": "Ver planos e preços"
         }
     }

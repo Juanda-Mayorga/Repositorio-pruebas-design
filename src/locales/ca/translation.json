@@ -208,21 +208,20 @@
         "title": "Característiques del Producte",
         "subtitle": "Cada funció està dissenyada per estalviar-te temps, reduir errors i escalar el teu flux de treball",
         "heroTitle": "Amidaments Automàtics (QTO)",
-        "heroHighlight": "Obté amidaments precisos en segons des del teu model BIM.",
-        "heroDescription": "MAMBA automatitza els Amidaments. Elimina el treball manual i els errors. Manté les quantitats actualitzades per a un millor control del projecte i decisions més ràpides.",
+        "heroHighlight": "Extreu quantitats exactes del teu model en segons.",
+        "heroDescription": "Oblida't de les tasques repetitives i manuals. MAMBA processa la geometria del teu projecte per generar <strong>amidaments dinàmics</strong> que s'actualitzen automàticament davant qualsevol canvi de disseny.",
         "heroCta": "Prova-ho gratis",
         "costEstimating": {
             "title": "Estimació de Costos",
-            "description": "Vincula els teus amidaments a les teves bases de dades de costos i obté pressupostos instantanis. Pren decisions financeres informades des de les etapes més primerenques del projecte."
+            "description": "Vincula directament els amidaments del teu model amb les teves bases de preus. Aquesta integració et permet generar <strong>pressupostos precisos</strong> de forma immediata, ajudant-te a avaluar l'impacte financer de cada decisió des de les fases inicials."
         },
         "modelAudit": {
             "title": "Auditoria Automàtica del Model",
-            "highlight": "Detecta problemes en el teu model de manera primerenca i mantén la fiabilitat de les teves dades BIM.",
-            "description": "MAMBA comprova automàticament el teu model BIM a la recerca d'errors i conflictes de regles, ajudant-te a reduir treballs i assegurar la consistencia de les dades."
+            "description": "Mitjançant regles automàtiques, MAMBA verifica la correcta definició del model BIM, detectant incoherències i errors d'informació.\nReforça la <strong>qualitat i consistència</strong> de les dades del projecte."
         },
         "wasteCalculation": {
             "title": "Càlcul Automàtic de Residus",
-            "description": "Redueix residus i costos amb l'anàlisi predictiva del model. Millora l'eficiència i minimitza l'impacte ambiental.",
+            "description": "Determina el volum de residus associat a cada element constructiu partint de les dades del teu model. MAMBA te facilita el compliment de la normativa ambiental i optimitza la logística de recursos, permetent-te realitzar <strong>projectes més eficients i responsables</strong> amb l'entorn.",
             "cta": "Veure plans i preus"
         }
     }

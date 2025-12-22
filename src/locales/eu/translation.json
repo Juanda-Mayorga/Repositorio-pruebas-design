@@ -208,21 +208,20 @@
         "title": "Produktuaren Ezaugarriak",
         "subtitle": "Funtzio bakoitza denbora aurrezteko, akatsak murrizteko eta zure lan-fluxua eskalatzeko diseinatuta dago",
         "heroTitle": "Neurketa Automatikoak (QTO)",
-        "heroHighlight": "Lortu neurketa zehatzak segundotan zure BIM modelotik.",
-        "heroDescription": "MAMBAk neurketak automatizatzen ditu. Kendu eskuzko lana eta akatsak. Mantendu kantitateak eguneratuta proiektua hobeto kontrolatzeko eta erabakiak azkarrago hartzeko.",
+        "heroHighlight": "Atera kantitate zehatzak zure eredutik segundo gutxitan.",
+        "heroDescription": "Ahaztu zeregin errepikakor eta eskuzkoak. MAMBAk zure proiektuaren geometria prozesatzen du <strong>neurketa dinamikoak</strong> sortzeko, diseinu-aldaketa bakoitzarekin automatikoki eguneratzen direnak.",
         "heroCta": "Probatu doan",
         "costEstimating": {
             "title": "Kostuen Estimazioa",
-            "description": "Lotu zure neurketak zure kostuen datu-baseekin eta lortu berehalako aurrekontu-estimazioak. Hartu erabaki finantzario informatuak proiektuaren lehen faseetatik."
+            "description": "Lotu zuzenean zure ereduko neurketak zure prezio-baseekin. Integrazio honek <strong>aurrekontu zehatzak</strong> berehala sortzea ahalbidetzen du, erabaki bakoitzaren finantza-inpaktua hasierako faseetatik ebaluatzen lagunduz."
         },
         "modelAudit": {
-            "title": "Modeloaren Auditoria Automatikoa",
-            "highlight": "Detektatu arazoak zure modeloan garaiz eta mantendu zure BIM datuen fidagarritasuna.",
-            "description": "MAMBAk automatikoki egiaztatzen du zure BIM modeloa akatsen eta arau-konfliktoen bila, berrantolaketa murrizten eta datuen koherentzia ziurtatzen lagunduz."
+            "title": "Ereduaren Auditoria Automatikoa",
+            "description": "Arau automatikoen bidez, MAMBAk BIM ereduaren definizio zuzena egiaztatzen du, inkoherentziak eta informazio-akatsak detektatuz.\nIndartu proiektuaren datuen <strong>kalitatea eta sendotasuna</strong>."
         },
         "wasteCalculation": {
             "title": "Hondakinen Kalkulu Automatikoa",
-            "description": "Murriztu hondakinak eta kostuak modeloaren analisi prediktiboarekin. Hobetu eraginkortasuna eta minimizatu ingurumen-inpaktua.",
+            "description": "Zehaztu elementu eraikitzaile bakoitzarekin lotutako hondakin-bolumena zure ereduko datuetatik abiatuta. MAMBAk ingurumen-araudia betetzen laguntzen dizu eta baliabideen logistika optimizatzen du, ingurunearekin <strong>proiektu eraginkorragoak eta arduratsuagoak</strong> egitea ahalbidetuz.",
             "cta": "Ikusi planak eta prezioak"
         }
     }

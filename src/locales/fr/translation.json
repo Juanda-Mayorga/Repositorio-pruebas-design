@@ -207,23 +207,22 @@
     "productPage": {
         "title": "Caractéristiques du Produit",
         "subtitle": "Chaque fonctionnalité est conçue pour vous faire gagner du temps, réduire les erreurs et faire évoluer votre flux de travail",
-        "heroTitle": "Relevés Quantitatifs Automatiques (QTO)",
-        "heroHighlight": "Obtenez des quantités précises en quelques secondes à partir de votre maquette BIM.",
-        "heroDescription": "MAMBA automatise le Relevé Quantitatif. Éliminez le travail manuel et les erreurs. Gardez les quantités à jour pour un meilleur contrôle du projet et des décisions plus rapides.",
-        "heroCta": "Essayer gratuitement",
+        "heroTitle": "Métrés Automatiques (QTO)",
+        "heroHighlight": "Extrayez des quantités exactes de votre modèle en quelques secondes.",
+        "heroDescription": "Oubliez les tâches répétitives et manuelles. MAMBA traite la géométrie de votre projet pour générer des <strong>métrés dynamiques</strong> qui se mettent à jour automatiquement à chaque changement de conception.",
+        "heroCta": "Essayez gratuitement",
         "costEstimating": {
             "title": "Estimation des Coûts",
-            "description": "Liez vos relevés quantitatifs à vos bases de données de coûts et obtenez instantanément des estimations budgétaires. Prenez des décisions financières éclairées dès les premières phases du projet."
+            "description": "Liez directement les métrés de votre modèle à vos bases de prix. Cette intégration vous permet de générer des <strong>budgets précis</strong> immédiatement, vous aidant à évaluer l'impact financier de chaque décision dès les phases initiales."
         },
         "modelAudit": {
-            "title": "Audit Automatique de Maquette",
-            "highlight": "Détectez les problèmes dans votre maquette dès le début et maintenez la fiabilité de vos données BIM.",
-            "description": "MAMBA vérifie automatiquement votre maquette BIM pour les erreurs et les conflits de règles, vous aidant à réduire les reprises et à assurer la cohérence des données."
+            "title": "Audit Automatique du Modèle",
+            "description": "Grâce à des règles automatiques, MAMBA vérifie la définition correcte du modèle BIM, détectant les incohérences et les erreurs d'information.\nRenforcez la <strong>qualité et la cohérence</strong> des données du projet."
         },
         "wasteCalculation": {
             "title": "Calcul Automatique des Déchets",
-            "description": "Réduisez les déchets et les coûts grâce à l'analyse prédictive du modèle. Améliorez l'efficacité et minimisez l'impact environnemental.",
-            "cta": "Voir les plans et les tarifs"
+            "description": "Déterminez le volume de déchets associé à chaque élément de construction à partir des données de votre modèle. MAMBA facilite le respect de la réglementation environnementale et optimise la logistique des ressources, vous permettant de réaliser des <strong>projets plus efficaces et responsables</strong> envers l'environnement.",
+            "cta": "Voir plans et prix"
         }
     }
 }

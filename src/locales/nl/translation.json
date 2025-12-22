@@ -206,23 +206,22 @@
     },
     "productPage": {
         "title": "Productkenmerken",
-        "subtitle": "Elke functie is ontworpen om u tijd te besparen, fouten te verminderen en uw workflow op te schalen",
+        "subtitle": "Elke functie is ontworpen om tijd te besparen, fouten te verminderen en uw workflow te schalen",
         "heroTitle": "Automatische Hoeveelheidsbepaling (QTO)",
-        "heroHighlight": "Krijg binnen enkele seconden nauwkeurige hoeveelheden uit uw BIM-model.",
-        "heroDescription": "MAMBA automatiseert Hoeveelheidsbepaling. Elimineer handmatig werk en fouten. Houd hoeveelheden up-to-date voor betere projectbeheersing en snellere beslissingen.",
+        "heroHighlight": "Haal exacte hoeveelheden uit uw model in seconden.",
+        "heroDescription": "Vergeet repetitieve en handmatige taken. MAMBA verwerkt de geometrie van uw project om <strong>dynamische metingen</strong> te genereren die automatisch worden bijgewerkt bij elke ontwerpwijziging.",
         "heroCta": "Probeer het gratis",
         "costEstimating": {
             "title": "Kostenraming",
-            "description": "Koppel uw hoeveelheidsbepalingen aan uw kostendatabases en ontvang direct budgetramingen. Neem weloverwogen financiële beslissingen vanaf de vroegste stadia van het project."
+            "description": "Koppel de metingen van uw model direct aan uw prijsdatabases. Deze integratie stelt u in staat om direct <strong>nauwkeurige begrotingen</strong> te genereren, wat u helpt de financiële impact van elke beslissing vanaf de beginfasen te evalueren."
         },
         "modelAudit": {
             "title": "Automatische Modelaudit",
-            "highlight": "Detecteer problemen in uw model in een vroeg stadium en behoud de betrouwbaarheid van uw BIM-data.",
-            "description": "MAMBA controleert uw BIM-model automatisch op fouten en regelconflicten, waardoor u minder hoeft te herstellen en de dataconsistentie gewaarborgd blijft."
+            "description": "Met behulp van automatische regels controleert MAMBA de juiste definitie van het BIM-model en detecteert inconsistenties en informatiefouten.\nVersterk de <strong>kwaliteit en consistentie</strong> van de projectgegevens."
         },
         "wasteCalculation": {
             "title": "Automatische Afvalberekening",
-            "description": "Verminder afval en kosten met voorspellende modelanalyse. Verbeter de efficiëntie en minimaliseer de milieu-impact.",
+            "description": "Bepaal het afvalvolume dat bij elk bouwelement hoort op basis van uw modelgegevens. MAMBA vergemakkelijkt de naleving van milieuregelgeving en optimaliseert de logistiek van middelen, waardoor u <strong>efficiëntere en veratwoorde projecten</strong> voor de omgeving kunt realiseren.",
             "cta": "Bekijk plannen en prijzen"
         }
     }

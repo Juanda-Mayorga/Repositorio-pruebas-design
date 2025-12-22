@@ -213,21 +213,20 @@
         "title": "Product Features",
         "subtitle": "Each feature is designed to save you time, reduce errors, and scale your workflow",
         "heroTitle": "Automatic Quantity Take-Off (QTO)",
-        "heroHighlight": "Get accurate quantities in seconds from your BIM model.",
-        "heroDescription": "MAMBA automates Quantity Take-Off. Remove manual work and errors. Keep quantities up to date for better project control and faster decisions.",
+        "heroHighlight": "Extract exact quantities from your model in seconds.",
+        "heroDescription": "Forget repetitive and manual tasks. MAMBA processes your project geometry to generate <strong>dynamic measurements</strong> that automatically update with any design change.",
         "heroCta": "Try it for free",
         "costEstimating": {
             "title": "Cost Estimating",
-            "description": "Link your quantity take-offs to your cost databases and get instant budget estimates. Make informed financial decisions from the earliest stages of the project."
+            "description": "Directly link your model measurements with your price databases. This integration allows you to generate <strong>accurate budgets</strong> immediately, helping you evaluate the financial impact of every decision from the initial phases."
         },
         "modelAudit": {
             "title": "Automatic Model Audit",
-            "highlight": "Detect problems in your model early and maintain the reliability of your BIM data.",
-            "description": "MAMBA automatically checks your BIM model for errors and rule conflicts, helping you reduce rework and ensure data consistency."
+            "description": "Using automatic rules, MAMBA verifies the correct definition of the BIM model, detecting inconsistencies and information errors.\nReinforce the <strong>quality and consistency</strong> of project data."
         },
         "wasteCalculation": {
             "title": "Automatic Waste Calculation",
-            "description": "Reduce waste and costs with predictive model analysis. Improve efficiency and minimize environmental impact.",
+            "description": "Determine the volume of waste associated with each construction element starting from your model data. MAMBA facilitates compliance with environmental regulations and optimizes resource logistics, allowing you to carry out <strong>projects that are more efficient and responsible</strong> with the environment.",
             "cta": "View plans and prices"
         }
     }

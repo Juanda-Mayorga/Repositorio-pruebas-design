@@ -207,23 +207,22 @@
     "productPage": {
         "title": "Caratteristiche del Prodotto",
         "subtitle": "Ogni funzione è progettata per farti risparmiare tempo, ridurre gli errori e scalare il tuo flusso di lavoro",
-        "heroTitle": "Computo Metrico Automatico (QTO)",
-        "heroHighlight": "Ottieni quantità accurate in pochi secondi dal tuo modello BIM.",
-        "heroDescription": "MAMBA automatizza il Computo Metrico. Elimina il lavoro manuale e gli errori. Mantieni le quantità aggiornate per un migliore controllo del progetto e decisioni più rapide.",
+        "heroTitle": "Misurazioni Automatiche (QTO)",
+        "heroHighlight": "Estrai quantità esatte dal tuo modello in pochi secondi.",
+        "heroDescription": "Dimentica le attività ripetitive e manuali. MAMBA elabora la geometria del tuo progetto per generare <strong>misurazioni dinamiche</strong> che si aggiornano automaticamente a ogni modifica del design.",
         "heroCta": "Provalo gratis",
         "costEstimating": {
             "title": "Stima dei Costi",
-            "description": "Collega i tuoi computi metrici ai tuoi database dei costi e ottieni stime di budget istantanee. Prendi decisioni finanziarie informate sin dalle prime fasi del progetto."
+            "description": "Collega direttamente le misurazioni del tuo modello con i tuoi listini prezzi. Questa integrazione ti permette di generare <strong>preventivi precisi</strong> immediatamente, aiutandoti a valutare l'impatto finanziario di ogni decisione fin dalle fasi iniziali."
         },
         "modelAudit": {
             "title": "Audit Automatico del Modello",
-            "highlight": "Rileva precocemente i problemi nel tuo modello e mantieni l'affidabilità dei tuoi dati BIM.",
-            "description": "MAMBA controlla automaticamente il tuo modello BIM per errori e conflitti di regole, aiutandoti a ridurre le rilavorazioni e a garantire la coerenza dei dati."
+            "description": "Tramite regole automatiche, MAMBA verifica la correta definizione del modello BIM, rilevando incoerenze ed errori di informazione.\nRafforza la <strong>qualità e consistenza</strong> dei dati del progetto."
         },
         "wasteCalculation": {
             "title": "Calcolo Automatico dei Rifiuti",
-            "description": "Riduci i rifiuti e i costi con l'analisi predittiva del modello. Migliora l'efficienza e minimizza l'impatto ambientale.",
-            "cta": "Visualizza piani e prezzi"
+            "description": "Determina il volume di rifiuti associato a ogni elemento costruttivo partendo dai dati del tuo modello. MAMBA ti facilita il rispetto della normativa ambientale e ottimizza la logistica delle risorse, permettendoti di realizzare <strong>progetti più efficienti e responsabili</strong> verso l'ambiente.",
+            "cta": "Vedi piani e prezzi"
         }
     }
 }
