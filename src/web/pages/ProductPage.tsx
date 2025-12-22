@@ -118,7 +118,9 @@ export const ProductPage = () => {
                                     sx={{
                                         width: '100%',
                                         maxWidth: '480px',
-                                        display: 'block',
+                                        display: 'flex',
+                                        justifyContent: 'center',
+                                        alignItems: 'center',
                                         mx: 'auto'
                                     }}
                                 >
@@ -160,7 +162,9 @@ export const ProductPage = () => {
                             sx={{
                                 width: '100%',
                                 maxWidth: '480px',
-                                display: 'block',
+                                display: 'flex',
+                                justifyContent: 'center',
+                                alignItems: 'center',
                                 mx: 'auto'
                             }}
                         >
