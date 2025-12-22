@@ -34,7 +34,7 @@ export const WebProductCard = ({
         >
             <Grid
                 container
-                spacing={8}
+                spacing={{ xs: 3, md: 8 }}
                 sx={{
                     alignItems: 'center',
                     flexDirection: 'row'

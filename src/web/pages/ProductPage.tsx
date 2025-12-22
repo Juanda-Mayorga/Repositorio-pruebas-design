@@ -73,7 +73,7 @@ export const ProductPage = () => {
                         }} />
 
                         <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, width: '100%', position: 'relative', zIndex: 1 }}>
-                            <Box sx={{ flex: 1, p: { xs: 3, md: 6 }, display: 'flex', justifyContent: 'center' }}>
+                            <Box sx={{ flex: 1, p: { xs: 3, md: 6 }, pb: { xs: 0, md: 6 }, display: 'flex', justifyContent: 'center' }}>
                                 <Box
                                     component="img"
                                     src="/src/assets/product-hero-qto.png"
