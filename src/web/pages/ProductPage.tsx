@@ -21,7 +21,13 @@ export const ProductPage = () => {
                         component="h1"
                         sx={{
                             mb: 2,
-                            fontSize: { xs: '32px', lg: '56px' }
+                            fontSize: '32px',
+                            '@media (min-width: 744px)': {
+                                fontSize: '40px'
+                            },
+                            [theme.breakpoints.up('lg')]: {
+                                fontSize: '56px'
+                            }
                         }}
                     >
                         {t('productPage.title')}
@@ -82,7 +88,14 @@ export const ProductPage = () => {
                                 />
                             </Box>
 
-                            <Box sx={{ flex: 1, p: { xs: 3, md: 6 }, textAlign: 'left' }}>
+                            <Box sx={{
+                                flex: 1,
+                                p: { xs: 3, md: 6 },
+                                textAlign: 'left',
+                                width: '100%',
+                                maxWidth: { xs: '420px', md: 'none' },
+                                mx: { xs: 'auto', md: 0 }
+                            }}>
                                 <Typography variant="h2" sx={{ mb: 2 }}>
                                     {t('productPage.heroTitle')}
                                 </Typography>
