@@ -229,5 +229,24 @@
             "description": "Determine the volume of waste associated with each construction element starting from your model data. MAMBA facilitates compliance with environmental regulations and optimizes resource logistics, allowing you to carry out <strong>projects that are more efficient and responsible</strong> with the environment.",
             "cta": "View plans and prices"
         }
+    },
+    "cloudServicesPage": {
+        "hero": {
+            "title": "Cloud Services",
+            "subtitle": "Centralize the management of license, employees, training and projects in a single place"
+        },
+        "licenseControl": {
+            "title": "License control",
+            "description": "Keep full control over your company’s subscription, billing, and license usage through a centralized and intuitive interface",
+            "cta": "See how it works"
+        },
+        "userManagement": {
+            "title": "User Management",
+            "description": "Invite users, assign training, and track progress effortlessly. MAMBA lets administrators manage team members, monitor learning, and ensure everyone stays aligned from a single interface."
+        },
+        "training": {
+            "title": "Training",
+            "description": "Interactive training made simple and engaging. MAMBA offers an intuitive interface where you can follow learning paths built with nodes, track your progress, and stay motivated with gamification."
+        }
     }
 }
