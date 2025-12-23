@@ -37,7 +37,6 @@ export const WebResourceCard: React.FC<WebResourceCardProps> = ({
                     variant="cardTitle"
                     sx={{
                         mb: 2,
-                        color: theme.palette.web.text.secondary
                     }}
                 >
                     {title}

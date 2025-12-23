@@ -181,6 +181,7 @@ export const getWebTheme = (mode: PaletteMode) => {
                 fontFamily: '"Inter", sans-serif',
                 fontWeight: 400,
                 lineHeight: 1.2,
+                color: '#7A6EBD', // Standardized color for all card titles
                 fontSize: '28px', // xxs/xs/sm: 0-1132px (requested 28px for 375 and 744)
                 '@media (min-width:1133px)': { // md
                     fontSize: '28px',
