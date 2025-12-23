@@ -1,4 +1,5 @@
 import { Box, Container, Typography, useTheme } from '@mui/material';
+import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { PublicHeader } from '../design-system/organisms/PublicHeader';
 import { Footer } from '../design-system/organisms/Footer';
@@ -18,7 +19,10 @@ export const ProductPage = () => {
                 <Box sx={{ textAlign: 'center', pt: theme.webLayout.headerSpacing, pb: 6, px: 2 }}>
                     <Typography
                         variant="h1"
-                        component="h1"
+                        component={motion.h1}
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
                         sx={{
                             mb: 2,
                             fontSize: '32px', // xs (375px)
@@ -40,6 +44,10 @@ export const ProductPage = () => {
                     </Typography>
                     <Typography
                         variant="subtitle1"
+                        component={motion.p}
+                        initial={{ opacity: 0, y: -10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
                         sx={{
                             color: 'text.secondary',
                             maxWidth: 600,
@@ -85,7 +93,14 @@ export const ProductPage = () => {
                         }} />
 
                         <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, width: '100%', position: 'relative', zIndex: 1 }}>
-                            <Box sx={{ flex: 1, p: { xs: 3, md: 6 }, pb: { xs: 0, md: 6 }, display: 'flex', justifyContent: 'center' }}>
+                            <Box
+                                component={motion.div}
+                                initial={{ opacity: 0, scale: 0.98, y: 20 }}
+                                whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                                viewport={{ once: true, amount: 0.1 }}
+                                transition={{ duration: 0.8, ease: "easeOut" }}
+                                sx={{ flex: 1, p: { xs: 3, md: 6 }, pb: { xs: 0, md: 6 }, display: 'flex', justifyContent: 'center' }}
+                            >
                                 <Box
                                     component="img"
                                     src="/src/assets/product-hero-qto.png"
@@ -100,6 +115,7 @@ export const ProductPage = () => {
                                 />
                             </Box>
 
+
                             <Box sx={{
                                 flex: 1,
                                 width: '100%',
@@ -108,38 +124,68 @@ export const ProductPage = () => {
                                 display: 'flex',
                                 flexDirection: 'column'
                             }}>
-                                <Box sx={{
-                                    display: 'flex',
-                                    flexDirection: 'column',
-                                    height: '100%',
-                                    justifyContent: 'center',
-                                    textAlign: 'left',
-                                    p: { xs: 3, md: 6 }
-                                }}>
-                                    <Typography variant="h2" sx={{ mb: 3 }}>
-                                        {t('productPage.heroTitle')}
-                                    </Typography>
-                                    <Typography sx={{
-                                        color: 'text.secondary',
-                                        fontFamily: 'Hind Siliguri',
-                                        mb: 3,
-                                        fontSize: { xs: '16px', md: '18px' }
-                                    }} dangerouslySetInnerHTML={{ __html: t('productPage.heroHighlight') }} />
-                                    <Typography variant="body1" sx={{
-                                        color: 'text.secondary',
-                                        mb: 3,
-                                        whiteSpace: 'pre-line',
-                                        fontSize: { xs: '16px', md: '18px' }
-                                    }} dangerouslySetInnerHTML={{ __html: t('productPage.heroDescription') }} />
-                                    <WebButton
-                                        variant="contained"
-                                        sx={{
-                                            width: '100%',
-                                            maxWidth: '480px',
-                                        }}
-                                    >
-                                        {t('productPage.heroCta')}
-                                    </WebButton>
+                                <Box
+                                    component={motion.div}
+                                    initial={{ opacity: 0, x: { xs: 0, md: 30 }, y: { xs: 20, md: 0 } }}
+                                    whileInView={{ opacity: 1, x: 0, y: 0 }}
+                                    viewport={{ once: true, amount: 0.1 }}
+                                    transition={{ duration: 0.8, ease: "easeOut" }}
+                                    sx={{
+                                        display: 'flex',
+                                        flexDirection: 'column',
+                                        height: '100%',
+                                        justifyContent: 'center',
+                                        textAlign: 'left',
+                                        p: { xs: 3, md: 6 }
+                                    }}
+                                >
+                                    <motion.div variants={{
+                                        hidden: { opacity: 0, y: 15 },
+                                        visible: { opacity: 1, y: 0 }
+                                    }} initial="hidden" animate="visible" transition={{ duration: 0.5, delay: 0.4 }}>
+                                        <Typography variant="h2" sx={{ mb: 3 }}>
+                                            {t('productPage.heroTitle')}
+                                        </Typography>
+                                    </motion.div>
+
+                                    <motion.div variants={{
+                                        hidden: { opacity: 0, y: 15 },
+                                        visible: { opacity: 1, y: 0 }
+                                    }} initial="hidden" animate="visible" transition={{ duration: 0.5, delay: 0.5 }}>
+                                        <Typography sx={{
+                                            color: 'text.secondary',
+                                            fontFamily: 'Hind Siliguri',
+                                            mb: 3,
+                                            fontSize: { xs: '16px', md: '18px' }
+                                        }} dangerouslySetInnerHTML={{ __html: t('productPage.heroHighlight') }} />
+                                    </motion.div>
+
+                                    <motion.div variants={{
+                                        hidden: { opacity: 0, y: 15 },
+                                        visible: { opacity: 1, y: 0 }
+                                    }} initial="hidden" animate="visible" transition={{ duration: 0.5, delay: 0.6 }}>
+                                        <Typography variant="body1" sx={{
+                                            color: 'text.secondary',
+                                            mb: 3,
+                                            whiteSpace: 'pre-line',
+                                            fontSize: { xs: '16px', md: '18px' }
+                                        }} dangerouslySetInnerHTML={{ __html: t('productPage.heroDescription') }} />
+                                    </motion.div>
+
+                                    <motion.div variants={{
+                                        hidden: { opacity: 0, y: 15 },
+                                        visible: { opacity: 1, y: 0 }
+                                    }} initial="hidden" animate="visible" transition={{ duration: 0.5, delay: 0.7 }}>
+                                        <WebButton
+                                            variant="contained"
+                                            sx={{
+                                                width: '100%',
+                                                maxWidth: '480px',
+                                            }}
+                                        >
+                                            {t('productPage.heroCta')}
+                                        </WebButton>
+                                    </motion.div>
                                 </Box>
                             </Box>
                         </Box>

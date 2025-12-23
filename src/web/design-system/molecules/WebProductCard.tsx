@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react';
 import { Box, Typography, Grid } from '@mui/material';
+import { motion } from 'framer-motion';
 import type { SxProps, Theme } from '@mui/material';
 
 interface WebProductCardProps {
@@ -43,6 +44,11 @@ export const WebProductCard = ({
                 {/* Content Side */}
                 <Grid
                     size={{ xs: 12, md: 6 }}
+                    component={motion.div}
+                    initial={{ opacity: 0, x: { xs: 0, md: isImageLeft ? 40 : -40 }, y: { xs: 20, md: 0 } }}
+                    whileInView={{ opacity: 1, x: 0, y: 0 }}
+                    viewport={{ once: true, amount: 0.1 }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
                     sx={{
                         order: { xs: 2, md: isImageLeft ? 2 : 1 },
                         maxWidth: { xs: imageMaxWidth, md: 'none' },
@@ -84,6 +90,11 @@ export const WebProductCard = ({
                 {/* Image Side */}
                 <Grid
                     size={{ xs: 12, md: 6 }}
+                    component={motion.div}
+                    initial={{ opacity: 0, scale: 0.98, y: { xs: 20, md: 0 } }}
+                    whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.1 }}
+                    transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
                     sx={{
                         order: { xs: 1, md: isImageLeft ? 1 : 2 }
                     }}
