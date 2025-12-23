@@ -230,6 +230,34 @@ A versatile card component with two variants:
 </ContentCard>
 ```
 
+### [WebProductCard](file:///Users/carolinadomenechreal/Desktop/Prueba/Repositorio-pruebas-design/src/web/design-system/molecules/WebProductCard.tsx)
+
+Tarjeta especializada para mostrar características de producto con soporte para imágenes y animaciones de scroll.
+
+**Props:**
+- `title: string` - Título de la tarjeta
+- `description: ReactNode` - Texto descriptivo (soporta HTML)
+- `image: string` - Ruta de la imagen
+- `imagePosition?: 'left' | 'right'` - Posición de la imagen (default: 'right')
+- `children?: ReactNode` - Slot para Call to Action
+
+**Características:**
+- **Estándar de Espaciado:** 24px entre todos los elementos internos.
+- **Centrado Vertical:** El contenido de texto se centra automáticamente respecto a la imagen.
+- **Animación Scroll Reveal:** Implementa animaciones suaves que se activan al hacer scroll, optimizadas para mobile (fade up) y desktop (lateral).
+- **Tipografía Estandarizada:** Usa automáticamente las variantes `cardTitle` y `cardDescription`.
+
+```tsx
+<WebProductCard
+  title="Título"
+  description="Descripción larga..."
+  image="/path/to/image.png"
+  imagePosition="left"
+>
+  <WebButton variant="contained">Saber más</WebButton>
+</WebProductCard>
+```
+
 ### [SolutionDropdown](file:///Users/carolinadomenechreal/Desktop/Prueba/Repositorio-pruebas-design/src/web/design-system/molecules/SolutionDropdown.tsx)
 
 A dropdown menu component for solution selection, featuring persistent selection states based on the current route.

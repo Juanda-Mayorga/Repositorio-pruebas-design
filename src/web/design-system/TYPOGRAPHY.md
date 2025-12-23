@@ -39,9 +39,26 @@ Se han redefinido los breakpoints del sistema web para alinearse con los requisi
 
 ### Titulares Generales
 
-#### Hero Title (h1)
-**Uso:** Títulos principales de landing pages y secciones hero.
+#### Hero Title (`variant="h1"`)
+**Uso:** Título principal de landing pages y secciones hero.
 *Font: Inter (Medium)*
+
+| Breakpoint | Font Size |
+|------------|-----------|
+| **xs** (375px) | 32px |
+| **sm** (744px) | 40px |
+| **md** (1133px) | 48px |
+| **lg** (1440px) | 56px |
+| **xl** (1920px) | 64px |
+
+#### Subtitle (`variant="subtitle1"`)
+**Uso:** Subtítulos de secciones principales.
+*Font: Hind Siliguri (Regular)*
+
+| Breakpoint | Font Size |
+|------------|-----------|
+| **xs - md** (< 1440px) | 16px |
+| **lg - xl** (>= 1440px) | 20px |
 
 #### Section Title (h2)
 **Uso:** Títulos de secciones principales.

@@ -1,7 +1,9 @@
 import type { ReactNode } from 'react';
-import { Box, Typography, Grid } from '@mui/material';
+import { Box, Typography, Grid, useTheme, useMediaQuery } from '@mui/material';
 import { motion } from 'framer-motion';
 import type { SxProps, Theme } from '@mui/material';
+
+const MotionGrid = motion(Grid);
 
 interface WebProductCardProps {
     title: string;
@@ -14,6 +16,26 @@ interface WebProductCardProps {
     sx?: SxProps<Theme>;
 }
 
+/**
+ * @component WebProductCard
+ * @description
+ * Tarjeta estandarizada para mostrar características de producto. 
+ * Implementa automáticamente la escala tipográfica, el espaciado y las animaciones de scroll.
+ * 
+ * @standards
+ * - **Espaciado:** Siempre 24px (mb: 3) entre Título, Descripción y CTA.
+ * - **Tipografía:** Título usa `variant="cardTitle"` y descripción `variant="cardDescription"`.
+ * - **Animación:** Revelado lateral en Desktop y Vertical en Mobile mediante `framer-motion`.
+ * - **Alineación:** Contenido siempre alineado a la izquierda.
+ * 
+ * @param {string} title - Título de la tarjeta.
+ * @param {ReactNode} description - Texto descriptivo (soporta HTML).
+ * @param {string} image - Ruta de la imagen.
+ * @param {string} [imageAlt] - Texto alternativo para accesibilidad.
+ * @param {'left' | 'right'} [imagePosition='right'] - Posición de la imagen respecto al texto.
+ * @param {number | string} [imageMaxWidth=420] - Ancho máximo de la imagen.
+ * @param {ReactNode} [children] - Slot para botones de Call to Action.
+ */
 export const WebProductCard = ({
     title,
     description,
@@ -24,6 +46,8 @@ export const WebProductCard = ({
     children,
     sx
 }: WebProductCardProps) => {
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down('md'));
     const isImageLeft = imagePosition === 'left';
 
     return (
@@ -42,10 +66,9 @@ export const WebProductCard = ({
                 }}
             >
                 {/* Content Side */}
-                <Grid
+                <MotionGrid
                     size={{ xs: 12, md: 6 }}
-                    component={motion.div}
-                    initial={{ opacity: 0, x: { xs: 0, md: isImageLeft ? 40 : -40 }, y: { xs: 20, md: 0 } }}
+                    initial={{ opacity: 0, x: isMobile ? 0 : (isImageLeft ? 40 : -40), y: isMobile ? 20 : 0 }}
                     whileInView={{ opacity: 1, x: 0, y: 0 }}
                     viewport={{ once: true, amount: 0.1 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
@@ -85,13 +108,12 @@ export const WebProductCard = ({
                         )}
                         {children}
                     </Box>
-                </Grid>
+                </MotionGrid>
 
                 {/* Image Side */}
-                <Grid
+                <MotionGrid
                     size={{ xs: 12, md: 6 }}
-                    component={motion.div}
-                    initial={{ opacity: 0, scale: 0.98, y: { xs: 20, md: 0 } }}
+                    initial={{ opacity: 0, scale: 0.98, y: isMobile ? 20 : 0 }}
                     whileInView={{ opacity: 1, scale: 1, y: 0 }}
                     viewport={{ once: true, amount: 0.1 }}
                     transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
@@ -113,7 +135,7 @@ export const WebProductCard = ({
                             boxShadow: '0px 4px 24px rgba(0, 0, 0, 0.1)',
                         }}
                     />
-                </Grid>
+                </MotionGrid>
             </Grid>
         </Box>
     );

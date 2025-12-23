@@ -69,6 +69,29 @@ Used for major page changes or workflow steps.
     -   **Content Cards:** Extensive use of `ContentCard`. Each resource block (Tips, Community, Docs, Support) lifts up and deepens shadow on hover.
     -   **Buttons:** `WebButton` variants (`outlined` and `soft`) react to hover with background color changes.
 
+---
+
+## Scroll Reveal (Visibility triggers)
+
+Para mejorar el "percepción de valor" y el dinamismo, hemos implementado un sistema de revelado progresivo basado en el scroll del usuario.
+
+### 1. Product Page (`ProductPage.tsx`)
+*Foco en la entrada elegante de características.*
+
+-   **Encabezado:** Fade In + Slide Down (-20px -> 0) al montar el componente.
+-   **Hero:** Animación escalonada (Stagger). La imagen entra con un ligero zoom (`scale: 0.98`), seguida del bloque de texto que se desplaza lateralmente en Desktop.
+
+### 2. Mobile & Tablet UX (Optimización)
+Para evitar que las animaciones se sientan "bruscas" en dispositivos móviles (375px y 744px):
+-   **Dirección:** Se eliminan los deslizamientos laterales largos (`x`), sustituyéndolos por un ligero desplazamiento vertical (`y: 20px`).
+-   **Suavidad:** El escalado inicial se ajusta a `0.98` (en lugar de `0.95`) para una transición fluida.
+-   **Trigger (Viewport):** En mobile, se usa un `amount: 0.1` (10% de visibilidad) para activar la animación antes, compensando el scroll rápido.
+
+### 3. Componentes Reutilizables (`WebProductCard`)
+Las tarjetas implementan el efecto de entrada automáticamente:
+-   **Lógica Espejo:** El contenido entra desde el lado opuesto a la posición de la imagen para crear equilibrio visual.
+-   **Trigger:** Activado por visibilidad real usando `whileInView` de Framer Motion.
+
 ## Technical Implementation
 
 We use **Framer Motion** for complex state transitions and mounting/unmounting animations.

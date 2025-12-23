@@ -1,4 +1,4 @@
-import { Box, Container, Typography, useTheme } from '@mui/material';
+import { Box, Container, Typography, useTheme, useMediaQuery } from '@mui/material';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { PublicHeader } from '../design-system/organisms/PublicHeader';
@@ -6,8 +6,23 @@ import { Footer } from '../design-system/organisms/Footer';
 import { WebButton } from '../design-system/atoms/WebButton';
 import { WebProductCard } from '../design-system/molecules/WebProductCard';
 
+const MotionBox = motion(Box);
+
+/**
+ * @view ProductPage
+ * @description
+ * Página principal de productos de MAMBA. 
+ * 
+ * @design_standards
+ * - **Header Scalability:** El título (h1) y subtítulo implementan una escala responsive 
+ *   agresiva de 5 niveles (375px -> 1920px) para máxima legibilidad.
+ * - **Animations:** Implementa entrada escalonada (stagger) en la sección Hero 
+ *   y revelado por scroll en las tarjetas.
+ * - **Buttons:** Los botones dentro de tarjetas ocupan el 100% del ancho en pantallas grandes (lg+).
+ */
 export const ProductPage = () => {
     const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down('md'));
     const { t } = useTranslation();
 
     return (
@@ -65,8 +80,6 @@ export const ProductPage = () => {
 
                 <Container maxWidth="lg" sx={{ px: { xs: 2, md: 4 }, pb: 10 }}>
                     {/* Hero Section */}
-                    {/* Hero Section */}
-                    {/* Hero Section */}
                     <Box
                         sx={{
                             position: 'relative',
@@ -74,9 +87,6 @@ export const ProductPage = () => {
                             borderRadius: '16px',
                             overflow: 'hidden',
                             mb: { xs: 4, md: 12 },
-                            display: 'flex',
-                            flexDirection: { xs: 'column', md: 'row' },
-                            alignItems: 'center',
                         }}
                     >
                         <Box sx={{
@@ -93,8 +103,7 @@ export const ProductPage = () => {
                         }} />
 
                         <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, width: '100%', position: 'relative', zIndex: 1 }}>
-                            <Box
-                                component={motion.div}
+                            <MotionBox
                                 initial={{ opacity: 0, scale: 0.98, y: 20 }}
                                 whileInView={{ opacity: 1, scale: 1, y: 0 }}
                                 viewport={{ once: true, amount: 0.1 }}
@@ -113,8 +122,7 @@ export const ProductPage = () => {
                                         boxShadow: '0px 4px 24px rgba(0, 0, 0, 0.15)',
                                     }}
                                 />
-                            </Box>
-
+                            </MotionBox>
 
                             <Box sx={{
                                 flex: 1,
@@ -124,9 +132,8 @@ export const ProductPage = () => {
                                 display: 'flex',
                                 flexDirection: 'column'
                             }}>
-                                <Box
-                                    component={motion.div}
-                                    initial={{ opacity: 0, x: { xs: 0, md: 30 }, y: { xs: 20, md: 0 } }}
+                                <MotionBox
+                                    initial={{ opacity: 0, x: isMobile ? 0 : 30, y: isMobile ? 20 : 0 }}
                                     whileInView={{ opacity: 1, x: 0, y: 0 }}
                                     viewport={{ once: true, amount: 0.1 }}
                                     transition={{ duration: 0.8, ease: "easeOut" }}
@@ -186,7 +193,7 @@ export const ProductPage = () => {
                                             {t('productPage.heroCta')}
                                         </WebButton>
                                     </motion.div>
-                                </Box>
+                                </MotionBox>
                             </Box>
                         </Box>
                     </Box>
@@ -228,8 +235,6 @@ export const ProductPage = () => {
                             {t('productPage.wasteCalculation.cta')}
                         </WebButton>
                     </WebProductCard>
-
-
                 </Container>
             </Box>
 
