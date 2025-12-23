@@ -67,7 +67,7 @@ Estas variantes están estandarizadas y se aplican automáticamente a `WebResour
 | Line Height | 1.2 |
 
 **Tamaños Responsive:**
-- **xs (375px - 743px):** 28px
+- **xs (375px - 743px):** 24px
 - **sm (744px - 1132px):** 28px
 - **md (1133px - 1439px):** 28px
 - **lg (1440px - 1919px):** 36px

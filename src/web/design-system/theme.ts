@@ -182,7 +182,10 @@ export const getWebTheme = (mode: PaletteMode) => {
                 fontWeight: 400,
                 lineHeight: 1.2,
                 color: '#7A6EBD', // Standardized color for all card titles
-                fontSize: '28px', // xxs/xs/sm: 0-1132px (requested 28px for 375 and 744)
+                fontSize: '24px', // xxs/xs
+                '@media (min-width:744px)': { // sm
+                    fontSize: '28px',
+                },
                 '@media (min-width:1133px)': { // md
                     fontSize: '28px',
                 },

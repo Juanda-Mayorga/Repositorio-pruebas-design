@@ -162,10 +162,6 @@ export const ProductPage = () => {
                             sx={{
                                 width: '100%',
                                 maxWidth: '480px',
-                                display: 'flex',
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                                mx: 'auto'
                             }}
                         >
                             {t('productPage.wasteCalculation.cta')}

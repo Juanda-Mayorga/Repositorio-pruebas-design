@@ -36,42 +36,49 @@ export const WebProductCard = ({
                 container
                 spacing={{ xs: 3, md: 8 }}
                 sx={{
-                    alignItems: 'center',
-                    flexDirection: 'row'
+                    flexDirection: 'row',
+                    alignItems: 'stretch'
                 }}
             >
                 {/* Content Side */}
                 <Grid
                     size={{ xs: 12, md: 6 }}
                     sx={{
-                        textAlign: 'left',
                         order: { xs: 2, md: isImageLeft ? 2 : 1 },
                         maxWidth: { xs: imageMaxWidth, md: 'none' },
                         mx: { xs: 'auto', md: 0 }
                     }}
                 >
-                    <Typography variant="cardTitle" sx={{ mb: 2 }}>
-                        {title}
-                    </Typography>
-                    {typeof description === 'string' ? (
-                        <Typography
-                            variant="cardDescription"
-                            sx={{
-                                color: 'text.secondary',
-                                mb: children ? 3 : 0,
-                                whiteSpace: 'pre-line'
-                            }}
-                            dangerouslySetInnerHTML={{ __html: description }}
-                        />
-                    ) : (
-                        <Typography variant="cardDescription" sx={{
-                            color: 'text.secondary',
-                            mb: children ? 3 : 0
-                        }}>
-                            {description}
+                    <Box sx={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        height: '100%',
+                        justifyContent: 'center',
+                        textAlign: 'left'
+                    }}>
+                        <Typography variant="cardTitle" sx={{ mb: 3 }}>
+                            {title}
                         </Typography>
-                    )}
-                    {children}
+                        {typeof description === 'string' ? (
+                            <Typography
+                                variant="cardDescription"
+                                sx={{
+                                    color: 'text.secondary',
+                                    mb: children ? 3 : 0,
+                                    whiteSpace: 'pre-line'
+                                }}
+                                dangerouslySetInnerHTML={{ __html: description }}
+                            />
+                        ) : (
+                            <Typography variant="cardDescription" sx={{
+                                color: 'text.secondary',
+                                mb: children ? 3 : 0
+                            }}>
+                                {description}
+                            </Typography>
+                        )}
+                        {children}
+                    </Box>
                 </Grid>
 
                 {/* Image Side */}
