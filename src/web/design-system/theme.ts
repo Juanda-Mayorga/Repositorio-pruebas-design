@@ -47,6 +47,7 @@ declare module '@mui/material/styles' {
     interface Theme {
         webLayout: {
             headerSpacing: {
+                xxs: string;
                 xs: string;
                 sm: string;
                 md: string;
@@ -58,6 +59,7 @@ declare module '@mui/material/styles' {
     interface ThemeOptions {
         webLayout?: {
             headerSpacing?: {
+                xxs?: string;
                 xs?: string;
                 sm?: string;
                 md?: string;
@@ -66,12 +68,48 @@ declare module '@mui/material/styles' {
             };
         };
     }
+
+    interface BreakpointOverrides {
+        xxs: true;
+        xs: true;
+        sm: true;
+        md: true;
+        lg: true;
+        xl: true;
+    }
+
+    interface TypographyVariants {
+        cardTitle: React.CSSProperties;
+        cardDescription: React.CSSProperties;
+    }
+
+    interface TypographyVariantsOptions {
+        cardTitle?: React.CSSProperties;
+        cardDescription?: React.CSSProperties;
+    }
+}
+
+declare module '@mui/material/Typography' {
+    interface TypographyPropsVariantOverrides {
+        cardTitle: true;
+        cardDescription: true;
+    }
 }
 
 export const getWebTheme = (mode: PaletteMode) => {
     const baseTheme = getTheme(mode);
 
     return createTheme(baseTheme, {
+        breakpoints: {
+            values: {
+                xxs: 0,
+                xs: 375,
+                sm: 744,
+                md: 1133,
+                lg: 1440,
+                xl: 1920,
+            },
+        },
         palette: {
             web: {
                 background: {
@@ -94,6 +132,7 @@ export const getWebTheme = (mode: PaletteMode) => {
         },
         webLayout: {
             headerSpacing: {
+                xxs: '14px',
                 xs: '14px',
                 sm: '28px',
                 md: '42px',
@@ -116,16 +155,16 @@ export const getWebTheme = (mode: PaletteMode) => {
                 color: '#7A6EBD',
                 lineHeight: 1.3,
                 fontSize: '24px',
-                '@media (min-width:600px)': {
+                '@media (min-width:744px)': { // sm
                     fontSize: '28px',
                 },
-                '@media (min-width:960px)': {
+                '@media (min-width:1133px)': { // md
                     fontSize: '32px',
                 },
-                '@media (min-width:1280px)': {
+                '@media (min-width:1440px)': { // lg
                     fontSize: '36px',
                 },
-                '@media (min-width:1920px)': {
+                '@media (min-width:1920px)': { // xl
                     fontSize: '40px',
                 },
             },
@@ -133,11 +172,41 @@ export const getWebTheme = (mode: PaletteMode) => {
                 fontFamily: '"Hind Siliguri", "Inter", sans-serif',
                 fontWeight: 400,
                 color: '#7A6EBD', // text.secondary
-                fontSize: '16px', // Default (mobile)
-                '@media (min-width:1200px)': { // lg breakpoint
+                fontSize: '16px', // Default (xxs/xs)
+                '@media (min-width:1440px)': { // lg breakpoint
                     fontSize: '20px',
                 },
-            }
+            },
+            cardTitle: {
+                fontFamily: '"Inter", sans-serif',
+                fontWeight: 400,
+                lineHeight: 1.2,
+                fontSize: '28px', // xxs/xs/sm: 0-1132px (requested 28px for 375 and 744)
+                '@media (min-width:1133px)': { // md
+                    fontSize: '28px',
+                },
+                '@media (min-width:1440px)': { // lg
+                    fontSize: '36px',
+                },
+                '@media (min-width:1920px)': { // xl
+                    fontSize: '40px',
+                },
+            },
+            cardDescription: {
+                fontFamily: '"Hind Siliguri", sans-serif',
+                fontWeight: 400,
+                lineHeight: 1.5,
+                fontSize: '16px', // xxs/xs/sm: 0-1132px
+                '@media (min-width:1133px)': { // md
+                    fontSize: '18px',
+                },
+                '@media (min-width:1440px)': { // lg
+                    fontSize: '18px',
+                },
+                '@media (min-width:1920px)': { // xl
+                    fontSize: '18px',
+                },
+            },
         }
     });
 };

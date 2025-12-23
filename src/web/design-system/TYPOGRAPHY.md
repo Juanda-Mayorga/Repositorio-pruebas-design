@@ -4,15 +4,32 @@
 
 Este documento define el sistema de tipografía para las páginas web públicas de MAMBA.
 
+## Breakpoints del Sistema Web
+
+Se han redefinido los breakpoints del sistema web para alinearse con los requisitos específicos del diseño:
+
+> **Nota:** Se incluye `xxs` para cubrir dispositivos menores a 375px, manteniendo `xs` en el valor solicitado de 375px.
+
+| Nombre | Valor | Dispositivo Típico |
+|--------|-------|-------------------|
+| **xxs** | 0px | Dispositivos muy pequeños |
+| **xs** | 375px | Mobile Standard |
+| **sm** | 744px | Tablet Portrait |
+| **md** | 1133px | Tablet Landscape / Small Laptop |
+| **lg** | 1440px | Desktop Standard |
+| **xl** | 1920px | Large Desktop |
+
+---
+
 ## Familias Tipográficas
 
 ### Inter
-- **Uso:** Títulos principales, encabezados de secciones web
+- **Uso:** Títulos principales, encabezados de secciones, títulos de tarjetas
 - **Pesos:** Medium (500), SemiBold (600)
 - **Características:** Moderna, legible, optimizada para pantallas
 
 ### Hind Siliguri
-- **Uso:** Textos de cuerpo, subtítulos, interfaz de plataforma
+- **Uso:** Textos de cuerpo, descripciones de tarjetas, subtítulos
 - **Pesos:** Regular (400), Medium (500), SemiBold (600)
 - **Características:** Versátil, excelente legibilidad
 
@@ -20,92 +37,70 @@ Este documento define el sistema de tipografía para las páginas web públicas 
 
 ## Escala Tipográfica Web
 
-### Hero Title (h1)
-**Uso:** Títulos principales de landing pages y secciones hero
+### Titulares Generales
+
+#### Hero Title (h1)
+**Uso:** Títulos principales de landing pages y secciones hero.
+*Font: Inter (Medium)*
+
+#### Section Title (h2)
+**Uso:** Títulos de secciones principales.
+*Font: Inter (Medium)*
+
+#### Subsection Title (h3)
+**Uso:** Subtítulos de secciones.
+*Font: Inter (Medium)*
+
+---
+
+### Tipografía de Tarjetas (Cards)
+
+Estas variantes están estandarizadas y se aplican automáticamente a `WebResourceCard`, `WebProductCard` y `WebContactCard`.
+
+#### Card Title (`variant="cardTitle"`)
+**Uso:** Título principal dentro de una tarjeta.
 
 | Propiedad | Valor |
 |-----------|-------|
 | Font Family | Inter |
-| Font Weight | 500 (Medium) |
-| Letter Spacing | 0 |
+| Font Weight | 400 (Regular) |
 | Line Height | 1.2 |
 
 **Tamaños Responsive:**
-- Mobile (< 600px): **32px**
-- Tablet (600-959px): **40px**
-- Laptop (960-1279px): **48px**
-- Desktop (1280-1919px): **56px**
-- Large Desktop (≥ 1920px): **64px**
+- **xs (375px - 743px):** 28px
+- **sm (744px - 1132px):** 28px
+- **md (1133px - 1439px):** 28px
+- **lg (1440px - 1919px):** 36px
+- **xl (≥ 1920px):** 40px
 
-**Ejemplo de uso:**
+#### Card Description (`variant="cardDescription"`)
+**Uso:** Texto descriptivo o cuerpo dentro de una tarjeta.
+
+| Propiedad | Valor |
+|-----------|-------|
+| Font Family | Hind Siliguri |
+| Font Weight | 400 (Regular) |
+| Line Height | 1.5 |
+
+**Tamaños Responsive:**
+- **xs (375px - 743px):** 16px
+- **sm (744px - 1132px):** 16px
+- **md (1133px - 1439px):** 18px
+- **lg (1440px - 1919px):** 18px
+- **xl (≥ 1920px):** 18px
+
+---
+
+## Implementación
+
+Para utilizar estos estilos en nuevos componentes, usa las variantes personalizadas del componente `Typography`:
+
 ```tsx
-<Typography variant="h1">
-  Learn, connect and solve faster
+<Typography variant="cardTitle">
+  Título de la tarjeta
+</Typography>
+
+<Typography variant="cardDescription">
+  Descripción detallada de la tarjeta...
 </Typography>
 ```
-
----
-
-### Section Title (h2)
-**Uso:** Títulos de secciones principales
-
-| Propiedad | Valor |
-|-----------|-------|
-| Font Family | Inter |
-| Font Weight | 600 (SemiBold) |
-| Line Height | 1.3 |
-
-**Tamaños Responsive:**
-- Mobile: **28px**
-- Tablet: **32px**
-- Laptop: **36px**
-- Desktop: **40px**
-- Large Desktop: **48px**
-
----
-
-### Subsection Title (h3)
-**Uso:** Subtítulos de secciones
-
-| Propiedad | Valor |
-|-----------|-------|
-| Font Family | Inter |
-| Font Weight | 600 (SemiBold) |
-| Line Height | 1.4 |
-
-**Tamaños Responsive:**
-- Mobile: **20px**
-- Tablet: **24px**
-- Laptop: **28px**
-- Desktop: **32px**
-- Large Desktop: **36px**
-
----
-
-## Notas de Implementación
-
-### Responsive Strategy
-Todos los tamaños de fuente escalan proporcionalmente según el breakpoint, asegurando legibilidad óptima en todos los dispositivos.
-
-### Gradientes en Texto
-Para títulos con gradiente (como en hero sections), aplicar:
-```tsx
-sx={{
-  background: 'linear-gradient(135deg, #9989EC 0%, #6E659F 50%, #333337 100%)',
-  WebkitBackgroundClip: 'text',
-  WebkitTextFillColor: 'transparent',
-  backgroundClip: 'text',
-}}
-```
-
----
-
-## Breakpoints de Referencia
-
-| Nombre | Valor | Dispositivo Típico |
-|--------|-------|-------------------|
-| xs | 0px | Mobile Portrait |
-| sm | 600px | Mobile Landscape / Tablet Portrait |
-| md | 960px | Tablet Landscape / Laptop |
-| lg | 1280px | Desktop |
-| xl | 1920px | Large Desktop |

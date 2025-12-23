@@ -50,26 +50,23 @@ export const WebProductCard = ({
                         mx: { xs: 'auto', md: 0 }
                     }}
                 >
-                    <Typography variant="h2" sx={{ mb: 2 }}>
+                    <Typography variant="cardTitle" sx={{ mb: 2 }}>
                         {title}
                     </Typography>
                     {typeof description === 'string' ? (
                         <Typography
+                            variant="cardDescription"
                             sx={{
                                 color: 'text.secondary',
-                                fontFamily: 'Hind Siliguri',
                                 mb: children ? 3 : 0,
-                                whiteSpace: 'pre-line',
-                                fontSize: { xs: '16px', md: '18px' }
+                                whiteSpace: 'pre-line'
                             }}
                             dangerouslySetInnerHTML={{ __html: description }}
                         />
                     ) : (
-                        <Typography sx={{
+                        <Typography variant="cardDescription" sx={{
                             color: 'text.secondary',
-                            fontFamily: 'Hind Siliguri',
-                            mb: children ? 3 : 0,
-                            fontSize: { xs: '16px', md: '18px' }
+                            mb: children ? 3 : 0
                         }}>
                             {description}
                         </Typography>

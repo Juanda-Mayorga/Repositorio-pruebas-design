@@ -162,10 +162,11 @@ export const getTheme = (mode: PaletteMode) => createTheme({
     },
     breakpoints: {
         values: {
-            xs: 0,
-            sm: 600,
-            md: 960,
-            lg: 1280,
+            xxs: 0,
+            xs: 375,
+            sm: 744,
+            md: 1133,
+            lg: 1440,
             xl: 1920,
         },
     },
@@ -178,13 +179,13 @@ export const getTheme = (mode: PaletteMode) => createTheme({
             lineHeight: 1.2,
             letterSpacing: 0,
             fontSize: '32px',
-            '@media (min-width:600px)': {
+            '@media (min-width:744px)': {
                 fontSize: '40px',
             },
-            '@media (min-width:960px)': {
+            '@media (min-width:1133px)': {
                 fontSize: '48px',
             },
-            '@media (min-width:1280px)': {
+            '@media (min-width:1440px)': {
                 fontSize: '56px',
             },
             '@media (min-width:1920px)': {
@@ -197,13 +198,13 @@ export const getTheme = (mode: PaletteMode) => createTheme({
             fontWeight: 600,
             lineHeight: 1.3,
             fontSize: '28px',
-            '@media (min-width:600px)': {
+            '@media (min-width:744px)': {
                 fontSize: '32px',
             },
-            '@media (min-width:960px)': {
+            '@media (min-width:1133px)': {
                 fontSize: '36px',
             },
-            '@media (min-width:1280px)': {
+            '@media (min-width:1440px)': {
                 fontSize: '40px',
             },
             '@media (min-width:1920px)': {
@@ -216,13 +217,13 @@ export const getTheme = (mode: PaletteMode) => createTheme({
             fontWeight: 500, // Medium
             lineHeight: 1.4,
             fontSize: '18px', // xs: 375x812
-            '@media (min-width:600px)': {
+            '@media (min-width:744px)': {
                 fontSize: '20px', // sm: 744x1133
             },
-            '@media (min-width:960px)': {
+            '@media (min-width:1133px)': {
                 fontSize: '24px', // md: 1133x744
             },
-            '@media (min-width:1280px)': {
+            '@media (min-width:1440px)': {
                 fontSize: '28px', // lg: 1440x1024
             },
             '@media (min-width:1920px)': {
@@ -235,13 +236,13 @@ export const getTheme = (mode: PaletteMode) => createTheme({
             fontWeight: 500,
             lineHeight: 1.4,
             fontSize: '24px', // Mobile base
-            '@media (min-width:600px)': {
+            '@media (min-width:744px)': {
                 fontSize: '26px',
             },
-            '@media (min-width:960px)': {
+            '@media (min-width:1133px)': {
                 fontSize: '28px',
             },
-            '@media (min-width:1280px)': {
+            '@media (min-width:1440px)': {
                 fontSize: '32px',
             },
         },
@@ -251,13 +252,13 @@ export const getTheme = (mode: PaletteMode) => createTheme({
             fontWeight: 600,
             lineHeight: 1.5,
             fontSize: '16px',
-            '@media (min-width:600px)': {
+            '@media (min-width:744px)': {
                 fontSize: '18px',
             },
-            '@media (min-width:960px)': {
+            '@media (min-width:1133px)': {
                 fontSize: '20px',
             },
-            '@media (min-width:1280px)': {
+            '@media (min-width:1440px)': {
                 fontSize: '22px',
             },
             '@media (min-width:1920px)': {
@@ -270,13 +271,13 @@ export const getTheme = (mode: PaletteMode) => createTheme({
             fontWeight: 600,
             lineHeight: 1.5,
             fontSize: '14px',
-            '@media (min-width:600px)': {
+            '@media (min-width:744px)': {
                 fontSize: '14px',
             },
-            '@media (min-width:960px)': {
+            '@media (min-width:1133px)': {
                 fontSize: '16px',
             },
-            '@media (min-width:1280px)': {
+            '@media (min-width:1440px)': {
                 fontSize: '18px',
             },
             '@media (min-width:1920px)': {
@@ -289,13 +290,13 @@ export const getTheme = (mode: PaletteMode) => createTheme({
             fontWeight: 400,
             lineHeight: 1.4,
             fontSize: '14px', // xs: 375x812
-            '@media (min-width:600px)': {
+            '@media (min-width:744px)': {
                 fontSize: '16px', // sm: 744x1133
             },
-            '@media (min-width:960px)': {
+            '@media (min-width:1133px)': {
                 fontSize: '18px', // md: 1133x744
             },
-            '@media (min-width:1280px)': {
+            '@media (min-width:1440px)': {
                 fontSize: '20px', // lg: 1440x1024
             },
             '@media (min-width:1920px)': {
@@ -305,10 +306,33 @@ export const getTheme = (mode: PaletteMode) => createTheme({
         body2: {
             fontFamily: '"Hind Siliguri", sans-serif',
             fontWeight: 400,
-            lineHeight: 1.5,
+            lineHeight: 1.4,
             fontSize: '12px',
-            '@media (min-width:960px)': {
+            '@media (min-width:744px)': {
                 fontSize: '14px',
+            },
+            '@media (min-width:1133px)': {
+                fontSize: '16px',
+            },
+        },
+        caption: {
+            fontFamily: '"Hind Siliguri", sans-serif',
+            fontWeight: 400,
+            lineHeight: 1.4,
+            fontSize: '10px',
+            '@media (min-width:744px)': {
+                fontSize: '12px',
+            },
+        },
+        overline: {
+            fontFamily: '"Inter", "Hind Siliguri", sans-serif',
+            fontWeight: 600,
+            lineHeight: 1.2,
+            letterSpacing: '1px',
+            textTransform: 'uppercase',
+            fontSize: '10px',
+            '@media (min-width:744px)': {
+                fontSize: '11px',
             },
         },
     },

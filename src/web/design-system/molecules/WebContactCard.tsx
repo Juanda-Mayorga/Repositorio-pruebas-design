@@ -38,14 +38,14 @@ export const WebContactCard = ({
                 '&:last-child': { pb: 0 }
             }}>
                 <Typography
-                    variant="h2"
+                    variant="cardTitle"
                     gutterBottom
                     sx={{ mb: 2 }}
                 >
                     {title}
                 </Typography>
                 <Typography
-                    variant="body1"
+                    variant="cardDescription"
                     sx={{
                         mb: { xs: 4, sm: 4, md: 3 },
                         color: 'text.secondary'

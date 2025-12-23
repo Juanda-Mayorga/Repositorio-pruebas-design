@@ -34,7 +34,7 @@ export const WebResourceCard: React.FC<WebResourceCardProps> = ({
                 p: 3
             }}>
                 <Typography
-                    variant="h3"
+                    variant="cardTitle"
                     sx={{
                         mb: 2,
                         color: theme.palette.web.text.secondary
@@ -43,7 +43,7 @@ export const WebResourceCard: React.FC<WebResourceCardProps> = ({
                     {title}
                 </Typography>
                 <Typography
-                    variant="body1"
+                    variant="cardDescription"
                     sx={{
                         mb: 3,
                         flexGrow: 1,
