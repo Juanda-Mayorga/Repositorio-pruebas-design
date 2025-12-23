@@ -21,12 +21,18 @@ export const ProductPage = () => {
                         component="h1"
                         sx={{
                             mb: 2,
-                            fontSize: '32px',
-                            '@media (min-width: 744px)': {
+                            fontSize: '32px', // xs (375px)
+                            [theme.breakpoints.up('sm')]: { // 744px
                                 fontSize: '40px'
                             },
-                            [theme.breakpoints.up('lg')]: {
+                            [theme.breakpoints.up('md')]: { // 1133px
+                                fontSize: '48px'
+                            },
+                            [theme.breakpoints.up('lg')]: { // 1440px
                                 fontSize: '56px'
+                            },
+                            [theme.breakpoints.up('xl')]: { // 1920px
+                                fontSize: '64px'
                             }
                         }}
                     >
@@ -39,6 +45,10 @@ export const ProductPage = () => {
                             maxWidth: 600,
                             mx: 'auto',
                             textAlign: 'center',
+                            fontSize: '16px', // xs, sm, md (375px, 744px, 1133px)
+                            [theme.breakpoints.up('lg')]: { // 1440px, 1920px
+                                fontSize: '20px'
+                            }
                         }}
                     >
                         {t('productPage.subtitle')}
@@ -92,40 +102,45 @@ export const ProductPage = () => {
 
                             <Box sx={{
                                 flex: 1,
-                                p: { xs: 3, md: 6 },
-                                textAlign: 'left',
                                 width: '100%',
                                 maxWidth: { xs: '420px', md: 'none' },
-                                mx: { xs: 'auto', md: 0 }
+                                mx: { xs: 'auto', md: 0 },
+                                display: 'flex',
+                                flexDirection: 'column'
                             }}>
-                                <Typography variant="h2" sx={{ mb: 2 }}>
-                                    {t('productPage.heroTitle')}
-                                </Typography>
-                                <Typography sx={{
-                                    color: 'text.secondary',
-                                    fontFamily: 'Hind Siliguri',
-                                    mb: 1,
-                                    fontSize: { xs: '16px', md: '18px' }
-                                }} dangerouslySetInnerHTML={{ __html: t('productPage.heroHighlight') }} />
-                                <Typography variant="body1" sx={{
-                                    color: 'text.secondary',
-                                    mb: 4,
-                                    whiteSpace: 'pre-line',
-                                    fontSize: { xs: '16px', md: '18px' }
-                                }} dangerouslySetInnerHTML={{ __html: t('productPage.heroDescription') }} />
-                                <WebButton
-                                    variant="contained"
-                                    sx={{
-                                        width: '100%',
-                                        maxWidth: '480px',
-                                        display: 'flex',
-                                        justifyContent: 'center',
-                                        alignItems: 'center',
-                                        mx: 'auto'
-                                    }}
-                                >
-                                    {t('productPage.heroCta')}
-                                </WebButton>
+                                <Box sx={{
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    height: '100%',
+                                    justifyContent: 'center',
+                                    textAlign: 'left',
+                                    p: { xs: 3, md: 6 }
+                                }}>
+                                    <Typography variant="h2" sx={{ mb: 3 }}>
+                                        {t('productPage.heroTitle')}
+                                    </Typography>
+                                    <Typography sx={{
+                                        color: 'text.secondary',
+                                        fontFamily: 'Hind Siliguri',
+                                        mb: 3,
+                                        fontSize: { xs: '16px', md: '18px' }
+                                    }} dangerouslySetInnerHTML={{ __html: t('productPage.heroHighlight') }} />
+                                    <Typography variant="body1" sx={{
+                                        color: 'text.secondary',
+                                        mb: 3,
+                                        whiteSpace: 'pre-line',
+                                        fontSize: { xs: '16px', md: '18px' }
+                                    }} dangerouslySetInnerHTML={{ __html: t('productPage.heroDescription') }} />
+                                    <WebButton
+                                        variant="contained"
+                                        sx={{
+                                            width: '100%',
+                                            maxWidth: '480px',
+                                        }}
+                                    >
+                                        {t('productPage.heroCta')}
+                                    </WebButton>
+                                </Box>
                             </Box>
                         </Box>
                     </Box>
@@ -161,7 +176,7 @@ export const ProductPage = () => {
                             variant="contained"
                             sx={{
                                 width: '100%',
-                                maxWidth: '480px',
+                                maxWidth: { xs: '480px', lg: 'none' },
                             }}
                         >
                             {t('productPage.wasteCalculation.cta')}
