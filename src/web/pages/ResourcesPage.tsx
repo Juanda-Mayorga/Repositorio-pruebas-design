@@ -7,6 +7,17 @@ import TelegramIcon from '@mui/icons-material/Telegram';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import { useTranslation } from 'react-i18next';
 
+
+/**
+ * @view ResourcesPage
+ * @description
+ * Página de recursos de MAMBA. Presenta una sección de tarjetas con enlaces rápidos.
+ * 
+ * @standards
+ * - **Layout:** Usa un Container 'lg' con fondo de papel y bordes redondeados (radius: 4).
+ * - **Cards:** Implementa `WebResourceCard` con bordes superiores temáticos (Primary/Secondary).
+ * - **Background:** Incluye una imagen decorativa 'wave-background' con opacidad suave (0.6).
+ */
 export const ResourcesPage = () => {
     const { t } = useTranslation();
     const theme = useTheme();

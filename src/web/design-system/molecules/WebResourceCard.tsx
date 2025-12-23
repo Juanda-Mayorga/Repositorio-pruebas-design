@@ -8,6 +8,17 @@ interface WebResourceCardProps {
     children: React.ReactNode;
 }
 
+/**
+ * @component WebResourceCard
+ * @description
+ * Tarjeta para la página de recursos. Incluye un borde superior coloreado
+ * y soporte para animaciones de hover (scale + shadow).
+ * 
+ * @standards
+ * - **Espaciado:** Padding interno de 24px (p: 3).
+ * - **Tipografía:** Título usa `variant="cardTitle"` y descripción `variant="cardDescription"`.
+ * - **Hover:** Escala a 1.02 y profundiza la sombra.
+ */
 export const WebResourceCard: React.FC<WebResourceCardProps> = ({
     title,
     description,

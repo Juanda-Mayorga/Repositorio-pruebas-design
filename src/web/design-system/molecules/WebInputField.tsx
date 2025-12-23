@@ -19,10 +19,16 @@ export interface WebInputFieldProps {
 }
 
 /**
- * WebInputField - Generic input field component for the web design system
+ * @component WebInputField
+ * @description
+ * Componente de entrada de texto genérico para el sistema de diseño web.
+ * Implementa validaciones automáticas para email (incluyendo dominios desechables)
+ * y números de teléfono.
  * 
- * A styled text input field that follows the web design system specifications.
- * Supports single-line and multi-line inputs with validation states.
+ * @standards
+ * - **Tipografía:** Usa "Hind Siliguri" para inputs y labels.
+ * - **Validación:** Email (regex + blacklisted domains), Tel (min 7 dígitos).
+ * - **UI:** Borde gris suave (#CCCCCC) que se oscurece en hover/focus. Radio de 4px.
  * 
  * @example
  * ```tsx
@@ -33,8 +39,6 @@ export interface WebInputFieldProps {
  *   required
  *   value={email}
  *   onChange={handleChange}
- *   error={!!errors.email}
- *   helperText={errors.email}
  * />
  * ```
  */

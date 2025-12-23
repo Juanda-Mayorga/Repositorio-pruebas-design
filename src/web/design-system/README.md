@@ -8,12 +8,12 @@ The design system follows the Atomic Design methodology:
 
 ```
 web/design-system/
-├── atoms/          # Basic building blocks (currently empty, ready for future components)
-├── molecules/      # Simple combinations of atoms
-├── organisms/      # Complex UI components
+├── atoms/          # Basic building blocks (Buttons, Logos, etc.)
+├── molecules/      # Simple combinations of atoms (Cards, Inputs, etc.)
+├── organisms/      # Complex UI components (Header, Footer)
 ├── theme.ts        # MUI theme configuration with web-specific tokens
 ├── TOKENS.md       # Design tokens documentation
-├── typography.md   # Typography system documentation
+├── TYPOGRAPHY.md   # Typography system documentation
 └── animation.md    # Animation and transition guidelines
 ```
 
@@ -80,57 +80,9 @@ A self-contained logo component that renders the Mamba brand icon and text.
 <MambaLogo onClick={handleClick} sx={{ cursor: 'pointer' }} />
 ```
 
-### [WebInputField](file:///Users/carolinadomenechreal/Desktop/Prueba/Repositorio-pruebas-design/src/web/design-system/atoms/WebInputField.tsx)
+### [WebInputField](file:///Users/carolinadomenechreal/Desktop/Prueba/Repositorio-pruebas-design/src/web/design-system/molecules/WebInputField.tsx)
 
-A generic input field component for web forms with validation support.
-
-**Props:**
-- `label?: string` - Input label
-- `placeholder?: string` - Placeholder text
-- `value?: string` - Input value
-- `onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void` - Change handler
-- `error?: boolean` - Error state
-- `helperText?: string` - Helper/error text
-- `fullWidth?: boolean` - Full width (default: true)
-- `disabled?: boolean` - Disabled state
-- `required?: boolean` - Required field indicator
-- `name?: string` - Input name
-- `id?: string` - Input ID
-- `type?: 'text' | 'email' | 'tel' | 'number'` - Input type (default: 'text')
-- `multiline?: boolean` - Multi-line textarea
-- `rows?: number` - Number of rows for multiline
-
-**Features:**
-- Consistent styling with web design system
-- Validation state support (error/helperText)
-- Single-line and multi-line support
-- Theme-based colors
-- Border radius: 4px
-- Hover and focus states
-
-**Usage:**
-```tsx
-<WebInputField
-  name="email"
-  label="Email"
-  placeholder="name@example.com"
-  type="email"
-  required
-  value={email}
-  onChange={handleChange}
-  error={!!errors.email}
-  helperText={errors.email}
-/>
-
-<WebInputField
-  name="message"
-  multiline
-  rows={4}
-  placeholder="Your message"
-  value={message}
-  onChange={handleChange}
-/>
-```
+A generic input field component for web forms with validation support. Located in `molecules/`.
 
 
 ### [SocialIcons](file:///Users/carolinadomenechreal/Desktop/Prueba/Repositorio-pruebas-design/src/web/design-system/atoms/SocialIcons.tsx)
@@ -188,47 +140,23 @@ A navigation breadcrumb component that shows the current page hierarchy.
 />
 ```
 
-### [ContentCard](file:///Users/carolinadomenechreal/Desktop/Prueba/Repositorio-pruebas-design/src/web/design-system/molecules/ContentCard.tsx)
+### [WebResourceCard](file:///Users/carolinadomenechreal/Desktop/Prueba/Repositorio-pruebas-design/src/web/design-system/molecules/WebResourceCard.tsx)
 
-A versatile card component with two variants:
+Tarjeta diseñada para la página de recursos con borde superior coloreado.
 
-**Props:**
-- `title: string` - Card title
-- `description: string` - Card description text
-- `borderTopColor?: string` - Top border color (resources variant only)
-- `variant?: 'resources' | 'contact'` - Card style variant (default: 'resources')
-- `children: React.ReactNode` - Action buttons or other content
+**Características:**
+- Border-top dinámico basado en props.
+- Tipografía estandarizada: `cardTitle` y `cardDescription`.
+- Animación de hover (scale 1.02 + shadow).
 
-**Variants:**
-- **Resources**: Border-top with color, h3 title, themed text colors
-- **Contact**: No border-top, h2 title, static shadow, min-height 280px
+### [WebContactCard](file:///Users/carolinadomenechreal/Desktop/Prueba/Repositorio-pruebas-design/src/web/design-system/molecules/WebContactCard.tsx)
 
-**Features:**
-- Hover animation (scale + shadow) on both variants
-- Responsive typography
-- Theme-based colors
+Tarjeta diseñada para la página de contacto con altura mínima garantizada.
 
-**Usage:**
-```tsx
-// Resources variant
-<ContentCard
-  title="Card Title"
-  description="Card description"
-  borderTopColor={theme.palette.web.border.primary}
-  variant="resources"
->
-  <Button>Action</Button>
-</ContentCard>
-
-// Contact variant
-<ContentCard
-  title="Card Title"
-  description="Card description"
-  variant="contact"
->
-  <Button>Action</Button>
-</ContentCard>
-```
+**Características:**
+- `minHeight: 280px` para consistencia visual.
+- Layout flexible para acomodar diferentes longitudes de texto.
+- Animación de hover alineada al sistema.
 
 ### [WebProductCard](file:///Users/carolinadomenechreal/Desktop/Prueba/Repositorio-pruebas-design/src/web/design-system/molecules/WebProductCard.tsx)
 
@@ -289,8 +217,6 @@ Used internally within the `PublicHeader` component.
 
 ### [PublicHeader](file:///Users/carolinadomenechreal/Desktop/Prueba/Repositorio-pruebas-design/src/web/design-system/organisms/PublicHeader.tsx)
 
-### [PublicHeader](file:///Users/carolinadomenechreal/Desktop/Prueba/Repositorio-pruebas-design/src/web/design-system/organisms/PublicHeader.tsx)
-
 Navigation header for public pages with logo, menu items, and login button.
 
 **Features:**
@@ -327,20 +253,15 @@ See [theme.ts](file:///Users/carolinadomenechreal/Desktop/Prueba/Repositorio-pru
 The web theme extends the base platform theme with:
 - **Custom palette**: `theme.palette.web.*` for web-specific colors
 - **Typography overrides**: H1 with gradient, H2 with custom styling
-- **Responsive breakpoints**: xs (0), sm (600), md (960), lg (1280), xl (1920)
+- **Responsive breakpoints**: xxs (0), xs (375), sm (744), md (1133), lg (1440), xl (1920)
 
 ## Design Tokens
 
-See [TOKENS.md](file:///Users/carolinadomenechreal/Desktop/Prueba/Repositorio-pruebas-design/src/web/design-system/TOKENS.md) for the complete design tokens documentation, including:
-- Colors (backgrounds, text, borders, actions)
-- Gradients
-- Shadows
-- Typography tokens
-- Layout & Grid tokens
+See [TOKENS.md](file:///Users/carolinadomenechreal/Desktop/Prueba/Repositorio-pruebas-design/src/web/design-system/TOKENS.md) for the complete design tokens documentation.
 
 ## Typography
 
-See [typography.md](file:///Users/carolinadomenechreal/Desktop/Prueba/Repositorio-pruebas-design/src/web/design-system/typography.md) for typography guidelines and usage.
+See [TYPOGRAPHY.md](file:///Users/carolinadomenechreal/Desktop/Prueba/Repositorio-pruebas-design/src/web/design-system/TYPOGRAPHY.md) for typography guidelines and usage.
 
 ## Animations
 

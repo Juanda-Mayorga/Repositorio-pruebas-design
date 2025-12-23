@@ -7,6 +7,17 @@ interface WebContactCardProps {
     children: ReactNode;
 }
 
+/**
+ * @component WebContactCard
+ * @description
+ * Tarjeta para mostrar información de contacto. Implementa el estándar de diseño
+ * con sombras suaves y efecto de elevación al hacer hover.
+ * 
+ * @standards
+ * - **Espaciado:** Padding interno de 24px (p: 3).
+ * - **Tipografía:** Título usa `variant="cardTitle"` y descripción `variant="cardDescription"`.
+ * - **Hover:** Escala a 1.02 para feedback táctil visual.
+ */
 export const WebContactCard = ({
     title,
     description,

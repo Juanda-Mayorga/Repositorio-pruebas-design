@@ -16,7 +16,9 @@ This document outlines the specific design tokens used in the Web application, f
 ### Text
 | Token Name | Value | Usage |
 | :--- | :--- | :--- |
+| `theme.palette.web.text.primary` | `#2F2F32` | Main text color |
 | `theme.palette.web.text.secondary` | `#5C528E` | Subtitles and H2/H3 text color |
+| `theme.palette.web.text.accent` | `#7A6EBD` | Standard card title and accent text color |
 | `theme.palette.web.text.body` | `#797979` | Body text color |
 
 ### Backgrounds & Borders
@@ -76,11 +78,12 @@ This document outlines the specific design tokens used in the Web application, f
 ### Breakpoints
 | Token Name | Value | Description |
 | :--- | :--- | :--- |
-| `layout.breakpoint.xs` | `0px` | Extra small devices (phones) |
-| `layout.breakpoint.sm` | `600px` | Small devices (tablets) |
-| `layout.breakpoint.md` | `960px` | Medium devices (small laptops) |
-| `layout.breakpoint.lg` | `1280px` | Large devices (desktops) |
-| `layout.breakpoint.xl` | `1920px` | Extra large devices (large screens) |
+| `layout.breakpoint.xxs` | `0px` | Smallest devices |
+| `layout.breakpoint.xs` | `375px` | Mobile Standard |
+| `layout.breakpoint.sm` | `744px` | Tablet Portrait |
+| `layout.breakpoint.md` | `1133px` | Tablet Landscape / Small Laptop |
+| `layout.breakpoint.lg` | `1440px` | Desktop Standard |
+| `layout.breakpoint.xl` | `1920px` | Large Desktop |
 
 ### Containers
 | Token Name | Value | Description |
