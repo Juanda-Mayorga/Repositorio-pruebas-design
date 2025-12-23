@@ -28,15 +28,30 @@ export const CloudServicesPage = () => {
         <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', bgcolor: '#FFFFFF', overflowX: 'hidden' }}>
             <PublicHeader />
 
-            <Box component="main" sx={{ flexGrow: 1, pt: theme.webLayout.headerSpacing }}>
+            <Box component="main" sx={{ flexGrow: 1, mt: '64px' }}>
                 {/* Hero Header */}
-                <Container maxWidth="lg" sx={{ textAlign: 'center', mb: { xs: 6, md: 10 } }}>
+                <Box sx={{ textAlign: 'center', pt: theme.webLayout.headerSpacing, pb: 6, px: 2 }}>
                     <MotionTypography
                         variant="h1"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6 }}
-                        sx={{ mb: 2 }}
+                        sx={{
+                            mb: 2,
+                            fontSize: '32px', // xs (375px)
+                            [theme.breakpoints.up('sm')]: { // 744px
+                                fontSize: '40px'
+                            },
+                            [theme.breakpoints.up('md')]: { // 1133px
+                                fontSize: '48px'
+                            },
+                            [theme.breakpoints.up('lg')]: { // 1440px
+                                fontSize: '56px'
+                            },
+                            [theme.breakpoints.up('xl')]: { // 1920px
+                                fontSize: '64px'
+                            }
+                        }}
                     >
                         {t('cloudServicesPage.hero.title')}
                     </MotionTypography>
@@ -45,11 +60,19 @@ export const CloudServicesPage = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.2 }}
-                        sx={{ color: 'text.secondary', maxWidth: 700, mx: 'auto' }}
+                        sx={{
+                            color: 'text.secondary',
+                            maxWidth: 700,
+                            mx: 'auto',
+                            fontSize: '16px', // xs, sm, md (375px, 744px, 1133px)
+                            [theme.breakpoints.up('lg')]: { // 1440px, 1920px
+                                fontSize: '20px'
+                            }
+                        }}
                     >
                         {t('cloudServicesPage.hero.subtitle')}
                     </MotionTypography>
-                </Container>
+                </Box>
 
                 {/* License Control Feature */}
                 <Box sx={{ position: 'relative', mb: { xs: 10, md: 20 }, px: { xs: 2, md: 4 } }}>
