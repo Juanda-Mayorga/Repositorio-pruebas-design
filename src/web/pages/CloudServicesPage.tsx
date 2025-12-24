@@ -103,7 +103,7 @@ export const CloudServicesPage = () => {
                                 description={t('cloudServicesPage.licenseControl.description')}
                                 image="/src/assets/cloud-license.png"
                                 imagePosition="left"
-                                imageMaxWidth={500}
+                                imageMaxWidth={{ xs: 500, lg: 500 }}
                                 variant="contained"
                                 sx={{ position: 'relative', zIndex: 1, p: { xs: 2, md: 0 } }}
                             >
@@ -122,6 +122,7 @@ export const CloudServicesPage = () => {
                         description={t('cloudServicesPage.userManagement.description')}
                         image="/src/assets/cloud-users.png"
                         imagePosition="right"
+                        imageMaxWidth={{ xs: 420, lg: 500 }}
                     />
                 </Box>
 
@@ -131,6 +132,7 @@ export const CloudServicesPage = () => {
                         description={t('cloudServicesPage.training.description')}
                         image="/src/assets/cloud-training.png"
                         imagePosition="left"
+                        imageMaxWidth={{ xs: 420, lg: 500 }}
                     />
                 </Box>
             </Box>

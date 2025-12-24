@@ -11,7 +11,7 @@ interface WebServiceCardProps {
     image: string;
     imageAlt?: string;
     imagePosition?: 'left' | 'right';
-    imageMaxWidth?: number | string;
+    imageMaxWidth?: number | string | any;
     variant?: 'default' | 'contained';
     children?: ReactNode;
     sx?: SxProps<Theme>;
@@ -94,7 +94,7 @@ export const WebServiceCard = ({
                             boxShadow: '0 4px 12px rgba(0,0,0,0.05)',
                         })
                     }}>
-                        <Typography variant="cardTitle" sx={{ mb: 3 }}>
+                        <Typography variant="cardTitle" sx={{ mb: '24px', mt: 0 }}>
                             {title}
                         </Typography>
                         {typeof description === 'string' ? (
@@ -102,7 +102,8 @@ export const WebServiceCard = ({
                                 variant="cardDescription"
                                 sx={{
                                     color: 'text.secondary',
-                                    mb: children ? 3 : 0,
+                                    mb: children ? '24px' : 0,
+                                    mt: 0,
                                     whiteSpace: 'pre-line'
                                 }}
                                 dangerouslySetInnerHTML={{ __html: description }}
@@ -110,7 +111,8 @@ export const WebServiceCard = ({
                         ) : (
                             <Typography variant="cardDescription" sx={{
                                 color: 'text.secondary',
-                                mb: children ? 3 : 0
+                                mb: children ? '24px' : 0,
+                                mt: 0
                             }}>
                                 {description}
                             </Typography>
