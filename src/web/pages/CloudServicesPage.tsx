@@ -1,9 +1,9 @@
-import { Box, Typography, Container, Grid, useTheme } from '@mui/material';
+import { Box, Typography, Container, Grid, useTheme, useMediaQuery } from '@mui/material';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { PublicHeader } from '../design-system/organisms/PublicHeader';
 import { Footer } from '../design-system/organisms/Footer';
-import { WebProductCard } from '../design-system/molecules/WebProductCard';
+import { WebServiceCard } from '../design-system/molecules/WebServiceCard';
 import { WebButton } from '../design-system/atoms/WebButton';
 
 const MotionBox = motion(Box);
@@ -23,6 +23,7 @@ const MotionTypography = motion(Typography);
 export const CloudServicesPage = () => {
     const { t } = useTranslation();
     const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
     return (
         <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', bgcolor: '#FFFFFF', overflowX: 'hidden' }}>
@@ -79,7 +80,7 @@ export const CloudServicesPage = () => {
                     <Container maxWidth="lg">
                         <Box sx={{
                             position: 'relative',
-                            bgcolor: '#FFF9E5', // Light yellow/cream bg
+                            bgcolor: theme.palette.web.background.paper,
                             borderRadius: '40px',
                             p: { xs: 3, md: 8 },
                             display: 'flex',
@@ -88,57 +89,60 @@ export const CloudServicesPage = () => {
                             gap: 4,
                             overflow: 'hidden'
                         }}>
-                            {/* Decorative Shape */}
+                            {/* Wave Background Image */}
                             <Box sx={{
                                 position: 'absolute',
-                                bottom: -50,
-                                right: -50,
-                                width: '300px',
-                                height: '300px',
-                                background: 'linear-gradient(135deg, #FFEAB5 0%, #FFD970 100%)',
-                                borderRadius: '100px',
-                                opacity: 0.6,
-                                zIndex: 0,
-                                transform: 'rotate(15deg)'
+                                bottom: 0,
+                                left: 0,
+                                right: 0,
+                                height: '100%',
+                                backgroundImage: 'url(/src/assets/contact-wave-yellow.png)',
+                                backgroundSize: 'cover',
+                                backgroundPosition: 'center bottom',
+                                backgroundRepeat: 'no-repeat',
+                                opacity: 1,
+                                zIndex: 0
                             }} />
 
                             {/* Screenshot Side */}
                             <Grid container spacing={4} sx={{ position: 'relative', zIndex: 1, alignItems: 'center' }}>
-                                <Grid size={{ xs: 12, md: 7 }}>
+                                <Grid size={{ xs: 12, md: 6 }}>
                                     <MotionBox
-                                        initial={{ opacity: 0, x: -30 }}
-                                        whileInView={{ opacity: 1, x: 0 }}
-                                        viewport={{ once: true }}
-                                        transition={{ duration: 0.8 }}
-                                        sx={{
-                                            borderRadius: '12px',
-                                            overflow: 'hidden',
-                                            boxShadow: '0 20px 40px rgba(0,0,0,0.1)',
-                                            bgcolor: '#FFFFFF'
-                                        }}
+                                        initial={{ opacity: 0, scale: 0.98, y: 20 }}
+                                        whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                                        viewport={{ once: true, amount: 0.1 }}
+                                        transition={{ duration: 0.8, ease: "easeOut" }}
+                                        sx={{ flex: 1, p: { xs: 3, md: 6 }, pb: { xs: 0, md: 6 }, display: 'flex', justifyContent: 'center' }}
                                     >
                                         <Box
                                             component="img"
                                             src="/src/assets/cloud-license.png"
                                             alt="License Control Dashboard"
-                                            sx={{ width: '100%', height: 'auto', display: 'block' }}
+                                            sx={{
+                                                width: '100%',
+                                                maxWidth: '500px',
+                                                height: 'auto',
+                                                borderRadius: '8px',
+                                                boxShadow: '0px 4px 24px rgba(0, 0, 0, 0.15)',
+                                            }}
                                         />
                                     </MotionBox>
                                 </Grid>
 
                                 {/* Content Side */}
-                                <Grid size={{ xs: 12, md: 5 }}>
+                                <Grid size={{ xs: 12, md: 6 }}>
                                     <MotionBox
-                                        initial={{ opacity: 0, x: 30 }}
-                                        whileInView={{ opacity: 1, x: 0 }}
-                                        viewport={{ once: true }}
-                                        transition={{ duration: 0.8 }}
+                                        initial={{ opacity: 0, x: isMobile ? 0 : 30, y: isMobile ? 20 : 0 }}
+                                        whileInView={{ opacity: 1, x: 0, y: 0 }}
+                                        viewport={{ once: true, amount: 0.1 }}
+                                        transition={{ duration: 0.8, ease: "easeOut" }}
                                         sx={{
-                                            bgcolor: '#FFFFFF',
-                                            p: { xs: 4, md: 5 },
-                                            borderRadius: '16px',
-                                            boxShadow: '0 10px 30px rgba(0,0,0,0.05)',
-                                            border: '1px solid #F0F0F0'
+                                            display: 'flex',
+                                            flexDirection: 'column',
+                                            height: '100%',
+                                            justifyContent: 'center',
+                                            textAlign: 'left',
+                                            p: { xs: 3, md: 6 }
                                         }}
                                     >
                                         <Typography variant="cardTitle" sx={{ mb: 2, display: 'block' }}>
@@ -157,9 +161,9 @@ export const CloudServicesPage = () => {
                     </Container>
                 </Box>
 
-                {/* Other Features using WebProductCard */}
+                {/* Other Features using WebServiceCard */}
                 <Box sx={{ mb: { xs: 8, md: 15 } }}>
-                    <WebProductCard
+                    <WebServiceCard
                         title={t('cloudServicesPage.userManagement.title')}
                         description={t('cloudServicesPage.userManagement.description')}
                         image="/src/assets/cloud-users.png"
@@ -168,7 +172,7 @@ export const CloudServicesPage = () => {
                 </Box>
 
                 <Box sx={{ mb: { xs: 10, md: 20 } }}>
-                    <WebProductCard
+                    <WebServiceCard
                         title={t('cloudServicesPage.training.title')}
                         description={t('cloudServicesPage.training.description')}
                         image="/src/assets/cloud-training.png"
