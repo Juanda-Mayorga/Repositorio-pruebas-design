@@ -80,6 +80,7 @@ export const CloudServicesPage = () => {
                             position: 'relative',
                             bgcolor: theme.palette.web.background.paper,
                             borderRadius: '16px',
+                            p: { xs: 2, md: 8 },
                             overflow: 'hidden'
                         }}>
                             {/* Wave Background Image */}
@@ -103,7 +104,8 @@ export const CloudServicesPage = () => {
                                 image="/src/assets/cloud-license.png"
                                 imagePosition="left"
                                 imageMaxWidth={500}
-                                sx={{ position: 'relative', zIndex: 1, p: { xs: 3, md: 6 } }}
+                                variant="contained"
+                                sx={{ position: 'relative', zIndex: 1, p: { xs: 2, md: 0 } }}
                             >
                                 <WebButton variant="contained">
                                     {t('cloudServicesPage.licenseControl.cta')}

@@ -12,6 +12,7 @@ interface WebServiceCardProps {
     imageAlt?: string;
     imagePosition?: 'left' | 'right';
     imageMaxWidth?: number | string;
+    variant?: 'default' | 'contained';
     children?: ReactNode;
     sx?: SxProps<Theme>;
 }
@@ -43,6 +44,7 @@ export const WebServiceCard = ({
     imageAlt = '',
     imagePosition = 'right',
     imageMaxWidth = 420,
+    variant = 'default',
     children,
     sx
 }: WebServiceCardProps) => {
@@ -53,7 +55,7 @@ export const WebServiceCard = ({
     return (
         <Box
             sx={{
-                p: { xs: 4, md: 6 },
+                p: variant === 'contained' ? 0 : { xs: 4, md: 6 },
                 ...sx
             }}
         >
@@ -83,7 +85,14 @@ export const WebServiceCard = ({
                         flexDirection: 'column',
                         height: '100%',
                         justifyContent: 'center',
-                        textAlign: 'left'
+                        textAlign: 'left',
+                        ...(variant === 'contained' && {
+                            bgcolor: '#FFFFFF',
+                            border: '1px solid #E2E8F0',
+                            borderRadius: '8px',
+                            p: { xs: 3, md: 6 },
+                            boxShadow: '0 4px 12px rgba(0,0,0,0.05)',
+                        })
                     }}>
                         <Typography variant="cardTitle" sx={{ mb: 3 }}>
                             {title}
