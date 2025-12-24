@@ -131,8 +131,6 @@ export const WebServiceCard = ({
                             height: 'auto',
                             display: 'block',
                             mx: 'auto',
-                            borderRadius: '12px',
-                            boxShadow: '0px 4px 24px rgba(0, 0, 0, 0.1)',
                         }}
                     />
                 </MotionGrid>

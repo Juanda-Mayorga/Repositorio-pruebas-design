@@ -1,4 +1,4 @@
-import { Box, Typography, Container, Grid, useTheme, useMediaQuery } from '@mui/material';
+import { Box, Typography, Container, useTheme } from '@mui/material';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { PublicHeader } from '../design-system/organisms/PublicHeader';
@@ -6,7 +6,6 @@ import { Footer } from '../design-system/organisms/Footer';
 import { WebServiceCard } from '../design-system/molecules/WebServiceCard';
 import { WebButton } from '../design-system/atoms/WebButton';
 
-const MotionBox = motion(Box);
 const MotionTypography = motion(Typography);
 
 /**
@@ -23,7 +22,6 @@ const MotionTypography = motion(Typography);
 export const CloudServicesPage = () => {
     const { t } = useTranslation();
     const theme = useTheme();
-    const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
     return (
         <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', bgcolor: '#FFFFFF', overflowX: 'hidden' }}>
@@ -76,87 +74,41 @@ export const CloudServicesPage = () => {
                 </Box>
 
                 {/* License Control Feature */}
-                <Box sx={{ position: 'relative', mb: { xs: 10, md: 20 }, px: { xs: 2, md: 4 } }}>
+                <Box sx={{ position: 'relative', px: { xs: 2, md: 4 }, mb: { xs: 4, md: 12 } }}>
                     <Container maxWidth="lg">
                         <Box sx={{
                             position: 'relative',
                             bgcolor: theme.palette.web.background.paper,
-                            borderRadius: '40px',
-                            p: { xs: 3, md: 8 },
-                            display: 'flex',
-                            flexDirection: { xs: 'column', md: 'row' },
-                            alignItems: 'center',
-                            gap: 4,
+                            borderRadius: '16px',
                             overflow: 'hidden'
                         }}>
                             {/* Wave Background Image */}
                             <Box sx={{
                                 position: 'absolute',
+                                top: 0,
                                 bottom: 0,
                                 left: 0,
                                 right: 0,
-                                height: '100%',
                                 backgroundImage: 'url(/src/assets/contact-wave-yellow.png)',
                                 backgroundSize: 'cover',
-                                backgroundPosition: 'center bottom',
+                                backgroundPosition: 'center',
                                 backgroundRepeat: 'no-repeat',
                                 opacity: 1,
                                 zIndex: 0
                             }} />
 
-                            {/* Screenshot Side */}
-                            <Grid container spacing={4} sx={{ position: 'relative', zIndex: 1, alignItems: 'center' }}>
-                                <Grid size={{ xs: 12, md: 6 }}>
-                                    <MotionBox
-                                        initial={{ opacity: 0, scale: 0.98, y: 20 }}
-                                        whileInView={{ opacity: 1, scale: 1, y: 0 }}
-                                        viewport={{ once: true, amount: 0.1 }}
-                                        transition={{ duration: 0.8, ease: "easeOut" }}
-                                        sx={{ flex: 1, p: { xs: 3, md: 6 }, pb: { xs: 0, md: 6 }, display: 'flex', justifyContent: 'center' }}
-                                    >
-                                        <Box
-                                            component="img"
-                                            src="/src/assets/cloud-license.png"
-                                            alt="License Control Dashboard"
-                                            sx={{
-                                                width: '100%',
-                                                maxWidth: '500px',
-                                                height: 'auto',
-                                                borderRadius: '8px',
-                                                boxShadow: '0px 4px 24px rgba(0, 0, 0, 0.15)',
-                                            }}
-                                        />
-                                    </MotionBox>
-                                </Grid>
-
-                                {/* Content Side */}
-                                <Grid size={{ xs: 12, md: 6 }}>
-                                    <MotionBox
-                                        initial={{ opacity: 0, x: isMobile ? 0 : 30, y: isMobile ? 20 : 0 }}
-                                        whileInView={{ opacity: 1, x: 0, y: 0 }}
-                                        viewport={{ once: true, amount: 0.1 }}
-                                        transition={{ duration: 0.8, ease: "easeOut" }}
-                                        sx={{
-                                            display: 'flex',
-                                            flexDirection: 'column',
-                                            height: '100%',
-                                            justifyContent: 'center',
-                                            textAlign: 'left',
-                                            p: { xs: 3, md: 6 }
-                                        }}
-                                    >
-                                        <Typography variant="cardTitle" sx={{ mb: 2, display: 'block' }}>
-                                            {t('cloudServicesPage.licenseControl.title')}
-                                        </Typography>
-                                        <Typography variant="cardDescription" sx={{ mb: 4, display: 'block' }}>
-                                            {t('cloudServicesPage.licenseControl.description')}
-                                        </Typography>
-                                        <WebButton variant="contained">
-                                            {t('cloudServicesPage.licenseControl.cta')}
-                                        </WebButton>
-                                    </MotionBox>
-                                </Grid>
-                            </Grid>
+                            <WebServiceCard
+                                title={t('cloudServicesPage.licenseControl.title')}
+                                description={t('cloudServicesPage.licenseControl.description')}
+                                image="/src/assets/cloud-license.png"
+                                imagePosition="left"
+                                imageMaxWidth={500}
+                                sx={{ position: 'relative', zIndex: 1, p: { xs: 3, md: 6 } }}
+                            >
+                                <WebButton variant="contained">
+                                    {t('cloudServicesPage.licenseControl.cta')}
+                                </WebButton>
+                            </WebServiceCard>
                         </Box>
                     </Container>
                 </Box>
