@@ -73,68 +73,67 @@ export const CloudServicesPage = () => {
                     </MotionTypography>
                 </Box>
 
-                {/* License Control Feature */}
-                <Box sx={{ position: 'relative', px: { xs: 2, md: 4 }, mb: { xs: 4, md: 12 } }}>
-                    <Container maxWidth="lg">
+                {/* Content Section */}
+                <Container maxWidth="lg" sx={{ px: { xs: 2, md: 4 }, pb: 10 }}>
+                    {/* License Control Feature */}
+                    <Box sx={{
+                        position: 'relative',
+                        bgcolor: theme.palette.web.background.paper,
+                        borderRadius: '16px',
+                        overflow: 'hidden',
+                        mb: { xs: 4, md: 12 }
+                    }}>
+                        {/* Wave Background Image */}
                         <Box sx={{
-                            position: 'relative',
-                            bgcolor: theme.palette.web.background.paper,
-                            borderRadius: '16px',
-                            p: { xs: 2, md: 8 },
-                            overflow: 'hidden'
-                        }}>
-                            {/* Wave Background Image */}
-                            <Box sx={{
-                                position: 'absolute',
-                                top: 0,
-                                bottom: 0,
-                                left: 0,
-                                right: 0,
-                                backgroundImage: 'url(/src/assets/contact-wave-yellow.png)',
-                                backgroundSize: 'cover',
-                                backgroundPosition: 'center',
-                                backgroundRepeat: 'no-repeat',
-                                opacity: 1,
-                                zIndex: 0
-                            }} />
+                            position: 'absolute',
+                            top: 0,
+                            bottom: 0,
+                            left: 0,
+                            right: 0,
+                            backgroundImage: 'url(/src/assets/contact-wave-yellow.png)',
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center',
+                            backgroundRepeat: 'no-repeat',
+                            opacity: 1,
+                            zIndex: 0
+                        }} />
 
-                            <WebServiceCard
-                                title={t('cloudServicesPage.licenseControl.title')}
-                                description={t('cloudServicesPage.licenseControl.description')}
-                                image="/src/assets/cloud-license.png"
-                                imagePosition="left"
-                                imageMaxWidth={{ xs: 500, lg: 500 }}
-                                variant="contained"
-                                sx={{ position: 'relative', zIndex: 1, p: { xs: 2, md: 0 } }}
-                            >
-                                <WebButton variant="contained">
-                                    {t('cloudServicesPage.licenseControl.cta')}
-                                </WebButton>
-                            </WebServiceCard>
-                        </Box>
-                    </Container>
-                </Box>
+                        <WebServiceCard
+                            title={t('cloudServicesPage.licenseControl.title')}
+                            description={t('cloudServicesPage.licenseControl.description')}
+                            image="/src/assets/cloud-license.png"
+                            imagePosition="left"
+                            imageMaxWidth={{ xs: 500, lg: 500 }}
+                            variant="contained"
+                            sx={{ position: 'relative', zIndex: 1 }}
+                        >
+                            <WebButton variant="contained">
+                                {t('cloudServicesPage.licenseControl.cta')}
+                            </WebButton>
+                        </WebServiceCard>
+                    </Box>
 
-                {/* Other Features using WebServiceCard */}
-                <Box sx={{ mb: { xs: 8, md: 15 } }}>
-                    <WebServiceCard
-                        title={t('cloudServicesPage.userManagement.title')}
-                        description={t('cloudServicesPage.userManagement.description')}
-                        image="/src/assets/cloud-users.png"
-                        imagePosition="right"
-                        imageMaxWidth={{ xs: 420, lg: 500 }}
-                    />
-                </Box>
+                    {/* Other Features using WebServiceCard */}
+                    <Box sx={{ mb: { xs: 4, md: 8 } }}>
+                        <WebServiceCard
+                            title={t('cloudServicesPage.userManagement.title')}
+                            description={t('cloudServicesPage.userManagement.description')}
+                            image="/src/assets/cloud-users.png"
+                            imagePosition="right"
+                            imageMaxWidth={{ xs: 420, lg: 500 }}
+                        />
+                    </Box>
 
-                <Box sx={{ mb: { xs: 10, md: 20 } }}>
-                    <WebServiceCard
-                        title={t('cloudServicesPage.training.title')}
-                        description={t('cloudServicesPage.training.description')}
-                        image="/src/assets/cloud-training.png"
-                        imagePosition="left"
-                        imageMaxWidth={{ xs: 420, lg: 500 }}
-                    />
-                </Box>
+                    <Box sx={{ mb: 0 }}>
+                        <WebServiceCard
+                            title={t('cloudServicesPage.training.title')}
+                            description={t('cloudServicesPage.training.description')}
+                            image="/src/assets/cloud-training.png"
+                            imagePosition="left"
+                            imageMaxWidth={{ xs: 420, lg: 500 }}
+                        />
+                    </Box>
+                </Container>
             </Box>
 
             <Footer />

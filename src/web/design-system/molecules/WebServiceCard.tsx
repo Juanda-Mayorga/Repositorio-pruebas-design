@@ -76,8 +76,11 @@ export const WebServiceCard = ({
                     transition={{ duration: 0.8, ease: "easeOut" }}
                     sx={{
                         order: { xs: 2, md: isImageLeft ? 2 : 1 },
-                        maxWidth: { xs: imageMaxWidth, md: 'none' },
-                        mx: { xs: 'auto', md: 0 }
+                        maxWidth: typeof imageMaxWidth === 'object'
+                            ? { ...imageMaxWidth, md: 'none' }
+                            : { xs: imageMaxWidth, md: 'none' },
+                        mx: { xs: 'auto', md: 0 },
+                        width: '100%'
                     }}
                 >
                     <Box sx={{
