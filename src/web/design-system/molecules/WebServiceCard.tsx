@@ -64,7 +64,7 @@ export const WebServiceCard = ({
                 spacing={{ xs: 3, md: 8 }}
                 sx={{
                     flexDirection: 'row',
-                    alignItems: 'stretch'
+                    alignItems: 'center' // Shifted from stretch to center to prevent boxes from expanding unnecessarily
                 }}
             >
                 {/* Content Side */}
@@ -83,14 +83,14 @@ export const WebServiceCard = ({
                     <Box sx={{
                         display: 'flex',
                         flexDirection: 'column',
-                        height: '100%',
+                        height: variant === 'contained' ? 'auto' : '100%', // Prevent stretching in contained variant
                         justifyContent: 'center',
                         textAlign: 'left',
                         ...(variant === 'contained' && {
                             bgcolor: '#FFFFFF',
                             border: '1px solid #E2E8F0',
                             borderRadius: '8px',
-                            p: { xs: 3, md: 6 },
+                            p: '24px',
                             boxShadow: '0 4px 12px rgba(0,0,0,0.05)',
                         })
                     }}>
