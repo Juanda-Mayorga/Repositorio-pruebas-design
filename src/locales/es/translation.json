@@ -254,5 +254,162 @@
             "title": "Formación",
             "description": "Formación interactiva simplificada y atractiva. MAMBA ofrece una interfaz intuitiva donde puedes seguir rutas de aprendizaje construidas con nodos, realizar un seguimiento de tu progreso y mantenerte motivado con la gamificación."
         }
+    },
+    "pricing": {
+        "title": "Nuestros planes",
+        "subtitle": "Elige el plan que mejor se adapte a tus necesidades",
+        "carousel": {
+            "trial": {
+                "name": "Trial",
+                "description": "Prueba MAMBA gratis sin tarjeta de crédito",
+                "priceNote": "/14 días",
+                "licenseType": "Licencia única",
+                "buttonText": "Empezar ahora",
+                "features": {
+                    "filtersByCategory": "Filtros por categoría",
+                    "exportFilters": "Exportar filtros",
+                    "costEstimatingRules": "Reglas de estimación de costes",
+                    "exportRules": "Exportar reglas",
+                    "certificationsManagement": "Gestión de certificaciones",
+                    "customReportTemplates": "Plantillas de informes personalizadas"
+                }
+            },
+            "professional": {
+                "name": "Profesional",
+                "description": "Para usuarios avanzados",
+                "priceNote": "/año",
+                "licenseType": "Licencia única",
+                "buttonText": "Elegir Profesional",
+                "features": {
+                    "filtersByCategory": "Filtros por categoría",
+                    "ruleTypesSingle": "Reglas simples",
+                    "certificationsManagement": "Gestión de certificaciones",
+                    "templatesCustom": "Plantillas personalizadas"
+                }
+            },
+            "enterprise": {
+                "name": "Enterprise",
+                "description": "Para grandes equipos",
+                "priceNote": "/año",
+                "licenseType": "Licencias ilimitadas",
+                "buttonText": "Contactar Ventas",
+                "features": {
+                    "filtersByCategory": "Filtros por categoría",
+                    "ruleTypesAll": "Todos los tipos de reglas",
+                    "certificationsManagement": "Gestión de certificaciones",
+                    "templatesCustomSharing": "Compartir plantillas personalizadas"
+                }
+            }
+        },
+        "education": {
+            "title": "¿Eres estudiante o profesor?",
+            "description": "Obtén acceso gratuito a MAMBA para fines educativos.",
+            "cta": "Solicitar licencia educativa"
+        },
+        "featureComparison": {
+            "title": "Comparar características",
+            "subtitle": "Detalle completo de funciones por plan",
+            "feature": "Característica",
+            "trialPro": "Trial / Profesional",
+            "enterprise": "Enterprise",
+            "comingSoon": "Próximamente",
+            "sections": {
+                "filtering": {
+                    "title": "Filtrado",
+                    "features": {
+                        "filtersByCategory": "Filtros por categoría",
+                        "exportFilters": "Exportar filtros",
+                        "sharedFiltersOnline": "Filtros compartidos online"
+                    }
+                },
+                "ruling": {
+                    "title": "Reglas",
+                    "features": {
+                        "auditRules": "Reglas de auditoría",
+                        "costEstimatingRules": "Reglas de estimación de costes",
+                        "clashDetectionRules": "Detección de colisiones",
+                        "planningRules": "Reglas de planificación",
+                        "exportRules": "Exportar reglas",
+                        "sharedRulesEngine": "Motor de reglas compartido",
+                        "informationDeliverySpecification": "Especificación de entrega de información (IDS)"
+                    }
+                },
+                "progressCertification": {
+                    "title": "Certificación de Progreso",
+                    "features": {
+                        "certificationManagement": "Gestión de certificaciones"
+                    }
+                },
+                "communications": {
+                    "title": "Comunicaciones",
+                    "features": {
+                        "chatSystemEmbedded": "Sistema de chat integrado",
+                        "company": "Empresa",
+                        "project": "Proyecto",
+                        "bimCollaborationFormatExchange": "Intercambio BCF",
+                        "bcf": "BCF"
+                    }
+                },
+                "fileSystem": {
+                    "title": "Sistema de Archivos",
+                    "features": {
+                        "templates": "Plantillas",
+                        "defaultDocument": "Documento por defecto",
+                        "customDocument": "Documento personalizado",
+                        "sharedDocument": "Documento compartido",
+                        "saveOptions": "Opciones de guardado",
+                        "saveAutosave": "Autoguardado"
+                    }
+                },
+                "importExport": {
+                    "title": "Importar / Exportar",
+                    "features": {
+                        "bc3Spain": "BC3 (España)",
+                        "s10Peru": "S10 (Perú)",
+                        "gaabGermany": "GAAB (Alemania)",
+                        "spreadsheet": "Hoja de cálculo",
+                        "csv": "CSV",
+                        "database": "Base de datos"
+                    }
+                },
+                "publishing": {
+                    "title": "Publicación",
+                    "features": {
+                        "templates": "Plantillas",
+                        "defaultReport": "Informe por defecto",
+                        "customReports": "Informes personalizados",
+                        "sharedReport": "Informe compartido",
+                        "publish": "Publicar",
+                        "pdf": "PDF",
+                        "docx": "DOCX",
+                        "csv": "CSV"
+                    }
+                },
+                "support": {
+                    "title": "Soporte",
+                    "features": {
+                        "community": "Comunidad",
+                        "whatsApp": "WhatsApp",
+                        "telegram": "Telegram",
+                        "direct": "Directo",
+                        "phone": "Teléfono",
+                        "email": "Email",
+                        "onlineMeeting": "Reunión online",
+                        "integratedChat": "Chat integrado"
+                    }
+                },
+                "training": {
+                    "title": "Formación",
+                    "features": {
+                        "learning": "Aprendizaje",
+                        "onlinePaths": "Rutas online",
+                        "onlineTasks": "Tareas online",
+                        "progressDashboards": "Paneles de progreso",
+                        "own": "Propio",
+                        "shared": "Compartido"
+                    }
+                }
+            }
+        }
     }
 }

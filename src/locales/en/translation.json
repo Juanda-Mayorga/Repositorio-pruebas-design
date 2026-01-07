@@ -248,5 +248,162 @@
             "title": "Training",
             "description": "Interactive training made simple and engaging. MAMBA offers an intuitive interface where you can follow learning paths built with nodes, track your progress, and stay motivated with gamification."
         }
+    },
+    "pricing": {
+        "title": "Our plans",
+        "subtitle": "Choose the plan that best fits your needs",
+        "carousel": {
+            "trial": {
+                "name": "Trial",
+                "description": "Try MAMBA free no credit card required",
+                "priceNote": "/14 days",
+                "licenseType": "Single seat",
+                "buttonText": "Get started",
+                "features": {
+                    "filtersByCategory": "Filters by category",
+                    "exportFilters": "Export filters",
+                    "costEstimatingRules": "Cost estimating rules",
+                    "exportRules": "Export rules",
+                    "certificationsManagement": "Certifications management",
+                    "customReportTemplates": "Custom report templates"
+                }
+            },
+            "professional": {
+                "name": "Professional",
+                "description": "For advanced users",
+                "priceNote": "/year",
+                "licenseType": "Single seat",
+                "buttonText": "Choose Professional",
+                "features": {
+                    "filtersByCategory": "Filters by category",
+                    "ruleTypesSingle": "Single rule types",
+                    "certificationsManagement": "Certifications management",
+                    "templatesCustom": "Custom templates"
+                }
+            },
+            "enterprise": {
+                "name": "Enterprise",
+                "description": "For large teams",
+                "priceNote": "/year",
+                "licenseType": "Unlimited licenses",
+                "buttonText": "Contact Sales",
+                "features": {
+                    "filtersByCategory": "Filters by category",
+                    "ruleTypesAll": "All rule types",
+                    "certificationsManagement": "Certifications management",
+                    "templatesCustomSharing": "Share custom templates"
+                }
+            }
+        },
+        "education": {
+            "title": "Are you a student or teacher?",
+            "description": "Get free access to MAMBA for educational purposes.",
+            "cta": "Request educational license"
+        },
+        "featureComparison": {
+            "title": "Compare features",
+            "subtitle": "Complete feature breakdown by plan",
+            "feature": "Feature",
+            "trialPro": "Trial / Professional",
+            "enterprise": "Enterprise",
+            "comingSoon": "Coming soon",
+            "sections": {
+                "filtering": {
+                    "title": "Filtering",
+                    "features": {
+                        "filtersByCategory": "Filters by category",
+                        "exportFilters": "Export filters",
+                        "sharedFiltersOnline": "Shared filters online"
+                    }
+                },
+                "ruling": {
+                    "title": "Rules",
+                    "features": {
+                        "auditRules": "Audit rules",
+                        "costEstimatingRules": "Cost estimating rules",
+                        "clashDetectionRules": "Clash detection rules",
+                        "planningRules": "Planning rules",
+                        "exportRules": "Export rules",
+                        "sharedRulesEngine": "Shared rules engine",
+                        "informationDeliverySpecification": "Information Delivery Specification (IDS)"
+                    }
+                },
+                "progressCertification": {
+                    "title": "Progress Certification",
+                    "features": {
+                        "certificationManagement": "Certification management"
+                    }
+                },
+                "communications": {
+                    "title": "Communications",
+                    "features": {
+                        "chatSystemEmbedded": "Embedded chat system",
+                        "company": "Company",
+                        "project": "Project",
+                        "bimCollaborationFormatExchange": "BCF Exchange",
+                        "bcf": "BCF"
+                    }
+                },
+                "fileSystem": {
+                    "title": "File System",
+                    "features": {
+                        "templates": "Templates",
+                        "defaultDocument": "Default document",
+                        "customDocument": "Custom document",
+                        "sharedDocument": "Shared document",
+                        "saveOptions": "Save options",
+                        "saveAutosave": "Autosave"
+                    }
+                },
+                "importExport": {
+                    "title": "Import / Export",
+                    "features": {
+                        "bc3Spain": "BC3 (Spain)",
+                        "s10Peru": "S10 (Peru)",
+                        "gaabGermany": "GAAB (Germany)",
+                        "spreadsheet": "Spreadsheet",
+                        "csv": "CSV",
+                        "database": "Database"
+                    }
+                },
+                "publishing": {
+                    "title": "Publishing",
+                    "features": {
+                        "templates": "Templates",
+                        "defaultReport": "Default report",
+                        "customReports": "Custom reports",
+                        "sharedReport": "Shared report",
+                        "publish": "Publish",
+                        "pdf": "PDF",
+                        "docx": "DOCX",
+                        "csv": "CSV"
+                    }
+                },
+                "support": {
+                    "title": "Support",
+                    "features": {
+                        "community": "Community",
+                        "whatsApp": "WhatsApp",
+                        "telegram": "Telegram",
+                        "direct": "Direct",
+                        "phone": "Phone",
+                        "email": "Email",
+                        "onlineMeeting": "Online meeting",
+                        "integratedChat": "Integrated chat"
+                    }
+                },
+                "training": {
+                    "title": "Training",
+                    "features": {
+                        "learning": "Learning",
+                        "onlinePaths": "Online paths",
+                        "onlineTasks": "Online tasks",
+                        "progressDashboards": "Progress dashboards",
+                        "own": "Own",
+                        "shared": "Shared"
+                    }
+                }
+            }
+        }
     }
 }

@@ -13,9 +13,11 @@ export const carouselPlans: PricingPlan[] = [
 		licenseType: 'pricing.carousel.trial.licenseType',
 		features: [
 			{ text: 'pricing.carousel.trial.features.filtersByCategory', included: true },
-			{ text: 'pricing.carousel.trial.features.ruleTypesSingle', included: true },
+			{ text: 'pricing.carousel.trial.features.exportFilters', included: true },
+			{ text: 'pricing.carousel.trial.features.costEstimatingRules', included: true },
+			{ text: 'pricing.carousel.trial.features.exportRules', included: true },
 			{ text: 'pricing.carousel.trial.features.certificationsManagement', included: false },
-			{ text: 'pricing.carousel.trial.features.templatesDefault', included: true },
+			{ text: 'pricing.carousel.trial.features.customReportTemplates', included: false },
 		],
 		popular: false,
 		buttonText: 'pricing.carousel.trial.buttonText',
