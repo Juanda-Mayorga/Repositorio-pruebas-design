@@ -75,15 +75,15 @@ export const ResourcesPage = () => {
                         }} />
 
                         <Grid container spacing={3} sx={{ position: 'relative', zIndex: 1 }}>
-                            {/* Tips & Tricks Card */}
+                            {/* Documentation Card */}
                             <Grid size={{ xs: 12, md: 3 }}>
                                 <WebResourceCard
-                                    title={t('resources.cards.tips.title')}
-                                    description={t('resources.cards.tips.description')}
+                                    title={t('resources.cards.documentation.title')}
+                                    description={t('resources.cards.documentation.description')}
                                     borderTopColor={theme.palette.web.border.primary}
                                 >
                                     <WebButton variant="outlined" fullWidth>
-                                        {t('resources.cards.tips.button')}
+                                        {t('resources.cards.documentation.button')}
                                     </WebButton>
                                 </WebResourceCard>
                             </Grid>
@@ -106,15 +106,15 @@ export const ResourcesPage = () => {
                                 </WebResourceCard>
                             </Grid>
 
-                            {/* Documentation Card */}
+                            {/* Tips & Tricks Card */}
                             <Grid size={{ xs: 12, md: 3 }}>
                                 <WebResourceCard
-                                    title={t('resources.cards.documentation.title')}
-                                    description={t('resources.cards.documentation.description')}
+                                    title={t('resources.cards.tips.title')}
+                                    description={t('resources.cards.tips.description')}
                                     borderTopColor={theme.palette.web.border.primary}
                                 >
                                     <WebButton variant="outlined" fullWidth>
-                                        {t('resources.cards.documentation.button')}
+                                        {t('resources.cards.tips.button')}
                                     </WebButton>
                                 </WebResourceCard>
                             </Grid>
