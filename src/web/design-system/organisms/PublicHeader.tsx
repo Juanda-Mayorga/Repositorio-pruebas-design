@@ -181,6 +181,11 @@ export const PublicHeader = () => {
                             </Box>
                         )}
                     </Box>
+                    <HeaderNavLink>
+                        <Typography component="span" sx={{ ...navLinkFontSize, lineHeight: 1 }}>
+                            {t('publicHeader.pricing')}
+                        </Typography>
+                    </HeaderNavLink>
                     <HeaderNavLink
                         onClick={() => navigate('/resources')}
                         selected={location.pathname === '/resources'}
@@ -195,11 +200,6 @@ export const PublicHeader = () => {
                     >
                         <Typography component="span" sx={{ ...navLinkFontSize, lineHeight: 1 }}>
                             {t('publicHeader.contact')}
-                        </Typography>
-                    </HeaderNavLink>
-                    <HeaderNavLink>
-                        <Typography component="span" sx={{ ...navLinkFontSize, lineHeight: 1 }}>
-                            {t('publicHeader.pricing')}
                         </Typography>
                     </HeaderNavLink>
                 </Box>
@@ -298,6 +298,15 @@ export const PublicHeader = () => {
                         </Collapse>
                     </Box>
 
+                    {/* Pricing */}
+                    <Box>
+                        <HeaderNavLink disableHover>
+                            <Typography component="span" sx={{ ...navLinkFontSize, lineHeight: 1 }}>
+                                {t('publicHeader.pricing')}
+                            </Typography>
+                        </HeaderNavLink>
+                    </Box>
+
                     {/* Resources */}
                     <Box>
                         <HeaderNavLink
@@ -320,15 +329,6 @@ export const PublicHeader = () => {
                         >
                             <Typography component="span" sx={{ ...navLinkFontSize, lineHeight: 1 }}>
                                 {t('publicHeader.contact')}
-                            </Typography>
-                        </HeaderNavLink>
-                    </Box>
-
-                    {/* Pricing */}
-                    <Box>
-                        <HeaderNavLink disableHover>
-                            <Typography component="span" sx={{ ...navLinkFontSize, lineHeight: 1 }}>
-                                {t('publicHeader.pricing')}
                             </Typography>
                         </HeaderNavLink>
                     </Box>
