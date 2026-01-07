@@ -32,9 +32,9 @@ export const CloudServicesPage = () => {
                 <Box sx={{ textAlign: 'center', pt: theme.webLayout.headerSpacing, pb: 6, px: 2 }}>
                     <MotionTypography
                         variant="h1"
-                        initial={{ opacity: 0, y: 20 }}
+                        initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6 }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
                         sx={{
                             mb: 2,
                             fontSize: '32px', // xs (375px)
@@ -56,9 +56,9 @@ export const CloudServicesPage = () => {
                     </MotionTypography>
                     <MotionTypography
                         variant="subtitle1"
-                        initial={{ opacity: 0, y: 20 }}
+                        initial={{ opacity: 0, y: -10 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, delay: 0.2 }}
+                        transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
                         sx={{
                             color: 'text.secondary',
                             maxWidth: 700,
