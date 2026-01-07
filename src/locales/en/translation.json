@@ -161,7 +161,7 @@
             "phoneLabel": "Mobile",
             "phonePlaceholder": "Enter your mobile number",
             "messagePlaceholder": "Write your message here",
-            "requiredFieldsNotice": "All fields marked with * are required",
+            "requiredFieldsNotice": "Los campos marcados con * son obligatorios",
             "submitTooltip": "Complete all required fields to submit the form",
             "terms": "I accept the terms and conditions. I authorize receiving useful information from MAMBA",
             "submit": "Submit",
