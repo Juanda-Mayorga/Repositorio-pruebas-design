@@ -61,10 +61,13 @@ export const WebServiceCard = ({
         >
             <Grid
                 container
-                spacing={{ xs: 3, md: 8 }}
+                spacing={{
+                    xs: variant === 'contained' ? 0 : 3,
+                    md: 8
+                }}
                 sx={{
                     flexDirection: 'row',
-                    alignItems: 'center' // Shifted from stretch to center to prevent boxes from expanding unnecessarily
+                    alignItems: 'center'
                 }}
             >
                 {/* Content Side */}
