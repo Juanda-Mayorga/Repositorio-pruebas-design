@@ -146,8 +146,21 @@ export const getWebTheme = (mode: PaletteMode) => {
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',
-                fontFamily: '"Inter", "Hind Siliguri", sans-serif',
+                fontFamily: '"Inter", sans-serif',
                 fontWeight: 500,
+                fontSize: '40px', // xs: 375
+                '@media (min-width:744px)': { // sm
+                    fontSize: '54px',
+                },
+                '@media (min-width:1133px)': { // md
+                    fontSize: '54px',
+                },
+                '@media (min-width:1440px)': { // lg
+                    fontSize: '64px',
+                },
+                '@media (min-width:1920px)': { // xl
+                    fontSize: '64px',
+                },
             },
             h2: {
                 fontFamily: '"Inter", "Hind Siliguri", sans-serif',

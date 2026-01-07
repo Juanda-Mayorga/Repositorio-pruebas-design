@@ -9,7 +9,7 @@ export const SupportPage = () => {
 
             <Box component="main" sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <Container maxWidth="lg" sx={{ textAlign: 'center' }}>
-                    <Typography variant="h2" component="h1" fontWeight="bold" color="text.primary" gutterBottom>
+                    <Typography variant="h1" component="h1" sx={{ mb: 2 }}>
                         Support
                     </Typography>
                     <Typography variant="h5" color="text.secondary">

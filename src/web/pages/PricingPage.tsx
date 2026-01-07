@@ -66,16 +66,7 @@ export const PricingPage: React.FC = () => {
 
                 {/* Header Section */}
                 <Container maxWidth={false} sx={{ maxWidth: '1440px', pt: 5, pb: 10, textAlign: 'center' }}>
-                    <Typography component="h1" sx={{
-                        fontFamily: 'Inter, sans-serif',
-                        fontWeight: 500,
-                        fontSize: { xs: '40px', md: '64px' },
-                        background: 'linear-gradient(90deg, #9989EC 0%, #6E659F 51.92%, #333337 100%)',
-                        backgroundClip: 'text',
-                        textFillColor: 'transparent',
-                        color: 'transparent',
-                        display: 'inline-block'
-                    }}>
+                    <Typography variant="h1" component="h1">
                         {t('pricing.title')}
                     </Typography>
                 </Container>

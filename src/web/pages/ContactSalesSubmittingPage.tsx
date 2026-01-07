@@ -64,12 +64,7 @@ export const ContactSalesSubmittingPage = () => {
                         <Typography
                             variant="h1"
                             component="h1"
-                            sx={{
-                                mb: 2,
-                                color: '#7367B1', // Mamba Primary Dark
-                                fontFamily: '"Inter", "Hind Siliguri", sans-serif',
-                                fontWeight: 500,
-                            }}
+                            sx={{ mb: 2 }}
                         >
                             {t('contactSales.title')}
                         </Typography>

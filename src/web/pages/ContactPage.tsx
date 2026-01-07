@@ -17,15 +17,7 @@ export const ContactPage = () => {
                     <Typography
                         variant="h1"
                         component="h1"
-                        sx={{
-                            mb: 2,
-                            background: 'linear-gradient(to right, #9989EC, #6E659F, #333337)',
-                            WebkitBackgroundClip: 'text',
-                            WebkitTextFillColor: 'transparent',
-                            backgroundClip: 'text',
-                            fontFamily: '"Inter", "Hind Siliguri", sans-serif',
-                            fontWeight: 500,
-                        }}
+                        sx={{ mb: 2 }}
                     >
                         {t('contact.title')}
                     </Typography>

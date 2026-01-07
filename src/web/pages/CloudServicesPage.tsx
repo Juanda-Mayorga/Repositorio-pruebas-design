@@ -35,22 +35,7 @@ export const CloudServicesPage = () => {
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, ease: "easeOut" }}
-                        sx={{
-                            mb: 2,
-                            fontSize: '32px', // xs (375px)
-                            [theme.breakpoints.up('sm')]: { // 744px
-                                fontSize: '40px'
-                            },
-                            [theme.breakpoints.up('md')]: { // 1133px
-                                fontSize: '48px'
-                            },
-                            [theme.breakpoints.up('lg')]: { // 1440px
-                                fontSize: '56px'
-                            },
-                            [theme.breakpoints.up('xl')]: { // 1920px
-                                fontSize: '64px'
-                            }
-                        }}
+                        sx={{ mb: 2 }}
                     >
                         {t('cloudServicesPage.hero.title')}
                     </MotionTypography>
