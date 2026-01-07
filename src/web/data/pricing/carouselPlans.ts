@@ -1,4 +1,4 @@
-import { PricingPlan } from '../types'
+import type { PricingPlan } from './types'
 
 export const carouselPlans: PricingPlan[] = [
 	{

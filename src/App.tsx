@@ -12,6 +12,7 @@ import { ContactSalesSuccessPage } from './web/pages/ContactSalesSuccessPage'
 import { ProductPage } from './web/pages/ProductPage'
 import { CloudServicesPage } from './web/pages/CloudServicesPage'
 import { SupportPage } from './web/pages/SupportPage'
+import { PricingPage } from './web/pages/PricingPage'
 import { ThemeProvider } from './platform/design-system/theme/ThemeContext'
 
 import { AnimatePresence } from 'framer-motion'
@@ -37,6 +38,7 @@ const AnimatedRoutes = () => {
 					<Route path='/product' element={<ProductPage />} />
 					<Route path='/cloud-services' element={<CloudServicesPage />} />
 					<Route path='/support' element={<SupportPage />} />
+					<Route path='/pricing' element={<PricingPage />} />
 
 					{/* Platform routes - wrapped with MainLayout (Sidebar + Header) */}
 					<Route

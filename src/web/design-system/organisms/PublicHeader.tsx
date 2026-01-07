@@ -181,7 +181,10 @@ export const PublicHeader = () => {
                             </Box>
                         )}
                     </Box>
-                    <HeaderNavLink>
+                    <HeaderNavLink
+                        onClick={() => navigate('/pricing')}
+                        selected={location.pathname === '/pricing'}
+                    >
                         <Typography component="span" sx={{ ...navLinkFontSize, lineHeight: 1 }}>
                             {t('publicHeader.pricing')}
                         </Typography>
@@ -300,7 +303,11 @@ export const PublicHeader = () => {
 
                     {/* Pricing */}
                     <Box>
-                        <HeaderNavLink disableHover>
+                        <HeaderNavLink
+                            onClick={() => { navigate('/pricing'); setMobileMenuOpen(false); }}
+                            selected={location.pathname === '/pricing'}
+                            disableHover
+                        >
                             <Typography component="span" sx={{ ...navLinkFontSize, lineHeight: 1 }}>
                                 {t('publicHeader.pricing')}
                             </Typography>
