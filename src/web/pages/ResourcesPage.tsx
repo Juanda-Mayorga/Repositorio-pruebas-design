@@ -1,6 +1,5 @@
 import { Box, Typography, Grid, Container, useTheme } from '@mui/material';
-import { PublicHeader } from '../design-system/organisms/PublicHeader';
-import { Footer } from '../design-system/organisms/Footer';
+import { MainLayout } from '../design-system/templates/MainLayout';
 import { WebResourceCard } from '../design-system/molecules/WebResourceCard';
 import { WebButton } from '../design-system/atoms/WebButton';
 import TelegramIcon from '@mui/icons-material/Telegram';
@@ -23,120 +22,114 @@ export const ResourcesPage = () => {
     const theme = useTheme();
 
     return (
-        <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', bgcolor: theme.palette.web.background.default }}>
-            <PublicHeader />
-
-            <Box component="main" sx={{ flexGrow: 1, mt: '64px' }}>
-                {/* Hero Section */}
-                <Box sx={{ textAlign: 'center', pt: theme.webLayout.headerSpacing, pb: 8, px: 2 }}>
-                    <Typography
-                        variant="h1"
-                        component="h1"
-                        sx={{
-                            mb: 2,
-                        }}
-                    >
-                        {t('resources.hero.title')}
-                    </Typography>
-                    <Typography
-                        variant="subtitle1"
-                        sx={{
-                            color: 'text.secondary',
-                            maxWidth: 600,
-                            mx: 'auto'
-                        }}
-                    >
-                        {t('resources.hero.subtitle')}
-                    </Typography>
-                </Box>
-
-                {/* Cards Section */}
-                <Container maxWidth="lg" sx={{ mb: 8 }}>
-                    <Box sx={{
-                        bgcolor: theme.palette.web.background.paper,
-                        borderRadius: 4,
-                        p: 4,
-                        position: 'relative',
-                        overflow: 'hidden'
-                    }}>
-                        {/* Wave Background Image */}
-                        <Box sx={{
-                            position: 'absolute',
-                            bottom: 0,
-                            left: 0,
-                            right: 0,
-                            height: '100%',
-                            backgroundImage: 'url(/src/assets/wave-background.png)',
-                            backgroundSize: 'cover',
-                            backgroundPosition: 'center bottom',
-                            backgroundRepeat: 'no-repeat',
-                            opacity: 0.6,
-                            zIndex: 0
-                        }} />
-
-                        <Grid container spacing={3} sx={{ position: 'relative', zIndex: 1 }}>
-                            {/* Documentation Card */}
-                            <Grid size={{ xs: 12, md: 3 }}>
-                                <WebResourceCard
-                                    title={t('resources.cards.documentation.title')}
-                                    description={t('resources.cards.documentation.description')}
-                                    borderTopColor={theme.palette.web.border.primary}
-                                >
-                                    <WebButton variant="outlined" fullWidth>
-                                        {t('resources.cards.documentation.button')}
-                                    </WebButton>
-                                </WebResourceCard>
-                            </Grid>
-
-                            {/* Community Card */}
-                            <Grid size={{ xs: 12, md: 3 }}>
-                                <WebResourceCard
-                                    title={t('resources.cards.community.title')}
-                                    description={t('resources.cards.community.description')}
-                                    borderTopColor={theme.palette.web.border.secondary}
-                                >
-                                    <Box sx={{ display: 'flex', gap: 2 }}>
-                                        <WebButton variant="soft" fullWidth>
-                                            <WhatsAppIcon />
-                                        </WebButton>
-                                        <WebButton variant="soft" fullWidth>
-                                            <TelegramIcon />
-                                        </WebButton>
-                                    </Box>
-                                </WebResourceCard>
-                            </Grid>
-
-                            {/* Tips & Tricks Card */}
-                            <Grid size={{ xs: 12, md: 3 }}>
-                                <WebResourceCard
-                                    title={t('resources.cards.tips.title')}
-                                    description={t('resources.cards.tips.description')}
-                                    borderTopColor={theme.palette.web.border.primary}
-                                >
-                                    <WebButton variant="outlined" fullWidth>
-                                        {t('resources.cards.tips.button')}
-                                    </WebButton>
-                                </WebResourceCard>
-                            </Grid>
-
-                            {/* Support Card */}
-                            <Grid size={{ xs: 12, md: 3 }}>
-                                <WebResourceCard
-                                    title={t('resources.cards.support.title')}
-                                    description={t('resources.cards.support.description')}
-                                    borderTopColor={theme.palette.web.border.secondary}
-                                >
-                                    <WebButton variant="outlined" fullWidth>
-                                        {t('resources.cards.support.button')}
-                                    </WebButton>
-                                </WebResourceCard>
-                            </Grid>
-                        </Grid>
-                    </Box>
-                </Container>
+        <MainLayout>
+            {/* Hero Section */}
+            <Box sx={{ textAlign: 'center', pt: theme.webLayout.headerSpacing, pb: 8, px: 2 }}>
+                <Typography
+                    variant="h1"
+                    component="h1"
+                    sx={{
+                        mb: 2,
+                    }}
+                >
+                    {t('resources.hero.title')}
+                </Typography>
+                <Typography
+                    variant="subtitle1"
+                    sx={{
+                        color: 'text.secondary',
+                        maxWidth: 600,
+                        mx: 'auto'
+                    }}
+                >
+                    {t('resources.hero.subtitle')}
+                </Typography>
             </Box>
 
-            <Footer />
-        </Box>
+            {/* Cards Section */}
+            <Container maxWidth="lg" sx={{ mb: 8 }}>
+                <Box sx={{
+                    bgcolor: theme.palette.web.background.paper,
+                    borderRadius: 4,
+                    p: 4,
+                    position: 'relative',
+                    overflow: 'hidden'
+                }}>
+                    {/* Wave Background Image */}
+                    <Box sx={{
+                        position: 'absolute',
+                        bottom: 0,
+                        left: 0,
+                        right: 0,
+                        height: '100%',
+                        backgroundImage: 'url(/src/assets/wave-background.png)',
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center bottom',
+                        backgroundRepeat: 'no-repeat',
+                        opacity: 0.6,
+                        zIndex: 0
+                    }} />
+
+                    <Grid container spacing={3} sx={{ position: 'relative', zIndex: 1 }}>
+                        {/* Documentation Card */}
+                        <Grid size={{ xs: 12, md: 3 }}>
+                            <WebResourceCard
+                                title={t('resources.cards.documentation.title')}
+                                description={t('resources.cards.documentation.description')}
+                                borderTopColor={theme.palette.web.border.primary}
+                            >
+                                <WebButton variant="outlined" fullWidth>
+                                    {t('resources.cards.documentation.button')}
+                                </WebButton>
+                            </WebResourceCard>
+                        </Grid>
+
+                        {/* Community Card */}
+                        <Grid size={{ xs: 12, md: 3 }}>
+                            <WebResourceCard
+                                title={t('resources.cards.community.title')}
+                                description={t('resources.cards.community.description')}
+                                borderTopColor={theme.palette.web.border.secondary}
+                            >
+                                <Box sx={{ display: 'flex', gap: 2 }}>
+                                    <WebButton variant="soft" fullWidth>
+                                        <WhatsAppIcon />
+                                    </WebButton>
+                                    <WebButton variant="soft" fullWidth>
+                                        <TelegramIcon />
+                                    </WebButton>
+                                </Box>
+                            </WebResourceCard>
+                        </Grid>
+
+                        {/* Tips & Tricks Card */}
+                        <Grid size={{ xs: 12, md: 3 }}>
+                            <WebResourceCard
+                                title={t('resources.cards.tips.title')}
+                                description={t('resources.cards.tips.description')}
+                                borderTopColor={theme.palette.web.border.primary}
+                            >
+                                <WebButton variant="outlined" fullWidth>
+                                    {t('resources.cards.tips.button')}
+                                </WebButton>
+                            </WebResourceCard>
+                        </Grid>
+
+                        {/* Support Card */}
+                        <Grid size={{ xs: 12, md: 3 }}>
+                            <WebResourceCard
+                                title={t('resources.cards.support.title')}
+                                description={t('resources.cards.support.description')}
+                                borderTopColor={theme.palette.web.border.secondary}
+                            >
+                                <WebButton variant="outlined" fullWidth>
+                                    {t('resources.cards.support.button')}
+                                </WebButton>
+                            </WebResourceCard>
+                        </Grid>
+                    </Grid>
+                </Box>
+            </Container>
+        </MainLayout>
     );
 };
