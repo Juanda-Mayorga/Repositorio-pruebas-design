@@ -55,7 +55,7 @@ export const CloudServicesPageII = () => {
                         }
                     }}
                 >
-                    {t('productPage.subtitle')}
+                    Centraliza la gestión de licencias, empleados, formación y proyectos en un solo lugar
                 </Typography>
             </Box>
 
@@ -76,11 +76,11 @@ export const CloudServicesPageII = () => {
                         left: 0,
                         right: 0,
                         bottom: 0,
-                        backgroundImage: 'url(/src/assets/product-hero-background.png)',
+                        backgroundImage: 'url(/src/assets/contact-wave-yellow.png)',
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
                         zIndex: 0,
-                        opacity: 0.1,
+                        opacity: 1,
                     }} />
 
                     <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, width: '100%', position: 'relative', zIndex: 1 }}>
@@ -181,29 +181,29 @@ export const CloudServicesPageII = () => {
 
                 {/* Feature 1: Cost Estimating */}
                 <WebProductCard
-                    title={t('productPage.costEstimating.title')}
-                    description={t('productPage.costEstimating.description')}
+                    title="Control de licencias"
+                    description="Mantén el control total sobre la suscripción, facturación y uso de licencias de tu empresa a través de una interfaz centralizada e intuitiva"
                     image="/src/assets/feature-cost-estimating.png"
-                    imageAlt={t('productPage.costEstimating.title')}
+                    imageAlt="Control de licencias"
                     sx={{ mb: { xs: 4, md: 8 } }}
                 />
 
                 {/* Feature 2: Automatic Model Audit */}
                 <WebProductCard
-                    title={t('productPage.modelAudit.title')}
+                    title="Gestión de usuarios"
                     imagePosition="left"
-                    description={t('productPage.modelAudit.description')}
+                    description="Invita a usuarios, asigna formación y realiza un seguimiento del progreso sin esfuerzo. MAMBA permite a los administradores gestionar a los miembros del equipo, supervisar el aprendizaje y asegurar que todos estén alineados desde una única interfaz."
                     image="/src/assets/feature-model-audit.png"
-                    imageAlt={t('productPage.modelAudit.title')}
+                    imageAlt="Gestión de usuarios"
                     sx={{ mb: { xs: 4, md: 8 } }}
                 />
 
                 {/* Feature 3: Automatic Waste Calculation */}
                 <WebProductCard
-                    title={t('productPage.wasteCalculation.title')}
-                    description={t('productPage.wasteCalculation.description')}
+                    title="Formación"
+                    description="MAMBA ofrece una interfaz intuitiva donde puedes seguir rutas de aprendizaje construidas con nodos, realizar un seguimiento de tu progreso y mantenerte motivado con la gamificación."
                     image="/src/assets/feature-waste-calculation.png"
-                    imageAlt={t('productPage.wasteCalculation.title')}
+                    imageAlt="Formación"
                     sx={{ mb: 0 }}
                 >
                     <WebButton
