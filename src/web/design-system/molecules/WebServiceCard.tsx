@@ -67,7 +67,7 @@ export const WebServiceCard = ({
                 }}
                 sx={{
                     flexDirection: 'row',
-                    alignItems: 'center'
+                    alignItems: 'stretch'
                 }}
             >
                 {/* Content Side */}
@@ -89,7 +89,7 @@ export const WebServiceCard = ({
                     <Box sx={{
                         display: 'flex',
                         flexDirection: 'column',
-                        height: variant === 'contained' ? 'auto' : '100%', // Prevent stretching in contained variant
+                        height: '100%',
                         justifyContent: 'center',
                         textAlign: 'left',
                         ...(variant === 'contained' && {
@@ -135,7 +135,8 @@ export const WebServiceCard = ({
                     viewport={{ once: true, amount: 0.1 }}
                     transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
                     sx={{
-                        order: { xs: 1, md: isImageLeft ? 1 : 2 }
+                        order: { xs: 1, md: isImageLeft ? 1 : 2 },
+                        alignSelf: 'center'
                     }}
                 >
                     <Box
@@ -148,6 +149,8 @@ export const WebServiceCard = ({
                             height: 'auto',
                             display: 'block',
                             mx: 'auto',
+                            borderRadius: '12px',
+                            boxShadow: '0px 4px 24px rgba(0, 0, 0, 0.1)',
                         }}
                     />
                 </MotionGrid>

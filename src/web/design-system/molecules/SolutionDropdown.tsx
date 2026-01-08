@@ -28,7 +28,7 @@ export const SolutionDropdown = ({ isMobile = false, onItemClick }: SolutionDrop
             title: t('solutionDropdown.cloudServices.title'),
             description: t('solutionDropdown.cloudServices.description'),
             icon: <CloudQueueIcon sx={{ fontSize: 24 }} />,
-            path: '/cloud-services'
+            path: '/cloud-services-ii'
         },
         {
             title: t('solutionDropdown.support.title'),

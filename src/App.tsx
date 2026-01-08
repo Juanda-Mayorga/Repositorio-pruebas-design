@@ -11,6 +11,7 @@ import { ContactSalesSubmittingPage } from './web/pages/ContactSalesSubmittingPa
 import { ContactSalesSuccessPage } from './web/pages/ContactSalesSuccessPage'
 import { ProductPage } from './web/pages/ProductPage'
 import { CloudServicesPage } from './web/pages/CloudServicesPage'
+import { CloudServicesPageII } from './web/pages/CloudServicesPageII'
 import { SupportPage } from './web/pages/SupportPage'
 import { PricingPage } from './web/pages/PricingPage'
 import { ThemeProvider } from './platform/design-system/theme/ThemeContext'
@@ -37,6 +38,7 @@ const AnimatedRoutes = () => {
 					<Route path='/contact-sales/success' element={<ContactSalesSuccessPage />} />
 					<Route path='/product' element={<ProductPage />} />
 					<Route path='/cloud-services' element={<CloudServicesPage />} />
+					<Route path='/cloud-services-ii' element={<CloudServicesPageII />} />
 					<Route path='/support' element={<SupportPage />} />
 					<Route path='/pricing' element={<PricingPage />} />
 
