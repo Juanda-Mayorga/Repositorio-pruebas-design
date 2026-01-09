@@ -111,7 +111,8 @@ export const CloudServicesPageII = () => {
                             maxWidth: { xs: '420px', md: 'none' },
                             mx: { xs: 'auto', md: 0 },
                             display: 'flex',
-                            flexDirection: 'column'
+                            flexDirection: 'column',
+                            justifyContent: 'center'
                         }}>
                             <MotionBox
                                 initial={{ opacity: 0, x: isMobile ? 0 : 30, y: isMobile ? 20 : 0 }}
@@ -121,9 +122,10 @@ export const CloudServicesPageII = () => {
                                 sx={{
                                     display: 'flex',
                                     flexDirection: 'column',
-                                    height: '100%',
-                                    justifyContent: 'center',
                                     textAlign: 'left',
+                                    bgcolor: '#FFFFFF',
+                                    borderRadius: '16px',
+                                    boxShadow: '0px 4px 24px rgba(0, 0, 0, 0.08)',
                                     p: { xs: 3, md: 6 }
                                 }}
                             >
@@ -171,36 +173,48 @@ export const CloudServicesPageII = () => {
 
 
 
-                {/* Feature 2: Automatic Model Audit */}
-                <WebProductCard
-                    title="Gestión de usuarios"
-                    imagePosition="left"
-                    description="Invita a usuarios, asigna formación y realiza un seguimiento del progreso sin esfuerzo. MAMBA permite a los administradores gestionar a los miembros del equipo, supervisar el aprendizaje y asegurar que todos estén alineados desde una única interfaz."
-                    image="/src/assets/cloud-services-users.png"
-                    imageAlt="Gestión de usuarios"
-                    imageMaxWidth="100%"
-                    sx={{ mb: { xs: 4, md: 8 } }}
-                />
-
-                {/* Feature 3: Training */}
-                <WebProductCard
-                    title="Formación"
-                    description="MAMBA ofrece una interfaz intuitiva donde puedes seguir rutas de aprendizaje construidas con nodos, realizar un seguimiento de tu progreso y mantenerte motivado con la gamificación."
-                    image="/src/assets/cloud-services-training.png"
-                    imageAlt="Formación"
-                    imageMaxWidth={500}
-                    sx={{ mb: 0 }}
-                >
-                    <WebButton
-                        variant="contained"
+                {/* Feature Cards Container */}
+                <Box sx={{ display: 'flex', flexDirection: 'column', gap: { xs: 4, md: 8 } }}>
+                    {/* Feature 2: Automatic Model Audit (First) */}
+                    <WebProductCard
+                        title="Gestión de usuarios"
+                        imagePosition="right"
+                        description="Invita a usuarios, asigna formación y realiza un seguimiento del progreso sin esfuerzo. MAMBA permite a los administradores gestionar a los miembros del equipo, supervisar el aprendizaje y asegurar que todos estén alineados desde una única interfaz."
+                        image="/src/assets/cloud-services-users.png"
+                        imageAlt="Gestión de usuarios"
+                        imageMaxWidth="100%"
                         sx={{
-                            width: '100%',
-                            maxWidth: { xs: '480px', lg: 'none' },
+                            p: { xs: 4, md: 2 },
+                            maxWidth: { xs: '420px', md: 'none' },
+                            mx: { xs: 'auto', md: 0 }
+                        }}
+                    />
+
+                    {/* Feature 3: Training (Second) */}
+                    <WebProductCard
+                        title="Formación"
+                        imagePosition="left"
+                        description="MAMBA ofrece una interfaz intuitiva donde puedes seguir rutas de aprendizaje construidas con nodos, realizar un seguimiento de tu progreso y mantenerte motivado con la gamificación."
+                        image="/src/assets/cloud-services-training.png"
+                        imageAlt="Formación"
+                        imageMaxWidth={500}
+                        sx={{
+                            p: { xs: 4, md: 2 },
+                            maxWidth: { xs: '420px', md: 'none' },
+                            mx: { xs: 'auto', md: 0 }
                         }}
                     >
-                        {t('productPage.wasteCalculation.cta')}
-                    </WebButton>
-                </WebProductCard>
+                        <WebButton
+                            variant="contained"
+                            sx={{
+                                width: '100%',
+                                maxWidth: { xs: '480px', lg: 'none' },
+                            }}
+                        >
+                            {t('productPage.wasteCalculation.cta')}
+                        </WebButton>
+                    </WebProductCard>
+                </Box>
             </Container>
         </MainLayout>
     );
