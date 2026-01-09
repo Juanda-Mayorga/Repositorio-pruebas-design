@@ -185,7 +185,11 @@ export const ProductPage = () => {
                     description={t('productPage.costEstimating.description')}
                     image="/src/assets/feature-cost-estimating.png"
                     imageAlt={t('productPage.costEstimating.title')}
-                    sx={{ mb: { xs: 4, md: 8 } }}
+                    sx={{
+                        mb: { xs: 4, md: 8 },
+                        maxWidth: { xs: '420px', md: 'none' },
+                        mx: { xs: 'auto', md: 0 }
+                    }}
                 />
 
                 {/* Feature 2: Automatic Model Audit */}
@@ -195,7 +199,11 @@ export const ProductPage = () => {
                     description={t('productPage.modelAudit.description')}
                     image="/src/assets/feature-model-audit.png"
                     imageAlt={t('productPage.modelAudit.title')}
-                    sx={{ mb: { xs: 4, md: 8 } }}
+                    sx={{
+                        mb: { xs: 4, md: 8 },
+                        maxWidth: { xs: '420px', md: 'none' },
+                        mx: { xs: 'auto', md: 0 }
+                    }}
                 />
 
                 {/* Feature 3: Automatic Waste Calculation */}
@@ -204,7 +212,11 @@ export const ProductPage = () => {
                     description={t('productPage.wasteCalculation.description')}
                     image="/src/assets/feature-waste-calculation.png"
                     imageAlt={t('productPage.wasteCalculation.title')}
-                    sx={{ mb: 0 }}
+                    sx={{
+                        mb: 0,
+                        maxWidth: { xs: '420px', md: 'none' },
+                        mx: { xs: 'auto', md: 0 }
+                    }}
                 >
                     <WebButton
                         variant="contained"
