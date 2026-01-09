@@ -441,7 +441,8 @@
             "traceability": {
                 "title": "Traceability",
                 "description": "Every conversation is collected and linked to the project"
-            }
+            },
+            "comingSoon": "COMING SOON"
         }
     }
 }

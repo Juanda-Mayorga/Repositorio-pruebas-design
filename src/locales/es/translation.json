@@ -447,7 +447,8 @@
             "traceability": {
                 "title": "Trazabilidad",
                 "description": "Cada conversación queda registrada y vinculada al proyecto"
-            }
+            },
+            "comingSoon": "PRÓXIMAMENTE"
         }
     }
 }

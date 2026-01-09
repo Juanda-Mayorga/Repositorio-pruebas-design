@@ -5,6 +5,7 @@ import GroupsOutlined from '@mui/icons-material/GroupsOutlined';
 import ChatOutlined from '@mui/icons-material/ChatOutlined';
 import ListAltOutlined from '@mui/icons-material/ListAltOutlined';
 import { MainLayout } from '../design-system/templates/MainLayout';
+import { WebComingSoonBadge } from '../design-system/atoms/WebComingSoonBadge';
 
 const MotionTypography = motion(Typography);
 const MotionGrid = motion(Grid);
@@ -45,6 +46,8 @@ export const SupportPage = () => {
         <MainLayout sx={{ bgcolor: '#FFFFFF', overflowX: 'hidden' }}>
             {/* Hero Header */}
             <Box sx={{ textAlign: 'center', pt: theme.webLayout.headerSpacing, pb: 6, px: 2 }}>
+                <WebComingSoonBadge />
+
                 <MotionTypography
                     variant="h1"
                     initial={{ opacity: 0, y: -20 }}
@@ -75,51 +78,85 @@ export const SupportPage = () => {
 
             {/* Feature Cards Section */}
             <Container maxWidth="lg" sx={{ px: { xs: 2, md: 4 }, pb: 10 }}>
-                <Grid container spacing={4}>
-                    {features.map((feature, index) => (
-                        <MotionGrid
-                            size={{ xs: 12, md: 4 }}
-                            key={index}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.5, delay: index * 0.1 }}
-                        >
-                            <Box sx={{
-                                p: 4,
-                                height: '100%',
-                                bgcolor: '#FFFFFF',
-                                borderRadius: '16px',
-                                border: '1px solid',
-                                borderColor: 'divider',
-                                boxShadow: '0px 4px 24px rgba(0, 0, 0, 0.04)',
-                                transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-                                '&:hover': {
-                                    transform: 'translateY(-4px)',
-                                    boxShadow: '0px 12px 32px rgba(0, 0, 0, 0.08)',
-                                }
-                            }}>
-                                <Box sx={{
-                                    display: 'inline-flex',
-                                    p: 1.5,
-                                    mb: 3,
-                                    bgcolor: '#F3F0FF',
-                                    borderRadius: '12px',
-                                    color: '#6B46C1'
-                                }}>
-                                    <feature.icon sx={{ fontSize: 32 }} />
-                                </Box>
-                                <Typography variant="h5" sx={{ mb: 2, fontWeight: 600 }}>
-                                    {t(feature.titleKey)}
-                                </Typography>
-                                <Typography variant="body1" color="text.secondary">
-                                    {t(feature.descKey)}
-                                </Typography>
-                            </Box>
-                        </MotionGrid>
+                <Box sx={{
+                    bgcolor: theme.palette.web.background.paper,
+                    borderRadius: 4,
+                    p: 4,
+                    position: 'relative',
+                    overflow: 'hidden'
+                }}>
+                    {/* Wave Background Image */}
+                    <Box sx={{
+                        position: 'absolute',
+                        bottom: 0,
+                        left: 0,
+                        right: 0,
+                        height: '100%',
+                        backgroundImage: 'url(/src/assets/wave-background.png)',
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center bottom',
+                        backgroundRepeat: 'no-repeat',
+                        opacity: 0.6,
+                        zIndex: 0
+                    }} />
 
-                    ))}
-                </Grid>
+                    <Grid container spacing={4} sx={{ position: 'relative', zIndex: 1 }}>
+                        {features.map((feature, index) => (
+                            <MotionGrid
+                                size={{ xs: 12, md: 4 }}
+                                key={index}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5, delay: index * 0.1 }}
+                            >
+                                <Box sx={{
+                                    p: 4,
+                                    height: '100%',
+                                    bgcolor: '#FFFFFF',
+                                    borderRadius: '16px',
+                                    border: '1px solid',
+                                    borderColor: 'divider',
+                                    boxShadow: '0px 4px 24px rgba(0, 0, 0, 0.04)',
+                                    transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    alignItems: 'center',
+                                    textAlign: 'center',
+                                    maxWidth: 320,
+                                    mx: 'auto',
+                                    '&:hover': {
+                                        transform: 'translateY(-4px)',
+                                        boxShadow: '0px 12px 32px rgba(0, 0, 0, 0.08)',
+                                    }
+                                }}>
+                                    <Box sx={{
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+                                        width: 40,
+                                        height: 40,
+                                        mb: 3,
+                                        bgcolor: '#F5F3FD',
+                                        borderRadius: 1,
+                                        color: '#8A7BD4'
+                                    }}>
+                                        <feature.icon sx={{ fontSize: 24 }} />
+                                    </Box>
+                                    <Typography variant="cardTitle" sx={{ mb: 2 }}>
+                                        {t(feature.titleKey)}
+                                    </Typography>
+                                    <Typography variant="body1" color="text.secondary" sx={{ textAlign: 'left', minHeight: '3em' }}>
+                                        {t(feature.descKey)}
+                                    </Typography>
+
+
+                                </Box>
+                            </MotionGrid>
+
+                        ))}
+                    </Grid>
+                </Box>
             </Container>
 
 
