@@ -148,7 +148,7 @@ export const CloudServicesPageII = () => {
                                         whiteSpace: 'pre-line',
                                         fontSize: { xs: '16px', md: '18px' }
                                     }}>
-                                        Mantén el control total sobre la suscripción, facturación y uso de licencias de tu empresa a través de una interfaz centralizada e intuitiva
+                                        Mantén el control total sobre la suscripción, facturación y uso de licencias de tu empresa a través de una interfaz <strong>centralizada</strong> e <strong>intuitiva</strong>
                                     </Typography>
                                 </motion.div>
 
@@ -179,7 +179,7 @@ export const CloudServicesPageII = () => {
                     <WebProductCard
                         title="Gestión de usuarios"
                         imagePosition="right"
-                        description="Invita a usuarios, asigna formación y realiza un seguimiento del progreso sin esfuerzo. MAMBA permite a los administradores gestionar a los miembros del equipo, supervisar el aprendizaje y asegurar que todos estén alineados desde una única interfaz."
+                        description="Invita a usuarios, asigna formación y realiza un seguimiento del progreso sin esfuerzo. MAMBA permite a los administradores gestionar a los miembros del <strong>equipo</strong>, supervisar el aprendizaje y asegurar que todos estén <strong>alineados</strong> desde una única interfaz."
                         image="/src/assets/cloud-services-users.png"
                         imageAlt="Gestión de usuarios"
                         imageMaxWidth="100%"
@@ -194,7 +194,7 @@ export const CloudServicesPageII = () => {
                     <WebProductCard
                         title="Formación"
                         imagePosition="left"
-                        description="MAMBA ofrece una interfaz intuitiva donde puedes seguir rutas de aprendizaje construidas con nodos, realizar un seguimiento de tu progreso y mantenerte motivado con la gamificación."
+                        description="MAMBA ofrece una interfaz intuitiva donde puedes seguir <strong>rutas de aprendizaje</strong> construidas con nodos, realizar un seguimiento de tu progreso y mantenerte motivado con la <strong>gamificación</strong>."
                         image="/src/assets/cloud-services-training.png"
                         imageAlt="Formación"
                         imageMaxWidth={500}
