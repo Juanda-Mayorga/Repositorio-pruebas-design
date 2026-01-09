@@ -1,26 +1,45 @@
-import { Box, Typography, Container, useTheme } from '@mui/material';
+import { Box, Typography, useTheme, Grid, Container } from '@mui/material';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import GroupsOutlined from '@mui/icons-material/GroupsOutlined';
+import ChatOutlined from '@mui/icons-material/ChatOutlined';
+import ListAltOutlined from '@mui/icons-material/ListAltOutlined';
 import { MainLayout } from '../design-system/templates/MainLayout';
-import { WebServiceCard } from '../design-system/molecules/WebServiceCard';
-import { WebButton } from '../design-system/atoms/WebButton';
 
 const MotionTypography = motion(Typography);
+const MotionGrid = motion(Grid);
 
 /**
  * @view SupportPage
  * @description
- * Página de Soporte (anteriormente CloudServicesPage). Presenta la gestión de licencias,
+ * Página de Soporte. Presenta la gestión de licencias,
  * usuarios y formación con una estética premium y animaciones de scroll.
  * 
  * @design_standards
  * - **Hero:** Título centralizado con escala responsive (32px - 64px).
- * - **License Control:** Sección destacada con fondo decorativo amarillo (#FFF5CC).
- * - **Features:** Uso de WebProductCard para consistencia con la página de producto.
+ * - **Features:** Grid de 3 columnas con tarjetas personalizadas.
  */
 export const SupportPage = () => {
     const { t } = useTranslation();
     const theme = useTheme();
+
+    const features = [
+        {
+            icon: GroupsOutlined,
+            titleKey: 'supportPage.cards.teamAligned.title',
+            descKey: 'supportPage.cards.teamAligned.description'
+        },
+        {
+            icon: ChatOutlined,
+            titleKey: 'supportPage.cards.integratedSupport.title',
+            descKey: 'supportPage.cards.integratedSupport.description'
+        },
+        {
+            icon: ListAltOutlined,
+            titleKey: 'supportPage.cards.traceability.title',
+            descKey: 'supportPage.cards.traceability.description'
+        }
+    ];
 
     return (
         <MainLayout sx={{ bgcolor: '#FFFFFF', overflowX: 'hidden' }}>
@@ -33,7 +52,7 @@ export const SupportPage = () => {
                     transition={{ duration: 0.8, ease: "easeOut" }}
                     sx={{ mb: 2 }}
                 >
-                    {t('cloudServicesPage.hero.title')}
+                    {t('supportPage.hero.title')}
                 </MotionTypography>
                 <MotionTypography
                     variant="subtitle1"
@@ -50,71 +69,60 @@ export const SupportPage = () => {
                         }
                     }}
                 >
-                    {t('cloudServicesPage.hero.subtitle')}
+                    {t('supportPage.hero.subtitle')}
                 </MotionTypography>
             </Box>
 
-            {/* Content Section */}
+            {/* Feature Cards Section */}
             <Container maxWidth="lg" sx={{ px: { xs: 2, md: 4 }, pb: 10 }}>
-                {/* License Control Feature */}
-                <Box sx={{
-                    position: 'relative',
-                    bgcolor: theme.palette.web.background.paper,
-                    borderRadius: '16px',
-                    overflow: 'hidden',
-                    mb: { xs: 4, md: 12 }
-                }}>
-                    {/* Wave Background Image */}
-                    <Box sx={{
-                        position: 'absolute',
-                        top: 0,
-                        bottom: 0,
-                        left: 0,
-                        right: 0,
-                        backgroundImage: 'url(/src/assets/contact-wave-yellow.png)',
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center',
-                        backgroundRepeat: 'no-repeat',
-                        opacity: 1,
-                        zIndex: 0
-                    }} />
+                <Grid container spacing={4}>
+                    {features.map((feature, index) => (
+                        <MotionGrid
+                            size={{ xs: 12, md: 4 }}
+                            key={index}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5, delay: index * 0.1 }}
+                        >
+                            <Box sx={{
+                                p: 4,
+                                height: '100%',
+                                bgcolor: '#FFFFFF',
+                                borderRadius: '16px',
+                                border: '1px solid',
+                                borderColor: 'divider',
+                                boxShadow: '0px 4px 24px rgba(0, 0, 0, 0.04)',
+                                transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+                                '&:hover': {
+                                    transform: 'translateY(-4px)',
+                                    boxShadow: '0px 12px 32px rgba(0, 0, 0, 0.08)',
+                                }
+                            }}>
+                                <Box sx={{
+                                    display: 'inline-flex',
+                                    p: 1.5,
+                                    mb: 3,
+                                    bgcolor: '#F3F0FF',
+                                    borderRadius: '12px',
+                                    color: '#6B46C1'
+                                }}>
+                                    <feature.icon sx={{ fontSize: 32 }} />
+                                </Box>
+                                <Typography variant="h5" sx={{ mb: 2, fontWeight: 600 }}>
+                                    {t(feature.titleKey)}
+                                </Typography>
+                                <Typography variant="body1" color="text.secondary">
+                                    {t(feature.descKey)}
+                                </Typography>
+                            </Box>
+                        </MotionGrid>
 
-                    <WebServiceCard
-                        title={t('cloudServicesPage.licenseControl.title')}
-                        description={t('cloudServicesPage.licenseControl.description')}
-                        image="/src/assets/cloud-license.png"
-                        imagePosition="left"
-                        imageMaxWidth={{ xs: 500, lg: 500 }}
-                        variant="contained"
-                        sx={{ position: 'relative', zIndex: 1 }}
-                    >
-                        <WebButton variant="contained">
-                            {t('cloudServicesPage.licenseControl.cta')}
-                        </WebButton>
-                    </WebServiceCard>
-                </Box>
-
-                {/* Other Features using WebServiceCard */}
-                <Box sx={{ mb: { xs: 4, md: 8 } }}>
-                    <WebServiceCard
-                        title={t('cloudServicesPage.userManagement.title')}
-                        description={t('cloudServicesPage.userManagement.description')}
-                        image="/src/assets/cloud-users.png"
-                        imagePosition="right"
-                        imageMaxWidth={{ xs: 420, lg: 500 }}
-                    />
-                </Box>
-
-                <Box sx={{ mb: 0 }}>
-                    <WebServiceCard
-                        title={t('cloudServicesPage.training.title')}
-                        description={t('cloudServicesPage.training.description')}
-                        image="/src/assets/cloud-training.png"
-                        imagePosition="left"
-                        imageMaxWidth={{ xs: 420, lg: 500 }}
-                    />
-                </Box>
+                    ))}
+                </Grid>
             </Container>
-        </MainLayout>
+
+
+        </MainLayout >
     );
 };

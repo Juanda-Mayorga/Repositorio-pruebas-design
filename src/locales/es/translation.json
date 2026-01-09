@@ -429,5 +429,25 @@
             "title": "Formación",
             "description": "MAMBA ofrece una interfaz intuitiva donde puedes seguir <strong>rutas de aprendizaje</strong> construidas con nodos, realizar un seguimiento de tu progreso y mantenerte motivado con la <strong>gamificación</strong>."
         }
+    },
+    "supportPage": {
+        "hero": {
+            "title": "Support",
+            "subtitle": "Resuelve dudas, alinea a tu equipo y mantén el control del proyecto desde un solo lugar."
+        },
+        "cards": {
+            "teamAligned": {
+                "title": "Equipo alineado",
+                "description": "Decisiones claras, menos errores y mejor coordinación"
+            },
+            "integratedSupport": {
+                "title": "Soporte integrado",
+                "description": "Resuelve dudas técnicas directamente desde MAMBA"
+            },
+            "traceability": {
+                "title": "Trazabilidad",
+                "description": "Cada conversación queda registrada y vinculada al proyecto"
+            }
+        }
     }
 }

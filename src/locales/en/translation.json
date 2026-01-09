@@ -423,5 +423,25 @@
             "title": "Training",
             "description": "MAMBA offers an intuitive interface where you can follow <strong>learning paths</strong> built with nodes, track your progress, and stay motivated with <strong>gamification</strong>."
         }
+    },
+    "supportPage": {
+        "hero": {
+            "title": "Support",
+            "subtitle": "Solve doubts, align your team, and keep control of the project from a single place."
+        },
+        "cards": {
+            "teamAligned": {
+                "title": "Team aligned",
+                "description": "Clear decisions, fewer errors, and better coordination"
+            },
+            "integratedSupport": {
+                "title": "Integrated support",
+                "description": "Resolve technical doubts directly from MAMBA"
+            },
+            "traceability": {
+                "title": "Traceability",
+                "description": "Every conversation is collected and linked to the project"
+            }
+        }
     }
 }
