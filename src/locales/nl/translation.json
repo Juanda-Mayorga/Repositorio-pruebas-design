@@ -224,5 +224,23 @@
             "description": "Bepaal het afvalvolume dat bij elk bouwelement hoort op basis van uw modelgegevens. MAMBA vergemakkelijkt de naleving van milieuregelgeving en optimaliseert de logistiek van middelen, waardoor u <strong>efficiëntere en veratwoorde projecten</strong> voor de omgeving kunt realiseren.",
             "cta": "Bekijk plannen en prijzen"
         }
+    },
+    "cloudServicesPageII": {
+        "header": {
+            "title": "Cloud Services",
+            "subtitle": "Centraliseer licentiebeheer, medewerkers, training en projecten op één plek"
+        },
+        "hero": {
+            "title": "Licentiebeheer",
+            "description": "Behoud volledige controle over abonnement, facturering en licentiegebruik van uw bedrijf via een <strong>gecentraliseerde</strong> en <strong>intuïtieve</strong> interface"
+        },
+        "userManagement": {
+            "title": "Gebruikersbeheer",
+            "description": "Nodig gebruikers uit, wijs training toe en volg de voortgang moeiteloos. MAMBA stelt beheerders in staat om <strong>team</strong>leden te beheren, het leren te overzien en ervoor te zorgen dat iedereen <strong>op één lijn</strong> zit vanuit een enkele interface."
+        },
+        "training": {
+            "title": "Training",
+            "description": "MAMBA biedt een intuïtieve interface waar u <strong>leertrajecten</strong> kunt volgen die zijn opgebouwd met knooppunten, uw voortgang kunt bijhouden en gemotiveerd kunt blijven met <strong>gamification</strong>."
+        }
     }
 }

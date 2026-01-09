@@ -224,5 +224,23 @@
             "description": "Zehaztu elementu eraikitzaile bakoitzarekin lotutako hondakin-bolumena zure ereduko datuetatik abiatuta. MAMBAk ingurumen-araudia betetzen laguntzen dizu eta baliabideen logistika optimizatzen du, ingurunearekin <strong>proiektu eraginkorragoak eta arduratsuagoak</strong> egitea ahalbidetuz.",
             "cta": "Ikusi planak eta prezioak"
         }
+    },
+    "cloudServicesPageII": {
+        "header": {
+            "title": "Hodei Zerbitzuak",
+            "subtitle": "Zentralizatu lizentzien, langileen, prestakuntzaren eta proiektuen kudeaketa leku bakarrean"
+        },
+        "hero": {
+            "title": "Lizentzien kontrola",
+            "description": "Mantendu zure enpresaren harpidetzaren, fakturazioaren eta lizentzien erabileraren kontrol osoa interfaze <strong>zentralizatu</strong> eta <strong>intuitibo</strong> baten bidez"
+        },
+        "userManagement": {
+            "title": "Erabiltzaileen kudeaketa",
+            "description": "Gonbidatu erabiltzaileak, esleitu prestakuntza eta egin aurrerapenaren jarraipena esfortzurik gabe. MAMBAk administratzaileei <strong>taldeko</strong> kideak kudeatzeko, ikaskuntza gainbegiratzeko eta denak interfaze bakar batetik <strong>lerrokatuta</strong> daudela ziurtatzeko aukera ematen die."
+        },
+        "training": {
+            "title": "Prestakuntza",
+            "description": "MAMBAk interfaze intuitibo bat eskaintzen du, non nodoekin eraikitako <strong>ikaskuntza-ibilbideak</strong> jarraitu, zure aurrerapenaren jarraipena egin eta <strong>gamifikazioarekin</strong> motibatuta egon zaitezkeen."
+        }
     }
 }

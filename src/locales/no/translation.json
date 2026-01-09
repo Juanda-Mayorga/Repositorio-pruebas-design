@@ -224,5 +224,23 @@
             "description": "Bestem avfallsvolumet knyttet til hvert bygningselement basert på dataene fra modellen din. MAMBA forenkler overholdelse av miljøforskrifter og optimaliserer ressurslogistikken, slik at du kan gjennomføre <strong>mer effektive og ansvarlige prosjekter</strong> overfor miljøet.",
             "cta": "Se planer og priser"
         }
+    },
+    "cloudServicesPageII": {
+        "header": {
+            "title": "Cloud Services",
+            "subtitle": "Sentraliser lisensadministrasjon, ansatte, opplæring og prosjekter på ett sted"
+        },
+        "hero": {
+            "title": "Lisenskontroll",
+            "description": "Behold full kontroll over abonnement, fakturering og lisensbruk for bedriften din gjennom et <strong>sentralisert</strong> og <strong>intuitivt</strong> grensesnitt"
+        },
+        "userManagement": {
+            "title": "Brukeradministrasjon",
+            "description": "Inviter brukere, tildel opplæring og spor fremgang uten problemer. MAMBA lar administratorer administrere <strong>team</strong>medlemmer, overvåke læring og sikre at alle er <strong>samkjørt</strong> fra ett enkelt grensesnitt."
+        },
+        "training": {
+            "title": "Opplæring",
+            "description": "MAMBA tilbyder et intuitivt grensesnitt der du kan følge <strong>læringsveier</strong> bygget med noder, spore fremgangen din og holde deg motivert med <strong>seier</strong>."
+        }
     }
 }

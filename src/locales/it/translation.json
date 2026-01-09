@@ -224,5 +224,23 @@
             "description": "Determina il volume di rifiuti associato a ogni elemento costruttivo partendo dai dati del tuo modello. MAMBA ti facilita il rispetto della normativa ambientale e ottimizza la logistica delle risorse, permettendoti di realizzare <strong>progetti più efficienti e responsabili</strong> verso l'ambiente.",
             "cta": "Vedi piani e prezzi"
         }
+    },
+    "cloudServicesPageII": {
+        "header": {
+            "title": "Servizi Cloud",
+            "subtitle": "Centralizza la gestione di licenze, dipendenti, formazione e progetti in un unico luogo"
+        },
+        "hero": {
+            "title": "Controllo delle licenze",
+            "description": "Mantieni il controllo totale su abbonamento, fatturazione e utilizzo delle licenze della tua azienda attraverso un'interfaccia <strong>centralizzata</strong> e <strong>intuitiva</strong>"
+        },
+        "userManagement": {
+            "title": "Gestione Utenti",
+            "description": "Invita utenti, assegna formazione e monitora i progressi senza sforzo. MAMBA consente agli amministratori di gestire i membri del <strong>team</strong>, supervisionare l'apprendimento e garantire che tutti siano <strong>allineati</strong> da un'unica interfaccia."
+        },
+        "training": {
+            "title": "Formazione",
+            "description": "MAMBA offre un'interfaccia intuitiva dove puoi seguire <strong>percorsi di apprendimento</strong> costruiti con nodi, tracciare i tuoi progressi e rimanere motivato con la <strong>gamification</strong>."
+        }
     }
 }

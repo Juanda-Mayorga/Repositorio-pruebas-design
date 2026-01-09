@@ -36,7 +36,7 @@ export const CloudServicesPageII = () => {
                     transition={{ duration: 0.8, ease: "easeOut" }}
                     sx={{ mb: 2 }}
                 >
-                    Servicios en la Nube
+                    {t('cloudServicesPageII.header.title')}
                 </Typography>
                 <Typography
                     variant="subtitle1"
@@ -55,7 +55,7 @@ export const CloudServicesPageII = () => {
                         }
                     }}
                 >
-                    Centraliza la gestión de licencias, empleados, formación y proyectos en un solo lugar
+                    {t('cloudServicesPageII.header.subtitle')}
                 </Typography>
             </Box>
 
@@ -134,7 +134,7 @@ export const CloudServicesPageII = () => {
                                     visible: { opacity: 1, y: 0 }
                                 }} initial="hidden" animate="visible" transition={{ duration: 0.5, delay: 0.4 }}>
                                     <Typography variant="h2" sx={{ mb: 3 }}>
-                                        Control de licencias
+                                        {t('cloudServicesPageII.hero.title')}
                                     </Typography>
                                 </motion.div>
 
@@ -148,7 +148,7 @@ export const CloudServicesPageII = () => {
                                         whiteSpace: 'pre-line',
                                         fontSize: { xs: '16px', md: '18px' }
                                     }}>
-                                        Mantén el control total sobre la suscripción, facturación y uso de licencias de tu empresa a través de una interfaz <strong>centralizada</strong> e <strong>intuitiva</strong>
+                                        <span dangerouslySetInnerHTML={{ __html: t('cloudServicesPageII.hero.description') }} />
                                     </Typography>
                                 </motion.div>
 
@@ -177,11 +177,11 @@ export const CloudServicesPageII = () => {
                 <Box sx={{ display: 'flex', flexDirection: 'column', gap: { xs: 4, md: 8 } }}>
                     {/* Feature 2: Automatic Model Audit (First) */}
                     <WebProductCard
-                        title="Gestión de usuarios"
+                        title={t('cloudServicesPageII.userManagement.title')}
                         imagePosition="right"
-                        description="Invita a usuarios, asigna formación y realiza un seguimiento del progreso sin esfuerzo. MAMBA permite a los administradores gestionar a los miembros del <strong>equipo</strong>, supervisar el aprendizaje y asegurar que todos estén <strong>alineados</strong> desde una única interfaz."
+                        description={<span dangerouslySetInnerHTML={{ __html: t('cloudServicesPageII.userManagement.description') }} />}
                         image="/src/assets/cloud-services-users.png"
-                        imageAlt="Gestión de usuarios"
+                        imageAlt={t('cloudServicesPageII.userManagement.title')}
                         imageMaxWidth="100%"
                         sx={{
                             p: { xs: 4, md: 2 },
@@ -192,11 +192,11 @@ export const CloudServicesPageII = () => {
 
                     {/* Feature 3: Training (Second) */}
                     <WebProductCard
-                        title="Formación"
+                        title={t('cloudServicesPageII.training.title')}
                         imagePosition="left"
-                        description="MAMBA ofrece una interfaz intuitiva donde puedes seguir <strong>rutas de aprendizaje</strong> construidas con nodos, realizar un seguimiento de tu progreso y mantenerte motivado con la <strong>gamificación</strong>."
+                        description={<span dangerouslySetInnerHTML={{ __html: t('cloudServicesPageII.training.description') }} />}
                         image="/src/assets/cloud-services-training.png"
-                        imageAlt="Formación"
+                        imageAlt={t('cloudServicesPageII.training.title')}
                         imageMaxWidth={500}
                         sx={{
                             p: { xs: 4, md: 2 },

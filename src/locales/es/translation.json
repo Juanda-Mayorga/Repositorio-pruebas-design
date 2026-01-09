@@ -411,5 +411,23 @@
                 }
             }
         }
+    },
+    "cloudServicesPageII": {
+        "header": {
+            "title": "Servicios en la Nube",
+            "subtitle": "Centraliza la gestión de licencias, empleados, formación y proyectos en un solo lugar"
+        },
+        "hero": {
+            "title": "Control de licencias",
+            "description": "Mantén el control total sobre la suscripción, facturación y uso de licencias de tu empresa a través de una interfaz <strong>centralizada</strong> e <strong>intuitiva</strong>"
+        },
+        "userManagement": {
+            "title": "Gestión de usuarios",
+            "description": "Invita a usuarios, asigna formación y realiza un seguimiento del progreso sin esfuerzo. MAMBA permite a los administradores gestionar a los miembros del <strong>equipo</strong>, supervisar el aprendizaje y asegurar que todos estén <strong>alineados</strong> desde una única interfaz."
+        },
+        "training": {
+            "title": "Formación",
+            "description": "MAMBA ofrece una interfaz intuitiva donde puedes seguir <strong>rutas de aprendizaje</strong> construidas con nodos, realizar un seguimiento de tu progreso y mantenerte motivado con la <strong>gamificación</strong>."
+        }
     }
 }

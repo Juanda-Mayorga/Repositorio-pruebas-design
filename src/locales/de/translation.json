@@ -224,5 +224,23 @@
             "description": "Bestimmen Sie das Abfallvolumen für jedes Bauelement basierend auf Ihren Modelldaten. MAMBA erleichtert die Einhaltung von Umweltvorschriften und optimiert die Ressourcenlogistik, sodass Sie <strong>effizientere und umweltverantwortlichere Projekte</strong> realisieren können.",
             "cta": "Pläne und Preise ansehen"
         }
+    },
+    "cloudServicesPageII": {
+        "header": {
+            "title": "Cloud-Dienste",
+            "subtitle": "Zentralisieren Sie Lizenzmanagement, Mitarbeiter, Schulungen und Projekte an einem Ort"
+        },
+        "hero": {
+            "title": "Lizenzkontrolle",
+            "description": "Behalten Sie die volle Kontrolle über Abonnement, Abrechnung und Lizenznutzung Ihres Unternehmens über eine <strong>zentralisierte</strong> und <strong>intuitive</strong> Oberfläche"
+        },
+        "userManagement": {
+            "title": "Benutzerverwaltung",
+            "description": "Laden Sie Benutzer ein, weisen Sie Schulungen zu und verfolgen Sie den Fortschritt mühelos. MAMBA ermöglicht es Administratoren, <strong>Team</strong>mitglieder zu verwalten, das Lernen zu überwachen und sicherzustellen, dass alle über eine einzige Schnittstelle <strong>ausgerichtet</strong> sind."
+        },
+        "training": {
+            "title": "Schulung",
+            "description": "MAMBA bietet eine intuitive Oberfläche, auf der Sie mit Knoten erstellten <strong>Lernpfaden</strong> folgen, Ihren Fortschritt verfolgen und durch <strong>Gamification</strong> motiviert bleiben können."
+        }
     }
 }
