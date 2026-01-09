@@ -11,7 +11,7 @@ interface WebProductCardProps {
     image: string;
     imageAlt?: string;
     imagePosition?: 'left' | 'right';
-    imageMaxWidth?: number | string;
+    imageMaxWidth?: number | string | Record<string, any>;
     imageHeight?: number | string;
     imageObjectFit?: React.CSSProperties['objectFit'];
     children?: ReactNode;
@@ -35,7 +35,7 @@ interface WebProductCardProps {
  * @param {string} image - Ruta de la imagen.
  * @param {string} [imageAlt] - Texto alternativo para accesibilidad.
  * @param {'left' | 'right'} [imagePosition='right'] - Posición de la imagen respecto al texto.
- * @param {number | string} [imageMaxWidth=420] - Ancho máximo de la imagen.
+ * @param {number | string | object} [imageMaxWidth=420] - Ancho máximo de la imagen. Soporta objeto responsive.
  * @param {number | string} [imageHeight='auto'] - Alto de la imagen.
  * @param {objectFit} [imageObjectFit='initial'] - Comportamiento de ajuste de la imagen.
  * @param {ReactNode} [children] - Slot para botones de Call to Action.
@@ -80,7 +80,7 @@ export const WebProductCard = ({
                     transition={{ duration: 0.8, ease: "easeOut" }}
                     sx={{
                         order: { xs: 2, md: isImageLeft ? 2 : 1 },
-                        maxWidth: { xs: imageMaxWidth, md: 'none' },
+                        maxWidth: { xs: '100%', md: 'none' },
                         mx: { xs: 'auto', md: 0 }
                     }}
                 >
@@ -125,6 +125,7 @@ export const WebProductCard = ({
                     transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
                     sx={{
                         order: { xs: 1, md: isImageLeft ? 1 : 2 },
+                        display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center'
                     }}

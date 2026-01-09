@@ -89,13 +89,7 @@ export const CloudServicesPageII = () => {
                             whileInView={{ opacity: 1, scale: 1, y: 0 }}
                             viewport={{ once: true, amount: 0.1 }}
                             transition={{ duration: 0.8, ease: "easeOut" }}
-                            sx={{
-                                flex: 1,
-                                display: 'flex',
-                                justifyContent: 'center',
-                                position: 'relative',
-                                minHeight: { xs: '300px', md: 'auto' } // Ensure visibility if text is short? No, text dictates.
-                            }}
+                            sx={{ flex: 1, p: { xs: 3, md: 6 }, pb: { xs: 0, md: 6 }, display: 'flex', justifyContent: 'center' }}
                         >
                             <Box
                                 component="img"
@@ -103,12 +97,10 @@ export const CloudServicesPageII = () => {
                                 alt="Control de licencias"
                                 sx={{
                                     width: '100%',
-                                    height: { xs: 'auto', md: '100%' },
-                                    position: { xs: 'relative', md: 'absolute' },
-                                    top: 0,
-                                    left: 0,
-                                    objectFit: 'cover',
-                                    zIndex: 1
+                                    maxWidth: '500px',
+                                    height: 'auto',
+                                    borderRadius: '8px',
+                                    boxShadow: '0px 4px 24px rgba(0, 0, 0, 0.15)',
                                 }}
                             />
                         </MotionBox>
@@ -187,17 +179,16 @@ export const CloudServicesPageII = () => {
                     image="/src/assets/cloud-services-users.png"
                     imageAlt="Gestión de usuarios"
                     imageMaxWidth="100%"
-                    imageHeight="100%"
-                    imageObjectFit="cover"
                     sx={{ mb: { xs: 4, md: 8 } }}
                 />
 
-                {/* Feature 3: Automatic Waste Calculation */}
+                {/* Feature 3: Training */}
                 <WebProductCard
                     title="Formación"
                     description="MAMBA ofrece una interfaz intuitiva donde puedes seguir rutas de aprendizaje construidas con nodos, realizar un seguimiento de tu progreso y mantenerte motivado con la gamificación."
-                    image="/src/assets/feature-waste-calculation.png"
+                    image="/src/assets/cloud-services-training.png"
                     imageAlt="Formación"
+                    imageMaxWidth={500}
                     sx={{ mb: 0 }}
                 >
                     <WebButton
