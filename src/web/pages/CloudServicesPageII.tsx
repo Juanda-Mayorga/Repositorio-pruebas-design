@@ -89,18 +89,26 @@ export const CloudServicesPageII = () => {
                             whileInView={{ opacity: 1, scale: 1, y: 0 }}
                             viewport={{ once: true, amount: 0.1 }}
                             transition={{ duration: 0.8, ease: "easeOut" }}
-                            sx={{ flex: 1, p: { xs: 3, md: 6 }, pb: { xs: 0, md: 6 }, display: 'flex', justifyContent: 'center' }}
+                            sx={{
+                                flex: 1,
+                                display: 'flex',
+                                justifyContent: 'center',
+                                position: 'relative',
+                                minHeight: { xs: '300px', md: 'auto' } // Ensure visibility if text is short? No, text dictates.
+                            }}
                         >
                             <Box
                                 component="img"
-                                src="/src/assets/product-hero-qto.png"
-                                alt={t('productPage.heroTitle')}
+                                src="/src/assets/cloud-services-hero-license-final.png"
+                                alt="Control de licencias"
                                 sx={{
                                     width: '100%',
-                                    maxWidth: '500px',
-                                    height: 'auto',
-                                    borderRadius: '8px',
-                                    boxShadow: '0px 4px 24px rgba(0, 0, 0, 0.15)',
+                                    height: { xs: 'auto', md: '100%' },
+                                    position: { xs: 'relative', md: 'absolute' },
+                                    top: 0,
+                                    left: 0,
+                                    objectFit: 'cover',
+                                    zIndex: 1
                                 }}
                             />
                         </MotionBox>
@@ -132,20 +140,8 @@ export const CloudServicesPageII = () => {
                                     visible: { opacity: 1, y: 0 }
                                 }} initial="hidden" animate="visible" transition={{ duration: 0.5, delay: 0.4 }}>
                                     <Typography variant="h2" sx={{ mb: 3 }}>
-                                        {t('productPage.heroTitle')}
+                                        Control de licencias
                                     </Typography>
-                                </motion.div>
-
-                                <motion.div variants={{
-                                    hidden: { opacity: 0, y: 15 },
-                                    visible: { opacity: 1, y: 0 }
-                                }} initial="hidden" animate="visible" transition={{ duration: 0.5, delay: 0.5 }}>
-                                    <Typography sx={{
-                                        color: 'text.secondary',
-                                        fontFamily: 'Hind Siliguri',
-                                        mb: 3,
-                                        fontSize: { xs: '16px', md: '18px' }
-                                    }} dangerouslySetInnerHTML={{ __html: t('productPage.heroHighlight') }} />
                                 </motion.div>
 
                                 <motion.div variants={{
@@ -157,7 +153,9 @@ export const CloudServicesPageII = () => {
                                         mb: 3,
                                         whiteSpace: 'pre-line',
                                         fontSize: { xs: '16px', md: '18px' }
-                                    }} dangerouslySetInnerHTML={{ __html: t('productPage.heroDescription') }} />
+                                    }}>
+                                        Mantén el control total sobre la suscripción, facturación y uso de licencias de tu empresa a través de una interfaz centralizada e intuitiva
+                                    </Typography>
                                 </motion.div>
 
                                 <motion.div variants={{
@@ -179,22 +177,18 @@ export const CloudServicesPageII = () => {
                     </Box>
                 </Box>
 
-                {/* Feature 1: Cost Estimating */}
-                <WebProductCard
-                    title="Control de licencias"
-                    description="Mantén el control total sobre la suscripción, facturación y uso de licencias de tu empresa a través de una interfaz centralizada e intuitiva"
-                    image="/src/assets/feature-cost-estimating.png"
-                    imageAlt="Control de licencias"
-                    sx={{ mb: { xs: 4, md: 8 } }}
-                />
+
 
                 {/* Feature 2: Automatic Model Audit */}
                 <WebProductCard
                     title="Gestión de usuarios"
                     imagePosition="left"
                     description="Invita a usuarios, asigna formación y realiza un seguimiento del progreso sin esfuerzo. MAMBA permite a los administradores gestionar a los miembros del equipo, supervisar el aprendizaje y asegurar que todos estén alineados desde una única interfaz."
-                    image="/src/assets/feature-model-audit.png"
+                    image="/src/assets/cloud-services-users.png"
                     imageAlt="Gestión de usuarios"
+                    imageMaxWidth="100%"
+                    imageHeight="100%"
+                    imageObjectFit="cover"
                     sx={{ mb: { xs: 4, md: 8 } }}
                 />
 

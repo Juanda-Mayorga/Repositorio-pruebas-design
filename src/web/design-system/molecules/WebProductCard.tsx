@@ -12,6 +12,8 @@ interface WebProductCardProps {
     imageAlt?: string;
     imagePosition?: 'left' | 'right';
     imageMaxWidth?: number | string;
+    imageHeight?: number | string;
+    imageObjectFit?: React.CSSProperties['objectFit'];
     children?: ReactNode;
     sx?: SxProps<Theme>;
 }
@@ -34,6 +36,8 @@ interface WebProductCardProps {
  * @param {string} [imageAlt] - Texto alternativo para accesibilidad.
  * @param {'left' | 'right'} [imagePosition='right'] - Posición de la imagen respecto al texto.
  * @param {number | string} [imageMaxWidth=420] - Ancho máximo de la imagen.
+ * @param {number | string} [imageHeight='auto'] - Alto de la imagen.
+ * @param {objectFit} [imageObjectFit='initial'] - Comportamiento de ajuste de la imagen.
  * @param {ReactNode} [children] - Slot para botones de Call to Action.
  */
 export const WebProductCard = ({
@@ -43,6 +47,8 @@ export const WebProductCard = ({
     imageAlt = '',
     imagePosition = 'right',
     imageMaxWidth = 420,
+    imageHeight = 'auto',
+    imageObjectFit = 'initial',
     children,
     sx
 }: WebProductCardProps) => {
@@ -118,7 +124,9 @@ export const WebProductCard = ({
                     viewport={{ once: true, amount: 0.1 }}
                     transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
                     sx={{
-                        order: { xs: 1, md: isImageLeft ? 1 : 2 }
+                        order: { xs: 1, md: isImageLeft ? 1 : 2 },
+                        alignItems: 'center',
+                        justifyContent: 'center'
                     }}
                 >
                     <Box
@@ -128,11 +136,11 @@ export const WebProductCard = ({
                         sx={{
                             width: '100%',
                             maxWidth: imageMaxWidth,
-                            height: 'auto',
+                            height: imageHeight,
+                            objectFit: imageObjectFit,
                             display: 'block',
                             mx: 'auto',
                             borderRadius: '12px',
-                            boxShadow: '0px 4px 24px rgba(0, 0, 0, 0.1)',
                         }}
                     />
                 </MotionGrid>
