@@ -242,5 +242,26 @@
             "title": "Schulung",
             "description": "MAMBA bietet eine intuitive Oberfläche, auf der Sie mit Knoten erstellten <strong>Lernpfaden</strong> folgen, Ihren Fortschritt verfolgen und durch <strong>Gamification</strong> motiviert bleiben können."
         }
+    },
+    "supportPage": {
+        "hero": {
+            "title": "Support-Center",
+            "subtitle": "Klären Sie Fragen, richten Sie Ihr Team aus und behalten Sie die Projektkontrolle an einem Ort."
+        },
+        "cards": {
+            "teamAligned": {
+                "title": "Ausgerichtetes Team",
+                "description": "Klare Entscheidungen, weniger Fehler und bessere Koordination"
+            },
+            "integratedSupport": {
+                "title": "Integrierter Support",
+                "description": "Technische Fragen direkt in MAMBA klären"
+            },
+            "traceability": {
+                "title": "Rückverfolgbarkeit",
+                "description": "Jedes Gespräch wird aufgezeichnet und mit dem Projekt verknüpft"
+            },
+            "comingSoon": "DEMNÄCHST"
+        }
     }
 }

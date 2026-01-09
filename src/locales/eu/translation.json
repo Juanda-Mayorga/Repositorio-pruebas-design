@@ -242,5 +242,26 @@
             "title": "Prestakuntza",
             "description": "MAMBAk interfaze intuitibo bat eskaintzen du, non nodoekin eraikitako <strong>ikaskuntza-ibilbideak</strong> jarraitu, zure aurrerapenaren jarraipena egin eta <strong>gamifikazioarekin</strong> motibatuta egon zaitezkeen."
         }
+    },
+    "supportPage": {
+        "hero": {
+            "title": "Laguntza Zentroa",
+            "subtitle": "Zalantzak argitu, taldea lerrokatu eta proiektuaren kontrola mantendu leku berean."
+        },
+        "cards": {
+            "teamAligned": {
+                "title": "Talde lerrokatua",
+                "description": "Erabaki argiak, errore gutxiago eta koordinazio hobea"
+            },
+            "integratedSupport": {
+                "title": "Laguntza integratua",
+                "description": "Zalantza teknikoak zuzenean MAMBAtik argitu"
+            },
+            "traceability": {
+                "title": "Trazabilitatea",
+                "description": "Elkarrizketa bakoitza erregistratuta eta proiektuari lotuta geratzen da"
+            },
+            "comingSoon": "LAISTER"
+        }
     }
 }

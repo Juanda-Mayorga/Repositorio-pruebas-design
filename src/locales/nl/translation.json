@@ -242,5 +242,26 @@
             "title": "Training",
             "description": "MAMBA biedt een intuïtieve interface waar u <strong>leertrajecten</strong> kunt volgen die zijn opgebouwd met knooppunten, uw voortgang kunt bijhouden en gemotiveerd kunt blijven met <strong>gamification</strong>."
         }
+    },
+    "supportPage": {
+        "hero": {
+            "title": "Supportcentrum",
+            "subtitle": "Los twijfels op, breng uw team op één lijn en houd de controle over het project vanaf één plek."
+        },
+        "cards": {
+            "teamAligned": {
+                "title": "Afgestemd team",
+                "description": "Duidelijke beslissingen, minder fouten en betere coördinatie"
+            },
+            "integratedSupport": {
+                "title": "Geïntegreerde ondersteuning",
+                "description": "Los technische twijfels direct op via MAMBA"
+            },
+            "traceability": {
+                "title": "Traceerbaarheid",
+                "description": "Elk gesprek wordt vastgelegd en gekoppeld aan het project"
+            },
+            "comingSoon": "BINNENKORT"
+        }
     }
 }

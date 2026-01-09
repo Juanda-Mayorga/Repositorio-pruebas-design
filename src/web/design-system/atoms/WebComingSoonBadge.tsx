@@ -20,10 +20,10 @@ export const WebComingSoonBadge = () => {
         <Box sx={{
             display: 'inline-flex',
             alignItems: 'center',
-            gap: 1.5,
-            px: 2,
-            py: 0.75,
-            mb: 3,
+            gap: { xxs: 0.8, sm: 1, md: 1.2, lg: 1.5 },
+            px: { xxs: 1, sm: 1.5, md: 2 },
+            py: { xxs: 0.4, sm: 0.6, md: 0.75 },
+            mb: { xxs: 2, md: 3 },
             bgcolor: '#F3F0FF',
             borderRadius: '24px',
             border: '1px solid',
@@ -34,17 +34,25 @@ export const WebComingSoonBadge = () => {
                 animate={{ opacity: [1, 0.4, 1] }}
                 transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
                 sx={{
-                    width: 10,
-                    height: 10,
+                    width: { xxs: 6, sm: 8, md: 10 },
+                    height: { xxs: 6, sm: 8, md: 10 },
                     borderRadius: '50%',
                     bgcolor: '#6B46C1'
                 }}
             />
             <Typography sx={{
-                fontSize: '16px',
+                fontSize: {
+                    xxs: '10px',
+                    xs: '11px',
+                    sm: '12px',
+                    md: '13px',
+                    lg: '14px',
+                    xl: '16px'
+                },
                 fontWeight: 500,
                 fontFamily: '"Inter", sans-serif',
-                color: '#6B46C1'
+                color: '#6B46C1',
+                lineHeight: 1
             }}>
                 {t('supportPage.cards.comingSoon')}
             </Typography>

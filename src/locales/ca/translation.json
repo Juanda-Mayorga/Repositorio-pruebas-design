@@ -242,5 +242,26 @@
             "title": "Formació",
             "description": "MAMBA ofereix una interfície intuïtiva on pots seguir <strong>rutes d'aprenentatge</strong> construïdes amb nodes, realitzar un seguiment del teu progrés i mantenir-te motivat amb la <strong>gamificació</strong>."
         }
+    },
+    "supportPage": {
+        "hero": {
+            "title": "Centre de Suport",
+            "subtitle": "Resol dubtes, alinea el teu equip i mantén el control del projecte des d'un mateix lloc."
+        },
+        "cards": {
+            "teamAligned": {
+                "title": "Equip alineat",
+                "description": "Decisions clares, menys errors i millor coordinació"
+            },
+            "integratedSupport": {
+                "title": "Suport integrat",
+                "description": "Resol dubtes tècnics directament des de MAMBA"
+            },
+            "traceability": {
+                "title": "Traçabilitat",
+                "description": "Cada conversa queda registrada i vinculada al projecte"
+            },
+            "comingSoon": "PROXIMAMENT"
+        }
     }
 }

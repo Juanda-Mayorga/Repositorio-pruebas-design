@@ -242,5 +242,26 @@
             "title": "Opplæring",
             "description": "MAMBA tilbyder et intuitivt grensesnitt der du kan følge <strong>læringsveier</strong> bygget med noder, spore fremgangen din og holde deg motivert med <strong>seier</strong>."
         }
+    },
+    "supportPage": {
+        "hero": {
+            "title": "Brukerstøtte",
+            "subtitle": "Løs tvil, samkjør teamet ditt og behold kontrollen over prosjektet fra ett sted."
+        },
+        "cards": {
+            "teamAligned": {
+                "title": "Samkjørt team",
+                "description": "Klare beslutninger, færre feil og bedre koordinering"
+            },
+            "integratedSupport": {
+                "title": "Integrert støtte",
+                "description": "Løs tekniske spørsmål direkte fra MAMBA"
+            },
+            "traceability": {
+                "title": "Sporbarhet",
+                "description": "Hver samtale blir registrert og knyttet til prosjektet"
+            },
+            "comingSoon": "KOMMER SNART"
+        }
     }
 }
