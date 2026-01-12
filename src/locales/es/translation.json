@@ -415,7 +415,7 @@
     "cloudServicesPageII": {
         "header": {
             "title": "Servicios en la Nube",
-            "subtitle": "Centraliza la gestión de licencias, empleados, formación y proyectos en un solo lugar"
+            "subtitle": "Gestiona licencias, usuarios, formación y proyectos desde una única plataforma"
         },
         "hero": {
             "title": "Control de licencias",
@@ -433,7 +433,7 @@
     "supportPage": {
         "hero": {
             "title": "Centro de Soporte",
-            "subtitle": "Resuelve dudas, alinea a tu equipo y mantén el control del proyecto desde un solo lugar."
+            "subtitle": "Resuelve dudas, alinea a tu equipo y mantén el control del proyecto desde un solo lugar"
         },
         "cards": {
             "teamAligned": {
