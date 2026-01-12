@@ -45,7 +45,7 @@ export const SupportPage = () => {
     return (
         <MainLayout sx={{ bgcolor: '#FFFFFF', overflowX: 'hidden' }}>
             {/* Hero Header */}
-            <Box sx={{ textAlign: 'center', pt: theme.webLayout.headerSpacing, pb: 6, px: 2 }}>
+            <Box sx={{ textAlign: 'center', pt: theme.webLayout.headerSpacing, pb: 6, px: { xs: 2, sm: 6, md: 4 } }}>
                 <WebComingSoonBadge />
 
                 <MotionTypography
@@ -64,7 +64,7 @@ export const SupportPage = () => {
                     transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
                     sx={{
                         color: 'text.secondary',
-                        maxWidth: 700,
+                        maxWidth: { xs: '100%', sm: 648, lg: 700 },
                         mx: 'auto',
                         fontSize: '16px', // xs, sm, md (375px, 744px, 1133px)
                         [theme.breakpoints.up('lg')]: { // 1440px, 1920px
@@ -77,7 +77,7 @@ export const SupportPage = () => {
             </Box>
 
             {/* Feature Cards Section */}
-            <Container maxWidth="lg" sx={{ px: { xs: 2, md: 4 }, pb: 10 }}>
+            <Container maxWidth="lg" sx={{ px: { xs: 2, sm: 6, md: 4 }, pb: 10 }}>
                 <Box sx={{
                     bgcolor: theme.palette.web.background.paper,
                     borderRadius: 4,

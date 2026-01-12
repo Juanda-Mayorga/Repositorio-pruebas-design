@@ -27,7 +27,7 @@ export const CloudServicesPageII = () => {
     return (
         <MainLayout>
             {/* Page Header */}
-            <Box sx={{ textAlign: 'center', pt: theme.webLayout.headerSpacing, pb: 6, px: 2 }}>
+            <Box sx={{ textAlign: 'center', pt: theme.webLayout.headerSpacing, pb: 6, px: { xs: 2, sm: 6, md: 4 } }}>
                 <Typography
                     variant="h1"
                     component={motion.h1}
@@ -46,7 +46,7 @@ export const CloudServicesPageII = () => {
                     transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
                     sx={{
                         color: 'text.secondary',
-                        maxWidth: 600,
+                        maxWidth: { xs: '100%', sm: 648, lg: 600 },
                         mx: 'auto',
                         textAlign: 'center',
                         fontSize: '16px', // xs, sm, md (375px, 744px, 1133px)
@@ -59,7 +59,7 @@ export const CloudServicesPageII = () => {
                 </Typography>
             </Box>
 
-            <Container maxWidth="lg" sx={{ px: { xs: 2, md: 4 }, pb: 10 }}>
+            <Container maxWidth="lg" sx={{ px: { xs: 2, sm: 6, md: 4 }, pb: 10 }}>
                 {/* Hero Section */}
                 <Box
                     sx={{
