@@ -427,8 +427,7 @@ export const LandingPage = () => {
                                 fontFamily: '"Hind Siliguri", sans-serif'
                             }}
                         >
-                            With 80% of projects over budget or behind schedule,
-                            we have the solution to bring clarity back.
+                            With 25 years of experience in the AECO industry, we know the model isn’t the main problem
                         </Typography>
                     </Box>
 
