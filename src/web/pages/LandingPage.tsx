@@ -470,8 +470,15 @@ export const LandingPage = () => {
 
             {/* 5. Designed to fit every role */}
             <Box sx={{ py: { xs: 8, md: 16 }, bgcolor: '#FFFFFF', overflow: 'hidden' }}>
-                <Container maxWidth="lg">
-                    <Box sx={{ mb: { xs: 6, md: 10 } }}>
+                <Container maxWidth="lg" sx={{ px: { xs: 2, sm: 6, md: 10, lg: 15 } }}>
+                    <Box sx={{
+                        mb: { xs: 6, md: 10 },
+                        textAlign: 'center',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        mx: 'auto'
+                    }}>
                         <Typography
                             variant="h2"
                             sx={{
@@ -487,7 +494,7 @@ export const LandingPage = () => {
                             variant="body1"
                             sx={{
                                 color: 'text.secondary',
-                                maxWidth: '600px',
+                                maxWidth: '700px',
                                 fontSize: '18px',
                                 fontFamily: '"Hind Siliguri", sans-serif'
                             }}
@@ -496,7 +503,7 @@ export const LandingPage = () => {
                         </Typography>
                     </Box>
 
-                    <Grid container spacing={8}>
+                    <Grid container spacing={{ xs: 3, md: 8 }}>
                         {/* Role Selector */}
                         <Grid size={{ xs: 12, md: 4 }}>
                             <Box
@@ -506,7 +513,7 @@ export const LandingPage = () => {
                                     flexWrap: { xs: 'wrap', md: 'nowrap' },
                                     justifyContent: { xs: 'center', md: 'flex-start' },
                                     gap: { xs: 1.5, md: 1 },
-                                    mb: { xs: 4, md: 0 }
+                                    mb: { xs: 2, md: 0 }
                                 }}
                             >
                                 {roles.map((role, index) => (
@@ -522,11 +529,11 @@ export const LandingPage = () => {
                                             textAlign: 'left',
                                             transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
                                             position: 'relative',
-                                            bgcolor: activeRole === index ? `${role.color}15` : 'transparent',
+                                            bgcolor: activeRole === index ? `${role.color}15` : `${role.color}05`,
                                             border: '1px solid',
-                                            borderColor: activeRole === index ? role.color : { xs: '#E0E0E0', md: 'transparent' },
+                                            borderColor: activeRole === index ? role.color : `${role.color}30`,
                                             '&:hover': {
-                                                bgcolor: activeRole === index ? `${role.color}15` : '#F9F9FB',
+                                                bgcolor: activeRole === index ? `${role.color}15` : `${role.color}10`,
                                                 transform: { xs: 'none', md: activeRole === index ? 'none' : 'translateX(8px)' },
                                                 borderColor: role.color
                                             }
@@ -553,18 +560,6 @@ export const LandingPage = () => {
                                             >
                                                 {role.title}
                                             </Typography>
-                                            <Typography
-                                                variant="body2"
-                                                sx={{
-                                                    color: 'text.secondary',
-                                                    mt: 0.5,
-                                                    opacity: activeRole === index ? 1 : 0.7,
-                                                    fontSize: '14px',
-                                                    display: { xs: 'none', sm: 'none', md: 'block' }
-                                                }}
-                                            >
-                                                {activeRole === index ? 'Active perspective' : 'View capabilities'}
-                                            </Typography>
                                         </Box>
                                     </ButtonBase>
                                 ))}
@@ -589,7 +584,9 @@ export const LandingPage = () => {
                                         flexDirection: 'column',
                                         position: 'relative',
                                         overflow: 'hidden',
-                                        border: '1px solid #F0F0FF'
+                                        border: '1px solid',
+                                        borderColor: `${roles[activeRole].color}60`,
+                                        transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)'
                                     }}
                                 >
                                     <Grid container spacing={4} alignItems="center" sx={{ height: '100%' }}>
