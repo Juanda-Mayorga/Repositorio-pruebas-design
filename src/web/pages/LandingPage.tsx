@@ -245,15 +245,28 @@ export const LandingPage = () => {
                     </Typography>
                     <Grid container spacing={4} justifyContent="center" alignItems="center">
                         {logos.map((logo, index) => (
-                            <Grid key={index} size={{ xs: 6, sm: 4, md: 2 }}>
+                            <Grid key={index} size={{ xs: 4, sm: 3, md: 2, lg: 2, xl: 2 }}>
                                 <Box
                                     component="img"
                                     src={logo.src}
                                     alt={logo.name}
                                     sx={{
                                         width: '100%',
-                                        maxWidth: '120px',
-                                        height: 'auto',
+                                        maxWidth: {
+                                            xs: '80px',
+                                            sm: '96px',
+                                            md: '110px',
+                                            lg: '120px',
+                                            xl: '140px'
+                                        },
+                                        height: {
+                                            xs: '32px',
+                                            sm: '40px',
+                                            md: '44px',
+                                            lg: '48px',
+                                            xl: '56px'
+                                        },
+                                        objectFit: 'contain',
                                         filter: 'grayscale(100%)',
                                         opacity: 0.6,
                                         transition: 'all 0.3s ease',
