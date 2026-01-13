@@ -351,8 +351,7 @@ export const LandingPage = () => {
                                 fontFamily: '"Hind Siliguri", sans-serif'
                             }}
                         >
-                            Adaptable tools that improve performance for every
-                            workflow, ensuring precision and reducing risk.
+                            A powerful solution, driven by advanced software, cloud services and support.
                         </Typography>
                     </Box>
 
