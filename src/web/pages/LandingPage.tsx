@@ -11,6 +11,23 @@ import roleBimImg from '../../assets/role-bim-manager.png';
 import roleAdminImg from '../../assets/role-administration.png';
 import roleCommercialImg from '../../assets/role-commercial.png';
 import roleEstimatorImg from '../../assets/role-estimator.png';
+import logoAcciona from '../../assets/BMM_MMI_LogoAcciona_0100.svg';
+import logoArup from '../../assets/BMM_MMI_LogoArup_0100.svg';
+import logoIdom from '../../assets/BMM_MMI_LogoIdom_0100.svg';
+import logoMvc from '../../assets/BMM_MMI_LogoMvc_0100.svg';
+import logoCfc from '../../assets/BMM_MMI_LogoCFC_0100.svg';
+import logoWisebuild from '../../assets/Logo_Wisebuild.svg';
+import logoApogea from '../../assets/BMM_MMI_LogoApogea_0100.svg';
+import logoIneco from '../../assets/BMM_MMI_LogoIneco_0100.svg';
+import logoTylin from '../../assets/BMM_MMI_LogoTYlin_0100.svg';
+import logoVielca from '../../assets/BMM_MMI_LogoVielca_0100.svg';
+import logoMsi from '../../assets/BMM_MMI_LogoMsi_0100.svg';
+import logoGlobalOmnium from '../../assets/BMM_MMI_LogoGlobalOmnium_0100.svg';
+import logoBerrilan from '../../assets/BMM_MMI_Berrilan_0100.svg';
+import logoHualca from '../../assets/BMM_MMI_Hualca.svg';
+import logoGobNavarra from '../../assets/BMM_MMI_LogoGobiernoDeNavarra_0100.svg';
+import logoGobTpf from '../../assets/BMM_MMI_LogoGobiernoTpf_0100.svg';
+import logoPlanho from '../../assets/BMM_MMI_LogoPlanho_0100.svg';
 
 const MotionBox = motion(Box);
 
@@ -34,10 +51,25 @@ export const LandingPage = () => {
     const { t } = useTranslation();
     const theme = useTheme();
 
-    const logos = Array(12).fill(null).map((_, i) => ({
-        name: `Logo ${i + 1}`,
-        src: `https://via.placeholder.com/120x40?text=LOGO+${i + 1}`
-    }));
+    const logos = [
+        { name: 'Acciona', src: logoAcciona },
+        { name: 'Arup', src: logoArup },
+        { name: 'IDOM', src: logoIdom },
+        { name: 'MVC', src: logoMvc },
+        { name: 'CFC', src: logoCfc },
+        { name: 'Wisebuild', src: logoWisebuild },
+        { name: 'Apogea', src: logoApogea },
+        { name: 'Ineco', src: logoIneco },
+        { name: 'TYlin', src: logoTylin },
+        { name: 'Vielca', src: logoVielca },
+        { name: 'MSI', src: logoMsi },
+        { name: 'Global Omnium', src: logoGlobalOmnium },
+        { name: 'Berrilan', src: logoBerrilan },
+        { name: 'Hualca', src: logoHualca },
+        { name: 'Gobierno de Navarra', src: logoGobNavarra },
+        { name: 'Gobierno TPF', src: logoGobTpf },
+        { name: 'Planho', src: logoPlanho },
+    ];
 
     const sectors = [
         { name: 'Engineering', image: 'https://via.placeholder.com/300x400?text=Engineering' },
