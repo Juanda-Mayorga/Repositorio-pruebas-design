@@ -125,7 +125,7 @@ export const LandingPage = () => {
             title: 'Técnico',
             color: '#12B76A',
             image: roleBimImg,
-            description: 'MAMBA permite a los técnicos medir, cuantificar y generar presupuestos directamente desde modelos BIM.',
+            description: 'MAMBA permite a los técnicos medir, cuantificar y generar presupuestos directamente desde modelos BIM',
             items: [
                 'Reglas automatizadas de medición',
                 'Extracción precisa de datos QTO',
@@ -136,7 +136,7 @@ export const LandingPage = () => {
             title: 'Responsable IT',
             color: '#2E90FA',
             image: roleCommercialImg,
-            description: 'Entorno centralizado para gestionar usuarios, licencias e integraciones de forma segura.',
+            description: 'Entorno centralizado para gestionar usuarios, licencias e integraciones de forma segura',
             items: [
                 'Control de accesos y seguridad',
                 'Gestión estable en la nube',
@@ -147,7 +147,7 @@ export const LandingPage = () => {
             title: 'Director de Proyectos',
             color: '#FDB022',
             image: roleSalesImg,
-            description: 'Visión clara de costes, avance y rendimiento del equipo para una toma de decisiones informada.',
+            description: 'Visión clara de costes, avance y rendimiento del equipo para una toma de decisiones informada',
             items: [
                 'Datos y KPI en tiempo real',
                 'Procesos estandarizados de control',
@@ -158,7 +158,7 @@ export const LandingPage = () => {
             title: 'Contable',
             color: '#7A6EBD',
             image: roleAdminImg,
-            description: 'Conecta mediciones y presupuestos con datos financieros reales para un control total.',
+            description: 'Conecta mediciones y presupuestos con datos financieros reales para un control total',
             items: [
                 'Seguimiento exhaustivo de costes',
                 'Detección temprana de desviaciones',
@@ -169,7 +169,7 @@ export const LandingPage = () => {
             title: 'Asesor Legal',
             color: '#F04438',
             image: roleEstimatorImg,
-            description: 'Control, trazabilidad y cumplimiento normativo de toda la documentación del proyecto.',
+            description: 'Control, trazabilidad y cumplimiento normativo de toda la documentación del proyecto',
             items: [
                 'Trazabilidad total y registros claros',
                 'Reducción de riesgos legales',
@@ -569,73 +569,95 @@ export const LandingPage = () => {
                                 >
                                     <Grid container spacing={4} alignItems="center" sx={{ height: '100%' }}>
                                         <Grid size={{ xs: 12, lg: 6 }}>
-                                            <Box sx={{ mb: 4 }}>
-                                                <Typography
-                                                    variant="overline"
-                                                    sx={{
-                                                        color: roles[activeRole].color,
-                                                        fontWeight: 700,
-                                                        letterSpacing: '0.1em'
-                                                    }}
-                                                >
-                                                    MAMBA FOR {roles[activeRole].title.toUpperCase()}
-                                                </Typography>
-                                                <Typography
-                                                    variant="h4"
-                                                    sx={{
-                                                        mt: 1,
-                                                        mb: 2,
-                                                        fontWeight: 500,
-                                                        color: '#474747',
-                                                        fontSize: { xs: '24px', md: '32px' }
-                                                    }}
-                                                >
-                                                    {roles[activeRole].description}
-                                                </Typography>
-                                            </Box>
+                                            <Box sx={{
+                                                maxWidth: { xs: '500px', lg: 'none' },
+                                                mx: { xs: 'auto', lg: 0 },
+                                                textAlign: { xs: 'center', lg: 'left' },
+                                                display: 'flex',
+                                                flexDirection: 'column',
+                                                alignItems: { xs: 'center', lg: 'flex-start' }
+                                            }}>
+                                                <Box sx={{ mb: 2, width: '100%' }}>
+                                                    <Typography
+                                                        variant="overline"
+                                                        sx={{
+                                                            color: roles[activeRole].color,
+                                                            fontWeight: 700,
+                                                            letterSpacing: '0.1em'
+                                                        }}
+                                                    >
+                                                        MAMBA FOR {roles[activeRole].title.toUpperCase()}
+                                                    </Typography>
+                                                    <Typography
+                                                        variant="h4"
+                                                        sx={{
+                                                            mt: 1,
+                                                            mb: 2,
+                                                            fontWeight: 500,
+                                                            color: '#474747',
+                                                            fontSize: { xs: '24px', md: '32px' }
+                                                        }}
+                                                    >
+                                                        {roles[activeRole].description}
+                                                    </Typography>
+                                                </Box>
 
-                                            <List sx={{ mb: 4 }}>
-                                                {roles[activeRole].items.map((item, i) => (
-                                                    <ListItem key={i} sx={{ px: 0, py: 1 }}>
-                                                        <ListItemIcon sx={{ minWidth: 32 }}>
-                                                            <Box sx={{
-                                                                width: 8,
-                                                                height: 8,
-                                                                borderRadius: '50%',
-                                                                bgcolor: roles[activeRole].color
-                                                            }} />
-                                                        </ListItemIcon>
-                                                        <ListItemText
-                                                            primary={item}
-                                                            primaryTypographyProps={{
-                                                                sx: {
-                                                                    color: '#4A4A4E',
-                                                                    fontSize: '16px',
-                                                                    fontWeight: 500,
-                                                                    fontFamily: '"Hind Siliguri", sans-serif'
-                                                                }
-                                                            }}
-                                                        />
-                                                    </ListItem>
-                                                ))}
-                                            </List>
+                                                <List sx={{
+                                                    mb: 2,
+                                                    display: 'flex',
+                                                    flexDirection: 'column',
+                                                    alignItems: 'flex-start', // Keep items aligned to the left of the block
+                                                    width: 'fit-content',      // Take only needed width to allow centering
+                                                    mx: { xs: 'auto', lg: 0 }  // Center the block on mobile, left on desktop
+                                                }}>
+                                                    {roles[activeRole].items.map((item, i) => (
+                                                        <ListItem key={i} sx={{
+                                                            px: 0,
+                                                            py: 1,
+                                                            width: '100%',
+                                                            justifyContent: 'flex-start' // Ensure bullet is on the left
+                                                        }}>
+                                                            <ListItemIcon sx={{ minWidth: 32 }}>
+                                                                <Box sx={{
+                                                                    width: 8,
+                                                                    height: 8,
+                                                                    borderRadius: '50%',
+                                                                    bgcolor: roles[activeRole].color
+                                                                }} />
+                                                            </ListItemIcon>
+                                                            <ListItemText
+                                                                primary={item}
+                                                                primaryTypographyProps={{
+                                                                    sx: {
+                                                                        color: '#4A4A4E',
+                                                                        fontSize: '16px',
+                                                                        fontWeight: 500,
+                                                                        fontFamily: '"Hind Siliguri", sans-serif',
+                                                                        textAlign: 'left'
+                                                                    }
+                                                                }}
+                                                            />
+                                                        </ListItem>
+                                                    ))}
+                                                </List>
 
-                                            <WebButton
-                                                variant="outlined"
-                                                sx={{
-                                                    borderColor: roles[activeRole].color,
-                                                    color: roles[activeRole].color,
-                                                    borderRadius: '12px',
-                                                    px: 4,
-                                                    py: 1.2,
-                                                    '&:hover': {
+                                                <WebButton
+                                                    variant="outlined"
+                                                    sx={{
                                                         borderColor: roles[activeRole].color,
-                                                        bgcolor: `${roles[activeRole].color}08`
-                                                    }
-                                                }}
-                                            >
-                                                See {roles[activeRole].title} workflow
-                                            </WebButton>
+                                                        color: roles[activeRole].color,
+                                                        borderRadius: '12px',
+                                                        px: 4,
+                                                        py: 1.2,
+                                                        '&:hover': {
+                                                            borderColor: roles[activeRole].color,
+                                                            bgcolor: `${roles[activeRole].color}08`
+                                                        }
+                                                    }}
+                                                >
+                                                    See {roles[activeRole].title} workflow
+                                                </WebButton>
+                                            </Box>
                                         </Grid>
                                         <Grid size={{ xs: 12, lg: 6 }}>
                                             <Box
