@@ -15,6 +15,10 @@ import roleBimImg from '../../assets/role-bim-manager.png';
 import roleAdminImg from '../../assets/role-administration.png';
 import roleCommercialImg from '../../assets/role-commercial.png';
 import roleEstimatorImg from '../../assets/role-estimator.png';
+import architectsImg from '../../assets/Architects.svg';
+import constructionImg from '../../assets/Construction.svg';
+import promotersImg from '../../assets/Promoters.svg';
+import engineeringImg from '../../assets/Engineering.svg';
 import logoAcciona from '../../assets/BMM_MMI_LogoAcciona_0100.svg';
 import logoArup from '../../assets/BMM_MMI_LogoArup_0100.svg';
 import logoIdom from '../../assets/BMM_MMI_LogoIdom_0100.svg';
@@ -100,10 +104,10 @@ export const LandingPage = () => {
     ];
 
     const sectors = [
-        { name: 'Engineering', image: 'https://via.placeholder.com/300x400?text=Engineering' },
-        { name: 'Architects', image: 'https://via.placeholder.com/300x400?text=Architects' },
-        { name: 'Owners', image: 'https://via.placeholder.com/300x400?text=Owners' },
-        { name: 'Construction', image: 'https://via.placeholder.com/300x400?text=Construction' },
+        { name: 'Engineering', image: engineeringImg },
+        { name: 'Architects', image: architectsImg },
+        { name: 'Promoters', image: promotersImg },
+        { name: 'Construction', image: constructionImg },
     ];
 
     const problems = [
@@ -359,14 +363,12 @@ export const LandingPage = () => {
                         {sectors.map((sector, index) => (
                             <Grid key={index} size={{ xs: 12, sm: 6, md: 3 }}>
                                 <MotionBox
-                                    whileHover={{ y: -10 }}
                                     sx={{
                                         position: 'relative',
                                         height: '400px',
                                         borderRadius: '16px',
                                         overflow: 'hidden',
-                                        boxShadow: '0 10px 30px rgba(0,0,0,0.1)',
-                                        cursor: 'pointer'
+                                        boxShadow: '0 10px 30px rgba(0,0,0,0.1)'
                                     }}
                                 >
                                     <Box
