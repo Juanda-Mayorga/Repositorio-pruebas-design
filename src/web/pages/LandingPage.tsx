@@ -355,17 +355,23 @@ export const LandingPage = () => {
                                 fontFamily: '"Hind Siliguri", sans-serif'
                             }}
                         >
-                            A powerful solution, driven by advanced software, cloud services and support.
+                            A solution that connects every part of the AECO workflow, reducing errors and maximizing efficiency
                         </Typography>
                     </Box>
 
-                    <Grid container spacing={3}>
+                    <Grid container spacing={4}>
                         {sectors.map((sector, index) => (
                             <Grid key={index} size={{ xs: 12, sm: 6, md: 3 }}>
                                 <MotionBox
                                     sx={{
                                         position: 'relative',
-                                        height: '400px',
+                                        height: { xs: '132px', sm: '140px', md: '400px' },
+                                        maxWidth: {
+                                            xs: '325px',
+                                            sm: '300px',
+                                            md: '100%'
+                                        },
+                                        mx: 'auto',
                                         borderRadius: '16px',
                                         overflow: 'hidden',
                                         boxShadow: '0 10px 30px rgba(0,0,0,0.1)'
@@ -383,14 +389,18 @@ export const LandingPage = () => {
                                     />
                                     <Box sx={{
                                         position: 'absolute',
-                                        bottom: 0,
+                                        top: 0,
                                         left: 0,
                                         right: 0,
-                                        p: 3,
-                                        background: 'linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%)',
-                                        color: '#FFFFFF'
+                                        bottom: 0,
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+                                        background: 'rgba(0,0,0,0.4)',
+                                        color: '#FFFFFF',
+                                        p: 2
                                     }}>
-                                        <Typography variant="h5" sx={{ fontWeight: 600 }}>
+                                        <Typography variant="h5" sx={{ fontWeight: 600, textAlign: 'center' }}>
                                             {sector.name}
                                         </Typography>
                                     </Box>
