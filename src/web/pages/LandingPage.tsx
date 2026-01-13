@@ -4,8 +4,12 @@ import { useTranslation } from 'react-i18next';
 import { MainLayout } from '../design-system/templates/MainLayout';
 import { WebButton } from '../design-system/atoms/WebButton';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useEffect } from 'react';
 
 // Import images
+import measurementHero from '../../assets/Measurement.svg';
+import sustainabilityHero from '../../assets/Sustainability.svg';
+import managementHero from '../../assets/Management.svg';
 import roleSalesImg from '../../assets/role-sales.png';
 import roleBimImg from '../../assets/role-bim-manager.png';
 import roleAdminImg from '../../assets/role-administration.png';
@@ -50,6 +54,30 @@ const MotionBox = motion(Box);
 export const LandingPage = () => {
     const { t } = useTranslation();
     const theme = useTheme();
+
+    const [activeHeroIndex, setActiveHeroIndex] = useState(0);
+
+    const heroSlides = [
+        {
+            keyword: 'Measurement',
+            image: measurementHero
+        },
+        {
+            keyword: 'Sustainability',
+            image: sustainabilityHero
+        },
+        {
+            keyword: 'Management',
+            image: managementHero
+        }
+    ];
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setActiveHeroIndex((prev) => (prev + 1) % heroSlides.length);
+        }, 4000);
+        return () => clearInterval(timer);
+    }, []);
 
     const logos = [
         { name: 'Acciona', src: logoAcciona },
@@ -173,7 +201,26 @@ export const LandingPage = () => {
                                         textAlign: 'left'
                                     }}
                                 >
-                                    The smartest way to automate BIM <Box component="span" sx={{ color: theme.palette.web.action.primary }}>Measurement</Box>
+                                    The smartest way to automate BIM <Box component="span" sx={{ display: 'inline-block', minWidth: { md: '300px' } }}>
+                                        <AnimatePresence mode="wait">
+                                            <MotionBox
+                                                key={heroSlides[activeHeroIndex].keyword}
+                                                initial={{ opacity: 0, y: 10 }}
+                                                animate={{ opacity: 1, y: 0 }}
+                                                exit={{ opacity: 0, y: -10 }}
+                                                transition={{ duration: 0.5 }}
+                                                sx={{
+                                                    background: 'linear-gradient(to right, #9989EC, #6E659F, #333337)',
+                                                    WebkitBackgroundClip: 'text',
+                                                    WebkitTextFillColor: 'transparent',
+                                                    backgroundClip: 'text',
+                                                    display: 'inline-block'
+                                                }}
+                                            >
+                                                {heroSlides[activeHeroIndex].keyword}
+                                            </MotionBox>
+                                        </AnimatePresence>
+                                    </Box>
                                 </Typography>
                                 <Typography
                                     variant="body1"
@@ -211,17 +258,28 @@ export const LandingPage = () => {
                                 transition={{ duration: 0.8, delay: 0.2 }}
                                 sx={{ position: 'relative' }}
                             >
-                                <Box
-                                    component="img"
-                                    src="https://via.placeholder.com/600x400?text=BIM+Software+Demonstration"
-                                    alt="MAMBA BIM Software"
-                                    sx={{
-                                        width: '100%',
-                                        height: 'auto',
-                                        borderRadius: '16px',
-                                        boxShadow: '0 20px 40px rgba(0,0,0,0.1)'
-                                    }}
-                                />
+                                <AnimatePresence mode="wait">
+                                    <MotionBox
+                                        key={activeHeroIndex}
+                                        initial={{ opacity: 0, x: 20 }}
+                                        animate={{ opacity: 1, x: 0 }}
+                                        exit={{ opacity: 0, x: -20 }}
+                                        transition={{ duration: 0.7 }}
+                                        sx={{ position: 'relative' }}
+                                    >
+                                        <Box
+                                            component="img"
+                                            src={heroSlides[activeHeroIndex].image}
+                                            alt={`MAMBA BIM ${heroSlides[activeHeroIndex].keyword}`}
+                                            sx={{
+                                                width: '100%',
+                                                height: 'auto',
+                                                borderRadius: '16px',
+                                                boxShadow: '0 20px 40px rgba(0,0,0,0.1)'
+                                            }}
+                                        />
+                                    </MotionBox>
+                                </AnimatePresence>
                             </MotionBox>
                         </Grid>
                     </Grid>
