@@ -1,8 +1,9 @@
 import { useState } from 'react';
-import { Box, Typography, Container, useTheme, Grid, ButtonBase, List, ListItem, ListItemIcon, ListItemText } from '@mui/material';
+import { Box, Typography, Container, useTheme, Grid, List, ListItem, ListItemIcon, ListItemText } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import { MainLayout } from '../design-system/templates/MainLayout';
 import { WebButton } from '../design-system/atoms/WebButton';
+import WebRoleButton from '../design-system/atoms/WebRoleButton';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useEffect } from 'react';
 
@@ -532,55 +533,13 @@ export const LandingPage = () => {
                                 }}
                             >
                                 {roles.map((role, index) => (
-                                    <ButtonBase
+                                    <WebRoleButton
                                         key={index}
+                                        title={role.title}
+                                        color={role.color}
+                                        isActive={activeRole === index}
                                         onClick={() => setActiveRole(index)}
-                                        sx={{
-                                            justifyContent: { xs: 'center', md: 'flex-start' },
-                                            px: { xs: 2.5, md: 3 },
-                                            py: { xs: 1, md: 3 },
-                                            height: { xs: '40px', md: 'auto' },
-                                            borderRadius: { xs: '8px', md: '16px' },
-                                            textAlign: 'left',
-                                            transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
-                                            position: 'relative',
-                                            bgcolor: activeRole === index ? `${role.color}15` : `${role.color}08`,
-                                            border: '1px solid',
-                                            borderColor: activeRole === index ? role.color : `${role.color}50`,
-                                            '&:hover': {
-                                                bgcolor: activeRole === index ? `${role.color}15` : `${role.color}10`,
-                                                transform: { xs: 'none', md: activeRole === index ? 'none' : 'translateX(8px)' },
-                                                borderColor: role.color,
-                                                '& .role-title': {
-                                                    color: role.color
-                                                }
-                                            }
-                                        }}
-                                    >
-                                        <Box sx={{
-                                            width: 4,
-                                            height: activeRole === index ? '60%' : '0%',
-                                            position: 'absolute',
-                                            left: 0,
-                                            bgcolor: role.color,
-                                            borderRadius: '0 4px 4px 0',
-                                            transition: 'height 0.3s ease'
-                                        }} />
-                                        <Box>
-                                            <Typography
-                                                variant="h6"
-                                                className="role-title"
-                                                sx={{
-                                                    color: activeRole === index ? role.color : '#333337',
-                                                    fontWeight: activeRole === index ? 700 : 500,
-                                                    fontSize: { xs: '16px', sm: '18px', md: '20px' },
-                                                    transition: 'color 0.3s ease'
-                                                }}
-                                            >
-                                                {role.title}
-                                            </Typography>
-                                        </Box>
-                                    </ButtonBase>
+                                    />
                                 ))}
                             </Box>
                         </Grid>
@@ -626,8 +585,8 @@ export const LandingPage = () => {
                                                     sx={{
                                                         mt: 1,
                                                         mb: 2,
-                                                        fontWeight: 700,
-                                                        color: '#333337',
+                                                        fontWeight: 500,
+                                                        color: '#474747',
                                                         fontSize: { xs: '24px', md: '32px' }
                                                     }}
                                                 >
@@ -686,7 +645,7 @@ export const LandingPage = () => {
                                                 sx={{
                                                     width: '100%',
                                                     height: 'auto',
-                                                    maxWidth: '400px',
+                                                    maxWidth: '320px',
                                                     mx: 'auto',
                                                     display: 'block',
                                                     filter: 'drop-shadow(0 20px 40px rgba(0,0,0,0.08))'
