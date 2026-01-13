@@ -506,6 +506,21 @@ export const LandingPage = () => {
                     <Grid container spacing={{ xs: 3, md: 8 }}>
                         {/* Role Selector */}
                         <Grid size={{ xs: 12, md: 4 }}>
+                            <Typography
+                                variant="body2"
+                                sx={{
+                                    mb: 2,
+                                    color: 'text.secondary',
+                                    fontWeight: 600,
+                                    fontSize: '14px',
+                                    textAlign: { xs: 'center', md: 'left' },
+                                    textTransform: 'uppercase',
+                                    letterSpacing: '0.05em',
+                                    opacity: 0.8
+                                }}
+                            >
+                                Selecciona tu perfil profesional
+                            </Typography>
                             <Box
                                 sx={{
                                     display: 'flex',
@@ -529,13 +544,16 @@ export const LandingPage = () => {
                                             textAlign: 'left',
                                             transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
                                             position: 'relative',
-                                            bgcolor: activeRole === index ? `${role.color}15` : `${role.color}05`,
+                                            bgcolor: activeRole === index ? `${role.color}15` : `${role.color}08`,
                                             border: '1px solid',
-                                            borderColor: activeRole === index ? role.color : `${role.color}30`,
+                                            borderColor: activeRole === index ? role.color : `${role.color}50`,
                                             '&:hover': {
                                                 bgcolor: activeRole === index ? `${role.color}15` : `${role.color}10`,
                                                 transform: { xs: 'none', md: activeRole === index ? 'none' : 'translateX(8px)' },
-                                                borderColor: role.color
+                                                borderColor: role.color,
+                                                '& .role-title': {
+                                                    color: role.color
+                                                }
                                             }
                                         }}
                                     >
@@ -551,10 +569,11 @@ export const LandingPage = () => {
                                         <Box>
                                             <Typography
                                                 variant="h6"
+                                                className="role-title"
                                                 sx={{
                                                     color: activeRole === index ? role.color : '#333337',
                                                     fontWeight: activeRole === index ? 700 : 500,
-                                                    fontSize: '20px',
+                                                    fontSize: { xs: '16px', sm: '18px', md: '20px' },
                                                     transition: 'color 0.3s ease'
                                                 }}
                                             >
