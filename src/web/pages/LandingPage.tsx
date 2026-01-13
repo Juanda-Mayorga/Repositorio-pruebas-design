@@ -121,58 +121,58 @@ export const LandingPage = () => {
 
     const roles = [
         {
-            title: 'Ventas',
-            color: '#FDB022',
-            image: roleSalesImg,
-            description: 'Maximiza tus oportunidades comerciales con datos precisos desde el primer contacto.',
-            items: [
-                'Gestión de clientes y oportunidades',
-                'Presupuestos rápidos y fiables',
-                'Seguimiento comercial integrado'
-            ]
-        },
-        {
-            title: 'BIM Manager',
+            title: 'Técnico',
             color: '#12B76A',
             image: roleBimImg,
-            description: 'Asegura la calidad y coordinación de tus modelos con herramientas de auditoría avanzadas.',
+            description: 'MAMBA permite a los técnicos medir, cuantificar y generar presupuestos directamente desde modelos BIM.',
             items: [
-                'Control de calidad y coordinación',
-                'Automatización de procesos BIM',
-                'Auditoría de modelos en tiempo real'
+                'Reglas automatizadas de medición',
+                'Extracción precisa de datos QTO',
+                'Reducción drástica del trabajo manual'
             ]
         },
         {
-            title: 'Administración',
-            color: '#7A6EBD',
-            image: roleAdminImg,
-            description: 'Simplifica la gestión administrativa y financiera de tus proyectos de construcción.',
-            items: [
-                'Facturación y recursos humanos',
-                'Control de costes y pagos',
-                'Reportes financieros automáticos'
-            ]
-        },
-        {
-            title: 'Comercial',
+            title: 'Responsable IT',
             color: '#2E90FA',
             image: roleCommercialImg,
-            description: 'Potencia tu alcance de mercado con herramientas diseñadas para el sector AECO.',
+            description: 'Entorno centralizado para gestionar usuarios, licencias e integraciones de forma segura.',
             items: [
-                'Ventas y relaciones públicas',
-                'Análisis de mercado y competencia',
-                'Estrategias de crecimiento basadas en datos'
+                'Control de accesos y seguridad',
+                'Gestión estable en la nube',
+                'Sincronización organizacional coherente'
             ]
         },
         {
-            title: 'Estimador',
+            title: 'Director de Proyectos',
+            color: '#FDB022',
+            image: roleSalesImg,
+            description: 'Visión clara de costes, avance y rendimiento del equipo para una toma de decisiones informada.',
+            items: [
+                'Datos y KPI en tiempo real',
+                'Procesos estandarizados de control',
+                'Control integral del ciclo de proyecto'
+            ]
+        },
+        {
+            title: 'Contable',
+            color: '#7A6EBD',
+            image: roleAdminImg,
+            description: 'Conecta mediciones y presupuestos con datos financieros reales para un control total.',
+            items: [
+                'Seguimiento exhaustivo de costes',
+                'Detección temprana de desviaciones',
+                'Coherencia financiera con el flujo BIM'
+            ]
+        },
+        {
+            title: 'Asesor Legal',
             color: '#F04438',
             image: roleEstimatorImg,
-            description: 'Obtén mediciones precisas y presupuestos exactos en una fracción del tiempo habitual.',
+            description: 'Control, trazabilidad y cumplimiento normativo de toda la documentación del proyecto.',
             items: [
-                'Estudio de costes y presupuestos',
-                'Mediciones automáticas desde BIM',
-                'Análisis de variaciones de costes'
+                'Trazabilidad total y registros claros',
+                'Reducción de riesgos legales',
+                'Aseguramiento del cumplimiento técnico'
             ]
         }
     ];
@@ -492,32 +492,43 @@ export const LandingPage = () => {
                                 fontFamily: '"Hind Siliguri", sans-serif'
                             }}
                         >
-                            MAMBA provides specialized views and tools for the entire project team,
-                            ensuring everyone has the data they need, when they need it.
+                            From technicians to lawyers, MAMBA provides the complete solution that works for every role
                         </Typography>
                     </Box>
 
                     <Grid container spacing={8}>
                         {/* Role Selector */}
                         <Grid size={{ xs: 12, md: 4 }}>
-                            <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
+                            <Box
+                                sx={{
+                                    display: 'flex',
+                                    flexDirection: { xs: 'row', md: 'column' },
+                                    flexWrap: { xs: 'wrap', md: 'nowrap' },
+                                    justifyContent: { xs: 'center', md: 'flex-start' },
+                                    gap: { xs: 1.5, md: 1 },
+                                    mb: { xs: 4, md: 0 }
+                                }}
+                            >
                                 {roles.map((role, index) => (
                                     <ButtonBase
                                         key={index}
                                         onClick={() => setActiveRole(index)}
                                         sx={{
-                                            justifyContent: 'flex-start',
-                                            p: 3,
-                                            borderRadius: '16px',
+                                            justifyContent: { xs: 'center', md: 'flex-start' },
+                                            px: { xs: 2.5, md: 3 },
+                                            py: { xs: 1, md: 3 },
+                                            height: { xs: '40px', md: 'auto' },
+                                            borderRadius: { xs: '8px', md: '16px' },
                                             textAlign: 'left',
                                             transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
                                             position: 'relative',
-                                            bgcolor: activeRole === index ? `${role.color}08` : 'transparent',
+                                            bgcolor: activeRole === index ? `${role.color}15` : 'transparent',
                                             border: '1px solid',
-                                            borderColor: activeRole === index ? `${role.color}40` : 'transparent',
+                                            borderColor: activeRole === index ? role.color : { xs: '#E0E0E0', md: 'transparent' },
                                             '&:hover': {
-                                                bgcolor: activeRole === index ? `${role.color}08` : '#F9F9FB',
-                                                transform: activeRole === index ? 'none' : 'translateX(8px)'
+                                                bgcolor: activeRole === index ? `${role.color}15` : '#F9F9FB',
+                                                transform: { xs: 'none', md: activeRole === index ? 'none' : 'translateX(8px)' },
+                                                borderColor: role.color
                                             }
                                         }}
                                     >
@@ -549,7 +560,7 @@ export const LandingPage = () => {
                                                     mt: 0.5,
                                                     opacity: activeRole === index ? 1 : 0.7,
                                                     fontSize: '14px',
-                                                    display: { xs: activeRole === index ? 'block' : 'none', md: 'block' }
+                                                    display: { xs: 'none', sm: 'none', md: 'block' }
                                                 }}
                                             >
                                                 {activeRole === index ? 'Active perspective' : 'View capabilities'}
@@ -565,14 +576,14 @@ export const LandingPage = () => {
                             <AnimatePresence mode="wait">
                                 <MotionBox
                                     key={activeRole}
-                                    initial={{ opacity: 0, x: 20 }}
-                                    animate={{ opacity: 1, x: 0 }}
-                                    exit={{ opacity: 0, x: -20 }}
-                                    transition={{ duration: 0.4, ease: "easeOut" }}
+                                    initial={{ opacity: 0, y: 10 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0, y: -10 }}
+                                    transition={{ duration: 0.3, ease: "easeOut" }}
                                     sx={{
                                         bgcolor: '#FBFBFF',
-                                        borderRadius: '32px',
-                                        p: { xs: 4, md: 6 },
+                                        borderRadius: { xs: '24px', md: '32px' },
+                                        p: { xs: 3, md: 6 },
                                         height: '100%',
                                         display: 'flex',
                                         flexDirection: 'column',
