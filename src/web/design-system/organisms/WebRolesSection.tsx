@@ -166,7 +166,7 @@ export const WebRolesSection = () => {
                                 sx={{
                                     bgcolor: '#FBFBFF',
                                     borderRadius: { xs: '24px', md: '32px' },
-                                    p: { xs: 3, md: 6 },
+                                    p: { xs: 3, md: 4, lg: 6 },
                                     height: '100%',
                                     display: 'flex',
                                     flexDirection: 'column',
@@ -287,7 +287,7 @@ export const WebRolesSection = () => {
                                                 alt={roles[activeRole].title}
                                                 sx={{
                                                     width: '100%',
-                                                    height: { xs: '260px', md: '420px' },
+                                                    height: { xs: '260px', md: '320px', lg: '420px' },
                                                     objectFit: 'cover',
                                                     mx: 'auto',
                                                     display: 'block',
