@@ -18,9 +18,9 @@ const WebRoleButton: React.FC<WebRoleButtonProps> = ({ title, color, isActive, o
             onClick={onClick}
             sx={{
                 justifyContent: { xs: 'center', md: 'flex-start' },
-                px: { xs: 2.5, md: 3 },
-                py: { xs: 1, md: 3 },
-                height: { xs: '40px', md: 'auto' },
+                px: { xs: 1.5, sm: 2.5, md: 3 },
+                py: { xs: 0.5, sm: 1, md: 3 },
+                height: { xs: '32px', sm: '40px', md: 'auto' },
                 borderRadius: { xs: '8px', md: '16px' },
                 textAlign: 'left',
                 transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
@@ -29,6 +29,7 @@ const WebRoleButton: React.FC<WebRoleButtonProps> = ({ title, color, isActive, o
                 border: '1px solid',
                 borderColor: isActive ? color : `${color}50`,
                 width: { xs: 'auto', md: '100%' },
+                minWidth: { xs: '110px', sm: '160px', md: 'auto' },
                 '&:hover': {
                     bgcolor: isActive ? `${color}15` : `${color}10`,
                     transform: { xs: 'none', md: isActive ? 'none' : 'translateX(8px)' },
@@ -55,9 +56,21 @@ const WebRoleButton: React.FC<WebRoleButtonProps> = ({ title, color, isActive, o
                     sx={{
                         color: isActive ? color : '#474747',
                         fontWeight: isActive ? 700 : 500,
-                        fontSize: { xs: '16px', sm: '18px', md: '20px' },
+                        fontSize: { xs: '14px', sm: '16px', md: '18px' }, // Slightly smaller for better fit
                         transition: 'color 0.3s ease',
-                        whiteSpace: 'nowrap'
+                        whiteSpace: 'nowrap',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        // Reserve space for bold text
+                        '&::after': {
+                            content: `"${title}"`,
+                            height: 0,
+                            visibility: 'hidden',
+                            overflow: 'hidden',
+                            fontWeight: 700,
+                            userSelect: 'none'
+                        }
                     }}
                 >
                     {title}

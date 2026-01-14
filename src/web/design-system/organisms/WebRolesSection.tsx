@@ -135,11 +135,12 @@ export const WebRolesSection = () => {
                         <Box
                             sx={{
                                 display: 'flex',
+                                flexWrap: 'wrap',
                                 flexDirection: { xs: 'row', md: 'column' },
-                                flexWrap: { xs: 'wrap', md: 'nowrap' },
                                 justifyContent: { xs: 'center', md: 'flex-start' },
-                                gap: { xs: 1.5, md: 1 },
-                                mb: { xs: 2, md: 0 }
+                                gap: { xs: 1, md: 1 },
+                                mb: { xs: 2, md: 0 },
+                                width: '100%'
                             }}
                         >
                             {roles.map((role, index) => (
@@ -187,7 +188,7 @@ export const WebRolesSection = () => {
                                             flexDirection: 'column',
                                             alignItems: { xs: 'center', lg: 'flex-start' }
                                         }}>
-                                            <Box sx={{ mb: 2, width: '100%' }}>
+                                            <Box sx={{ mb: 1, width: '100%' }}>
                                                 <Typography
                                                     variant="overline"
                                                     sx={{
@@ -202,7 +203,7 @@ export const WebRolesSection = () => {
                                                     variant="h4"
                                                     sx={{
                                                         mt: 1,
-                                                        mb: 2,
+                                                        mb: 1,
                                                         fontWeight: 500,
                                                         color: '#474747',
                                                         fontSize: { xs: '24px', md: '32px' }
