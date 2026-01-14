@@ -8,8 +8,8 @@ import { WebButton } from '../atoms/WebButton';
 import roleSalesImg from '../../../assets/role-sales.png';
 import roleTechnicianImg from '../../../assets/BMM_MMI_RolTécnico.svg';
 import roleAccountantImg from '../../../assets/BMM_MMI_RolContable.svg';
-import roleCommercialImg from '../../../assets/role-commercial.png';
-import roleEstimatorImg from '../../../assets/role-estimator.png';
+import roleItImg from '../../../assets/BMM_MMI_RolResponsableIT.svg';
+import roleLegalImg from '../../../assets/BMM_MMI_RolAsesorLegal.svg';
 
 const MotionBox = motion(Box);
 
@@ -32,7 +32,7 @@ export const WebRolesSection = () => {
         {
             title: 'Responsable de IT',
             color: '#2E90FA',
-            image: roleCommercialImg,
+            image: roleItImg,
             description: 'Control centralizado y seguro',
             items: [
                 'Gestión de usuarios y accesos',
@@ -65,7 +65,7 @@ export const WebRolesSection = () => {
         {
             title: 'Legal',
             color: '#F04438',
-            image: roleEstimatorImg,
+            image: roleLegalImg,
             description: 'Trazabilidad y cumplimiento normativo',
             items: [
                 'Registros claros y auditables',
@@ -281,19 +281,18 @@ export const WebRolesSection = () => {
                                                 filter: 'blur(60px)',
                                                 zIndex: 0
                                             }} />
-
                                             <Box
                                                 component="img"
                                                 src={roles[activeRole].image}
                                                 alt={roles[activeRole].title}
                                                 sx={{
                                                     width: '100%',
-                                                    height: 'auto',
-                                                    maxWidth: { xs: '280px', md: '450px' },
+                                                    height: { xs: '260px', md: '420px' },
+                                                    objectFit: 'cover',
                                                     mx: 'auto',
                                                     display: 'block',
                                                     borderRadius: { xs: '20px', md: '24px' },
-                                                    overflow: 'hidden',
+                                                    bgcolor: '#FFFFFF',
                                                     filter: 'drop-shadow(0 25px 50px rgba(0,0,0,0.12))',
                                                     position: 'relative',
                                                     zIndex: 1
