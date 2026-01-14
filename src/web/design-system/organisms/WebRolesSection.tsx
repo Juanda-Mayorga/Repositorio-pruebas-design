@@ -5,7 +5,7 @@ import WebRoleButton from '../atoms/WebRoleButton';
 import { WebButton } from '../atoms/WebButton';
 
 // Import images
-import roleSalesImg from '../../../assets/role-sales.png';
+import roleDirectorImg from '../../../assets/BMM_MMI_RoleDirectorProyecto.svg';
 import roleTechnicianImg from '../../../assets/BMM_MMI_RolTécnico.svg';
 import roleAccountantImg from '../../../assets/BMM_MMI_RolContable.svg';
 import roleItImg from '../../../assets/BMM_MMI_RolResponsableIT.svg';
@@ -43,7 +43,7 @@ export const WebRolesSection = () => {
         {
             title: 'Director de Proyectos',
             color: '#FDB022',
-            image: roleSalesImg,
+            image: roleDirectorImg,
             description: 'Visión clara de costes y rendimiento',
             items: [
                 'KPI y datos en tiempo real',
@@ -114,31 +114,32 @@ export const WebRolesSection = () => {
                     </Typography>
                 </Box>
 
-                <Grid container spacing={{ xs: 3, md: 8 }}>
+                <Typography
+                    variant="body2"
+                    sx={{
+                        mb: 1, // Reduced distance from 2 to 1 (8px)
+                        color: 'text.secondary',
+                        fontWeight: 600,
+                        fontSize: '14px',
+                        textAlign: { xs: 'center', md: 'left' },
+                        textTransform: 'uppercase',
+                        letterSpacing: '0.05em',
+                        opacity: 0.8
+                    }}
+                >
+                    Selecciona tu perfil profesional
+                </Typography>
+
+                <Grid container spacing={{ xs: 3, md: 8 }} alignItems="flex-start">
                     {/* Role Selector */}
                     <Grid size={{ xs: 12, md: 4 }}>
-                        <Typography
-                            variant="body2"
-                            sx={{
-                                mb: 2,
-                                color: 'text.secondary',
-                                fontWeight: 600,
-                                fontSize: '14px',
-                                textAlign: { xs: 'center', md: 'left' },
-                                textTransform: 'uppercase',
-                                letterSpacing: '0.05em',
-                                opacity: 0.8
-                            }}
-                        >
-                            Selecciona tu perfil profesional
-                        </Typography>
                         <Box
                             sx={{
                                 display: 'flex',
                                 flexWrap: 'wrap',
                                 flexDirection: { xs: 'row', md: 'column' },
                                 justifyContent: { xs: 'center', md: 'flex-start' },
-                                gap: { xs: 1, md: 1 },
+                                gap: { xs: 1, md: 3 }, // 24px gap to reach 376px total height with 56px buttons
                                 mb: { xs: 2, md: 0 },
                                 width: '100%'
                             }}
@@ -167,8 +168,9 @@ export const WebRolesSection = () => {
                                 sx={{
                                     bgcolor: '#FBFBFF',
                                     borderRadius: { xs: '24px', md: '32px' },
-                                    p: { xs: 3, md: 4, lg: 6 },
-                                    height: '100%',
+                                    p: { xs: 3, md: 4 },
+                                    pt: { md: 2 }, // Reduced from 3 to 2
+                                    height: { xs: 'auto', md: '376px' }, // Matches total buttons height (5*56 + 4*24)
                                     display: 'flex',
                                     flexDirection: 'column',
                                     position: 'relative',
@@ -178,60 +180,78 @@ export const WebRolesSection = () => {
                                     // Removed CSS transition that conflicted with Framer Motion
                                 }}
                             >
-                                <Grid container spacing={4} alignItems="center" sx={{ height: '100%' }}>
-                                    <Grid size={{ xs: 12, lg: 5 }}>
+                                <Grid container spacing={2} sx={{ height: '100%' }}>
+                                    {/* Full-width Title Section */}
+                                    <Grid size={12}>
                                         <Box sx={{
-                                            maxWidth: { xs: '500px', lg: 'none' },
-                                            mx: { xs: 'auto', lg: 0 },
-                                            textAlign: { xs: 'center', lg: 'left' },
+                                            textAlign: { xs: 'center', md: 'left' },
+                                            width: '100%',
+                                            mb: { xs: 2, md: 2 } // Reduced distance from 3 to 2 (16px)
+                                        }}>
+                                            <Typography
+                                                variant="overline"
+                                                sx={{
+                                                    color: roles[activeRole].color,
+                                                    fontWeight: 700,
+                                                    letterSpacing: '0.1em'
+                                                }}
+                                            >
+                                                MAMBA FOR {roles[activeRole].title.toUpperCase()}
+                                            </Typography>
+                                            <Typography
+                                                variant="h4"
+                                                sx={{
+                                                    mt: 0.5,
+                                                    fontWeight: 600,
+                                                    color: '#474747',
+                                                    fontSize: { xs: '22px', md: '28px' },
+                                                    fontFamily: '"Inter", sans-serif',
+                                                    maxWidth: '100%'
+                                                }}
+                                            >
+                                                {roles[activeRole].description}
+                                            </Typography>
+                                        </Box>
+                                    </Grid>
+
+                                    {/* Two-column Content Section */}
+                                    <Grid size={{ xs: 12, md: 6 }} sx={{ display: 'flex', flexDirection: 'column' }}>
+                                        <Box sx={{
+                                            flex: 1,
+                                            maxWidth: { xs: '500px', md: 'none' },
+                                            mx: { xs: 'auto', md: 0 },
+                                            textAlign: { xs: 'center', md: 'left' },
                                             display: 'flex',
                                             flexDirection: 'column',
-                                            alignItems: { xs: 'center', lg: 'flex-start' }
+                                            justifyContent: 'flex-start',
+                                            alignItems: { xs: 'center', md: 'flex-start' },
+                                            height: {
+                                                xs: 'auto',
+                                                sm: 'auto',
+                                                md: '240px',
+                                                lg: '224px',
+                                                xl: '228px'
+                                            } // Match image vertical space exactly
                                         }}>
-                                            <Box sx={{ mb: 1, width: '100%' }}>
-                                                <Typography
-                                                    variant="overline"
-                                                    sx={{
-                                                        color: roles[activeRole].color,
-                                                        fontWeight: 700,
-                                                        letterSpacing: '0.1em'
-                                                    }}
-                                                >
-                                                    MAMBA FOR {roles[activeRole].title.toUpperCase()}
-                                                </Typography>
-                                                <Typography
-                                                    variant="h4"
-                                                    sx={{
-                                                        mt: 1,
-                                                        mb: 1,
-                                                        fontWeight: 500,
-                                                        color: '#474747',
-                                                        fontSize: { xs: '24px', md: '32px' }
-                                                    }}
-                                                >
-                                                    {roles[activeRole].description}
-                                                </Typography>
-                                            </Box>
-
                                             <List sx={{
                                                 mb: 2,
                                                 display: 'flex',
                                                 flexDirection: 'column',
                                                 alignItems: 'flex-start',
                                                 width: 'fit-content',
-                                                mx: { xs: 'auto', lg: 0 }
+                                                mx: { xs: 'auto', md: 0 }
                                             }}>
                                                 {roles[activeRole].items.map((item, i) => (
                                                     <ListItem key={i} sx={{
                                                         px: 0,
-                                                        py: 1,
+                                                        py: 0.25,
                                                         width: '100%',
                                                         justifyContent: 'flex-start'
                                                     }}>
-                                                        <ListItemIcon sx={{ minWidth: 32 }}>
+                                                        <ListItemIcon sx={{ minWidth: 20 }}>
                                                             <Box sx={{
-                                                                width: 8,
-                                                                height: 8,
+                                                                width: 5,
+                                                                height: 5,
                                                                 borderRadius: '50%',
                                                                 bgcolor: roles[activeRole].color
                                                             }} />
@@ -241,7 +261,7 @@ export const WebRolesSection = () => {
                                                             primaryTypographyProps={{
                                                                 sx: {
                                                                     color: '#4A4A4E',
-                                                                    fontSize: '16px',
+                                                                    fontSize: '15px',
                                                                     fontWeight: 500,
                                                                     fontFamily: '"Hind Siliguri", sans-serif',
                                                                     textAlign: 'left'
@@ -255,11 +275,13 @@ export const WebRolesSection = () => {
                                             <WebButton
                                                 variant="outlined"
                                                 sx={{
+                                                    mt: 0, // Removed mt auto to maintain 16px gap from List mb: 2
                                                     borderColor: roles[activeRole].color,
                                                     color: roles[activeRole].color,
                                                     borderRadius: '12px',
-                                                    px: 4,
-                                                    py: 1.2,
+                                                    px: 3,
+                                                    py: 1,
+                                                    fontSize: '14px',
                                                     '&:hover': {
                                                         borderColor: roles[activeRole].color,
                                                         bgcolor: `${roles[activeRole].color}08`
@@ -270,16 +292,17 @@ export const WebRolesSection = () => {
                                             </WebButton>
                                         </Box>
                                     </Grid>
-                                    <Grid size={{ xs: 12, lg: 7 }}>
+
+                                    <Grid size={{ xs: 12, md: 6 }}>
                                         <Box sx={{ position: 'relative', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                                             {/* Decorative Background Glow */}
                                             <Box sx={{
                                                 position: 'absolute',
-                                                width: { xs: '200px', md: '350px' },
-                                                height: { xs: '200px', md: '350px' },
+                                                width: { xs: '180px', md: '240px' },
+                                                height: { xs: '180px', md: '240px' },
                                                 borderRadius: '50%',
                                                 bgcolor: `${roles[activeRole].color}15`,
-                                                filter: 'blur(60px)',
+                                                filter: 'blur(50px)',
                                                 zIndex: 0
                                             }} />
                                             <Box
@@ -288,13 +311,21 @@ export const WebRolesSection = () => {
                                                 alt={roles[activeRole].title}
                                                 sx={{
                                                     width: '100%',
-                                                    height: { xs: '260px', md: '320px', lg: '420px' },
+                                                    maxWidth: { md: '320px' },
+                                                    height: {
+                                                        xs: '260px',
+                                                        sm: '260px',
+                                                        md: '240px',
+                                                        lg: '224px',
+                                                        xl: '228px'
+                                                    },
                                                     objectFit: 'cover',
+                                                    p: 0, // Fill the container
                                                     mx: 'auto',
                                                     display: 'block',
                                                     borderRadius: { xs: '20px', md: '24px' },
                                                     bgcolor: '#FFFFFF',
-                                                    filter: 'drop-shadow(0 25px 50px rgba(0,0,0,0.12))',
+                                                    filter: 'drop-shadow(0 20px 40px rgba(0,0,0,0.1))',
                                                     position: 'relative',
                                                     zIndex: 1
                                                 }}
