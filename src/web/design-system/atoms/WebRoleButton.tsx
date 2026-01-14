@@ -46,8 +46,7 @@ const WebRoleButton: React.FC<WebRoleButtonProps> = ({ title, color, isActive, o
                 left: 0,
                 bgcolor: color,
                 borderRadius: '0 4px 4px 0',
-                transition: 'height 0.3s ease',
-                display: { xs: 'none', md: 'block' }
+                transition: 'height 0.3s ease'
             }} />
             <Box>
                 <Typography

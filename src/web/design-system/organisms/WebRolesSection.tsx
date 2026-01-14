@@ -6,8 +6,8 @@ import { WebButton } from '../atoms/WebButton';
 
 // Import images
 import roleSalesImg from '../../../assets/role-sales.png';
-import roleBimImg from '../../../assets/role-bim-manager.png';
-import roleAdminImg from '../../../assets/role-administration.png';
+import roleTechnicianImg from '../../../assets/BMM_MMI_RolTécnico.svg';
+import roleAccountantImg from '../../../assets/BMM_MMI_RolContable.svg';
 import roleCommercialImg from '../../../assets/role-commercial.png';
 import roleEstimatorImg from '../../../assets/role-estimator.png';
 
@@ -21,56 +21,56 @@ export const WebRolesSection = () => {
         {
             title: 'Técnico',
             color: '#12B76A',
-            image: roleBimImg,
-            description: 'MAMBA permite a los técnicos medir, cuantificar y generar presupuestos directamente desde modelos BIM',
+            image: roleTechnicianImg,
+            description: 'Mediciones precisas desde modelos BIM',
             items: [
                 'Reglas automatizadas de medición',
-                'Extracción precisa de datos QTO',
-                'Reducción drástica del trabajo manual'
+                'Extracción de datos QTO',
+                'Reducción de trabajo manual'
             ]
         },
         {
-            title: 'Responsable IT',
+            title: 'IT',
             color: '#2E90FA',
             image: roleCommercialImg,
-            description: 'Entorno centralizado para gestionar usuarios, licencias e integraciones de forma segura',
+            description: 'Control centralizado y seguro',
             items: [
-                'Control de accesos y seguridad',
-                'Gestión estable en la nube',
-                'Sincronización organizacional coherente'
+                'Gestión de usuarios y accesos',
+                'Entorno estable en la nube',
+                'Sincronización organizacional'
             ]
         },
         {
-            title: 'Director de Proyectos',
+            title: 'Director',
             color: '#FDB022',
             image: roleSalesImg,
-            description: 'Visión clara de costes, avance y rendimiento del equipo para una toma de decisiones informada',
+            description: 'Visión clara de costes y rendimiento',
             items: [
-                'Datos y KPI en tiempo real',
-                'Procesos estandarizados de control',
-                'Control integral del ciclo de proyecto'
+                'KPI y datos en tiempo real',
+                'Planificación estratégica',
+                'Control del ciclo de proyecto'
             ]
         },
         {
             title: 'Contable',
             color: '#7A6EBD',
-            image: roleAdminImg,
-            description: 'Conecta mediciones y presupuestos con datos financieros reales para un control total',
+            image: roleAccountantImg,
+            description: 'Coherencia financiera garantizada',
             items: [
-                'Seguimiento exhaustivo de costes',
-                'Detección temprana de desviaciones',
-                'Coherencia financiera con el flujo BIM'
+                'Seguimiento de costes reales',
+                'Detección de desviaciones',
+                'Conexión con el flujo BIM'
             ]
         },
         {
-            title: 'Asesor Legal',
+            title: 'Legal',
             color: '#F04438',
             image: roleEstimatorImg,
-            description: 'Control, trazabilidad y cumplimiento normativo de toda la documentación del proyecto',
+            description: 'Trazabilidad y cumplimiento normativo',
             items: [
-                'Trazabilidad total y registros claros',
+                'Registros claros y auditables',
                 'Reducción de riesgos legales',
-                'Aseguramiento del cumplimiento técnico'
+                'Seguridad técnica y normativa'
             ]
         }
     ];
@@ -178,7 +178,7 @@ export const WebRolesSection = () => {
                                 }}
                             >
                                 <Grid container spacing={4} alignItems="center" sx={{ height: '100%' }}>
-                                    <Grid size={{ xs: 12, lg: 6 }}>
+                                    <Grid size={{ xs: 12, lg: 5 }}>
                                         <Box sx={{
                                             maxWidth: { xs: '500px', lg: 'none' },
                                             mx: { xs: 'auto', lg: 0 },
@@ -269,20 +269,35 @@ export const WebRolesSection = () => {
                                             </WebButton>
                                         </Box>
                                     </Grid>
-                                    <Grid size={{ xs: 12, lg: 6 }}>
-                                        <Box
-                                            component="img"
-                                            src={roles[activeRole].image}
-                                            alt={roles[activeRole].title}
-                                            sx={{
-                                                width: '100%',
-                                                height: 'auto',
-                                                maxWidth: '320px',
-                                                mx: 'auto',
-                                                display: 'block',
-                                                filter: 'drop-shadow(0 20px 40px rgba(0,0,0,0.08))'
-                                            }}
-                                        />
+                                    <Grid size={{ xs: 12, lg: 7 }}>
+                                        <Box sx={{ position: 'relative', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                            {/* Decorative Background Glow */}
+                                            <Box sx={{
+                                                position: 'absolute',
+                                                width: { xs: '200px', md: '350px' },
+                                                height: { xs: '200px', md: '350px' },
+                                                borderRadius: '50%',
+                                                bgcolor: `${roles[activeRole].color}15`,
+                                                filter: 'blur(60px)',
+                                                zIndex: 0
+                                            }} />
+
+                                            <Box
+                                                component="img"
+                                                src={roles[activeRole].image}
+                                                alt={roles[activeRole].title}
+                                                sx={{
+                                                    width: '100%',
+                                                    height: 'auto',
+                                                    maxWidth: { xs: '280px', md: '450px' },
+                                                    mx: 'auto',
+                                                    display: 'block',
+                                                    filter: 'drop-shadow(0 25px 50px rgba(0,0,0,0.12))',
+                                                    position: 'relative',
+                                                    zIndex: 1
+                                                }}
+                                            />
+                                        </Box>
                                     </Grid>
                                 </Grid>
                             </MotionBox>
