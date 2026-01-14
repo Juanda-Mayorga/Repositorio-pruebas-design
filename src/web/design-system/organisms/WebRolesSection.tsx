@@ -79,7 +79,7 @@ export const WebRolesSection = () => {
         <Box sx={{ py: { xs: 8, md: 16 }, bgcolor: '#FFFFFF', overflow: 'hidden' }}>
             <Container maxWidth="lg" sx={{ px: { xs: 2, sm: 6, md: 10, lg: 15 } }}>
                 <Box sx={{
-                    mb: { xs: 6, md: 10 },
+                    mb: { xs: 4, sm: 3, md: 10 }, // Reduced from 6/10 to 4/3 for mobile/tablet (812px)
                     textAlign: 'center',
                     display: 'flex',
                     flexDirection: 'column',
@@ -180,13 +180,13 @@ export const WebRolesSection = () => {
                                     // Removed CSS transition that conflicted with Framer Motion
                                 }}
                             >
-                                <Grid container spacing={2} sx={{ height: '100%' }}>
+                                <Grid container spacing={{ xs: 2, md: 2 }} sx={{ height: '100%' }}>
                                     {/* Full-width Title Section */}
                                     <Grid size={12}>
                                         <Box sx={{
                                             textAlign: { xs: 'center', md: 'left' },
                                             width: '100%',
-                                            mb: { xs: 2, md: 2 } // Reduced distance from 3 to 2 (16px)
+                                            mb: { xs: -1.5, sm: -1, md: 2 } // Pull content up
                                         }}>
                                             <Typography
                                                 variant="overline"
@@ -204,7 +204,7 @@ export const WebRolesSection = () => {
                                                     mt: 0.5,
                                                     fontWeight: 600,
                                                     color: '#474747',
-                                                    fontSize: { xs: '22px', md: '28px' },
+                                                    fontSize: { xs: '18px', sm: '20px', md: '28px' }, // Reduced for sm
                                                     fontFamily: '"Inter", sans-serif',
                                                     maxWidth: '100%'
                                                 }}
@@ -221,20 +221,17 @@ export const WebRolesSection = () => {
                                             maxWidth: { xs: '500px', md: 'none' },
                                             mx: { xs: 'auto', md: 0 },
                                             textAlign: { xs: 'center', md: 'left' },
-                                            display: 'flex',
-                                            flexDirection: 'column',
-                                            justifyContent: 'flex-start',
-                                            alignItems: { xs: 'center', md: 'flex-start' },
                                             height: {
                                                 xs: 'auto',
                                                 sm: 'auto',
                                                 md: '240px',
                                                 lg: '224px',
                                                 xl: '228px'
-                                            } // Match image vertical space exactly
+                                            },
+                                            mb: { xs: 3, md: 0 } // Push image down on mobile/tablet
                                         }}>
                                             <List sx={{
-                                                mb: 2,
+                                                mb: { xs: 1, md: 2 }, // Balanced gap (8px)
                                                 display: 'flex',
                                                 flexDirection: 'column',
                                                 alignItems: 'flex-start',
