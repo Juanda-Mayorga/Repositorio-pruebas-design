@@ -273,18 +273,29 @@ export const WebRolesSection = () => {
                                             </List>
 
                                             <WebButton
-                                                variant="outlined"
+                                                variant="contained"
                                                 sx={{
-                                                    mt: 0, // Removed mt auto to maintain 16px gap from List mb: 2
+                                                    mt: 0,
+                                                    bgcolor: roles[activeRole].color,
+                                                    color: '#FFFFFF',
                                                     borderColor: roles[activeRole].color,
-                                                    color: roles[activeRole].color,
                                                     borderRadius: '12px',
                                                     px: 3,
-                                                    py: 1,
+                                                    py: 1.25,
                                                     fontSize: '14px',
+                                                    fontWeight: 600,
+                                                    transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+                                                    boxShadow: `0 4px 12px ${roles[activeRole].color}30`,
                                                     '&:hover': {
+                                                        bgcolor: roles[activeRole].color,
+                                                        filter: 'brightness(0.9)',
                                                         borderColor: roles[activeRole].color,
-                                                        bgcolor: `${roles[activeRole].color}08`
+                                                        transform: 'translateY(-2px)',
+                                                        boxShadow: `0 6px 16px ${roles[activeRole].color}40`
+                                                    },
+                                                    '&:active': {
+                                                        transform: 'translateY(0)',
+                                                        boxShadow: `0 4px 12px ${roles[activeRole].color}30`
                                                     }
                                                 }}
                                             >

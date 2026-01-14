@@ -31,9 +31,10 @@ const WebRoleButton: React.FC<WebRoleButtonProps> = ({ title, color, isActive, o
                 width: { xs: 'auto', md: '100%' },
                 minWidth: { xs: '110px', sm: '160px', md: 'auto' },
                 '&:hover': {
-                    bgcolor: isActive ? `${color}15` : `${color}10`,
+                    bgcolor: isActive ? `${color}15` : `${color}12`,
                     transform: { xs: 'none', md: isActive ? 'none' : 'translateX(8px)' },
                     borderColor: color,
+                    boxShadow: !isActive ? `0 4px 12px ${color}15` : 'none',
                     '& .role-title': {
                         color: color
                     }
