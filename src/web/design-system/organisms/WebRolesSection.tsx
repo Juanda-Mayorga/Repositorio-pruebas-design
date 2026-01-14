@@ -30,7 +30,7 @@ export const WebRolesSection = () => {
             ]
         },
         {
-            title: 'IT',
+            title: 'Responsable de IT',
             color: '#2E90FA',
             image: roleCommercialImg,
             description: 'Control centralizado y seguro',
@@ -41,7 +41,7 @@ export const WebRolesSection = () => {
             ]
         },
         {
-            title: 'Director',
+            title: 'Director de Proyectos',
             color: '#FDB022',
             image: roleSalesImg,
             description: 'Visión clara de costes y rendimiento',
@@ -292,6 +292,8 @@ export const WebRolesSection = () => {
                                                     maxWidth: { xs: '280px', md: '450px' },
                                                     mx: 'auto',
                                                     display: 'block',
+                                                    borderRadius: { xs: '20px', md: '24px' },
+                                                    overflow: 'hidden',
                                                     filter: 'drop-shadow(0 25px 50px rgba(0,0,0,0.12))',
                                                     position: 'relative',
                                                     zIndex: 1
