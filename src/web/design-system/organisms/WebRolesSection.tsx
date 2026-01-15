@@ -203,7 +203,7 @@ export const WebRolesSection = () => {
                                                 variant="h4"
                                                 sx={{
                                                     mt: 0.5,
-                                                    fontWeight: 600,
+                                                    fontWeight: 500,
                                                     color: '#474747',
                                                     fontSize: { xs: '18px', sm: '20px', md: '28px' }, // Reduced for sm
                                                     fontFamily: '"Inter", sans-serif',
