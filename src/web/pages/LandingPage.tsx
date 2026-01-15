@@ -123,13 +123,18 @@ export const LandingPage = () => {
                 pb: { xs: 8, md: 12 },
                 background: 'linear-gradient(180deg, #FFFFFF 0%, #F8F9FA 100%)'
             }}>
-                <Container maxWidth="lg" sx={{ px: { xs: 2, sm: 6, md: 10, lg: 8 } }}>
+                <Container maxWidth="lg" sx={{ px: { xs: 4, sm: 8, md: 10, lg: 8 } }}>
                     <Grid container spacing={4} alignItems="center">
                         <Grid size={{ xs: 12, md: 6 }}>
                             <MotionBox
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.6 }}
+                                sx={{
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    alignItems: { xs: 'center', md: 'flex-start' }
+                                }}
                             >
                                 <Typography
                                     variant="h1"
@@ -140,7 +145,7 @@ export const LandingPage = () => {
                                         background: 'none',
                                         WebkitTextFillColor: 'initial',
                                         color: '#333337',
-                                        textAlign: 'left'
+                                        textAlign: { xs: 'center', md: 'left' }
                                     }}
                                 >
                                     The smartest way to automate BIM <Box component="span" sx={{ display: 'inline-block', minWidth: { md: '300px' } }}>
@@ -171,7 +176,8 @@ export const LandingPage = () => {
                                         color: 'text.secondary',
                                         mb: 5,
                                         maxWidth: '480px',
-                                        fontFamily: '"Hind Siliguri", sans-serif'
+                                        fontFamily: '"Hind Siliguri", sans-serif',
+                                        textAlign: { xs: 'center', md: 'left' }
                                     }}
                                 >
                                     MAMBA extracts and updates quantities directly from BIM models,
@@ -229,7 +235,7 @@ export const LandingPage = () => {
 
             {/* 2. Trusted By Section */}
             <Box sx={{ py: 6, bgcolor: '#FFFFFF', borderTop: '1px solid #F0F0F0', borderBottom: '1px solid #F0F0F0' }}>
-                <Container maxWidth="lg">
+                <Container maxWidth="lg" sx={{ px: { xs: 4, sm: 8, md: 10, lg: 8 } }}>
                     <Typography
                         variant="overline"
                         sx={{
@@ -278,7 +284,7 @@ export const LandingPage = () => {
 
             {/* 3. Designed for the AECO Sector */}
             <Box sx={{ py: { xs: 8, md: 12 }, bgcolor: '#FFFFFF' }}>
-                <Container maxWidth="lg" sx={{ px: { xs: 2, sm: 6, md: 10, lg: 8 } }}>
+                <Container maxWidth="lg" sx={{ px: { xs: 4, sm: 8, md: 10, lg: 8 } }}>
                     <Box sx={{ textAlign: 'center', mb: 8 }}>
                         <Typography
                             variant="h2"
@@ -362,7 +368,7 @@ export const LandingPage = () => {
 
             {/* 4. What's holding your projects back? */}
             <Box sx={{ py: { xs: 8, md: 12 }, bgcolor: '#F8F9FA' }}>
-                <Container maxWidth="lg" sx={{ px: { xs: 2, sm: 6, md: 10, lg: 8 } }}>
+                <Container maxWidth="lg" sx={{ px: { xs: 4, sm: 8, md: 10, lg: 8 } }}>
                     <Box sx={{ textAlign: 'center', mb: 8 }}>
                         <Typography
                             variant="h2"
@@ -434,7 +440,7 @@ export const LandingPage = () => {
 
             {/* 6. What is MAMBA? Section */}
             <Box sx={{ py: { xs: 8, md: 12 }, bgcolor: '#F8F9FA' }}>
-                <Container maxWidth="lg" sx={{ px: { xs: 2, sm: 6, md: 10, lg: 8 } }}>
+                <Container maxWidth="lg" sx={{ px: { xs: 4, sm: 8, md: 10, lg: 8 } }}>
                     <Grid container spacing={6} alignItems="center">
                         <Grid size={{ xs: 12, md: 6 }}>
                             <Typography
@@ -525,7 +531,7 @@ export const LandingPage = () => {
 
             {/* 7. How we deliver value? */}
             <Box sx={{ py: { xs: 8, md: 12 }, bgcolor: '#FFFFFF' }}>
-                <Container maxWidth="lg" sx={{ px: { xs: 2, sm: 6, md: 10, lg: 8 } }}>
+                <Container maxWidth="lg" sx={{ px: { xs: 4, sm: 8, md: 10, lg: 8 } }}>
                     <Box sx={{ textAlign: 'center', mb: 8 }}>
                         <Typography
                             variant="h2"
@@ -648,7 +654,7 @@ export const LandingPage = () => {
 
             {/* 8. Final CTA Banner */}
             <Box sx={{ pb: 8 }}>
-                <Container maxWidth="lg">
+                <Container maxWidth="lg" sx={{ px: { xs: 4, sm: 8, md: 10, lg: 8 } }}>
                     <Box sx={{
                         position: 'relative',
                         bgcolor: theme.palette.web.action.primary,
