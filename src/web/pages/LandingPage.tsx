@@ -440,7 +440,7 @@ export const LandingPage = () => {
 
             {/* 6. What is MAMBA? Section */}
             <Box sx={{ py: { xs: 8, md: 12 }, bgcolor: '#F8F9FA' }}>
-                <Container maxWidth="lg" sx={{ px: { xs: 4, sm: 8, md: 10, lg: 8 } }}>
+                <Container maxWidth="lg" sx={{ px: { xs: 4, sm: 8, md: 10, lg: 8 }, maxWidth: { sm: '604px', md: '100%' } }}>
                     <Grid container spacing={6} alignItems="center">
                         <Grid size={{ xs: 12, md: 6 }}>
                             <Typography
@@ -531,7 +531,7 @@ export const LandingPage = () => {
 
             {/* 7. How we deliver value? */}
             <Box sx={{ py: { xs: 8, md: 12 }, bgcolor: '#FFFFFF' }}>
-                <Container maxWidth="lg" sx={{ px: { xs: 4, sm: 8, md: 10, lg: 8 } }}>
+                <Container maxWidth="lg" sx={{ px: { xs: 4, sm: 8, md: 10, lg: 8 }, maxWidth: { sm: '604px', md: '100%' } }}>
                     <Box sx={{ textAlign: 'center', mb: 8 }}>
                         <Typography
                             variant="h2"
