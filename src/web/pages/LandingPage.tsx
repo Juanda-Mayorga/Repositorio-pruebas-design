@@ -567,7 +567,6 @@ export const LandingPage = () => {
                         ].map((card, index) => (
                             <Grid key={index} size={{ xs: 12, md: 4 }}>
                                 <Box sx={{
-                                    p: { xs: 3, lg: 2.5, xl: 4 },
                                     borderRadius: '24px',
                                     bgcolor: '#FFFFFF',
                                     boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.05)',
@@ -579,48 +578,61 @@ export const LandingPage = () => {
                                     },
                                     height: '100%',
                                     display: 'flex',
-                                    flexDirection: 'column'
+                                    flexDirection: 'column',
+                                    overflow: 'hidden'
                                 }}>
-                                    <Box component="img" src={card.image} sx={{ width: '100%', borderRadius: '12px', mb: 3 }} />
-                                    <Typography sx={{ mb: 1, fontSize: { xs: '28px', lg: '32px' }, fontWeight: 500, fontFamily: '"Hind Siliguri", sans-serif' }}>{card.title}</Typography>
-                                    <Typography variant="body1" sx={{ color: 'text.secondary', mb: 3, fontSize: { xs: '16px', lg: '18px' } }}>{card.description}</Typography>
-                                    <Box sx={{ flexGrow: 1, mb: { xs: 1, md: 1, lg: 1, xl: 3 } }}>
-                                        <Box sx={{
-                                            borderLeft: '3px solid #E0E0E0',
-                                            pl: 2,
-                                            ml: 0.5,
-                                            display: 'flex',
-                                            flexDirection: 'column',
-                                            gap: 1.5
-                                        }}>
-                                            {card.items.map((item, i) => (
-                                                <Typography
-                                                    key={i}
-                                                    variant="body2"
-                                                    sx={{
-                                                        color: 'text.secondary',
-                                                        fontWeight: 400,
-                                                        fontSize: { xs: '16px', lg: '18px' },
-                                                        lineHeight: 1.2
-                                                    }}
-                                                >
-                                                    {item}
-                                                </Typography>
-                                            ))}
-                                        </Box>
-                                    </Box>
-                                    <WebButton
-                                        variant="contained"
+                                    <Box
+                                        component="img"
+                                        src={card.image}
                                         sx={{
-                                            mt: { xs: 1, md: 1, lg: 1, xl: 3 },
-                                            py: 1.5,
-                                            px: { lg: 2, xl: 2 },
-                                            fontSize: { lg: '16px', xl: '16px' },
-                                            textTransform: 'none'
+                                            width: '100%',
+                                            height: { xs: '200px', md: '220px', lg: '240px' },
+                                            objectFit: 'cover',
+                                            display: 'block'
                                         }}
-                                    >
-                                        {card.cta}
-                                    </WebButton>
+                                    />
+                                    <Box sx={{ p: { xs: 3, lg: 2.5, xl: 4 }, flexGrow: 1, display: 'flex', flexDirection: 'column' }}>
+                                        <Typography sx={{ mb: 1, fontSize: { xs: '28px', lg: '32px' }, fontWeight: 500, fontFamily: '"Hind Siliguri", sans-serif' }}>{card.title}</Typography>
+                                        <Typography variant="body1" sx={{ color: 'text.secondary', mb: 3, fontSize: { xs: '16px', lg: '18px' } }}>{card.description}</Typography>
+                                        <Box sx={{ flexGrow: 1, mb: { xs: 1, md: 1, lg: 1, xl: 3 } }}>
+                                            <Box sx={{
+                                                borderLeft: '3px solid #E0E0E0',
+                                                pl: 2,
+                                                ml: 0.5,
+                                                display: 'flex',
+                                                flexDirection: 'column',
+                                                gap: 1.5
+                                            }}>
+                                                {card.items.map((item, i) => (
+                                                    <Typography
+                                                        key={i}
+                                                        variant="body2"
+                                                        sx={{
+                                                            color: 'text.secondary',
+                                                            fontWeight: 400,
+                                                            fontSize: { xs: '16px', lg: '18px' },
+                                                            lineHeight: 1.2
+                                                        }}
+                                                    >
+                                                        {item}
+                                                    </Typography>
+                                                ))}
+                                            </Box>
+                                        </Box>
+                                        <WebButton
+                                            variant="contained"
+                                            fullWidth
+                                            sx={{
+                                                mt: { xs: 1, md: 1, lg: 1, xl: 3 },
+                                                py: 1.5,
+                                                px: { lg: 2, xl: 2 },
+                                                fontSize: { lg: '16px', xl: '16px' },
+                                                textTransform: 'none'
+                                            }}
+                                        >
+                                            {card.cta}
+                                        </WebButton>
+                                    </Box>
                                 </Box>
                             </Grid>
                         ))}
