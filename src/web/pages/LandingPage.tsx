@@ -32,6 +32,9 @@ import logoHualca from '../../assets/BMM_MMI_Hualca.svg';
 import logoGobNavarra from '../../assets/BMM_MMI_LogoGobiernoDeNavarra_0100.svg';
 import logoGobTpf from '../../assets/BMM_MMI_LogoGobiernoTpf_0100.svg';
 import logoPlanho from '../../assets/BMM_MMI_LogoPlanho_0100.svg';
+import deliverySoftware from '../../assets/BMM_MMI_Software.svg';
+import deliveryCloud from '../../assets/BMM_MMI_CloudServices.svg';
+import deliverySupport from '../../assets/BMM_MMI_Support.svg';
 
 const MotionBox = motion(Box);
 
@@ -540,9 +543,9 @@ export const LandingPage = () => {
 
                     <Grid container spacing={4}>
                         {[
-                            { title: 'Software', items: ['Mediciones Automáticas', 'Estimación de Costes', 'Auditoría del Modelo'] },
-                            { title: 'Cloud Services', items: ['Gestión de Licencias', 'Colaboración en Nube', 'Repositorio Proyectos'] },
-                            { title: 'Support', items: ['Formación Personalizada', 'Soporte Técnico', 'Consultoría BIM'] }
+                            { title: 'Software', items: ['Mediciones Automáticas', 'Estimación de Costes', 'Auditoría del Modelo'], image: deliverySoftware },
+                            { title: 'Cloud Services', items: ['Gestión de Licencias', 'Colaboración en Nube', 'Repositorio Proyectos'], image: deliveryCloud },
+                            { title: 'Support', items: ['Formación Personalizada', 'Soporte Técnico', 'Consultoría BIM'], image: deliverySupport }
                         ].map((card, index) => (
                             <Grid key={index} size={{ xs: 12, md: 4 }}>
                                 <Box sx={{
@@ -554,7 +557,7 @@ export const LandingPage = () => {
                                     display: 'flex',
                                     flexDirection: 'column'
                                 }}>
-                                    <Box component="img" src="https://via.placeholder.com/300x200" sx={{ width: '100%', borderRadius: '12px', mb: 3 }} />
+                                    <Box component="img" src={card.image} sx={{ width: '100%', borderRadius: '12px', mb: 3 }} />
                                     <Typography variant="h5" sx={{ mb: 2, fontWeight: 700 }}>{card.title}</Typography>
                                     <Box sx={{ flexGrow: 1 }}>
                                         {card.items.map((item, i) => (
