@@ -263,5 +263,61 @@
             },
             "comingSoon": "PROCHAINEMENT"
         }
+    },
+    "landingPage": {
+        "roles": {
+            "title": "Conçu pour chaque profil",
+            "subtitle": "Des techniciens aux experts juridiques, MAMBA offre la solution complète pour chaque rôle",
+            "selectorLabel": "Sélectionnez votre profil professionnel",
+            "mambaFor": "MAMBA POUR {{role}}",
+            "seeWorkflow": "Voir le flux de {{role}}",
+            "profiles": {
+                "technician": {
+                    "title": "Technicien",
+                    "description": "Mesures précises à partir de modèles BIM",
+                    "items": [
+                        "Règles de mesure automatisées",
+                        "Extraction de données QTO",
+                        "Réduction du travail manuel"
+                    ]
+                },
+                "itManager": {
+                    "title": "Responsable IT",
+                    "description": "Contrôle centralisé et sécurisé",
+                    "items": [
+                        "Gestion des utilisateurs et des accès",
+                        "Environnement cloud stable",
+                        "Synchronisation organisationnelle"
+                    ]
+                },
+                "projectDirector": {
+                    "title": "Directeur de Projets",
+                    "description": "Vision claire des coûts et des performances",
+                    "items": [
+                        "Données en temps réel",
+                        "Planification stratégique",
+                        "Contrôle du cycle de projet"
+                    ]
+                },
+                "accountant": {
+                    "title": "Comptable",
+                    "description": "Cohérence financière garantie",
+                    "items": [
+                        "Suivi des coûts réels",
+                        "Détection des écarts",
+                        "Connexion avec le flux BIM"
+                    ]
+                },
+                "legal": {
+                    "title": "Juridique",
+                    "description": "Traçabilité et conformité réglementaire",
+                    "items": [
+                        "Registres clairs et auditables",
+                        "Réduction des risques juridiques",
+                        "Sécurité technique et réglementaire"
+                    ]
+                }
+            }
+        }
     }
 }

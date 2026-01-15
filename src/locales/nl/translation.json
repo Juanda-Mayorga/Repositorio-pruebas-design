@@ -263,5 +263,61 @@
             },
             "comingSoon": "BINNENKORT"
         }
+    },
+    "landingPage": {
+        "roles": {
+            "title": "Ontworpen voor elke rol",
+            "subtitle": "Van technici tot juridisch adviseurs, MAMBA biedt de complete oplossing die voor elke rol werkt",
+            "selectorLabel": "Selecteer uw professionele profiel",
+            "mambaFor": "MAMBA VOOR {{role}}",
+            "seeWorkflow": "Bekijk de {{role}} workflow",
+            "profiles": {
+                "technician": {
+                    "title": "Technicus",
+                    "description": "Nauwkeurige metingen uit BIM-modellen",
+                    "items": [
+                        "Geautomatiseerde meetregels",
+                        "QTO-dataextractie",
+                        "Vermindering van handmatig werk"
+                    ]
+                },
+                "itManager": {
+                    "title": "IT-manager",
+                    "description": "Gecentraliseerde en veilige controle",
+                    "items": [
+                        "Gebruikers- en toegangsbeheer",
+                        "Stabiele cloudomgeving",
+                        "Organisatorische synchronisatie"
+                    ]
+                },
+                "projectDirector": {
+                    "title": "Projectdirecteur",
+                    "description": "Helder inzicht in kosten en prestaties",
+                    "items": [
+                        "Realtime gegevens",
+                        "Strategische planning",
+                        "Controle van de projectcyclus"
+                    ]
+                },
+                "accountant": {
+                    "title": "Accountant",
+                    "description": "Gegarandeerde financiële consistentie",
+                    "items": [
+                        "Opvolging van werkelijke kosten",
+                        "Detectie van afwijkingen",
+                        "Verbinding met de BIM-flow"
+                    ]
+                },
+                "legal": {
+                    "title": "Juridisch",
+                    "description": "Traceerbaarheid en naleving van regelgeving",
+                    "items": [
+                        "Duidelijke en auditeerbare verslagen",
+                        "Vermindering van juridische risico's",
+                        "Technische en regelgevende veiligheid"
+                    ]
+                }
+            }
+        }
     }
 }

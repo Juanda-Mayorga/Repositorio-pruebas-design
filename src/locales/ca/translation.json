@@ -263,5 +263,61 @@
             },
             "comingSoon": "PROXIMAMENT"
         }
+    },
+    "landingPage": {
+        "roles": {
+            "title": "Dissenyat per a cada perfil",
+            "subtitle": "Des de tècnics fins a assessors legals, MAMBA ofereix la solució completa per a cada rol",
+            "selectorLabel": "Selecciona el teu perfil professional",
+            "mambaFor": "MAMBA PER A {{role}}",
+            "seeWorkflow": "Veure flux de {{role}}",
+            "profiles": {
+                "technician": {
+                    "title": "Tècnic",
+                    "description": "Amidaments precisos des de models BIM",
+                    "items": [
+                        "Regles automatitzades d'amidament",
+                        "Extracció de dades QTO",
+                        "Reducció de treball manual"
+                    ]
+                },
+                "itManager": {
+                    "title": "Responsable d'IT",
+                    "description": "Control centralitzat i segur",
+                    "items": [
+                        "Gestió d'usuaris i accessos",
+                        "Entorn estable al núvol",
+                        "Sincronització organitzacional"
+                    ]
+                },
+                "projectDirector": {
+                    "title": "Director de Projectes",
+                    "description": "Visió clara de costos i rendiment",
+                    "items": [
+                        "Dades en temps real",
+                        "Planificació estratègica",
+                        "Control del cicle de projecte"
+                    ]
+                },
+                "accountant": {
+                    "title": "Comptable",
+                    "description": "Coherència financera garantida",
+                    "items": [
+                        "Seguiment de costos reals",
+                        "Detecció de desviacions",
+                        "Connexió amb el flux BIM"
+                    ]
+                },
+                "legal": {
+                    "title": "Legal",
+                    "description": "Traçabilitat i compliment normatiu",
+                    "items": [
+                        "Registres clars i auditables",
+                        "Reducció de riscos legals",
+                        "Seguretat tècnica i normativa"
+                    ]
+                }
+            }
+        }
     }
 }

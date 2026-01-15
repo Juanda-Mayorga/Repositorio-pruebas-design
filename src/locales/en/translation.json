@@ -444,5 +444,61 @@
             },
             "comingSoon": "COMING SOON"
         }
+    },
+    "landingPage": {
+        "roles": {
+            "title": "Designed to fit every role",
+            "subtitle": "From technicians to lawyers, MAMBA provides the complete solution that works for every role",
+            "selectorLabel": "Select your professional profile",
+            "mambaFor": "MAMBA FOR {{role}}",
+            "seeWorkflow": "See {{role}} workflow",
+            "profiles": {
+                "technician": {
+                    "title": "Technician",
+                    "description": "Accurate measurements from BIM models",
+                    "items": [
+                        "Automated measurement rules",
+                        "QTO data extraction",
+                        "Reduction of manual work"
+                    ]
+                },
+                "itManager": {
+                    "title": "IT Manager",
+                    "description": "Centralized and secure control",
+                    "items": [
+                        "User and access management",
+                        "Stable cloud environment",
+                        "Organizational synchronization"
+                    ]
+                },
+                "projectDirector": {
+                    "title": "Project Director",
+                    "description": "Clear view of costs and performance",
+                    "items": [
+                        "Real-time data",
+                        "Strategic planning",
+                        "Project cycle control"
+                    ]
+                },
+                "accountant": {
+                    "title": "Accountant",
+                    "description": "Guaranteed financial consistency",
+                    "items": [
+                        "Tracking of actual costs",
+                        "Detection of deviations",
+                        "Connection with BIM flow"
+                    ]
+                },
+                "legal": {
+                    "title": "Legal",
+                    "description": "Traceability and regulatory compliance",
+                    "items": [
+                        "Clear and auditable records",
+                        "Reduced legal risks",
+                        "Technical and regulatory security"
+                    ]
+                }
+            }
+        }
     }
 }

@@ -263,5 +263,61 @@
             },
             "comingSoon": "DEMNÄCHST"
         }
+    },
+    "landingPage": {
+        "roles": {
+            "title": "Passend für jede Rolle konzipiert",
+            "subtitle": "Vom Techniker bis zum Anwalt bietet MAMBA die Komplettlösung, die für jede Rolle funktioniert",
+            "selectorLabel": "Wählen Sie Ihr berufliches Profil",
+            "mambaFor": "MAMBA FÜR {{role}}",
+            "seeWorkflow": "Workflow für {{role}} ansehen",
+            "profiles": {
+                "technician": {
+                    "title": "Techniker",
+                    "description": "Präzise Messungen aus BIM-Modellen",
+                    "items": [
+                        "Automatisierte Messregeln",
+                        "QTO-Datenextraktion",
+                        "Reduzierung manueller Arbeit"
+                    ]
+                },
+                "itManager": {
+                    "title": "IT-Leiter",
+                    "description": "Zentralisierte und sichere Kontrolle",
+                    "items": [
+                        "Benutzer- und Zugriffsverwaltung",
+                        "Stabile Cloud-Umgebung",
+                        "Organisatorische Synchronisation"
+                    ]
+                },
+                "projectDirector": {
+                    "title": "Projektleiter",
+                    "description": "Klarer Blick auf Kosten und Leistung",
+                    "items": [
+                        "Echtzeitdaten",
+                        "Strategische Planung",
+                        "Kontrolle des Projektzyklus"
+                    ]
+                },
+                "accountant": {
+                    "title": "Buchhalter",
+                    "description": "Garantierte finanzielle Konsistenz",
+                    "items": [
+                        "Verfolgung der tatsächlichen Kosten",
+                        "Erkennung von Abweichungen",
+                        "Verbindung mit dem BIM-Flow"
+                    ]
+                },
+                "legal": {
+                    "title": "Rechtsberater",
+                    "description": "Rückverfolgbarkeit und regulatorische Compliance",
+                    "items": [
+                        "Klare und prüfbare Aufzeichnungen",
+                        "Reduzierte rechtliche Risiken",
+                        "Technische und regulatorische Sicherheit"
+                    ]
+                }
+            }
+        }
     }
 }

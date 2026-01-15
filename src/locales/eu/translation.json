@@ -263,5 +263,61 @@
             },
             "comingSoon": "LAISTER"
         }
+    },
+    "landingPage": {
+        "roles": {
+            "title": "Profil bakoitzari egokitua",
+            "subtitle": "Teknikarietatik hasi eta lege-aholkularietaraino, MAMBAk rol bakoitzerako irtenbide osoa eskaintzen du",
+            "selectorLabel": "Hautatu zure profil profesionala",
+            "mambaFor": "MAMBA {{role}}(R)ENTZAT",
+            "seeWorkflow": "Ikusi {{role}} lan-fluxua",
+            "profiles": {
+                "technician": {
+                    "title": "Teknikaria",
+                    "description": "Neurketak BIM ereduetatik",
+                    "items": [
+                        "Neurketa-arau automatizatuak",
+                        "QTO datuen erauzketa",
+                        "Eskuzko lanaren murrizketa"
+                    ]
+                },
+                "itManager": {
+                    "title": "IT arduraduna",
+                    "description": "Kontrol zentralizatua eta segurua",
+                    "items": [
+                        "Erabiltzaileen eta sarbideen kudeaketa",
+                        "Hodei-ingurune egonkorra",
+                        "Erakunde-sinkronizazioa"
+                    ]
+                },
+                "projectDirector": {
+                    "title": "Proiektu zuzendaria",
+                    "description": "Kostuen eta errendimenduaren ikuspegi argia",
+                    "items": [
+                        "Datuak denbora errealean",
+                        "Plangintza estrategikoa",
+                        "Proiektu-zikloaren kontrola"
+                    ]
+                },
+                "accountant": {
+                    "title": "Kontularia",
+                    "description": "Koherentzia finantzario bermatua",
+                    "items": [
+                        "Benetako kostuen jarraipena",
+                        "Desbideratzeen detekzioa",
+                        "BIM fluxuarekin lotura"
+                    ]
+                },
+                "legal": {
+                    "title": "Legezkoa",
+                    "description": "Trazabilitatea eta araudia betetzea",
+                    "items": [
+                        "Erregistro argiak eta ikuskarriak",
+                        "Arrisku juridikoen murrizketa",
+                        "Segurtasun teknikoa eta arauzkoa"
+                    ]
+                }
+            }
+        }
     }
 }

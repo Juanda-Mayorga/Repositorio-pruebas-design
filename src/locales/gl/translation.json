@@ -263,5 +263,61 @@
             },
             "comingSoon": "PROXIMAMENTE"
         }
+    },
+    "landingPage": {
+        "roles": {
+            "title": "Deseñado para cada perfil",
+            "subtitle": "Desde técnicos ata asesores legais, MAMBA ofrece a solución completa para cada rol",
+            "selectorLabel": "Selecciona o teu perfil profesional",
+            "mambaFor": "MAMBA PARA {{role}}",
+            "seeWorkflow": "Ver fluxo de {{role}}",
+            "profiles": {
+                "technician": {
+                    "title": "Técnico",
+                    "description": "Medicións precisas desde modelos BIM",
+                    "items": [
+                        "Regras automatizadas de medición",
+                        "Extracción de datos QTO",
+                        "Redución de traballo manual"
+                    ]
+                },
+                "itManager": {
+                    "title": "Responsable de IT",
+                    "description": "Control centralizado e seguro",
+                    "items": [
+                        "Xestión de usuarios e accesos",
+                        "Entorno estable na nube",
+                        "Sincronización organizacional"
+                    ]
+                },
+                "projectDirector": {
+                    "title": "Director de Proxectos",
+                    "description": "Visión clara de costes e rendemento",
+                    "items": [
+                        "Datos en tempo real",
+                        "Planificación estratéxica",
+                        "Control do ciclo de proxecto"
+                    ]
+                },
+                "accountant": {
+                    "title": "Contable",
+                    "description": "Coherencia financeira garantida",
+                    "items": [
+                        "Seguimento de costes reais",
+                        "Detección de desviacións",
+                        "Conexión co fluxo BIM"
+                    ]
+                },
+                "legal": {
+                    "title": "Legal",
+                    "description": "Trazabilidade e cumprimento normativo",
+                    "items": [
+                        "Rexistros claros e auditables",
+                        "Redución de riscos legais",
+                        "Seguridade técnica e normativa"
+                    ]
+                }
+            }
+        }
     }
 }

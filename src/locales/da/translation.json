@@ -263,5 +263,61 @@
             },
             "comingSoon": "KOMMER SNART"
         }
+    },
+    "landingPage": {
+        "roles": {
+            "title": "Designet til at passe til enhver rolle",
+            "subtitle": "Fra teknikere til advokater, MAMBA tilbyder den komplette løsning, der fungerer for enhver rolle",
+            "selectorLabel": "Vælg din professionelle profil",
+            "mambaFor": "MAMBA FOR {{role}}",
+            "seeWorkflow": "Se {{role}} workflow",
+            "profiles": {
+                "technician": {
+                    "title": "Tekniker",
+                    "description": "Præcise målinger fra BIM-modeller",
+                    "items": [
+                        "Automatiserede måleregler",
+                        "QTO-dataudtræk",
+                        "Reduktion af manuelt arbejde"
+                    ]
+                },
+                "itManager": {
+                    "title": "IT-chef",
+                    "description": "Centraliseret og sikker kontrol",
+                    "items": [
+                        "Bruger- og adgangsstyring",
+                        "Stabilt cloud-miljø",
+                        "Organisatorisk synkronisering"
+                    ]
+                },
+                "projectDirector": {
+                    "title": "Projektdirektør",
+                    "description": "Klart overblik over omkostninger og ydeevne",
+                    "items": [
+                        "Data i realtid",
+                        "Strategisk planlægning",
+                        "Kontrol af projektcyklus"
+                    ]
+                },
+                "accountant": {
+                    "title": "Revisor",
+                    "description": "Garanteret økonomisk konsistens",
+                    "items": [
+                        "Sporing af faktiske omkostninger",
+                        "Registrering af afvigelser",
+                        "Forbindelse med BIM-flow"
+                    ]
+                },
+                "legal": {
+                    "title": "Juridisk",
+                    "description": "Sporbarhed og overholdelse af regler",
+                    "items": [
+                        "Klare og auditerbare optegnelser",
+                        "Reducerede juridiske risici",
+                        "Teknisk og regulatorisk sikkerhed"
+                    ]
+                }
+            }
+        }
     }
 }
