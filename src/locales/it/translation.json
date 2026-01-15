@@ -270,11 +270,11 @@
             "subtitle": "Dai tecnici agli esperti legali, MAMBA offre la soluzione completa che funziona per ogni ruolo",
             "selectorLabel": "Seleziona il tuo profilo professionale",
             "mambaFor": "MAMBA PER {{role}}",
-            "seeWorkflow": "Vedi il flusso di {{role}}",
             "profiles": {
                 "technician": {
                     "title": "Tecnico",
                     "description": "Misurazioni precise dai modelli BIM",
+                    "cta": "Prova gratis ora",
                     "items": [
                         "Regole di misurazione automatizzate",
                         "Estrazione dati QTO",
@@ -284,6 +284,7 @@
                 "itManager": {
                     "title": "Responsabile IT",
                     "description": "Controllo centralizzato e sicuro",
+                    "cta": "Esplora il flusso di lavoro",
                     "items": [
                         "Gestione utenti e accessi",
                         "Ambiente cloud stabile",
@@ -293,6 +294,7 @@
                 "projectDirector": {
                     "title": "Direttore dei Lavori",
                     "description": "Visione chiara dei costi e delle prestazioni",
+                    "cta": "Vedilo in azione",
                     "items": [
                         "Dati in tempo reale",
                         "Pianificazione strategica",
@@ -302,6 +304,7 @@
                 "accountant": {
                     "title": "Contabile",
                     "description": "Coerenza finanziaria garantita",
+                    "cta": "Vedilo in azione",
                     "items": [
                         "Monitoraggio dei costi effettivi",
                         "Rilevamento delle deviazioni",
@@ -311,6 +314,7 @@
                 "legal": {
                     "title": "Legale",
                     "description": "Tracciabilità e conformità normativa",
+                    "cta": "Esplora il flusso di lavoro",
                     "items": [
                         "Registri chiari e verificabili",
                         "Riduzione dei rischi legali",

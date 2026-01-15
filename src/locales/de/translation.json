@@ -270,11 +270,11 @@
             "subtitle": "Vom Techniker bis zum Anwalt bietet MAMBA die Komplettlösung, die für jede Rolle funktioniert",
             "selectorLabel": "Wählen Sie Ihr berufliches Profil",
             "mambaFor": "MAMBA FÜR {{role}}",
-            "seeWorkflow": "Workflow für {{role}} ansehen",
             "profiles": {
                 "technician": {
                     "title": "Techniker",
                     "description": "Präzise Messungen aus BIM-Modellen",
+                    "cta": "Jetzt kostenlos testen",
                     "items": [
                         "Automatisierte Messregeln",
                         "QTO-Datenextraktion",
@@ -282,8 +282,9 @@
                     ]
                 },
                 "itManager": {
-                    "title": "IT-Leiter",
+                    "title": "IT-Manager",
                     "description": "Zentralisierte und sichere Kontrolle",
+                    "cta": "Workflow erkunden",
                     "items": [
                         "Benutzer- und Zugriffsverwaltung",
                         "Stabile Cloud-Umgebung",
@@ -291,17 +292,19 @@
                     ]
                 },
                 "projectDirector": {
-                    "title": "Projektleiter",
-                    "description": "Klarer Blick auf Kosten und Leistung",
+                    "title": "Projektdirektor",
+                    "description": "Klare Sicht auf Kosten und Leistung",
+                    "cta": "In Aktion sehen",
                     "items": [
                         "Echtzeitdaten",
                         "Strategische Planung",
-                        "Kontrolle des Projektzyklus"
+                        "Projektzykluskontrolle"
                     ]
                 },
                 "accountant": {
                     "title": "Buchhalter",
                     "description": "Garantierte finanzielle Konsistenz",
+                    "cta": "In Aktion sehen",
                     "items": [
                         "Verfolgung der tatsächlichen Kosten",
                         "Erkennung von Abweichungen",
@@ -310,10 +313,11 @@
                 },
                 "legal": {
                     "title": "Rechtsberater",
-                    "description": "Rückverfolgbarkeit und regulatorische Compliance",
+                    "description": "Rückverfolgbarkeit und Einhaltung von Vorschriften",
+                    "cta": "Workflow erkunden",
                     "items": [
                         "Klare und prüfbare Aufzeichnungen",
-                        "Reduzierte rechtliche Risiken",
+                        "Reduzierung rechtlicher Risiken",
                         "Technische und regulatorische Sicherheit"
                     ]
                 }

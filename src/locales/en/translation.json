@@ -451,11 +451,11 @@
             "subtitle": "From technicians to lawyers, MAMBA provides the complete solution that works for every role",
             "selectorLabel": "Select your professional profile",
             "mambaFor": "MAMBA FOR {{role}}",
-            "seeWorkflow": "See {{role}} workflow",
             "profiles": {
                 "technician": {
                     "title": "Technician",
                     "description": "Accurate measurements from BIM models",
+                    "cta": "Try for free now",
                     "items": [
                         "Automated measurement rules",
                         "QTO data extraction",
@@ -465,6 +465,7 @@
                 "itManager": {
                     "title": "IT Manager",
                     "description": "Centralized and secure control",
+                    "cta": "Explore workflow",
                     "items": [
                         "User and access management",
                         "Stable cloud environment",
@@ -474,6 +475,7 @@
                 "projectDirector": {
                     "title": "Project Director",
                     "description": "Clear view of costs and performance",
+                    "cta": "See it in action",
                     "items": [
                         "Real-time data",
                         "Strategic planning",
@@ -483,6 +485,7 @@
                 "accountant": {
                     "title": "Accountant",
                     "description": "Guaranteed financial consistency",
+                    "cta": "See it in action",
                     "items": [
                         "Tracking of actual costs",
                         "Detection of deviations",
@@ -492,6 +495,7 @@
                 "legal": {
                     "title": "Legal",
                     "description": "Traceability and regulatory compliance",
+                    "cta": "Explore workflow",
                     "items": [
                         "Clear and auditable records",
                         "Reduced legal risks",

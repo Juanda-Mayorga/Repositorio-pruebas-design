@@ -270,11 +270,11 @@
             "subtitle": "Des techniciens aux experts juridiques, MAMBA offre la solution complète pour chaque rôle",
             "selectorLabel": "Sélectionnez votre profil professionnel",
             "mambaFor": "MAMBA POUR {{role}}",
-            "seeWorkflow": "Voir le flux de {{role}}",
             "profiles": {
                 "technician": {
                     "title": "Technicien",
                     "description": "Mesures précises à partir de modèles BIM",
+                    "cta": "Essayer gratuitement maintenant",
                     "items": [
                         "Règles de mesure automatisées",
                         "Extraction de données QTO",
@@ -284,6 +284,7 @@
                 "itManager": {
                     "title": "Responsable IT",
                     "description": "Contrôle centralisé et sécurisé",
+                    "cta": "Explorer le flux de travail",
                     "items": [
                         "Gestion des utilisateurs et des accès",
                         "Environnement cloud stable",
@@ -293,6 +294,7 @@
                 "projectDirector": {
                     "title": "Directeur de Projets",
                     "description": "Vision claire des coûts et des performances",
+                    "cta": "Le voir en action",
                     "items": [
                         "Données en temps réel",
                         "Planification stratégique",
@@ -302,6 +304,7 @@
                 "accountant": {
                     "title": "Comptable",
                     "description": "Cohérence financière garantie",
+                    "cta": "Le voir en action",
                     "items": [
                         "Suivi des coûts réels",
                         "Détection des écarts",
@@ -311,6 +314,7 @@
                 "legal": {
                     "title": "Juridique",
                     "description": "Traçabilité et conformité réglementaire",
+                    "cta": "Explorer le flux de travail",
                     "items": [
                         "Registres clairs et auditables",
                         "Réduction des risques juridiques",

@@ -269,7 +269,7 @@ export const WebRolesSection = () => {
                                                     }
                                                 }}
                                             >
-                                                {t('landingPage.roles.seeWorkflow', { role: roleTranslation.title })}
+                                                {roleTranslation.cta}
                                             </WebButton>
                                         </Box>
                                     </Grid>

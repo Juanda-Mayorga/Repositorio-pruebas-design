@@ -270,11 +270,11 @@
             "subtitle": "Van technici tot juridisch adviseurs, MAMBA biedt de complete oplossing die voor elke rol werkt",
             "selectorLabel": "Selecteer uw professionele profiel",
             "mambaFor": "MAMBA VOOR {{role}}",
-            "seeWorkflow": "Bekijk de {{role}} workflow",
             "profiles": {
                 "technician": {
                     "title": "Technicus",
                     "description": "Nauwkeurige metingen uit BIM-modellen",
+                    "cta": "Nu gratis proberen",
                     "items": [
                         "Geautomatiseerde meetregels",
                         "QTO-dataextractie",
@@ -284,6 +284,7 @@
                 "itManager": {
                     "title": "IT-manager",
                     "description": "Gecentraliseerde en veilige controle",
+                    "cta": "Verken workflow",
                     "items": [
                         "Gebruikers- en toegangsbeheer",
                         "Stabiele cloudomgeving",
@@ -293,6 +294,7 @@
                 "projectDirector": {
                     "title": "Projectdirecteur",
                     "description": "Helder inzicht in kosten en prestaties",
+                    "cta": "Zie het in actie",
                     "items": [
                         "Realtime gegevens",
                         "Strategische planning",
@@ -302,6 +304,7 @@
                 "accountant": {
                     "title": "Accountant",
                     "description": "Gegarandeerde financiële consistentie",
+                    "cta": "Zie het in actie",
                     "items": [
                         "Opvolging van werkelijke kosten",
                         "Detectie van afwijkingen",
@@ -311,6 +314,7 @@
                 "legal": {
                     "title": "Juridisch",
                     "description": "Traceerbaarheid en naleving van regelgeving",
+                    "cta": "Verken workflow",
                     "items": [
                         "Duidelijke en auditeerbare verslagen",
                         "Vermindering van juridische risico's",

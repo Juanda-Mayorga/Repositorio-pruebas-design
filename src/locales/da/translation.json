@@ -270,11 +270,11 @@
             "subtitle": "Fra teknikere til advokater, MAMBA tilbyder den komplette løsning, der fungerer for enhver rolle",
             "selectorLabel": "Vælg din professionelle profil",
             "mambaFor": "MAMBA FOR {{role}}",
-            "seeWorkflow": "Se {{role}} workflow",
             "profiles": {
                 "technician": {
                     "title": "Tekniker",
                     "description": "Præcise målinger fra BIM-modeller",
+                    "cta": "Prøv gratis nu",
                     "items": [
                         "Automatiserede måleregler",
                         "QTO-dataudtræk",
@@ -284,6 +284,7 @@
                 "itManager": {
                     "title": "IT-chef",
                     "description": "Centraliseret og sikker kontrol",
+                    "cta": "Udforsk workflow",
                     "items": [
                         "Bruger- og adgangsstyring",
                         "Stabilt cloud-miljø",
@@ -293,6 +294,7 @@
                 "projectDirector": {
                     "title": "Projektdirektør",
                     "description": "Klart overblik over omkostninger og ydeevne",
+                    "cta": "Se det i aktion",
                     "items": [
                         "Data i realtid",
                         "Strategisk planlægning",
@@ -302,6 +304,7 @@
                 "accountant": {
                     "title": "Revisor",
                     "description": "Garanteret økonomisk konsistens",
+                    "cta": "Se det i aktion",
                     "items": [
                         "Sporing af faktiske omkostninger",
                         "Registrering af afvigelser",
@@ -311,6 +314,7 @@
                 "legal": {
                     "title": "Juridisk",
                     "description": "Sporbarhed og overholdelse af regler",
+                    "cta": "Udforsk workflow",
                     "items": [
                         "Klare og auditerbare optegnelser",
                         "Reducerede juridiske risici",

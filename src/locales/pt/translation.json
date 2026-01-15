@@ -270,11 +270,11 @@
             "subtitle": "De técnicos a consultores jurídicos, o MAMBA oferece a solução completa para cada função",
             "selectorLabel": "Selecione o seu perfil profissional",
             "mambaFor": "MAMBA PARA {{role}}",
-            "seeWorkflow": "Ver fluxo de {{role}}",
             "profiles": {
                 "technician": {
                     "title": "Técnico",
                     "description": "Medições precisas a partir de modelos BIM",
+                    "cta": "Experimentar grátis agora",
                     "items": [
                         "Regras de medição automatizadas",
                         "Extração de dados QTO",
@@ -284,6 +284,7 @@
                 "itManager": {
                     "title": "Responsável de TI",
                     "description": "Controlo centralizado e seguro",
+                    "cta": "Explorar fluxo de trabalho",
                     "items": [
                         "Gestão de utilizadores e acessos",
                         "Ambiente estável na nuvem",
@@ -293,6 +294,7 @@
                 "projectDirector": {
                     "title": "Diretor de Projetos",
                     "description": "Visão clara de custos e desempenho",
+                    "cta": "Vê-lo em ação",
                     "items": [
                         "Dados em tempo real",
                         "Planeamento estratégico",
@@ -302,6 +304,7 @@
                 "accountant": {
                     "title": "Contabilista",
                     "description": "Coerência financeira garantida",
+                    "cta": "Vê-lo em ação",
                     "items": [
                         "Acompanhamento de custos reais",
                         "Deteção de desvios",
@@ -311,6 +314,7 @@
                 "legal": {
                     "title": "Jurídico",
                     "description": "Rastreabilidade e conformidade normativa",
+                    "cta": "Explorar fluxo de trabalho",
                     "items": [
                         "Registos claros e auditáveis",
                         "Redução de riscos legais",

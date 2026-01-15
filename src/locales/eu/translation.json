@@ -269,14 +269,14 @@
             "title": "Profil bakoitzari egokitua",
             "subtitle": "Teknikarietatik hasi eta lege-aholkularietaraino, MAMBAk rol bakoitzerako irtenbide osoa eskaintzen du",
             "selectorLabel": "Hautatu zure profil profesionala",
-            "mambaFor": "MAMBA {{role}}(R)ENTZAT",
-            "seeWorkflow": "Ikusi {{role}} lan-fluxua",
+            "mambaFor": "MAMBA {{role}}RENTZAT",
             "profiles": {
                 "technician": {
                     "title": "Teknikaria",
-                    "description": "Neurketak BIM ereduetatik",
+                    "description": "Neurketa zehatzak BIM modeloetatik",
+                    "cta": "Probatu doan orain",
                     "items": [
-                        "Neurketa-arau automatizatuak",
+                        "Neurketarako arau automatizatuak",
                         "QTO datuen erauzketa",
                         "Eskuzko lanaren murrizketa"
                     ]
@@ -284,15 +284,17 @@
                 "itManager": {
                     "title": "IT arduraduna",
                     "description": "Kontrol zentralizatua eta segurua",
+                    "cta": "Esploratu lan-fluxua",
                     "items": [
                         "Erabiltzaileen eta sarbideen kudeaketa",
-                        "Hodei-ingurune egonkorra",
+                        "Hodeiko ingurune egonkorra",
                         "Erakunde-sinkronizazioa"
                     ]
                 },
                 "projectDirector": {
-                    "title": "Proiektu zuzendaria",
+                    "title": "Proiektu-zuzendaria",
                     "description": "Kostuen eta errendimenduaren ikuspegi argia",
+                    "cta": "Ikusi ekintzan",
                     "items": [
                         "Datuak denbora errealean",
                         "Plangintza estrategikoa",
@@ -302,19 +304,21 @@
                 "accountant": {
                     "title": "Kontularia",
                     "description": "Koherentzia finantzario bermatua",
+                    "cta": "Ikusi ekintzan",
                     "items": [
                         "Benetako kostuen jarraipena",
-                        "Desbideratzeen detekzioa",
-                        "BIM fluxuarekin lotura"
+                        "Desbiapenen detekzioa",
+                        "BIM fluxuarekiko konexioa"
                     ]
                 },
                 "legal": {
-                    "title": "Legezkoa",
+                    "title": "Legalkia",
                     "description": "Trazabilitatea eta araudia betetzea",
+                    "cta": "Esploratu lan-fluxua",
                     "items": [
-                        "Erregistro argiak eta ikuskarriak",
-                        "Arrisku juridikoen murrizketa",
-                        "Segurtasun teknikoa eta arauzkoa"
+                        "Erregistro garbiak eta auditagarriak",
+                        "Arrisku legalen murrizketa",
+                        "Segurtasun tekniko eta arauemailea"
                     ]
                 }
             }
