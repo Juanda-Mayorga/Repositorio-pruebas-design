@@ -276,7 +276,6 @@ export const WebRolesSection = () => {
                                                     bgcolor: roles[activeRole].color,
                                                     color: '#FFFFFF',
                                                     borderColor: roles[activeRole].color,
-                                                    borderRadius: '12px',
                                                     px: 3,
                                                     py: 1.25,
                                                     fontSize: '14px',

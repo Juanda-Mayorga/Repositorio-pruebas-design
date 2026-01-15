@@ -125,7 +125,7 @@ export const LandingPage = () => {
                 pb: { xs: 8, md: 12 },
                 background: 'linear-gradient(180deg, #FFFFFF 0%, #F8F9FA 100%)'
             }}>
-                <Container maxWidth="lg">
+                <Container maxWidth="lg" sx={{ px: { xs: 2, sm: 6, md: 10, lg: 15 } }}>
                     <Grid container spacing={4} alignItems="center">
                         <Grid size={{ xs: 12, md: 6 }}>
                             <MotionBox
@@ -184,7 +184,6 @@ export const LandingPage = () => {
                                     sx={{
                                         py: 2,
                                         px: 6,
-                                        borderRadius: '8px',
                                         fontSize: '16px',
                                         fontWeight: 600,
                                         textTransform: 'none',
@@ -281,7 +280,7 @@ export const LandingPage = () => {
 
             {/* 3. Designed for the AECO Sector */}
             <Box sx={{ py: { xs: 8, md: 12 }, bgcolor: '#FFFFFF' }}>
-                <Container maxWidth="lg">
+                <Container maxWidth="lg" sx={{ px: { xs: 2, sm: 6, md: 10, lg: 15 } }}>
                     <Box sx={{ textAlign: 'center', mb: 8 }}>
                         <Typography
                             variant="h2"
@@ -363,7 +362,7 @@ export const LandingPage = () => {
 
             {/* 4. What's holding your projects back? */}
             <Box sx={{ py: { xs: 8, md: 12 }, bgcolor: '#F8F9FA' }}>
-                <Container maxWidth="lg">
+                <Container maxWidth="lg" sx={{ px: { xs: 2, sm: 6, md: 10, lg: 15 } }}>
                     <Box sx={{ textAlign: 'center', mb: 8 }}>
                         <Typography
                             variant="h2"
@@ -433,7 +432,7 @@ export const LandingPage = () => {
 
             {/* 6. What is MAMBA? Section */}
             <Box sx={{ py: { xs: 8, md: 12 }, bgcolor: '#F8F9FA' }}>
-                <Container maxWidth="lg">
+                <Container maxWidth="lg" sx={{ px: { xs: 2, sm: 6, md: 10, lg: 15 } }}>
                     <Grid container spacing={6} alignItems="center">
                         <Grid size={{ xs: 12, md: 6 }}>
                             <Typography
@@ -522,7 +521,7 @@ export const LandingPage = () => {
 
             {/* 7. How we deliver value? */}
             <Box sx={{ py: { xs: 8, md: 12 }, bgcolor: '#FFFFFF' }}>
-                <Container maxWidth="lg">
+                <Container maxWidth="lg" sx={{ px: { xs: 2, sm: 6, md: 10, lg: 15 } }}>
                     <Box sx={{ textAlign: 'center', mb: 8 }}>
                         <Typography
                             variant="h2"
@@ -544,28 +543,84 @@ export const LandingPage = () => {
 
                     <Grid container spacing={4}>
                         {[
-                            { title: 'Software', items: ['Mediciones Automáticas', 'Estimación de Costes', 'Auditoría del Modelo'], image: deliverySoftware },
-                            { title: 'Cloud Services', items: ['Gestión de Licencias', 'Colaboración en Nube', 'Repositorio Proyectos'], image: deliveryCloud },
-                            { title: 'Support', items: ['Formación Personalizada', 'Soporte Técnico', 'Consultoría BIM'], image: deliverySupport }
+                            {
+                                title: 'Software',
+                                description: 'MAMBA software turns BIM models into actionable results',
+                                items: ['Eliminate errors', 'Make smarter decisions', 'Keep projects on time and on budget'],
+                                image: deliverySoftware,
+                                cta: 'See how our software works'
+                            },
+                            {
+                                title: 'Cloud services',
+                                description: 'MAMBA\'s cloud platform centralizes licenses, training, and support',
+                                items: ['Everything in one place', 'Training built into the platform', 'Grow and align your team'],
+                                image: deliveryCloud,
+                                cta: 'See how our cloud services work'
+                            },
+                            {
+                                title: 'Support',
+                                description: 'Get fast, reliable support directly in MAMBA, available on both the software and cloud',
+                                items: ['Support integrated across tools', 'Solve problem faster', 'Support where you work'],
+                                image: deliverySupport,
+                                cta: 'See how our support works'
+                            }
                         ].map((card, index) => (
                             <Grid key={index} size={{ xs: 12, md: 4 }}>
                                 <Box sx={{
-                                    p: 4,
+                                    p: { xs: 3, lg: 2.5, xl: 4 },
                                     borderRadius: '24px',
                                     bgcolor: '#FFFFFF',
-                                    boxShadow: '0 8px 30px rgba(0,0,0,0.05)',
+                                    boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.05)',
+                                    border: '1px solid rgba(157, 157, 157, 0.4)',
+                                    transition: 'all 0.3s ease-out',
+                                    '&:hover': {
+                                        transform: 'translateY(-4px)',
+                                        boxShadow: '0 12px 24px rgba(0,0,0,0.15)',
+                                    },
                                     height: '100%',
                                     display: 'flex',
                                     flexDirection: 'column'
                                 }}>
                                     <Box component="img" src={card.image} sx={{ width: '100%', borderRadius: '12px', mb: 3 }} />
-                                    <Typography sx={{ mb: 2, fontSize: '32px', fontWeight: 500, fontFamily: '"Hind Siliguri", sans-serif' }}>{card.title}</Typography>
-                                    <Box sx={{ flexGrow: 1 }}>
-                                        {card.items.map((item, i) => (
-                                            <Typography key={i} variant="body2" sx={{ color: 'text.secondary', mb: 1 }}>• {item}</Typography>
-                                        ))}
+                                    <Typography sx={{ mb: 1, fontSize: { xs: '28px', lg: '32px' }, fontWeight: 500, fontFamily: '"Hind Siliguri", sans-serif' }}>{card.title}</Typography>
+                                    <Typography variant="body1" sx={{ color: 'text.secondary', mb: 3, fontSize: { xs: '16px', lg: '18px' } }}>{card.description}</Typography>
+                                    <Box sx={{ flexGrow: 1, mb: { xs: 1, md: 1, lg: 1, xl: 3 } }}>
+                                        <Box sx={{
+                                            borderLeft: '3px solid #E0E0E0',
+                                            pl: 2,
+                                            ml: 0.5,
+                                            display: 'flex',
+                                            flexDirection: 'column',
+                                            gap: 1.5
+                                        }}>
+                                            {card.items.map((item, i) => (
+                                                <Typography
+                                                    key={i}
+                                                    variant="body2"
+                                                    sx={{
+                                                        color: 'text.secondary',
+                                                        fontWeight: 400,
+                                                        fontSize: { xs: '16px', lg: '18px' },
+                                                        lineHeight: 1.2
+                                                    }}
+                                                >
+                                                    {item}
+                                                </Typography>
+                                            ))}
+                                        </Box>
                                     </Box>
-                                    <WebButton variant="contained" sx={{ mt: 3 }}>Explore {card.title}</WebButton>
+                                    <WebButton
+                                        variant="contained"
+                                        sx={{
+                                            mt: { xs: 1, md: 1, lg: 1, xl: 3 },
+                                            py: 1.5,
+                                            px: { lg: 2, xl: 2 },
+                                            fontSize: { lg: '16px', xl: '16px' },
+                                            textTransform: 'none'
+                                        }}
+                                    >
+                                        {card.cta}
+                                    </WebButton>
                                 </Box>
                             </Grid>
                         ))}
@@ -601,7 +656,7 @@ export const LandingPage = () => {
                             <Typography variant="h3" sx={{ mb: 3, fontWeight: 700 }}>
                                 Discover how MAMBA optimizes rules, quantities, and sustainability
                             </Typography>
-                            <WebButton variant="contained" sx={{ bgcolor: '#FDB022', color: '#000000', '&:hover': { bgcolor: '#F9A01B' }, px: 6, py: 1.5, borderRadius: '8px' }}>
+                            <WebButton variant="contained" sx={{ bgcolor: '#FDB022', color: '#000000', '&:hover': { bgcolor: '#F9A01B' }, px: 6, py: 1.5 }}>
                                 Solicite su demo
                             </WebButton>
                         </Box>

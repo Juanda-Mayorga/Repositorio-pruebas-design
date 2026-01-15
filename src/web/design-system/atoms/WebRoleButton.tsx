@@ -21,7 +21,7 @@ const WebRoleButton: React.FC<WebRoleButtonProps> = ({ title, color, isActive, o
                 px: { xs: 1.5, sm: 2, md: 2 },
                 py: { xs: 0.5, sm: 1, md: 0 },
                 height: { xs: '32px', sm: '40px', md: '56px' },
-                borderRadius: { xs: '8px', md: '16px' },
+                borderRadius: { xs: '12px', md: '24px' },
                 textAlign: 'left',
                 transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
                 position: 'relative',
