@@ -46,7 +46,7 @@ export const WebRolesSection = () => {
             image: roleDirectorImg,
             description: 'Visión clara de costes y rendimiento',
             items: [
-                'KPI y datos en tiempo real',
+                'Datos en tiempo real',
                 'Planificación estratégica',
                 'Control del ciclo de proyecto'
             ]
