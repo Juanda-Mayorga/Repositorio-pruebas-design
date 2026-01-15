@@ -18,7 +18,7 @@ const WebRoleButton: React.FC<WebRoleButtonProps> = ({ title, color, isActive, o
             onClick={onClick}
             sx={{
                 justifyContent: { xs: 'center', md: 'flex-start' },
-                px: { xs: 1.5, sm: 2, md: 2 },
+                px: { xs: 1.5, sm: 2, md: 2, lg: 1.5 },
                 py: { xs: 0.5, sm: 1, md: 0 },
                 height: { xs: '32px', sm: '40px', md: '56px' },
                 borderRadius: { xs: '12px', md: '24px' },

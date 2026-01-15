@@ -77,7 +77,7 @@ export const WebRolesSection = () => {
 
     return (
         <Box sx={{ py: { xs: 8, md: 16 }, bgcolor: '#FFFFFF', overflow: 'hidden' }}>
-            <Container maxWidth="lg" sx={{ px: { xs: 2, sm: 6, md: 10, lg: 15 } }}>
+            <Container maxWidth="lg" sx={{ px: { xs: 2, sm: 6, md: 10, lg: 8 } }}>
                 <Box sx={{
                     mb: { xs: 4, sm: 3, md: 10 }, // Reduced from 6/10 to 4/3 for mobile/tablet (812px)
                     textAlign: 'center',

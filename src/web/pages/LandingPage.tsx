@@ -125,7 +125,7 @@ export const LandingPage = () => {
                 pb: { xs: 8, md: 12 },
                 background: 'linear-gradient(180deg, #FFFFFF 0%, #F8F9FA 100%)'
             }}>
-                <Container maxWidth="lg" sx={{ px: { xs: 2, sm: 6, md: 10, lg: 15 } }}>
+                <Container maxWidth="lg" sx={{ px: { xs: 2, sm: 6, md: 10, lg: 8 } }}>
                     <Grid container spacing={4} alignItems="center">
                         <Grid size={{ xs: 12, md: 6 }}>
                             <MotionBox
@@ -280,7 +280,7 @@ export const LandingPage = () => {
 
             {/* 3. Designed for the AECO Sector */}
             <Box sx={{ py: { xs: 8, md: 12 }, bgcolor: '#FFFFFF' }}>
-                <Container maxWidth="lg" sx={{ px: { xs: 2, sm: 6, md: 10, lg: 15 } }}>
+                <Container maxWidth="lg" sx={{ px: { xs: 2, sm: 6, md: 10, lg: 8 } }}>
                     <Box sx={{ textAlign: 'center', mb: 8 }}>
                         <Typography
                             variant="h2"
@@ -362,7 +362,7 @@ export const LandingPage = () => {
 
             {/* 4. What's holding your projects back? */}
             <Box sx={{ py: { xs: 8, md: 12 }, bgcolor: '#F8F9FA' }}>
-                <Container maxWidth="lg" sx={{ px: { xs: 2, sm: 6, md: 10, lg: 15 } }}>
+                <Container maxWidth="lg" sx={{ px: { xs: 2, sm: 6, md: 10, lg: 8 } }}>
                     <Box sx={{ textAlign: 'center', mb: 8 }}>
                         <Typography
                             variant="h2"
@@ -432,7 +432,7 @@ export const LandingPage = () => {
 
             {/* 6. What is MAMBA? Section */}
             <Box sx={{ py: { xs: 8, md: 12 }, bgcolor: '#F8F9FA' }}>
-                <Container maxWidth="lg" sx={{ px: { xs: 2, sm: 6, md: 10, lg: 15 } }}>
+                <Container maxWidth="lg" sx={{ px: { xs: 2, sm: 6, md: 10, lg: 8 } }}>
                     <Grid container spacing={6} alignItems="center">
                         <Grid size={{ xs: 12, md: 6 }}>
                             <Typography
@@ -521,7 +521,7 @@ export const LandingPage = () => {
 
             {/* 7. How we deliver value? */}
             <Box sx={{ py: { xs: 8, md: 12 }, bgcolor: '#FFFFFF' }}>
-                <Container maxWidth="lg" sx={{ px: { xs: 2, sm: 6, md: 10, lg: 15 } }}>
+                <Container maxWidth="lg" sx={{ px: { xs: 2, sm: 6, md: 10, lg: 8 } }}>
                     <Box sx={{ textAlign: 'center', mb: 8 }}>
                         <Typography
                             variant="h2"
