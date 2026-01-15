@@ -286,11 +286,13 @@ export const LandingPage = () => {
                             variant="h2"
                             sx={{
                                 mb: 2,
+                                fontWeight: 500,
                                 background: 'linear-gradient(to right, #9989EC, #6E659F, #333337)',
                                 WebkitBackgroundClip: 'text',
                                 WebkitTextFillColor: 'transparent',
                                 backgroundClip: 'text',
-                                display: 'inline-block'
+                                display: 'inline-block',
+                                fontSize: { xs: '32px', md: '48px' }
                             }}
                         >
                             Designed for the <Box component="span" sx={{ color: theme.palette.web.action.primary }}>AECO</Box> sector
@@ -368,11 +370,13 @@ export const LandingPage = () => {
                             variant="h2"
                             sx={{
                                 mb: 2,
+                                fontWeight: 500,
                                 background: 'linear-gradient(to right, #9989EC, #6E659F, #333337)',
                                 WebkitBackgroundClip: 'text',
                                 WebkitTextFillColor: 'transparent',
                                 backgroundClip: 'text',
-                                display: 'inline-block'
+                                display: 'inline-block',
+                                fontSize: { xs: '32px', md: '48px' }
                             }}
                         >
                             What’s holding your <Box component="span" sx={{ color: theme.palette.web.action.primary }}>projects back</Box>?
@@ -439,11 +443,13 @@ export const LandingPage = () => {
                                 variant="h2"
                                 sx={{
                                     mb: 3,
+                                    fontWeight: 500,
                                     background: 'linear-gradient(to right, #9989EC, #6E659F, #333337)',
                                     WebkitBackgroundClip: 'text',
                                     WebkitTextFillColor: 'transparent',
                                     backgroundClip: 'text',
-                                    display: 'inline-block'
+                                    display: 'inline-block',
+                                    fontSize: { xs: '32px', md: '48px' }
                                 }}
                             >
                                 What is <Box component="span" sx={{ color: theme.palette.web.action.primary }}>MAMBA</Box>?
@@ -527,11 +533,13 @@ export const LandingPage = () => {
                             variant="h2"
                             sx={{
                                 mb: 2,
+                                fontWeight: 500,
                                 background: 'linear-gradient(to right, #9989EC, #6E659F, #333337)',
                                 WebkitBackgroundClip: 'text',
                                 WebkitTextFillColor: 'transparent',
                                 backgroundClip: 'text',
-                                display: 'inline-block'
+                                display: 'inline-block',
+                                fontSize: { xs: '32px', md: '48px' }
                             }}
                         >
                             How we deliver <Box component="span" sx={{ color: theme.palette.web.action.primary }}>value</Box>?
@@ -665,7 +673,7 @@ export const LandingPage = () => {
                             opacity: 0.8
                         }} />
                         <Box sx={{ position: 'relative', zIndex: 1 }}>
-                            <Typography variant="h3" sx={{ mb: 3, fontWeight: 700 }}>
+                            <Typography variant="h2" sx={{ mb: 3, fontWeight: 500, color: '#FFFFFF' }}>
                                 Discover how MAMBA optimizes rules, quantities, and sustainability
                             </Typography>
                             <WebButton variant="contained" sx={{ bgcolor: '#FDB022', color: '#000000', '&:hover': { bgcolor: '#F9A01B' }, px: 6, py: 1.5 }}>

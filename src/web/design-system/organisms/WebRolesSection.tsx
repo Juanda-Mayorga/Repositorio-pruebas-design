@@ -90,7 +90,7 @@ export const WebRolesSection = () => {
                         variant="h2"
                         sx={{
                             mb: 2,
-                            fontWeight: 700,
+                            fontWeight: 500,
                             background: 'linear-gradient(to right, #9989EC, #6E659F, #333337)',
                             WebkitBackgroundClip: 'text',
                             WebkitTextFillColor: 'transparent',
