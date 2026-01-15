@@ -527,7 +527,7 @@ export const LandingPage = () => {
                             variant="h2"
                             sx={{
                                 mb: 2,
-                                background: 'linear-gradient(to right, #FFFFFF, #E0E0E0, #CCCCCC)',
+                                background: 'linear-gradient(to right, #9989EC, #6E659F, #333337)',
                                 WebkitBackgroundClip: 'text',
                                 WebkitTextFillColor: 'transparent',
                                 backgroundClip: 'text',
@@ -564,7 +564,7 @@ export const LandingPage = () => {
                                             <Typography key={i} variant="body2" sx={{ color: 'text.secondary', mb: 1 }}>• {item}</Typography>
                                         ))}
                                     </Box>
-                                    <WebButton variant="outlined" sx={{ mt: 3 }}>Explore {card.title}</WebButton>
+                                    <WebButton variant="contained" sx={{ mt: 3 }}>Explore {card.title}</WebButton>
                                 </Box>
                             </Grid>
                         ))}
