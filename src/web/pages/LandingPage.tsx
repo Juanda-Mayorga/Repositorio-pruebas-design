@@ -35,6 +35,7 @@ import logoPlanho from '../../assets/BMM_MMI_LogoPlanho_0100.svg';
 import deliverySoftware from '../../assets/BMM_MMI_Software.svg';
 import deliveryCloud from '../../assets/BMM_MMI_CloudServices.svg';
 import deliverySupport from '../../assets/BMM_MMI_Support.svg';
+import backgroundDemo from '../../assets/BMM_MMI_BackgroundDemo.svg';
 
 const MotionBox = motion(Box);
 
@@ -558,7 +559,7 @@ export const LandingPage = () => {
                                     flexDirection: 'column'
                                 }}>
                                     <Box component="img" src={card.image} sx={{ width: '100%', borderRadius: '12px', mb: 3 }} />
-                                    <Typography variant="h5" sx={{ mb: 2, fontWeight: 700 }}>{card.title}</Typography>
+                                    <Typography sx={{ mb: 2, fontSize: '32px', fontWeight: 500, fontFamily: '"Hind Siliguri", sans-serif' }}>{card.title}</Typography>
                                     <Box sx={{ flexGrow: 1 }}>
                                         {card.items.map((item, i) => (
                                             <Typography key={i} variant="body2" sx={{ color: 'text.secondary', mb: 1 }}>• {item}</Typography>
@@ -576,18 +577,34 @@ export const LandingPage = () => {
             <Box sx={{ pb: 8 }}>
                 <Container maxWidth="lg">
                     <Box sx={{
+                        position: 'relative',
                         bgcolor: theme.palette.web.action.primary,
                         borderRadius: '24px',
                         p: { xs: 4, md: 8 },
                         textAlign: 'center',
-                        color: '#FFFFFF'
+                        color: '#FFFFFF',
+                        overflow: 'hidden'
                     }}>
-                        <Typography variant="h3" sx={{ mb: 3, fontWeight: 700 }}>
-                            Discover how MAMBA optimizes rules, quantities, and sustainability
-                        </Typography>
-                        <WebButton variant="contained" sx={{ bgcolor: '#FDB022', color: '#000000', '&:hover': { bgcolor: '#F9A01B' }, px: 6, py: 1.5, borderRadius: '8px' }}>
-                            Solicite su demo
-                        </WebButton>
+                        <Box sx={{
+                            position: 'absolute',
+                            top: 0,
+                            left: 0,
+                            right: 0,
+                            bottom: 0,
+                            backgroundImage: `url(${backgroundDemo})`,
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center',
+                            zIndex: 0,
+                            opacity: 0.8
+                        }} />
+                        <Box sx={{ position: 'relative', zIndex: 1 }}>
+                            <Typography variant="h3" sx={{ mb: 3, fontWeight: 700 }}>
+                                Discover how MAMBA optimizes rules, quantities, and sustainability
+                            </Typography>
+                            <WebButton variant="contained" sx={{ bgcolor: '#FDB022', color: '#000000', '&:hover': { bgcolor: '#F9A01B' }, px: 6, py: 1.5, borderRadius: '8px' }}>
+                                Solicite su demo
+                            </WebButton>
+                        </Box>
                     </Box>
                 </Container>
             </Box>
