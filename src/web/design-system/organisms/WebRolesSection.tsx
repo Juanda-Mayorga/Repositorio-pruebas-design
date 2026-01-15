@@ -132,7 +132,7 @@ export const WebRolesSection = () => {
 
                 <Grid container spacing={{ xs: 3, md: 8 }} alignItems="flex-start">
                     {/* Role Selector */}
-                    <Grid size={{ xs: 12, md: 4 }}>
+                    <Grid size={{ xs: 12, md: 4, lg: 3 }}>
                         <Box
                             sx={{
                                 display: 'flex',
@@ -141,7 +141,8 @@ export const WebRolesSection = () => {
                                 justifyContent: { xs: 'center', md: 'flex-start' },
                                 gap: { xs: 1, md: 3 }, // 24px gap to reach 376px total height with 56px buttons
                                 mb: { xs: 2, md: 0 },
-                                width: '100%'
+                                width: '100%',
+                                maxWidth: { lg: '280px' }
                             }}
                         >
                             {roles.map((role, index) => (
@@ -157,7 +158,7 @@ export const WebRolesSection = () => {
                     </Grid>
 
                     {/* Role Content Preview */}
-                    <Grid size={{ xs: 12, md: 8 }}>
+                    <Grid size={{ xs: 12, md: 8, lg: 9 }}>
                         <AnimatePresence mode="wait">
                             <MotionBox
                                 key={activeRole}
@@ -167,7 +168,7 @@ export const WebRolesSection = () => {
                                 transition={{ duration: 0.25, ease: "easeInOut" }}
                                 sx={{
                                     bgcolor: '#FBFBFF',
-                                    borderRadius: { xs: '24px', md: '32px' },
+                                    borderRadius: { xs: '16px', md: '24px' },
                                     p: { xs: 3, md: 4 },
                                     pt: { md: 2 }, // Reduced from 3 to 2
                                     height: { xs: 'auto', md: '376px' }, // Matches total buttons height (5*56 + 4*24)
@@ -330,7 +331,7 @@ export const WebRolesSection = () => {
                                                     p: 0, // Fill the container
                                                     mx: 'auto',
                                                     display: 'block',
-                                                    borderRadius: { xs: '20px', md: '24px' },
+                                                    borderRadius: { xs: '12px', md: '16px' },
                                                     bgcolor: '#FFFFFF',
                                                     filter: 'drop-shadow(0 20px 40px rgba(0,0,0,0.1))',
                                                     position: 'relative',
