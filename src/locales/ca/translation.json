@@ -276,6 +276,15 @@
                 "construction": "Construcció"
             }
         },
+        "ecosystem": {
+            "title": "Com MAMBA transforma el teu flux de treball",
+            "description": "Descobreix un ecosistema connectat on el Programari, els Serveis Cloud i el Suport treballen a l'uníson per potenciar els teus projectes.",
+            "labels": {
+                "software": "Programari",
+                "cloud": "Cloud",
+                "support": "Suport"
+            }
+        },
         "hero": {
             "title": "La forma més intel·ligent d'automatitzar BIM",
             "keywords": {

@@ -276,6 +276,15 @@
                 "construction": "Eraikuntza"
             }
         },
+        "ecosystem": {
+            "title": "Nola eraldatzen duen MAMBAk zure lan-fluxua",
+            "description": "Ezagutu ekosistema konektatu bat non Softwareak, Cloud Zerbitzuek eta Laguntzak batera lan egiten duten zure proiektuak indartzeko.",
+            "labels": {
+                "software": "Softwarea",
+                "cloud": "Cloud",
+                "support": "Laguntza"
+            }
+        },
         "hero": {
             "title": "BIM automatizatzeko modurik adimentsuena",
             "keywords": {

@@ -276,6 +276,15 @@
                 "construction": "Byggeri"
             }
         },
+        "ecosystem": {
+            "title": "Hvordan MAMBA forvandler din arbejdsgang",
+            "description": "Oplev et forbundet økosystem, hvor software, cloud-tjenester og support arbejder unisont for at styrke dine projekter.",
+            "labels": {
+                "software": "Software",
+                "cloud": "Cloud",
+                "support": "Support"
+            }
+        },
         "hero": {
             "title": "Den smarteste måde at automatisere BIM på",
             "keywords": {

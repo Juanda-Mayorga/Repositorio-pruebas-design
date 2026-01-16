@@ -276,6 +276,15 @@
                 "construction": "Bouw"
             }
         },
+        "ecosystem": {
+            "title": "Hoe MAMBA uw workflow transformeert",
+            "description": "Ontdek een verbonden ecosysteem waarin software, clouddiensten en ondersteuning samenwerken om uw projecten te versterken.",
+            "labels": {
+                "software": "Software",
+                "cloud": "Cloud",
+                "support": "Ondersteuning"
+            }
+        },
         "hero": {
             "title": "De slimste manier om BIM te automatiseren",
             "keywords": {

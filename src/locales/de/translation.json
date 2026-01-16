@@ -276,6 +276,15 @@
                 "construction": "Bauwesen"
             }
         },
+        "ecosystem": {
+            "title": "Wie MAMBA Ihren Workflow transformiert",
+            "description": "Entdecken Sie ein vernetztes Ökosystem, in dem Software, Cloud-Dienste und Support im Einklang arbeiten, um Ihre Projekte zu stärken.",
+            "labels": {
+                "software": "Software",
+                "cloud": "Cloud",
+                "support": "Support"
+            }
+        },
         "hero": {
             "title": "Der intelligenteste Weg zur BIM-Automatisierung",
             "keywords": {

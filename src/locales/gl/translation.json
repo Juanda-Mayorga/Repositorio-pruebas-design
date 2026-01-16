@@ -276,6 +276,15 @@
                 "construction": "Construción"
             }
         },
+        "ecosystem": {
+            "title": "Como MAMBA transforma o teu fluxo de traballo",
+            "description": "Descobre un ecosistema conectado onde o Software, os Servizos Cloud e o Soporte traballan ao unísono para potenciar os teus proxectos.",
+            "labels": {
+                "software": "Software",
+                "cloud": "Cloud",
+                "support": "Soporte"
+            }
+        },
         "hero": {
             "title": "A forma máis intelixente de automatizar BIM",
             "keywords": {

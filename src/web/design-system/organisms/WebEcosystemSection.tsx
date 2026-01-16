@@ -1,12 +1,14 @@
 import React from 'react';
 import { Box, Typography, Container, Grid, useTheme } from '@mui/material';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { MambaLogo } from '../atoms/MambaLogo';
 
 const MotionBox = motion(Box);
 
 export const WebEcosystemSection = () => {
     const theme = useTheme();
+    const { t } = useTranslation();
 
     return (
         <Box sx={{ py: { xs: 8, md: 12 }, bgcolor: '#FAFAFA', overflow: 'hidden' }}>
@@ -33,7 +35,7 @@ export const WebEcosystemSection = () => {
                                     backgroundClip: 'text'
                                 }}
                             >
-                                Cómo MAMBA transforma tu flujo de trabajo
+                                {t('landingPage.ecosystem.title')}
                             </Typography>
                             <Typography
                                 variant="body1"
@@ -44,7 +46,7 @@ export const WebEcosystemSection = () => {
                                     lineHeight: 1.6
                                 }}
                             >
-                                Descubre un ecosistema conectado donde el Software, los Servicios Cloud y el Soporte trabajan al unísono para potenciar tus proyectos.
+                                {t('landingPage.ecosystem.description')}
                             </Typography>
                         </MotionBox>
                     </Grid>
@@ -113,9 +115,9 @@ export const WebEcosystemSection = () => {
 
                             {/* Floating Nodes */}
                             {[
-                                { label: 'Software', angle: 0 },
-                                { label: 'Cloud', angle: 120 },
-                                { label: 'Support', angle: 240 }
+                                { id: 'software', angle: 0 },
+                                { id: 'cloud', angle: 120 },
+                                { id: 'support', angle: 240 }
                             ].map((item, i) => (
                                 <Box
                                     key={i}
@@ -136,7 +138,7 @@ export const WebEcosystemSection = () => {
                                     }}
                                 >
                                     <Typography variant="subtitle2" sx={{ fontWeight: 600, color: theme.palette.web.action.primary }}>
-                                        {item.label}
+                                        {t(`landingPage.ecosystem.labels.${item.id}`)}
                                     </Typography>
                                 </Box>
                             ))}
