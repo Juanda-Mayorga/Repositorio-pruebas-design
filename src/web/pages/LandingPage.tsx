@@ -1,11 +1,13 @@
-import { useState } from 'react';
+
+import { useState, useEffect } from 'react';
 import { Box, Typography, Container, useTheme, Grid } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import { MainLayout } from '../design-system/templates/MainLayout';
 import { WebButton } from '../design-system/atoms/WebButton';
 import { WebRolesSection } from '../design-system/organisms/WebRolesSection';
+import { WebEcosystemSection } from '../design-system/organisms/WebEcosystemSection';
+import { WebPillarsSection } from '../design-system/organisms/WebPillarsSection';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useEffect } from 'react';
 
 // Import images
 import measurementHero from '../../assets/Measurement.svg';
@@ -214,7 +216,7 @@ export const LandingPage = () => {
                                         <Box
                                             component="img"
                                             src={heroSlides[activeHeroIndex].image}
-                                            alt={`MAMBA BIM ${heroSlides[activeHeroIndex].keyword}`}
+                                            alt={`MAMBA BIM ${heroSlides[activeHeroIndex].keyword} `}
                                             sx={{
                                                 width: '100%',
                                                 height: 'auto',
@@ -449,7 +451,7 @@ export const LandingPage = () => {
                                         height: 0,
                                         borderTop: '10px solid transparent',
                                         borderBottom: '10px solid transparent',
-                                        borderLeft: `16px solid ${theme.palette.web.action.primary}`,
+                                        borderLeft: `16px solid ${theme.palette.web.action.primary} `,
                                         ml: 0.5
                                     }} />
                                 </Box>
@@ -617,6 +619,13 @@ export const LandingPage = () => {
                     </Box>
                 </Container>
             </Box>
-        </MainLayout>
+
+            {/* 9. Ecosystem Section (Static) */}
+            <WebEcosystemSection />
+
+            {/* 10. Pillars Details Section */}
+            <WebPillarsSection />
+
+        </MainLayout >
     );
 };
