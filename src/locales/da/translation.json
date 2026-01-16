@@ -322,6 +322,9 @@
                     ]
                 }
             }
+        },
+        "whatIsMamba": {
+            "cta": "Se planer og funktioner"
         }
     }
 }

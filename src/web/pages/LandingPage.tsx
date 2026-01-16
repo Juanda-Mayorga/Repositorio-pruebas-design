@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Box, Typography, Container, useTheme, Grid } from '@mui/material';
+import { useTranslation } from 'react-i18next';
 import { MainLayout } from '../design-system/templates/MainLayout';
 import { WebButton } from '../design-system/atoms/WebButton';
 import { WebRolesSection } from '../design-system/organisms/WebRolesSection';
@@ -55,6 +56,7 @@ const MotionBox = motion(Box);
  * 8. CTA: Banner final de conversión.
  */
 export const LandingPage = () => {
+    const { t } = useTranslation();
     const theme = useTheme();
 
     const [activeHeroIndex, setActiveHeroIndex] = useState(0);
@@ -474,7 +476,7 @@ export const LandingPage = () => {
                                 </Box>
                             ))}
                             <WebButton variant="contained" sx={{ mt: 4, px: 6 }}>
-                                Saber más
+                                {t('landingPage.whatIsMamba.cta')}
                             </WebButton>
                         </Grid>
                         <Grid size={{ xs: 12, md: 6 }}>

@@ -509,6 +509,9 @@
                     ]
                 }
             }
+        },
+        "whatIsMamba": {
+            "cta": "Ver planes y funcionalidades"
         }
     }
 }

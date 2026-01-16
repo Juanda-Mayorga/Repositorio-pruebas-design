@@ -503,6 +503,9 @@
                     ]
                 }
             }
+        },
+        "whatIsMamba": {
+            "cta": "View plans and features"
         }
     }
 }
