@@ -245,7 +245,7 @@ export const LandingPage = () => {
                             letterSpacing: '0.1em'
                         }}
                     >
-                        Trusted by leading AECO companies
+                        {t('landingPage.trustedBy')}
                     </Typography>
                     <Grid container spacing={4} justifyContent="center" alignItems="center">
                         {logos.map((logo, index) => (

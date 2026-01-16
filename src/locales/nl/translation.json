@@ -265,6 +265,7 @@
         }
     },
     "landingPage": {
+        "trustedBy": "Vertrouwd door toonaangevende AECO-bedrijven",
         "hero": {
             "title": "De slimste manier om BIM te automatiseren",
             "keywords": {

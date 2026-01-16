@@ -446,6 +446,7 @@
         }
     },
     "landingPage": {
+        "trustedBy": "Trusted by leading AECO companies",
         "hero": {
             "title": "The smartest way to automate BIM",
             "keywords": {
