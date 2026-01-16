@@ -102,7 +102,7 @@ export const WebPillarsSection = () => {
                                     }}
                                 >
                                     3 pilares que definen <br />
-                                    <Box component="span" sx={{ color: theme.palette.primary.main }}>la solución de MAMBA.</Box>
+                                    <Box component="span" sx={{ color: theme.palette.primary.main }}>la solución de MAMBA</Box>
                                 </Typography>
                             </Box>
 
