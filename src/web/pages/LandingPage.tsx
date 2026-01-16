@@ -9,6 +9,7 @@ import { WebEcosystemSection } from '../design-system/organisms/WebEcosystemSect
 import { WebPillarsSection } from '../design-system/organisms/WebPillarsSection';
 import { WebValueSection } from '../design-system/organisms/WebValueSection';
 import { WebWhatIsMambaSection } from '../design-system/organisms/WebWhatIsMambaSection';
+import { WebDemoBanner } from '../design-system/organisms/WebDemoBanner';
 import { motion, AnimatePresence } from 'framer-motion';
 
 // Import images
@@ -37,7 +38,7 @@ import logoGobNavarra from '../../assets/BMM_MMI_LogoGobiernoDeNavarra_0100.svg'
 import logoGobTpf from '../../assets/BMM_MMI_LogoGobiernoTpf_0100.svg';
 import logoPlanho from '../../assets/BMM_MMI_LogoPlanho_0100.svg';
 
-import backgroundDemo from '../../assets/BMM_MMI_BackgroundDemo.svg';
+
 
 const MotionBox = motion(Box);
 
@@ -377,47 +378,16 @@ export const LandingPage = () => {
             {/* 7. How we deliver value? (Organism Created but Hidden) */}
             {/* <WebValueSection /> */}
 
-            {/* 8. Final CTA Banner */}
-            <Box sx={{ pb: 8 }}>
-                <Container maxWidth="lg" sx={{ px: { xs: 4, sm: 8, md: 10, lg: 8 } }}>
-                    <Box sx={{
-                        position: 'relative',
-                        bgcolor: theme.palette.web.action.primary,
-                        borderRadius: '24px',
-                        p: { xs: 4, md: 8 },
-                        textAlign: 'center',
-                        color: '#FFFFFF',
-                        overflow: 'hidden'
-                    }}>
-                        <Box sx={{
-                            position: 'absolute',
-                            top: 0,
-                            left: 0,
-                            right: 0,
-                            bottom: 0,
-                            backgroundImage: `url(${backgroundDemo})`,
-                            backgroundSize: 'cover',
-                            backgroundPosition: 'center',
-                            zIndex: 0,
-                            opacity: 0.8
-                        }} />
-                        <Box sx={{ position: 'relative', zIndex: 1 }}>
-                            <Typography variant="h2" sx={{ mb: 3, fontWeight: 500, color: '#FFFFFF' }}>
-                                Discover how MAMBA optimizes rules, quantities, and sustainability
-                            </Typography>
-                            <WebButton variant="contained" sx={{ bgcolor: '#FDB022', color: '#000000', '&:hover': { bgcolor: '#F9A01B' }, px: 6, py: 1.5 }}>
-                                Solicite su demo
-                            </WebButton>
-                        </Box>
-                    </Box>
-                </Container>
-            </Box>
+            {/* 8. Final CTA Banner (Moved to End) */}
 
             {/* 9. Ecosystem Section (Static) */}
             <WebEcosystemSection />
 
             {/* 10. Pillars Details Section */}
             <WebPillarsSection />
+
+            {/* 11. Final CTA Banner */}
+            <WebDemoBanner />
 
         </MainLayout >
     );
