@@ -266,6 +266,10 @@
     },
     "landingPage": {
         "trustedBy": "Vertrouwd door toonaangevende AECO-bedrijven",
+        "demo": {
+            "title": "Ontdek hoe MAMBA regels, hoeveelheden en duurzaamheid optimaliseert",
+            "cta": "Vraag uw demo aan"
+        },
         "pillars": {
             "overline": "ONZE OPLOSSING",
             "titlePart1": "3 pijlers die",

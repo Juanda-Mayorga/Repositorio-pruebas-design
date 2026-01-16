@@ -266,6 +266,10 @@
     },
     "landingPage": {
         "trustedBy": "AECO sektoreko enpresa nagusien konfiantzarekin",
+        "demo": {
+            "title": "Ezagutu nola optimizatzen dituen MAMBAk arauak, neurketak eta jasangarritasuna",
+            "cta": "Eskatu zure demoa"
+        },
         "pillars": {
             "overline": "GURE IRTENBIDEA",
             "titlePart1": "Definitzen duten 3 zutabeak",

@@ -266,6 +266,10 @@
     },
     "landingPage": {
         "trustedBy": "Amb la confiança de les empreses líders del sector AECO",
+        "demo": {
+            "title": "Descobreix com MAMBA optimitza regles, amidaments i sostenibilitat",
+            "cta": "Sol·licita la teva demo"
+        },
         "pillars": {
             "overline": "LA NOSTRA SOLUCIÓ",
             "titlePart1": "3 pilars que defineixen",

@@ -266,6 +266,10 @@
     },
     "landingPage": {
         "trustedBy": "Com a confiança das principais empresas AECO",
+        "demo": {
+            "title": "Descubra como o MAMBA otimiza regras, quantidades e sustentabilidade",
+            "cta": "Peça a sua demo"
+        },
         "pillars": {
             "overline": "A NOSSA SOLUÇÃO",
             "titlePart1": "3 pilares que definem",

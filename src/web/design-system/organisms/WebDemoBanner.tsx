@@ -1,11 +1,14 @@
-import React from 'react';
+
 import { Box, Container, Typography, useTheme } from '@mui/material';
 import { WebButton } from '../atoms/WebButton';
+
+import { useTranslation } from 'react-i18next';
 
 import backgroundDemo from '../../../assets/BMM_MMI_BackgroundDemo.svg';
 
 export const WebDemoBanner = () => {
     const theme = useTheme();
+    const { t } = useTranslation();
 
     return (
         <Box sx={{ pb: 8 }}>
@@ -33,10 +36,10 @@ export const WebDemoBanner = () => {
                     }} />
                     <Box sx={{ position: 'relative', zIndex: 1 }}>
                         <Typography variant="h2" sx={{ mb: 3, fontWeight: 500, color: '#FFFFFF' }}>
-                            Discover how MAMBA optimizes rules, quantities, and sustainability
+                            {t('landingPage.demo.title')}
                         </Typography>
                         <WebButton variant="contained" sx={{ bgcolor: '#FDB022', color: '#000000', '&:hover': { bgcolor: '#F9A01B' }, px: 6, py: 1.5 }}>
-                            Solicite su demo
+                            {t('landingPage.demo.cta')}
                         </WebButton>
                     </Box>
                 </Box>

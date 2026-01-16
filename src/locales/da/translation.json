@@ -266,6 +266,10 @@
     },
     "landingPage": {
         "trustedBy": "Betroet af førende AECO-virksomheder",
+        "demo": {
+            "title": "Opdag hvordan MAMBA optimerer regler, mængder og bæredygtighed",
+            "cta": "Anmod om din demo"
+        },
         "pillars": {
             "overline": "VORES LØSNING",
             "titlePart1": "3 søjler, der definerer",

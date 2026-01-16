@@ -266,6 +266,10 @@
     },
     "landingPage": {
         "trustedBy": "La confiance des leaders du secteur AECO",
+        "demo": {
+            "title": "Découvrez comment MAMBA optimise les règles, les quantitatifs et la durabilité",
+            "cta": "Demandez votre démo"
+        },
         "pillars": {
             "overline": "NOTRE SOLUTION",
             "titlePart1": "3 piliers qui définissent",

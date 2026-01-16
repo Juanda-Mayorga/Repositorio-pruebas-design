@@ -266,6 +266,10 @@
     },
     "landingPage": {
         "trustedBy": "Coa confianza das empresas líderes do sector AECO",
+        "demo": {
+            "title": "Descobre como MAMBA optimiza regras, medicións e sostibilidade",
+            "cta": "Solicita a túa demo"
+        },
         "pillars": {
             "overline": "A NOSA SOLUCIÓN",
             "titlePart1": "3 piares que definen",

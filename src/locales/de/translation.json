@@ -266,6 +266,10 @@
     },
     "landingPage": {
         "trustedBy": "Das Vertrauen führender AECO-Unternehmen",
+        "demo": {
+            "title": "Entdecken Sie, wie MAMBA Regeln, Mengen und Nachhaltigkeit optimiert",
+            "cta": "Demo anfordern"
+        },
         "pillars": {
             "overline": "UNSERE LÖSUNG",
             "titlePart1": "3 Säulen, die",
