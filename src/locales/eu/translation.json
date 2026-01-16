@@ -266,6 +266,16 @@
     },
     "landingPage": {
         "trustedBy": "AECO sektoreko enpresa nagusien konfiantzarekin",
+        "aeco": {
+            "title": "<0>AECO</0> sektorerako diseinatua",
+            "subtitle": "AECO lan-fluxuaren zati bakoitza konektatzen duen irtenbidea, erroreak murriztuz eta eraginkortasuna maximizatuz",
+            "sectors": {
+                "engineering": "Ingeniaritza",
+                "architects": "Arkitektoak",
+                "promoters": "Sustatzaileak",
+                "construction": "Eraikuntza"
+            }
+        },
         "hero": {
             "title": "BIM automatizatzeko modurik adimentsuena",
             "keywords": {

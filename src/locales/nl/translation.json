@@ -266,6 +266,16 @@
     },
     "landingPage": {
         "trustedBy": "Vertrouwd door toonaangevende AECO-bedrijven",
+        "aeco": {
+            "title": "Ontworpen voor de <0>AECO</0>-sector",
+            "subtitle": "Een oplossing die elk onderdeel van de AECO-workflow verbindt, fouten vermindert en efficiëntie maximaliseert",
+            "sectors": {
+                "engineering": "Engineering",
+                "architects": "Architecten",
+                "promoters": "Projectontwikkelaars",
+                "construction": "Bouw"
+            }
+        },
         "hero": {
             "title": "De slimste manier om BIM te automatiseren",
             "keywords": {

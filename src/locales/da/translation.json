@@ -266,6 +266,16 @@
     },
     "landingPage": {
         "trustedBy": "Betroet af førende AECO-virksomheder",
+        "aeco": {
+            "title": "Designet til <0>AECO</0>-sektoren",
+            "subtitle": "En løsning, der forbinder hver del af AECO-arbejdsgangen, reducerer fejl og maksimerer effektivitet",
+            "sectors": {
+                "engineering": "Ingeniørarbejde",
+                "architects": "Arkitekter",
+                "promoters": "Bygherrer",
+                "construction": "Byggeri"
+            }
+        },
         "hero": {
             "title": "Den smarteste måde at automatisere BIM på",
             "keywords": {

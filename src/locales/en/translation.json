@@ -447,6 +447,16 @@
     },
     "landingPage": {
         "trustedBy": "Trusted by leading AECO companies",
+        "aeco": {
+            "title": "Designed for the <0>AECO</0> sector",
+            "subtitle": "A solution that connects every part of the AECO workflow, reducing errors and maximizing efficiency",
+            "sectors": {
+                "engineering": "Engineering",
+                "architects": "Architects",
+                "promoters": "Promoters",
+                "construction": "Construction"
+            }
+        },
         "hero": {
             "title": "The smartest way to automate BIM",
             "keywords": {

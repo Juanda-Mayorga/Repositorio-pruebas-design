@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import { Box, Typography, Container, useTheme, Grid } from '@mui/material';
-import { useTranslation } from 'react-i18next';
+import { useTranslation, Trans } from 'react-i18next';
 import { MainLayout } from '../design-system/templates/MainLayout';
 import { WebButton } from '../design-system/atoms/WebButton';
 import { WebRolesSection } from '../design-system/organisms/WebRolesSection';
@@ -107,10 +107,10 @@ export const LandingPage = () => {
     ];
 
     const sectors = [
-        { name: 'Engineering', image: engineeringImg },
-        { name: 'Architects', image: architectsImg },
-        { name: 'Promoters', image: promotersImg },
-        { name: 'Construction', image: constructionImg },
+        { id: 'engineering', image: engineeringImg },
+        { id: 'architects', image: architectsImg },
+        { id: 'promoters', image: promotersImg },
+        { id: 'construction', image: constructionImg },
     ];
 
 
@@ -298,7 +298,10 @@ export const LandingPage = () => {
                                 fontSize: { xs: '32px', md: '48px' }
                             }}
                         >
-                            Designed for the <Box component="span" sx={{ color: theme.palette.web.action.primary }}>AECO</Box> sector
+                            <Trans
+                                i18nKey="landingPage.aeco.title"
+                                components={[<Box component="span" sx={{ color: theme.palette.web.action.primary }} />]}
+                            />
                         </Typography>
                         <Typography
                             variant="body1"
@@ -309,7 +312,7 @@ export const LandingPage = () => {
                                 fontFamily: '"Hind Siliguri", sans-serif'
                             }}
                         >
-                            A solution that connects every part of the AECO workflow, reducing errors and maximizing efficiency
+                            {t('landingPage.aeco.subtitle')}
                         </Typography>
                     </Box>
 
@@ -334,7 +337,7 @@ export const LandingPage = () => {
                                     <Box
                                         component="img"
                                         src={sector.image}
-                                        alt={sector.name}
+                                        alt={t(`landingPage.aeco.sectors.${sector.id}`)}
                                         sx={{
                                             width: '100%',
                                             height: '100%',
@@ -355,7 +358,7 @@ export const LandingPage = () => {
                                         p: 2
                                     }}>
                                         <Typography variant="h5" sx={{ fontWeight: 600, textAlign: 'center' }}>
-                                            {sector.name}
+                                            {t(`landingPage.aeco.sectors.${sector.id}`)}
                                         </Typography>
                                     </Box>
                                 </MotionBox>

@@ -266,6 +266,16 @@
     },
     "landingPage": {
         "trustedBy": "Das Vertrauen führender AECO-Unternehmen",
+        "aeco": {
+            "title": "Entwickelt für den <0>AECO</0>-Sektor",
+            "subtitle": "Eine Lösung, die jeden Teil des AECO-Workflows verbindet, Fehler reduziert und die Effizienz maximiert",
+            "sectors": {
+                "engineering": "Ingenieurwesen",
+                "architects": "Architekten",
+                "promoters": "Bauträger",
+                "construction": "Bauwesen"
+            }
+        },
         "hero": {
             "title": "Der intelligenteste Weg zur BIM-Automatisierung",
             "keywords": {

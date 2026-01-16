@@ -266,6 +266,16 @@
     },
     "landingPage": {
         "trustedBy": "Com a confiança das principais empresas AECO",
+        "aeco": {
+            "title": "Projetado para o setor <0>AECO</0>",
+            "subtitle": "Uma solução que conecta cada parte do fluxo de trabalho da AECO, reduzindo erros e maximizando a eficiência",
+            "sectors": {
+                "engineering": "Engenharia",
+                "architects": "Arquitetos",
+                "promoters": "Promotores",
+                "construction": "Construção"
+            }
+        },
         "hero": {
             "title": "A maneira mais inteligente de automatizar o BIM",
             "keywords": {
