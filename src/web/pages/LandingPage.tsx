@@ -110,12 +110,7 @@ export const LandingPage = () => {
         { name: 'Construction', image: constructionImg },
     ];
 
-    const problems = [
-        "Extraer mediciones de forma manual requiere mucho tiempo",
-        "Modificaciones manuales constantes",
-        "Dificultad para mantener el control de costes",
-        "Falta de trazabilidad en el dato"
-    ];
+
 
     return (
         <MainLayout sx={{ bgcolor: '#FCFCFC' }} mainSx={{ mt: 0 }}>
@@ -368,74 +363,7 @@ export const LandingPage = () => {
                 </Container>
             </Box>
 
-            {/* 4. What's holding your projects back? */}
-            <Box sx={{ py: { xs: 8, md: 12 }, bgcolor: '#F8F9FA' }}>
-                <Container maxWidth="lg" sx={{ px: { xs: 4, sm: 8, md: 10, lg: 8 } }}>
-                    <Box sx={{ textAlign: 'center', mb: 8 }}>
-                        <Typography
-                            variant="h2"
-                            sx={{
-                                mb: 2,
-                                fontWeight: 500,
-                                background: 'linear-gradient(to right, #9989EC, #6E659F, #333337)',
-                                WebkitBackgroundClip: 'text',
-                                WebkitTextFillColor: 'transparent',
-                                backgroundClip: 'text',
-                                display: 'inline-block',
-                                fontSize: { xs: '32px', md: '48px' }
-                            }}
-                        >
-                            What’s holding your <Box component="span" sx={{ color: theme.palette.web.action.primary }}>projects back</Box>?
-                        </Typography>
-                        <Typography
-                            variant="body1"
-                            sx={{
-                                color: 'text.secondary',
-                                maxWidth: '600px',
-                                mx: 'auto',
-                                fontFamily: '"Hind Siliguri", sans-serif'
-                            }}
-                        >
-                            With 25 years of experience in the AECO industry, we know the model isn’t the main problem
-                        </Typography>
-                    </Box>
 
-                    <Grid container spacing={4}>
-                        {problems.map((problem, index) => (
-                            <Grid key={index} size={{ xs: 12, md: 6 }}>
-                                <Box sx={{
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    bgcolor: '#FFFFFF',
-                                    p: 3,
-                                    borderRadius: '12px',
-                                    boxShadow: '0 4px 12px rgba(0,0,0,0.05)',
-                                    height: '100%'
-                                }}>
-                                    <Box sx={{
-                                        width: 24,
-                                        height: 24,
-                                        borderRadius: '50%',
-                                        bgcolor: theme.palette.web.action.primary,
-                                        display: 'flex',
-                                        alignItems: 'center',
-                                        justifyContent: 'center',
-                                        mr: 2,
-                                        color: '#FFFFFF',
-                                        fontSize: '14px',
-                                        flexShrink: 0
-                                    }}>
-                                        ✓
-                                    </Box>
-                                    <Typography variant="body1" sx={{ color: '#333337', fontWeight: 500 }}>
-                                        {problem}
-                                    </Typography>
-                                </Box>
-                            </Grid>
-                        ))}
-                    </Grid>
-                </Container>
-            </Box>
 
             {/* 5. Designed to fit every role */}
             <WebRolesSection />
