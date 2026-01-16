@@ -88,14 +88,18 @@ export const WebPillarsSection = () => {
                                 <Typography
                                     variant="h2"
                                     sx={{
-                                        fontSize: { xs: '32px', md: '42px' },
-                                        fontWeight: 600,
+                                        fontSize: { xs: '32px', md: '48px' },
+                                        fontWeight: 500,
                                         lineHeight: 1.2,
-                                        color: '#1A1A1A'
+                                        background: 'linear-gradient(to right, #9989EC, #6E659F, #333337)',
+                                        WebkitBackgroundClip: 'text',
+                                        WebkitTextFillColor: 'transparent',
+                                        backgroundClip: 'text',
+                                        display: 'inline-block'
                                     }}
                                 >
                                     {t('landingPage.pillars.titlePart1')} <br />
-                                    <Box component="span" sx={{ color: theme.palette.primary.main }}>{t('landingPage.pillars.titlePart2')}</Box>
+                                    {t('landingPage.pillars.titlePart2')}
                                 </Typography>
                             </Box>
 

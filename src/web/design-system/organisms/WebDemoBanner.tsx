@@ -38,7 +38,7 @@ export const WebDemoBanner = () => {
                         <Typography variant="h2" sx={{ mb: 3, fontWeight: 500, color: '#FFFFFF' }}>
                             {t('landingPage.demo.title')}
                         </Typography>
-                        <WebButton variant="contained" sx={{ bgcolor: '#FDB022', color: '#000000', '&:hover': { bgcolor: '#F9A01B' }, px: 6, py: 1.5 }}>
+                        <WebButton variant="contained" sx={{ bgcolor: '#FDB022', color: '#FFFFFF', '&:hover': { bgcolor: '#F9A01B' }, px: 6, py: 1.5 }}>
                             {t('landingPage.demo.cta')}
                         </WebButton>
                     </Box>

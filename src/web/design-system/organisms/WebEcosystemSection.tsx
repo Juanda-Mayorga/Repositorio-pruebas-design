@@ -25,14 +25,15 @@ export const WebEcosystemSection = () => {
                             <Typography
                                 variant="h2"
                                 sx={{
-                                    fontSize: { xs: '36px', md: '48px' },
-                                    fontWeight: 600,
+                                    fontSize: { xs: '32px', md: '48px' },
+                                    fontWeight: 500,
                                     lineHeight: 1.2,
-                                    mb: 3,
-                                    background: 'linear-gradient(to right, #333337, #6E659F)',
+                                    mb: 2,
+                                    background: 'linear-gradient(to right, #9989EC, #6E659F, #333337)',
                                     WebkitBackgroundClip: 'text',
                                     WebkitTextFillColor: 'transparent',
-                                    backgroundClip: 'text'
+                                    backgroundClip: 'text',
+                                    display: 'inline-block'
                                 }}
                             >
                                 {t('landingPage.ecosystem.title')}
