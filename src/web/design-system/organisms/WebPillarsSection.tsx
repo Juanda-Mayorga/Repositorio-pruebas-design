@@ -1,6 +1,12 @@
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import { Box, Typography, Container, Grid, useTheme } from '@mui/material';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import { WebButton } from '../atoms/WebButton';
+
+// Import Real Images
+import deliverySoftware from '../../../assets/BMM_MMI_Software.svg';
+import deliveryCloud from '../../../assets/BMM_MMI_CloudServices.svg';
+import deliverySupport from '../../../assets/BMM_MMI_Support.svg';
 
 // Placeholder or real images import if accessible. 
 // Assuming assets exist based on previous LandingPage context.
@@ -23,18 +29,27 @@ export const WebPillarsSection = () => {
     const pillars = [
         {
             title: 'Software',
-            description: 'Potente modelado y gestión de datos BIM para una precisión inigualable. Automatiza mediciones y mantén el control total de tus costes desde el diseño.',
-            color: '#6E659F'
+            description: 'MAMBA software turns BIM models into actionable results',
+            items: ['Eliminate errors', 'Make smarter decisions', 'Keep projects on time and on budget'],
+            cta: 'Explore all software features',
+            color: '#6E659F',
+            image: deliverySoftware
         },
         {
             title: 'Cloud Services',
-            description: 'Colaboración en tiempo real y acceso centralizado desde cualquier lugar. Conecta a tus equipos de obra y oficina en un entorno de datos común seguro.',
-            color: '#9989EC'
+            description: "MAMBA's cloud platform centralizes licenses, training, and support",
+            items: ['Everything in one place', 'Training built into the platform', 'Grow and align your team'],
+            cta: 'Discover cloud features',
+            color: '#9989EC',
+            image: deliveryCloud
         },
         {
             title: 'Support',
-            description: 'Asistencia técnica experta y formación continua para tu equipo. Resolvemos tus dudas al instante para que tu proyecto nunca se detenga.',
-            color: '#333337'
+            description: 'Get fast, reliable support directly in MAMBA, available on both the software and cloud',
+            items: ['Support integrated across tools', 'Solve problem faster', 'Support where you work'],
+            cta: 'See how our support works',
+            color: '#333337',
+            image: deliverySupport
         }
     ];
 
@@ -86,45 +101,104 @@ export const WebPillarsSection = () => {
                                         color: '#1A1A1A'
                                     }}
                                 >
-                                    Tres pilares fundamentales <br />
-                                    <Box component="span" sx={{ color: theme.palette.primary.main }}>para el éxito integral.</Box>
+                                    3 pilares que definen <br />
+                                    <Box component="span" sx={{ color: theme.palette.primary.main }}>la solución de MAMBA.</Box>
                                 </Typography>
                             </Box>
 
                             {/* DYNAMIC CONTENT SECTION */}
-                            <Box sx={{ position: 'relative', height: '180px' }}>
+                            <Box sx={{ position: 'relative', height: 'auto', minHeight: '320px' }}>
                                 {pillars.map((pillar, index) => {
-                                    // Calculate range for this pillar
-                                    const start = index * 0.33;
-                                    const end = start + 0.33;
+                                    // Custom Scroll Logic for "Always Visible at Start/End"
+                                    const totalPillars = pillars.length;
+                                    const sectionSize = 1 / totalPillars; // 0.33 each
 
-                                    // Smooth fade in/out based on scroll position
-                                    const opacity = useTransform(
-                                        scrollYProgress,
-                                        [start, start + 0.05, end - 0.05, end],
-                                        [0, 1, 1, 0]
-                                    );
+                                    // Calculate precise fade-in/out points
+                                    const fadeStart = index * sectionSize;
+                                    const fadeInEnd = fadeStart + (sectionSize * 0.2); // Quick fade in
+                                    const fadeOutStart = (index + 1) * sectionSize - (sectionSize * 0.2); // Start fading out before next
+                                    const fadeEnd = (index + 1) * sectionSize;
 
+                                    let opacityInputRange = [fadeStart, fadeInEnd, fadeOutStart, fadeEnd];
+                                    let opacityOutputRange = [0, 1, 1, 0];
+
+                                    // Special Case: First Item (Start Visible)
+                                    if (index === 0) {
+                                        opacityInputRange = [0, 0.1, fadeOutStart, fadeEnd]; // Visible from 0 to fadeOut
+                                        opacityOutputRange = [1, 1, 1, 0];
+                                    }
+
+                                    // Special Case: Last Item (Stay Visible till End)
+                                    if (index === totalPillars - 1) {
+                                        opacityInputRange = [fadeStart, fadeInEnd, 1, 1]; // Fade in, then stay
+                                        opacityOutputRange = [0, 1, 1, 1];
+                                    }
+
+                                    const opacity = useTransform(scrollYProgress, opacityInputRange, opacityOutputRange);
+
+                                    // Subtle Y Movement
                                     const y = useTransform(
                                         scrollYProgress,
-                                        [start, start + 0.1, end],
-                                        [20, 0, -20]
+                                        [index * sectionSize, (index + 1) * sectionSize],
+                                        [20, -20]
                                     );
-
-                                    // Ensure proper visibility management (avoid overlapping interactions if interactive)
-                                    // For simple text, opacity is enough visually.
 
                                     return (
                                         <MotionBox
                                             key={index}
-                                            style={{ opacity, y, position: 'absolute', top: 0, left: 0, width: '100%' }}
+                                            style={{ opacity, y, position: 'absolute', top: 0, left: 0, width: '100%', pointerEvents: 'none' }} // Added pointerEvents none to prevent overlapping click issues
                                         >
                                             <Typography variant="h4" sx={{ fontWeight: 600, mb: 2, color: pillar.color }}>
                                                 {pillar.title}
                                             </Typography>
-                                            <Typography variant="body1" sx={{ fontSize: '18px', color: 'text.secondary', lineHeight: 1.6 }}>
+                                            <Typography variant="body1" sx={{ fontSize: '18px', color: 'text.secondary', lineHeight: 1.6, mb: 3 }}>
                                                 {pillar.description}
                                             </Typography>
+
+                                            {/* Items List with Design from Card */}
+                                            <Box sx={{
+                                                borderLeft: '3px solid #E0E0E0',
+                                                pl: 2,
+                                                ml: 0.5,
+                                                display: 'flex',
+                                                flexDirection: 'column',
+                                                gap: 1.5,
+                                                mb: 4
+                                            }}>
+                                                {pillar.items.map((item, i) => (
+                                                    <Typography
+                                                        key={i}
+                                                        variant="body2"
+                                                        sx={{
+                                                            color: 'text.secondary',
+                                                            fontWeight: 400,
+                                                            fontSize: { xs: '16px', lg: '18px' },
+                                                            lineHeight: 1.2
+                                                        }}
+                                                    >
+                                                        {item}
+                                                    </Typography>
+                                                ))}
+                                            </Box>
+
+                                            <Box sx={{ pointerEvents: 'auto' }}> {/* Re-enable interactions for button */}
+                                                <WebButton
+                                                    variant="contained"
+                                                    sx={{
+                                                        py: 1.5,
+                                                        px: 3,
+                                                        fontSize: '16px',
+                                                        textTransform: 'none',
+                                                        bgcolor: pillar.color, // Match pillar color usually, or primary
+                                                        '&:hover': {
+                                                            bgcolor: pillar.color,
+                                                            filter: 'brightness(0.9)'
+                                                        }
+                                                    }}
+                                                >
+                                                    {pillar.cta}
+                                                </WebButton>
+                                            </Box>
                                         </MotionBox>
                                     );
                                 })}
@@ -135,28 +209,41 @@ export const WebPillarsSection = () => {
                         <Grid size={{ xs: 12, md: 6 }}>
                             <Box sx={{ position: 'relative', height: '400px', width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                                 {pillars.map((pillar, index) => {
-                                    const start = index * 0.33;
-                                    const end = start + 0.33;
 
-                                    const opacity = useTransform(
-                                        scrollYProgress,
-                                        [start, start + 0.05, end - 0.05, end],
-                                        [0, 1, 1, 0]
-                                    );
+                                    // Sync Visual Animation exactly with Text
+                                    const totalPillars = pillars.length;
+                                    const sectionSize = 1 / totalPillars;
+
+                                    const fadeStart = index * sectionSize;
+                                    const fadeInEnd = fadeStart + (sectionSize * 0.2);
+                                    const fadeOutStart = (index + 1) * sectionSize - (sectionSize * 0.2);
+                                    const fadeEnd = (index + 1) * sectionSize;
+
+                                    let opacityInputRange = [fadeStart, fadeInEnd, fadeOutStart, fadeEnd];
+                                    let opacityOutputRange = [0, 1, 1, 0];
+
+                                    if (index === 0) {
+                                        opacityInputRange = [0, 0.1, fadeOutStart, fadeEnd];
+                                        opacityOutputRange = [1, 1, 1, 0];
+                                    }
+                                    if (index === totalPillars - 1) {
+                                        opacityInputRange = [fadeStart, fadeInEnd, 1, 1];
+                                        opacityOutputRange = [0, 1, 1, 1];
+                                    }
+
+                                    const opacity = useTransform(scrollYProgress, opacityInputRange, opacityOutputRange);
 
                                     const scale = useTransform(
                                         scrollYProgress,
-                                        [start, start + 0.15, end],
-                                        [0.9, 1, 0.9]
+                                        [fadeStart, fadeEnd],
+                                        [0.95, 1.05]
                                     );
 
                                     return (
                                         <MotionBox
                                             key={index}
-                                            style={{ opacity, scale, position: 'absolute', zIndex: index }}
+                                            style={{ opacity, scale, position: 'absolute', zIndex: index, width: '100%', height: '100%' }}
                                             sx={{
-                                                width: '100%',
-                                                height: '100%',
                                                 display: 'flex',
                                                 alignItems: 'center',
                                                 justifyContent: 'center'
@@ -164,49 +251,28 @@ export const WebPillarsSection = () => {
                                         >
                                             <Box sx={{
                                                 width: '100%',
-                                                height: '320px',
-                                                bgcolor: '#FAFAFA',
-                                                borderRadius: '24px',
-                                                boxShadow: '0 24px 48px rgba(0,0,0,0.08)',
-                                                border: `1px solid ${pillar.color}30`,
+                                                height: '100%', // Full height to fit image
+                                                bgcolor: 'transparent',
+                                                borderRadius: '24px', // Rounded corners on container
+                                                overflow: 'hidden', // Clip image to corners
                                                 display: 'flex',
-                                                flexDirection: 'column',
                                                 alignItems: 'center',
                                                 justifyContent: 'center',
                                                 position: 'relative',
-                                                overflow: 'hidden'
+                                                // Optional: Add a subtle border or shadow to emphasize the card shape if image is full bleed
+                                                // border: '1px solid rgba(0,0,0,0.05)',
                                             }}>
-                                                {/* Decorative background circle */}
-                                                <Box sx={{
-                                                    position: 'absolute',
-                                                    top: '-20%',
-                                                    right: '-20%',
-                                                    width: '300px',
-                                                    height: '300px',
-                                                    borderRadius: '50%',
-                                                    bgcolor: pillar.color,
-                                                    opacity: 0.05
-                                                }} />
-
-                                                <Box sx={{
-                                                    width: 80,
-                                                    height: 80,
-                                                    borderRadius: '50%',
-                                                    bgcolor: pillar.color,
-                                                    opacity: 0.15,
-                                                    mb: 3,
-                                                    display: 'flex',
-                                                    alignItems: 'center',
-                                                    justifyContent: 'center'
-                                                }}>
-                                                    {/* Ideally Icon here */}
-                                                </Box>
-                                                <Typography variant="h5" sx={{ fontWeight: 600, color: pillar.color, mb: 1 }}>
-                                                    {pillar.title} Visual
-                                                </Typography>
-                                                <Typography variant="caption" sx={{ color: 'text.secondary' }}>
-                                                    (Imagen Placeholder)
-                                                </Typography>
+                                                <Box
+                                                    component="img"
+                                                    src={pillar.image}
+                                                    alt={pillar.title}
+                                                    sx={{
+                                                        width: '100%',
+                                                        height: '100%',
+                                                        objectFit: 'cover', // FILLS the container, maintained aspect ratio
+                                                        // filter: 'drop-shadow(0px 20px 40px rgba(0,0,0,0.1))' // Shadow might look weird if clipped, better on container if needed
+                                                    }}
+                                                />
                                             </Box>
                                         </MotionBox>
                                     );
