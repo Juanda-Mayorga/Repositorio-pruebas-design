@@ -265,6 +265,16 @@
         }
     },
     "landingPage": {
+        "hero": {
+            "title": "Den smarteste måten å automatisere BIM på",
+            "keywords": {
+                "measurement": "Måling",
+                "sustainability": "Bærekraft",
+                "management": "Ledelse"
+            },
+            "description": "MAMBA henter og oppdaterer mengder direkte fra BIM-modeller, og eliminerer feil og manuelle oppgaver for byggteam.",
+            "cta": "Start gratis nå"
+        },
         "roles": {
             "title": "Designet for å passe til enhver rolle",
             "subtitle": "Fra teknikere til advokater, MAMBA tilbyr den komplette løsningen som fungerer for enhver rolle",

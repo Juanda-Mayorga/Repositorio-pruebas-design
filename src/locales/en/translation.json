@@ -446,6 +446,16 @@
         }
     },
     "landingPage": {
+        "hero": {
+            "title": "The smartest way to automate BIM",
+            "keywords": {
+                "measurement": "Measurement",
+                "sustainability": "Sustainability",
+                "management": "Management"
+            },
+            "description": "MAMBA extracts and updates quantities directly from BIM models, eliminating errors and manual tasks for construction teams.",
+            "cta": "Start for free now"
+        },
         "roles": {
             "title": "Designed to fit every role",
             "subtitle": "From technicians to lawyers, MAMBA provides the complete solution that works for every role",

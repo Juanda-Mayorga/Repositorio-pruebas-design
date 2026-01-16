@@ -265,6 +265,16 @@
         }
     },
     "landingPage": {
+        "hero": {
+            "title": "BIM automatizatzeko modurik adimentsuena",
+            "keywords": {
+                "measurement": "Neurketa",
+                "sustainability": "Jasangarritasuna",
+                "management": "Kudeaketa"
+            },
+            "description": "MAMBAk kantitateak zuzenean ateratzen eta eguneratzen ditu BIM modeloetatik, eraikuntza taldeentzako erroreak eta eskuzko zereginak ezabatuz.",
+            "cta": "Hasi doan orain"
+        },
         "roles": {
             "title": "Profil bakoitzari egokitua",
             "subtitle": "Teknikarietatik hasi eta lege-aholkularietaraino, MAMBAk rol bakoitzerako irtenbide osoa eskaintzen du",

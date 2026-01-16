@@ -265,6 +265,16 @@
         }
     },
     "landingPage": {
+        "hero": {
+            "title": "Der intelligenteste Weg zur BIM-Automatisierung",
+            "keywords": {
+                "measurement": "Aufmaß",
+                "sustainability": "Nachhaltigkeit",
+                "management": "Management"
+            },
+            "description": "MAMBA extrahiert und aktualisiert Mengen direkt aus BIM-Modellen und eliminiert Fehler sowie manuelle Aufgaben für Bauteams.",
+            "cta": "Jetzt kostenlos starten"
+        },
         "roles": {
             "title": "Passend für jede Rolle konzipiert",
             "subtitle": "Vom Techniker bis zum Anwalt bietet MAMBA die Komplettlösung, die für jede Rolle funktioniert",

@@ -265,6 +265,16 @@
         }
     },
     "landingPage": {
+        "hero": {
+            "title": "De slimste manier om BIM te automatiseren",
+            "keywords": {
+                "measurement": "Meting",
+                "sustainability": "Duurzaamheid",
+                "management": "Beheer"
+            },
+            "description": "MAMBA haalt hoeveelheden direct uit BIM-modellen en werkt deze bij, waardoor fouten en handmatige taken voor bouwteams worden geëlimineerd.",
+            "cta": "Begin nu gratis"
+        },
         "roles": {
             "title": "Ontworpen voor elke rol",
             "subtitle": "Van technici tot juridisch adviseurs, MAMBA biedt de complete oplossing die voor elke rol werkt",

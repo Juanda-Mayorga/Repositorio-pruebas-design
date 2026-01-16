@@ -265,6 +265,16 @@
         }
     },
     "landingPage": {
+        "hero": {
+            "title": "A forma máis intelixente de automatizar BIM",
+            "keywords": {
+                "measurement": "Medición",
+                "sustainability": "Sostenibilidade",
+                "management": "Xestión"
+            },
+            "description": "MAMBA extrae e actualiza medicións directamente desde modelos BIM, eliminando erros e tarefas manuais para os equipos de construción.",
+            "cta": "Comeza gratis agora"
+        },
         "roles": {
             "title": "Deseñado para cada perfil",
             "subtitle": "Desde técnicos ata asesores legais, MAMBA ofrece a solución completa para cada rol",

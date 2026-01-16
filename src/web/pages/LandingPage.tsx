@@ -66,15 +66,15 @@ export const LandingPage = () => {
 
     const heroSlides = [
         {
-            keyword: 'Measurement',
+            keyword: 'measurement',
             image: measurementHero
         },
         {
-            keyword: 'Sustainability',
+            keyword: 'sustainability',
             image: sustainabilityHero
         },
         {
-            keyword: 'Management',
+            keyword: 'management',
             image: managementHero
         }
     ];
@@ -148,7 +148,7 @@ export const LandingPage = () => {
                                         textAlign: { xs: 'center', md: 'left' }
                                     }}
                                 >
-                                    The smartest way to automate BIM <Box component="span" sx={{ display: 'inline-block', minWidth: { md: '300px' } }}>
+                                    {t('landingPage.hero.title')} <Box component="span" sx={{ display: 'inline-block', minWidth: { md: '300px' } }}>
                                         <AnimatePresence mode="wait">
                                             <MotionBox
                                                 key={heroSlides[activeHeroIndex].keyword}
@@ -164,7 +164,7 @@ export const LandingPage = () => {
                                                     display: 'inline-block'
                                                 }}
                                             >
-                                                {heroSlides[activeHeroIndex].keyword}
+                                                {t(`landingPage.hero.keywords.${heroSlides[activeHeroIndex].keyword}`)}
                                             </MotionBox>
                                         </AnimatePresence>
                                     </Box>
@@ -180,8 +180,7 @@ export const LandingPage = () => {
                                         textAlign: { xs: 'center', md: 'left' }
                                     }}
                                 >
-                                    MAMBA extracts and updates quantities directly from BIM models,
-                                    eliminating errors and manual tasks for construction teams.
+                                    {t('landingPage.hero.description')}
                                 </Typography>
                                 <WebButton
                                     variant="contained"
@@ -194,7 +193,7 @@ export const LandingPage = () => {
                                         boxShadow: '0 4px 14px 0 rgba(122, 110, 189, 0.39)'
                                     }}
                                 >
-                                    Empieza gratis ahora
+                                    {t('landingPage.hero.cta')}
                                 </WebButton>
                             </MotionBox>
                         </Grid>

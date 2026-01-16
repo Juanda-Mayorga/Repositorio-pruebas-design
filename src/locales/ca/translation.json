@@ -265,6 +265,16 @@
         }
     },
     "landingPage": {
+        "hero": {
+            "title": "La forma més intel·ligent d'automatitzar BIM",
+            "keywords": {
+                "measurement": "Amidament",
+                "sustainability": "Sostenibilitat",
+                "management": "Gestió"
+            },
+            "description": "MAMBA extreu i actualitza amidaments directament des de models BIM, eliminant errors i tasques manuals per als equips de construcció.",
+            "cta": "Comença de franc ara"
+        },
         "roles": {
             "title": "Dissenyat per a cada perfil",
             "subtitle": "Des de tècnics fins a assessors legals, MAMBA ofereix la solució completa per a cada rol",
