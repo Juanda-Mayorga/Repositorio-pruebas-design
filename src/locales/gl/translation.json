@@ -266,6 +266,41 @@
     },
     "landingPage": {
         "trustedBy": "Coa confianza das empresas líderes do sector AECO",
+        "pillars": {
+            "overline": "A NOSA SOLUCIÓN",
+            "titlePart1": "3 piares que definen",
+            "titlePart2": "a solución MAMBA",
+            "software": {
+                "title": "Software",
+                "description": "O software MAMBA converte os modelos BIM en resultados procesables",
+                "items": [
+                    "Elimina erros",
+                    "Toma decisións máis intelixentes",
+                    "Mantén os proxectos a tempo e dentro do orzamento"
+                ],
+                "cta": "Explora todas as funcionalidades do software"
+            },
+            "cloud": {
+                "title": "Servizos Cloud",
+                "description": "A plataforma na nube de MAMBA centraliza licenzas, formación e soporte",
+                "items": [
+                    "Todo nun só lugar",
+                    "Formación integrada na plataforma",
+                    "Fai crecer e aliña o teu equipo"
+                ],
+                "cta": "Descobre as funcionalidades cloud"
+            },
+            "support": {
+                "title": "Soporte",
+                "description": "Obtén soporte rápido e fiable directamente en MAMBA",
+                "items": [
+                    "Soporte integrado en todas as ferramentas",
+                    "Resolve problemas máis rápido",
+                    "Soporte onde traballas"
+                ],
+                "cta": "Mira como funciona o noso soporte"
+            }
+        },
         "aeco": {
             "title": "Deseñado para o sector <0>AECO</0>",
             "subtitle": "Unha solución que conecta cada parte do fluxo de traballo AECO, reducindo erros e maximizando a eficiencia",

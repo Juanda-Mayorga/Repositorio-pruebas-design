@@ -266,6 +266,41 @@
     },
     "landingPage": {
         "trustedBy": "AECO sektoreko enpresa nagusien konfiantzarekin",
+        "pillars": {
+            "overline": "GURE IRTENBIDEA",
+            "titlePart1": "Definitzen duten 3 zutabeak",
+            "titlePart2": "MAMBAren irtenbidea",
+            "software": {
+                "title": "Softwarea",
+                "description": "MAMBA softwareak BIM ereduak emaitza bideragarri bihurtzen ditu",
+                "items": [
+                    "Ezabatu erroreak",
+                    "Hartu erabaki adimentsuagoak",
+                    "Mantendu proiektuak garaiz eta aurrekontuaren barruan"
+                ],
+                "cta": "Arakatu softwarearen ezaugarri guztiak"
+            },
+            "cloud": {
+                "title": "Cloud Zerbitzuak",
+                "description": "MAMBAren hodeiko plataformak lizentziak, prestakuntza eta laguntza zentralizatzen ditu",
+                "items": [
+                    "Dena leku batean",
+                    "Plataforman integratutako prestakuntza",
+                    "Hazi eta lerrokatu zure taldea"
+                ],
+                "cta": "Ezagutu cloud ezaugarriak"
+            },
+            "support": {
+                "title": "Laguntza",
+                "description": "Lortu laguntza azkarra eta fidagarria zuzenean MAMBAn",
+                "items": [
+                    "Tresna guztietan integratutako laguntza",
+                    "Konpondu arazoak azkarrago",
+                    "Laguntza lan egiten duzun tokian"
+                ],
+                "cta": "Ikusi gure laguntzak nola funtzionatzen duen"
+            }
+        },
         "aeco": {
             "title": "<0>AECO</0> sektorerako diseinatua",
             "subtitle": "AECO lan-fluxuaren zati bakoitza konektatzen duen irtenbidea, erroreak murriztuz eta eraginkortasuna maximizatuz",

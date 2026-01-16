@@ -266,6 +266,41 @@
     },
     "landingPage": {
         "trustedBy": "Betroet af førende AECO-virksomheder",
+        "pillars": {
+            "overline": "VORES LØSNING",
+            "titlePart1": "3 søjler, der definerer",
+            "titlePart2": "MAMBA-løsningen",
+            "software": {
+                "title": "Software",
+                "description": "MAMBA-software gør BIM-modeller til handlingsrettede resultater",
+                "items": [
+                    "Eliminer fejl",
+                    "Træf smartere beslutninger",
+                    "Hold projekter til tiden og inden for budgettet"
+                ],
+                "cta": "Udforsk alle softwarefunktioner"
+            },
+            "cloud": {
+                "title": "Cloud-tjenester",
+                "description": "MAMBAs cloud-platform centraliserer licenser, træning og support",
+                "items": [
+                    "Alt på ét sted",
+                    "Træning indbygget i platformen",
+                    "Voks og juster dit team"
+                ],
+                "cta": "Opdag cloud-funktioner"
+            },
+            "support": {
+                "title": "Support",
+                "description": "Få hurtig, pålidelig support direkte i MAMBA",
+                "items": [
+                    "Support integreret på tværs af værktøjer",
+                    "Løs problemer hurtigere",
+                    "Support hvor du arbejder"
+                ],
+                "cta": "Se hvordan vores support fungerer"
+            }
+        },
         "aeco": {
             "title": "Designet til <0>AECO</0>-sektoren",
             "subtitle": "En løsning, der forbinder hver del af AECO-arbejdsgangen, reducerer fejl og maksimerer effektivitet",

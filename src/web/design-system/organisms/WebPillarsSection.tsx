@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import { Box, Typography, Container, Grid, useTheme } from '@mui/material';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { WebButton } from '../atoms/WebButton';
 
 // Import Real Images
@@ -18,6 +19,7 @@ const MotionBox = motion(Box);
 
 export const WebPillarsSection = () => {
     const theme = useTheme();
+    const { t } = useTranslation();
     const containerRef = useRef<HTMLDivElement>(null);
 
     // Track scroll progress within this specific section
@@ -28,26 +30,17 @@ export const WebPillarsSection = () => {
 
     const pillars = [
         {
-            title: 'Software',
-            description: 'MAMBA software turns BIM models into actionable results',
-            items: ['Eliminate errors', 'Make smarter decisions', 'Keep projects on time and on budget'],
-            cta: 'Explore all software features',
+            id: 'software',
             color: '#6E659F',
             image: deliverySoftware
         },
         {
-            title: 'Cloud Services',
-            description: "MAMBA's cloud platform centralizes licenses, training, and support",
-            items: ['Everything in one place', 'Training built into the platform', 'Grow and align your team'],
-            cta: 'Discover cloud features',
+            id: 'cloud',
             color: '#9989EC',
             image: deliveryCloud
         },
         {
-            title: 'Support',
-            description: 'Get fast, reliable support directly in MAMBA, available on both the software and cloud',
-            items: ['Support integrated across tools', 'Solve problem faster', 'Support where you work'],
-            cta: 'See how our support works',
+            id: 'support',
             color: '#333337',
             image: deliverySupport
         }
@@ -90,7 +83,7 @@ export const WebPillarsSection = () => {
                                         display: 'block'
                                     }}
                                 >
-                                    NUESTRA SOLUCIÓN
+                                    {t('landingPage.pillars.overline')}
                                 </Typography>
                                 <Typography
                                     variant="h2"
@@ -101,8 +94,8 @@ export const WebPillarsSection = () => {
                                         color: '#1A1A1A'
                                     }}
                                 >
-                                    3 pilares que definen <br />
-                                    <Box component="span" sx={{ color: theme.palette.primary.main }}>la solución de MAMBA</Box>
+                                    {t('landingPage.pillars.titlePart1')} <br />
+                                    <Box component="span" sx={{ color: theme.palette.primary.main }}>{t('landingPage.pillars.titlePart2')}</Box>
                                 </Typography>
                             </Box>
 
@@ -143,16 +136,18 @@ export const WebPillarsSection = () => {
                                         [20, -20]
                                     );
 
+                                    const items = t(`landingPage.pillars.${pillar.id}.items`, { returnObjects: true }) as string[];
+
                                     return (
                                         <MotionBox
                                             key={index}
                                             style={{ opacity, y, position: 'absolute', top: 0, left: 0, width: '100%', pointerEvents: 'none' }} // Added pointerEvents none to prevent overlapping click issues
                                         >
                                             <Typography variant="h4" sx={{ fontWeight: 600, mb: 2, color: pillar.color }}>
-                                                {pillar.title}
+                                                {t(`landingPage.pillars.${pillar.id}.title`)}
                                             </Typography>
                                             <Typography variant="body1" sx={{ fontSize: '18px', color: 'text.secondary', lineHeight: 1.6, mb: 3 }}>
-                                                {pillar.description}
+                                                {t(`landingPage.pillars.${pillar.id}.description`)}
                                             </Typography>
 
                                             {/* Items List with Design from Card */}
@@ -165,7 +160,7 @@ export const WebPillarsSection = () => {
                                                 gap: 1.5,
                                                 mb: 4
                                             }}>
-                                                {pillar.items.map((item, i) => (
+                                                {items.map((item, i) => (
                                                     <Typography
                                                         key={i}
                                                         variant="body2"
@@ -196,7 +191,7 @@ export const WebPillarsSection = () => {
                                                         }
                                                     }}
                                                 >
-                                                    {pillar.cta}
+                                                    {t(`landingPage.pillars.${pillar.id}.cta`)}
                                                 </WebButton>
                                             </Box>
                                         </MotionBox>
@@ -265,7 +260,7 @@ export const WebPillarsSection = () => {
                                                 <Box
                                                     component="img"
                                                     src={pillar.image}
-                                                    alt={pillar.title}
+                                                    alt={t(`landingPage.pillars.${pillar.id}.title`)}
                                                     sx={{
                                                         width: '100%',
                                                         height: '100%',
